@@ -443,3 +443,112 @@ def resumen_texto(resultado: dict, max_lineas: int = 20) -> str:
     if resto > 0:
         lineas.append(f"  … y {resto} problemas más")
     return "\n".join(lineas)
+
+
+# --------------------------------------------------------------------- aprender
+def _tipo_valor(v: Any) -> str | None:
+    if v is None or (isinstance(v, str) and not v.strip()):
+        return None
+    if isinstance(v, bool):
+        return "texto"
+    if isinstance(v, (datetime, date)):
+        return "fecha"
+    if isinstance(v, int):
+        return "entero"
+    if isinstance(v, float):
+        return "numero"
+    s = str(v).strip()
+    if RE_EMAIL.match(s):
+        return "email"
+    if _es_fecha(s):
+        return "fecha"
+    if re.fullmatch(r"-?\d+", s):
+        return "entero"
+    if _es_numero(s):
+        return "numero"
+    return "texto"
+
+
+def perfilar_hoja(ruta: str | Path, hoja: str | None = None, fila_encabezado: int = 1,
+                  max_filas: int = 5000) -> dict:
+    """Resumen de una hoja: columnas, tipo dominante, llenado, valores distintos, min/max y ejemplos."""
+    wb = _abrir(ruta)
+    ws = _seleccionar(wb, hoja)
+    encabezados = [_texto(c.value) for c in ws[fila_encabezado]]
+    columnas: dict[str, dict] = {n: {"tipos": Counter(), "valores": [], "vacios": 0} for n in encabezados if n}
+    n = 0
+    for fila in ws.iter_rows(min_row=fila_encabezado + 1, values_only=True):
+        if all(v is None for v in fila):
+            continue
+        if fila and _texto(fila[0]).upper() in ("TOTAL", "TOTALES", "SUBTOTAL"):
+            continue
+        n += 1
+        for i, nombre in enumerate(encabezados):
+            if not nombre:
+                continue
+            v = fila[i] if i < len(fila) else None
+            t = _tipo_valor(v)
+            if t is None:
+                columnas[nombre]["vacios"] += 1
+            else:
+                columnas[nombre]["tipos"][t] += 1
+                columnas[nombre]["valores"].append(v)
+        if n >= max_filas:
+            break
+    perfil_cols = {}
+    for nombre, c in columnas.items():
+        llenos = len(c["valores"])
+        tipos = c["tipos"]
+        if tipos.get("entero") and tipos.get("numero"):
+            tipos["numero"] += tipos.pop("entero")
+        dominante, cuenta = (tipos.most_common(1)[0] if tipos else (None, 0))
+        nums = [_a_numero(v) for v in c["valores"] if _es_numero(v)]
+        distintos = {(_serializable(v)) for v in c["valores"]}
+        perfil_cols[nombre] = {
+            "tipo": dominante,
+            "pureza_tipo": round(cuenta / llenos, 3) if llenos else 0,
+            "llenado": round(llenos / n, 3) if n else 0,
+            "distintos": len(distintos),
+            "min": min(nums) if nums else None,
+            "max": max(nums) if nums else None,
+            "ejemplos": [str(_serializable(v)) for v in list(dict.fromkeys(c["valores"]))[:5]],
+            "_valores_distintos": sorted(map(str, distintos))[:50] if len(distintos) <= 50 else None,
+        }
+    return {"archivo": str(ruta), "hoja": ws.title, "hojas": wb.sheetnames, "filas": n,
+            "encabezados": [e for e in encabezados if e], "columnas": perfil_cols}
+
+
+def inferir_reglas(perfil: dict) -> dict:
+    """Deduce reglas de validación a partir del perfil de una hoja que el usuario considera correcta."""
+    n = perfil["filas"]
+    reglas: dict[str, Any] = {"hoja": perfil["hoja"], "columnas_requeridas": list(perfil["encabezados"]),
+                              "no_vacios": [], "tipos": {}, "rangos": {}, "valores_permitidos": {}, "unicos": []}
+    for nombre, c in perfil["columnas"].items():
+        if not c["tipo"]:
+            continue
+        if c["llenado"] == 1 and n >= 2:
+            reglas["no_vacios"].append(nombre)
+        if c["pureza_tipo"] >= 0.95:
+            tipo = c["tipo"]
+            # Excel guarda 2000000.0 como entero: solo exigimos 'entero' si la columna es claramente un conteo/ID
+            if tipo == "entero" and not re.search(
+                    r"(?i)(cant|unid|n[uú]m|no\.|edad|a[nñ]o|mes|d[ií]as|id\b|c[oó]d|c[eé]dula|nit|documento|piezas)",
+                    nombre):
+                tipo = "numero"
+            reglas["tipos"][nombre] = tipo
+        if c["tipo"] in ("numero", "entero") and c["min"] is not None and c["min"] >= 0:
+            reglas["rangos"][nombre] = {"min": 0}
+        distintos = c["distintos"]
+        if (c["tipo"] == "texto" and c["_valores_distintos"] and 1 < distintos <= 12
+                and n >= 2 * distintos and n >= 6):
+            reglas["valores_permitidos"][nombre] = c["_valores_distintos"]
+        if (n >= 5 and distintos == n and c["llenado"] == 1 and c["tipo"] in ("texto", "entero")
+                and re.search(r"(?i)(id|c[oó]d|factura|n[uú]m|no\.|nit|c[eé]dula|documento|ref)", nombre)):
+            reglas["unicos"].append(nombre)
+    return {k: v for k, v in reglas.items() if v}
+
+
+def similitud_encabezados(a: list[str], b: list[str]) -> float:
+    sa = {x.strip().lower() for x in a if x}
+    sb = {x.strip().lower() for x in b if x}
+    return len(sa & sb) / len(sa | sb) if sa and sb else 0.0

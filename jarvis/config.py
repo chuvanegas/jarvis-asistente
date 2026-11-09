@@ -41,6 +41,10 @@ class Config:
     modelo: str = "claude-opus-5-5"
     carpeta_salida: Path = Path("salidas")
     correo: ConfigCorreo = field(default_factory=ConfigCorreo)
+    carpeta_datos: Path = Path.home() / ".jarvis"
+    carpetas_trabajo: list[Path] = field(default_factory=list)
+    voz_mac: str = "Paulina"
+    whisper_modelo: str = "small"
 
     @classmethod
     def desde_entorno(cls) -> "Config":
@@ -69,4 +73,12 @@ class Config:
             modelo=os.getenv("JARVIS_MODELO", "claude-opus-5-5"),
             carpeta_salida=carpeta,
             correo=correo,
+            carpeta_datos=Path(os.getenv("JARVIS_DATOS", str(Path.home() / ".jarvis"))).expanduser(),
+            carpetas_trabajo=[
+                Path(c.strip()).expanduser()
+                for c in os.getenv("JARVIS_CARPETAS_TRABAJO", "~/Documents,~/Desktop,~/Downloads").split(",")
+                if c.strip()
+            ],
+            voz_mac=os.getenv("JARVIS_VOZ", "Paulina"),
+            whisper_modelo=os.getenv("JARVIS_WHISPER_MODELO", "small"),
         )

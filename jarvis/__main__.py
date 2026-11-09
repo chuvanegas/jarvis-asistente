@@ -1,6 +1,7 @@
 """JARVIS — asistente de trabajo: correo + Excel + validación.
 
 Uso:
+  python -m jarvis --gui           # interfaz gráfica (ventana)
   python -m jarvis                 # chat por texto
   python -m jarvis --voz           # di "Jarvis, ..." para darle órdenes
   python -m jarvis -c "revisa mis correos no leídos y resúmelos"
@@ -50,6 +51,8 @@ def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(prog="jarvis", description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("-c", "--comando", help="Ejecuta una orden y termina")
+    ap.add_argument("--gui", action="store_true", help="Abre la interfaz gráfica")
+    ap.add_argument("--navegador", action="store_true", help="Con --gui: usar el navegador en vez de ventana")
     ap.add_argument("--voz", action="store_true", help="Modo voz")
     ap.add_argument("--validar", metavar="XLSX", help="Valida un Excel sin IA y termina")
     ap.add_argument("--reglas", metavar="JSON", help="Reglas para --validar")
@@ -64,6 +67,11 @@ def main(argv: list[str] | None = None) -> int:
         print(f"Reporte: {excel.generar_reporte(args.validar, res, destino)}")
         return 0 if res["valido"] else 1
 
+    if args.gui:
+        from .interfaz import abrir
+
+        return abrir(config, navegador=args.navegador)
+
     h, cerebro = construir(config)
     if cerebro is None:
         print("⚠ Sin ANTHROPIC_API_KEY: modo comandos básico (escribe 'ayuda').", file=sys.stderr)
@@ -77,7 +85,7 @@ def main(argv: list[str] | None = None) -> int:
     if args.voz:
         from .voz import Voz, quitar_palabra_clave
 
-        voz = Voz()
+        voz = Voz(config.voz_mac, config.whisper_modelo)
         voz.hablar("JARVIS en línea. ¿En qué le ayudo?")
         while True:
             oido = voz.escuchar()

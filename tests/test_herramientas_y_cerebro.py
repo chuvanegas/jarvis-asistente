@@ -24,14 +24,14 @@ class FakeCorreo:
 
 
 def _h(tmp_path, confirmar=True):
-    cfg = Config(carpeta_salida=tmp_path)
+    cfg = Config(carpeta_salida=tmp_path, carpeta_datos=tmp_path / "datos")
     return Herramientas(cfg, lambda _t: confirmar, FakeCorreo())
 
 
 def test_definiciones_validas():
     nombres = {d["name"] for d in DEFINICIONES}
     assert {"buscar_correos", "enviar_correo", "crear_excel", "validar_excel"} <= nombres
-    h = Herramientas(Config(), lambda t: True, FakeCorreo())
+    h = Herramientas(Config(carpeta_datos=Path("/nonexistent-jarvis")), lambda t: True, FakeCorreo())
     for n in nombres:
         assert hasattr(h, f"h_{n}")
 
@@ -91,5 +91,5 @@ def test_cerebro_bucle_herramientas(tmp_path):
 
 def test_cerebro_rechazo(tmp_path):
     cliente = NS(beta=NS(messages=FakeMessages([NS(stop_reason="refusal", content=[])])))
-    cer = Cerebro(Config(), _h(tmp_path), cliente=cliente)
+    cer = Cerebro(Config(carpeta_datos=tmp_path), _h(tmp_path), cliente=cliente)
     assert "no puedo" in cer.preguntar("algo")
