@@ -1,0 +1,11 @@
+{
+  "hoja": "Ventas",
+  "columnas_requeridas": ["Factura", "Fecha", "Cliente", "Correo", "Cantidad", "Precio", "Total", "Estado"],
+  "no_vacios": ["Factura", "Fecha", "Cliente", "Total"],
+  "tipos": {"Fecha": "fecha", "Correo": "email", "Cantidad": "entero", "Precio": "numero", "Total": "numero"},
+  "rangos": {"Cantidad": {"min": 1}, "Precio": {"min": 0}},
+  "valores_permitidos": {"Estado": ["Pagado", "Pendiente", "Anulado"]},
+  "unicos": ["Factura"],
+  "patrones": {"Factura": "^F-\\d{4}$"},
+  "formula_total": {"columna": "Total", "igual_a": "Cantidad * Precio", "tolerancia": 0.01}
+}
