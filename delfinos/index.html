@@ -453,9 +453,11 @@
   // desde https://lab.flipper.net). Ejemplo: "https://tu-servidor/delfinos/flipper-z-f7-update-delfinos-0.1.tgz"
   // Cuando los paquetes estén en el servidor, pon aquí sus URLs (una por idioma).
   // El servidor debe permitir CORS desde https://lab.flipper.net.
+  // Paquetes que publica el build en GitHub Releases (Actions "Compilar DelfínOS").
+  // Quedan listos en cuanto el Release v0.1 exista.
   const PAQUETES = {
-    es: "",  // p. ej. "https://tu-servidor/delfinos/flipper-z-f7-update-delfinos-0.1-es.tgz"
-    en: "",  // p. ej. "https://tu-servidor/delfinos/flipper-z-f7-update-delfinos-0.1-en.tgz"
+    es: "https://github.com/chuvanegas/Delf-nOS/releases/download/v0.1/delfinos-0.1-es.tgz",
+    en: "https://github.com/chuvanegas/Delf-nOS/releases/download/v0.1/delfinos-0.1-en.tgz",
   };
   const VERSION = "0.1";
   // Pon aquí tu enlace de donación (Ko-fi, PayPal, Buy Me a Coffee...). Vacío = botón en espera.
