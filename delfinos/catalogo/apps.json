@@ -4269,5 +4269,710 @@
 "desc": "Remote control for Zoom Workplace on macOS and Windows. Connect over USB or",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Mableton/zoom_remote"
+},
+{
+"appid": "toshiba_ac_remote",
+"name": "Toshiba",
+"cat": "📺 Infrarrojo",
+"desc": "IR remote for Toshiba-protocol air conditioners",
+"fuente": "Comunidad"
+},
+{
+"appid": "coolix_ac_remote",
+"name": "Coolix",
+"cat": "📺 Infrarrojo",
+"desc": "IR remote for Coolix-protocol air conditioners",
+"fuente": "Comunidad"
+},
+{
+"appid": "tagtinker",
+"name": "TagTinker",
+"cat": "📺 Infrarrojo",
+"desc": "Educational ESL study tool for owned hardware",
+"fuente": "Comunidad"
+},
+{
+"appid": "wmbuster",
+"name": "wM-Buster",
+"cat": "📡 Sub-GHz",
+"desc": "EU wM-Bus listener: T1/C1/T+C/S1, AES-128 mode 5, OMS DIF/VIF, manufacturer drivers. RX-only.",
+"fuente": "Comunidad"
+},
+{
+"appid": "shapshup",
+"name": "ShapShup",
+"cat": "📡 Sub-GHz",
+"desc": "",
+"fuente": "Comunidad"
+},
+{
+"appid": "rfid_metal_detector",
+"name": "RFID Metal Detector",
+"cat": "💳 RFID",
+"desc": "",
+"fuente": "Comunidad"
+},
+{
+"appid": "sd_info",
+"name": "SD Info",
+"cat": "🛠️ Herramientas",
+"desc": "The application shows information about the SD card",
+"fuente": "Comunidad",
+"github": "https://github.com/Sladkisnovraper/SD-Info-For-Flipper-Zero"
+},
+{
+"appid": "nfc_comparator",
+"name": "NFC Comparator",
+"cat": "💳 NFC",
+"desc": "A tool to check if a physical NFC card is the same as a saved digital one",
+"fuente": "Comunidad",
+"github": "https://github.com/acegoal07/FlipperZero_NFC_Comparator"
+},
+{
+"appid": "vario",
+"name": "[BME280] Vario",
+"cat": "🔌 GPIO / Hardware",
+"desc": "Variometer for paragliding and hiking using BME280 pressure sensor",
+"fuente": "Comunidad",
+"github": "https://github.com/xumbax/flipper-vario"
+},
+{
+"appid": "samsung_ac_remote_old",
+"name": "Samsung (Old)",
+"cat": "📺 Infrarrojo",
+"desc": "Samsung Electric Air Conditioner remote control",
+"fuente": "Comunidad",
+"github": "https://github.com/dappermint/samsung-ac-remote-flipper-app"
+},
+{
+"appid": "nrf24_batch",
+"name": "NRF24 Batch",
+"cat": "🔌 GPIO / Hardware",
+"desc": "",
+"fuente": "Comunidad"
+},
+{
+"appid": "genie_record",
+"name": "Genie Door Recorder",
+"cat": "📡 Sub-GHz",
+"desc": "This application extracts the codes from a Genie garage door remote into a .GNE file. It also plays back a .GNE file to a Genie garage door opener.",
+"fuente": "Comunidad"
+},
+{
+"appid": "gps_track",
+"name": "GPS Track",
+"cat": "🔌 GPIO / Hardware",
+"desc": "GPS NMEA tracker with breadcrumb navigation",
+"fuente": "Comunidad"
+},
+{
+"appid": "neoclima_ac_remote",
+"name": "Neoclima",
+"cat": "📺 Infrarrojo",
+"desc": "IR remote for Neoclima-protocol air conditioners",
+"fuente": "Comunidad"
+},
+{
+"appid": "iso15693_nfc_writer",
+"name": "ISO 15693-3 NFC Writer",
+"cat": "💳 NFC",
+"desc": "",
+"fuente": "Comunidad"
+},
+{
+"appid": "wiegand_reader",
+"name": "Wiegand Reader",
+"cat": "🔌 GPIO / Hardware",
+"desc": "This application can be used to test Wiegand readers and keypads",
+"fuente": "Comunidad"
+},
+{
+"appid": "daikin_ac_remote",
+"name": "Daikin",
+"cat": "📺 Infrarrojo",
+"desc": "IR remote for Daikin-protocol air conditioners",
+"fuente": "Comunidad"
+},
+{
+"appid": "goodweather_ac_remote",
+"name": "Goodweather",
+"cat": "📺 Infrarrojo",
+"desc": "IR remote for Goodweather-protocol air conditioners",
+"fuente": "Comunidad"
+},
+{
+"appid": "flipper_letterbeacon",
+"name": "Letter Beacon",
+"cat": "🛠️ Herramientas",
+"desc": "",
+"fuente": "Comunidad"
+},
+{
+"appid": "crypto_dict",
+"name": "Crypto Dictionary",
+"cat": "🎵 Multimedia",
+"desc": "Cryptography Dictionary (Flipper Zero Edition)",
+"fuente": "Comunidad",
+"github": "https://github.com/armixz/Flipper-Zero-Crypto-Dictionary"
+},
+{
+"appid": "servotester2",
+"name": "Servo Tester 2",
+"cat": "🔌 GPIO / Hardware",
+"desc": "App uses A7 pin for servo PWM output.",
+"fuente": "Comunidad"
+},
+{
+"appid": "memsic_2125",
+"name": "[Mx2125] Accelerometer",
+"cat": "🔌 GPIO / Hardware",
+"desc": "",
+"fuente": "Comunidad"
+},
+{
+"appid": "fujitsu_ac_remote",
+"name": "Fujitsu",
+"cat": "📺 Infrarrojo",
+"desc": "IR remote for Fujitsu-protocol air conditioners",
+"fuente": "Comunidad"
+},
+{
+"appid": "freq_analyzer_ext",
+"name": "Frequency Analyzer",
+"cat": "📡 Sub-GHz",
+"desc": "",
+"fuente": "Comunidad"
+},
+{
+"appid": "wolfenduino",
+"name": "Wolfenduino",
+"cat": "🎮 Juegos",
+"desc": "Play the port of Wolfenduino game on your Flipper Zero.",
+"fuente": "Comunidad",
+"github": "https://github.com/apfxtech/FlipperWolfenstein"
+},
+{
+"appid": "rcwl_0516",
+"name": "[RCWL-0516] Motion Sensor",
+"cat": "🔌 GPIO / Hardware",
+"desc": "",
+"fuente": "Comunidad"
+},
+{
+"appid": "ulc_brute",
+"name": "UL-C Bruteforce",
+"cat": "💳 NFC",
+"desc": "Bruteforce Ultralight C authentication",
+"fuente": "Comunidad"
+},
+{
+"appid": "nrf24_mouse_jacker_ms",
+"name": "Mouse Jacker MS",
+"cat": "🔌 GPIO / Hardware",
+"desc": "",
+"fuente": "Comunidad"
+},
+{
+"appid": "nrf24_sniffer_ms",
+"name": "Sniffer MS",
+"cat": "🔌 GPIO / Hardware",
+"desc": "",
+"fuente": "Comunidad"
+},
+{
+"appid": "ulcfkey_next",
+"name": "ULCFKey (Next)",
+"cat": "💳 NFC",
+"desc": "Crack counterfeit ULC cards",
+"fuente": "Comunidad"
+},
+{
+"appid": "haier_ac_remote",
+"name": "Haier",
+"cat": "📺 Infrarrojo",
+"desc": "IR remote for Haier-protocol air conditioners",
+"fuente": "Comunidad"
+},
+{
+"appid": "ulcfkey",
+"name": "ULCFKey",
+"cat": "💳 NFC",
+"desc": "Crack counterfeit ULC cards",
+"fuente": "Comunidad"
+},
+{
+"appid": "doom2",
+"name": "Maze of doom",
+"cat": "🎮 Juegos",
+"desc": "Play the port of the arduboy3d game on your Flipper Zero.",
+"fuente": "Comunidad",
+"github": "https://github.com/apfxtech/FlipperCatacombs"
+},
+{
+"appid": "allstar_firefly",
+"name": "Allstar Firefly",
+"cat": "📡 Sub-GHz",
+"desc": "Allstar Firefly 318ALD31K gate remote - 9-bit trinary OOK decoder/emulator",
+"fuente": "Comunidad"
+},
+{
+"appid": "fmtx",
+"name": "FM TX",
+"cat": "📡 Sub-GHz",
+"desc": "Experimental MP3 audio over CC1101 FM.",
+"fuente": "Comunidad"
+},
+{
+"appid": "ac_detector",
+"name": "AC Detector",
+"cat": "📺 Infrarrojo",
+"desc": "Identify the IR protocol an air conditioner remote speaks",
+"fuente": "Comunidad"
+},
+{
+"appid": "c_book",
+"name": "The C Prog. Language",
+"cat": "🎵 Multimedia",
+"desc": "The C Programming Language, Flipper Zero Edition (by Brian W. Kernighan, Dennis M. Ritchie)",
+"fuente": "Comunidad",
+"github": "https://github.com/armixz/Flipper-Zero-The-C-Programming-Language"
+},
+{
+"appid": "coffee_eeprom",
+"name": "Coffee EEPROM",
+"cat": "🔌 GPIO / Hardware",
+"desc": "",
+"fuente": "Comunidad"
+},
+{
+"appid": "microtd",
+"name": "Tower Defense",
+"cat": "🎮 Juegos",
+"desc": "Tower defense game ported from Arduboy.",
+"fuente": "Comunidad",
+"github": "https://github.com/apfxtech/FlipperTowerDefense"
+},
+{
+"appid": "dvd_bounce",
+"name": "DVD Bouncer",
+"cat": "🎮 Juegos",
+"desc": "",
+"fuente": "Comunidad"
+},
+{
+"appid": "princeofarabia",
+"name": "Prince Of Arabia",
+"cat": "🎮 Juegos",
+"desc": "Escape the dungeons and free the princess!",
+"fuente": "Comunidad",
+"github": "https://github.com/apfxtech/FlipperPrinceOfArabia"
+},
+{
+"appid": "uk_mbirth_sonicare",
+"name": "Sonicare Head ID",
+"cat": "💳 NFC",
+"desc": "Philips Sonicare brush head NFC reader + usage reset",
+"fuente": "Comunidad"
+},
+{
+"appid": "nfc_canary",
+"name": "NFC Canary",
+"cat": "💳 NFC",
+"desc": "Passive NFC skim detector: alarms when a reader interrogates the device.",
+"fuente": "Comunidad",
+"github": "https://github.com/antitree/nfc_canary"
+},
+{
+"appid": "ballu_ac_remote",
+"name": "Ballu",
+"cat": "📺 Infrarrojo",
+"desc": "IR remote for Ballu-protocol air conditioners",
+"fuente": "Comunidad"
+},
+{
+"appid": "oregon_trail",
+"name": "Oregon Trail",
+"cat": "🎮 Juegos",
+"desc": "",
+"fuente": "Comunidad"
+},
+{
+"appid": "btremote_kodi",
+"name": "BT Remote for Kodi",
+"cat": "🔵 Bluetooth",
+"desc": "Application Bluetooth remote Keynote for Kodi (original app + feature: long press on OK to switch between Space and Return (useful for Kodi to navigate the menu",
+"fuente": "Comunidad"
+},
+{
+"appid": "ulc_relay",
+"name": "UL-C Relay",
+"cat": "💳 NFC",
+"desc": "Relay Ultralight C authentication",
+"fuente": "Comunidad"
+},
+{
+"appid": "paper_plane",
+"name": "Paper Plane",
+"cat": "🎮 Juegos",
+"desc": "Guide a paper plane through obstacles to get the highest score.",
+"fuente": "Comunidad",
+"github": "https://github.com/Larry-the-Pig/flipper-plane"
+},
+{
+"appid": "delonghi_ac_remote",
+"name": "Delonghi",
+"cat": "📺 Infrarrojo",
+"desc": "IR remote for Delonghi-protocol air conditioners",
+"fuente": "Comunidad"
+},
+{
+"appid": "nrf24_scanner",
+"name": "NRF24 Scanner",
+"cat": "🔌 GPIO / Hardware",
+"desc": "",
+"fuente": "Comunidad"
+},
+{
+"appid": "rad_sens",
+"name": "Radiation Sensor",
+"cat": "🔌 GPIO / Hardware",
+"desc": "Works with RadSens external module",
+"fuente": "Comunidad",
+"github": "https://github.com/sionyx/flipper_radsens"
+},
+{
+"appid": "can_commander",
+"name": "CAN Commander",
+"cat": "🔌 GPIO / Hardware",
+"desc": "",
+"fuente": "Comunidad"
+},
+{
+"appid": "chess_clock",
+"name": "Chess Clock",
+"cat": "🎮 Juegos",
+"desc": "A simple chess clock",
+"fuente": "Comunidad"
+},
+{
+"appid": "tcl_ac_remote",
+"name": "TCL",
+"cat": "📺 Infrarrojo",
+"desc": "IR remote for TCL-protocol air conditioners",
+"fuente": "Comunidad"
+},
+{
+"appid": "carrier_ac_remote",
+"name": "Carrier",
+"cat": "📺 Infrarrojo",
+"desc": "IR remote for Carrier-protocol air conditioners",
+"fuente": "Comunidad"
+},
+{
+"appid": "lora_terminal",
+"name": "LoRATerminal",
+"cat": "🔌 GPIO / Hardware",
+"desc": "",
+"fuente": "Comunidad"
+},
+{
+"appid": "gree_ac_remote",
+"name": "Gree",
+"cat": "📺 Infrarrojo",
+"desc": "IR remote for Gree-protocol air conditioners",
+"fuente": "Comunidad"
+},
+{
+"appid": "kelon_ac_remote",
+"name": "Kelon",
+"cat": "📺 Infrarrojo",
+"desc": "IR remote for Kelon-protocol air conditioners",
+"fuente": "Comunidad"
+},
+{
+"appid": "wifi_map",
+"name": "WIFI Mapping",
+"cat": "🔌 GPIO / Hardware",
+"desc": "",
+"fuente": "Comunidad"
+},
+{
+"appid": "mitsubishi_heavy_ac_remote",
+"name": "MitsuHeavy",
+"cat": "📺 Infrarrojo",
+"desc": "IR remote for MitsuHeavy-protocol air conditioners",
+"fuente": "Comunidad"
+},
+{
+"appid": "tesla_mod_esp32_port",
+"name": "[DO NOT BUILD] ESP32 Port",
+"cat": "🛠️ Herramientas",
+"desc": "",
+"fuente": "Comunidad"
+},
+{
+"appid": "flipper_chronometer",
+"name": "Chronometer",
+"cat": "🛠️ Herramientas",
+"desc": "",
+"fuente": "Comunidad"
+},
+{
+"appid": "kyberwrite",
+"name": "KyberWrite",
+"cat": "💳 RFID",
+"desc": "Program EM4x05 tubes as Disney Galaxy's Edge kyber crystals",
+"fuente": "Comunidad"
+},
+{
+"appid": "nrf24tool",
+"name": "NRF24 Tool",
+"cat": "🔌 GPIO / Hardware",
+"desc": "Utility app for NRF24L01",
+"fuente": "Comunidad",
+"github": "https://github.com/OuinOuin74/nrf24tool"
+},
+{
+"appid": "pwnpal",
+"name": "Pwnpal",
+"cat": "🔌 GPIO / Hardware",
+"desc": "",
+"fuente": "Comunidad",
+"github": "https://github.com/mrq1911/pwnpal"
+},
+{
+"appid": "kelvinator_ac_remote",
+"name": "Kelvinator",
+"cat": "📺 Infrarrojo",
+"desc": "IR remote for Kelvinator-protocol air conditioners",
+"fuente": "Comunidad"
+},
+{
+"appid": "music_beeper",
+"name": "Music Beeper",
+"cat": "🎵 Multimedia",
+"desc": "",
+"fuente": "Comunidad"
+},
+{
+"appid": "claude_remote_ble",
+"name": "Agentic Remote",
+"cat": "🔵 Bluetooth",
+"desc": "One-handed Bluetooth remote for AI coding agents (Claude Code). 5-button D-pad control, macros, offline manual + quiz.",
+"fuente": "Comunidad"
+},
+{
+"appid": "flip_rob",
+"name": "R.O.B. Control",
+"cat": "📺 Infrarrojo",
+"desc": "Control Nintendo R.O.B.",
+"fuente": "Comunidad",
+"github": "https://github.com/riney/flip_rob"
+},
+{
+"appid": "schip",
+"name": "SUPER-CHIP",
+"cat": "🎮 Juegos",
+"desc": "SUPER-CHIP (Chip8) emulator for the Flipper Zero",
+"fuente": "Comunidad",
+"github": "https://github.com/Milk-Cool/fz-schip"
+},
+{
+"appid": "nickname_generator",
+"name": "NickName Generator",
+"cat": "🛠️ Herramientas",
+"desc": "",
+"fuente": "Comunidad"
+},
+{
+"appid": "gpioreader2",
+"name": "Input Reader 2",
+"cat": "🔌 GPIO / Hardware",
+"desc": "",
+"fuente": "Comunidad"
+},
+{
+"appid": "mitsubishi_ac_remote_old",
+"name": "Mitsubishi (Old)",
+"cat": "📺 Infrarrojo",
+"desc": "Mitsubishi Electric Air Conditioner remote control",
+"fuente": "Comunidad"
+},
+{
+"appid": "battery_reader",
+"name": "I2C BMS Reader",
+"cat": "🔌 GPIO / Hardware",
+"desc": "SBS battery reader and service tool for TI BQ30/BQ40 controllers",
+"fuente": "Comunidad",
+"github": "https://github.com/gazirov/battery_reader"
+},
+{
+"appid": "panasonic_ac_remote",
+"name": "Panasonic",
+"cat": "📺 Infrarrojo",
+"desc": "IR remote for Panasonic-protocol air conditioners",
+"fuente": "Comunidad"
+},
+{
+"appid": "lg_ac_remote",
+"name": "LG",
+"cat": "📺 Infrarrojo",
+"desc": "IR remote for LG-protocol air conditioners",
+"fuente": "Comunidad"
+},
+{
+"appid": "subghz_signal_gen",
+"name": "SubGHz Signal Generator",
+"cat": "📡 Sub-GHz",
+"desc": "SubGHz Signal Generator for Flipper Zero",
+"fuente": "Comunidad",
+"github": "https://github.com/RocketGod-Git/Flipper-Zero-SubGHz-Signal-Generator"
+},
+{
+"appid": "hidtransfer",
+"name": "HID File Transfer",
+"cat": "⌨️ USB / BadUSB",
+"desc": "",
+"fuente": "Comunidad"
+},
+{
+"appid": "crane_remote",
+"name": "Telecrane Control",
+"cat": "📡 Sub-GHz",
+"desc": "Sends forged frames to Telecrane-style 2FSK crane remotes (848.93/850.92 MHz)",
+"fuente": "Comunidad",
+"github": "https://github.com/nmatt0/telecrane-contol"
+},
+{
+"appid": "droidbeacon",
+"name": "Droid Beacon",
+"cat": "🔵 Bluetooth",
+"desc": "Emulate Galaxy's Edge BLE park location beacons for Droid Depot droids",
+"fuente": "Comunidad"
+},
+{
+"appid": "montyhall",
+"name": "Monty Hall",
+"cat": "🎮 Juegos",
+"desc": "Monty Hall asks you to guess which closed door a prize is behind.",
+"fuente": "Comunidad"
+},
+{
+"appid": "mandelbrotset",
+"name": "Mandelbrot Set",
+"cat": "🎮 Juegos",
+"desc": "The Mandelbrot set is the set of all so-called (complex) numbers that meet Mandelbrots simple arithmetic criterion.",
+"fuente": "Comunidad",
+"github": "https://github.com/xMasterX/all-the-plugins"
+},
+{
+"appid": "reaction",
+"name": "Reaction test",
+"cat": "🎮 Juegos",
+"desc": "A simple reaction test game",
+"fuente": "Comunidad",
+"github": "https://github.com/Milk-Cool/fz-reaction-game"
+},
+{
+"appid": "usb_hid_autofire",
+"name": "USB HID Autofire",
+"cat": "⌨️ USB / BadUSB",
+"desc": "This is a simple Flipper Zero application to send left-clicks as a USB HID device.",
+"fuente": "Comunidad",
+"github": "https://github.com/pbek/usb_hid_autofire"
+},
+{
+"appid": "ws2812b_tester_app",
+"name": "[WS2812B] LED Tester",
+"cat": "🔌 GPIO / Hardware",
+"desc": "WS2812B LED Tester App. This is intended to test that WS2812B LEDs are functioning correctly.",
+"fuente": "Comunidad"
+},
+{
+"appid": "segment_clock",
+"name": "Segment Clock",
+"cat": "🛠️ Herramientas",
+"desc": "Display simple segment clock on Flipper screen",
+"fuente": "Comunidad",
+"github": "https://github.com/Sladkisnovraper/Segment-Clock-For-Flipper-Zero"
+},
+{
+"appid": "gpio_reader",
+"name": "[GPIO] Reader",
+"cat": "🔌 GPIO / Hardware",
+"desc": "Read GPIO pins states, and display them on the screen",
+"fuente": "Comunidad",
+"github": "https://github.com/aureli1c/flipperzero_GPIO_read"
+},
+{
+"appid": "gpio_7segment_output",
+"name": "7-Segment Output",
+"cat": "🔌 GPIO / Hardware",
+"desc": "Control a 7-segment display with GPIO pins",
+"fuente": "Comunidad"
+},
+{
+"appid": "logic_analyzer",
+"name": "Logic Analyzer",
+"cat": "🔌 GPIO / Hardware",
+"desc": "Use flipper as Openbench Logic Sniffer (ols) logic analyzer in PulseView",
+"fuente": "Comunidad",
+"github": "https://github.com/g3gg0/flipper-logic_analyzer"
+},
+{
+"appid": "zero_tracker",
+"name": "Zero Tracker",
+"cat": "🎵 Multimedia",
+"desc": "App plays hardcoded tracker song",
+"fuente": "Comunidad",
+"github": "https://github.com/DrZlo13/flipper-zero-music-tracker"
+},
+{
+"appid": "brainfuck",
+"name": "Brainfuck",
+"cat": "🛠️ Herramientas",
+"desc": "Brainfuck language interpreter",
+"fuente": "Comunidad",
+"github": "https://github.com/nymda/FlipperZeroBrainfuck"
+},
+{
+"appid": "racegame",
+"name": "Race",
+"cat": "🎮 Juegos",
+"desc": "Race game inspired by Race game in BrickGame 9999 in 1.",
+"fuente": "Comunidad",
+"github": "https://github.com/zyuhel/flipperzero-racegame"
+},
+{
+"appid": "analog_clock",
+"name": "Analog Clock",
+"cat": "🛠️ Herramientas",
+"desc": "Shows analog clock on Flipper screen",
+"fuente": "Comunidad",
+"github": "https://github.com/scrolltex/flipper_analog_clock"
+},
+{
+"appid": "airmon",
+"name": "[PMSx003] Airmon",
+"cat": "🔌 GPIO / Hardware",
+"desc": "Plantower PMSx003 sensor reader",
+"fuente": "Comunidad",
+"github": "https://github.com/3cky/flipperzero-airmon"
+},
+{
+"appid": "ocarina",
+"name": "Ocarina",
+"cat": "🎵 Multimedia",
+"desc": "A basic Ocarina (of Time), Controls are the same as the N64 version of the Ocarina of Time",
+"fuente": "Comunidad",
+"github": "https://github.com/invalidna-me/flipperzero-ocarina"
+},
+{
+"appid": "pomodoro_timer",
+"name": "Pomodoro Timer",
+"cat": "🛠️ Herramientas",
+"desc": "Use your Flipper Zero as a Pomodoro Timer.",
+"fuente": "Comunidad",
+"github": "https://github.com/sbrin/flipperzero_pomodoro"
 }
 ]

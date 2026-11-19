@@ -120,3 +120,14 @@ Si funciona bien, la pasas a **Estable** en el catálogo web (botón «✓ Pasar
 ### No repetir: alerta de duplicados
 
 Antes de quedarse con una app, `clonar_app.py` compara su id, su repo de GitHub y su nombre contra las del catálogo (`catalogo/apps.json`). Si ya existe una parecida, **te avisa y no la agrega** (borra el clon). Si de verdad es distinta, repite con `--forzar`. El catálogo web hace la misma comprobación cuando pegas un enlace: te avisa en vivo y bloquea los duplicados fuertes (mismo id o mismo repo).
+
+## 5. Potenciar IR, NFC y Sub-GHz (bases de datos top)
+
+Para que el **Mando Universal** y los lectores reconozcan muchísimos más equipos, baja las mejores bases de la comunidad a tu SD:
+
+```bash
+python3 descargar_bases.py --todo          # infrarrojo + sub-ghz + nfc
+python3 descargar_bases.py --infrarrojo    # solo la base de IR (Flipper-IRDB, miles de controles)
+```
+
+Deja todo en `~/DelfinOS_SD/`; copias esas carpetas a la raíz de la SD. Son bases grandes, por eso van en la SD y no dentro del firmware. Fuentes: Flipper-IRDB y el repositorio Flipper de UberGuidoZ.

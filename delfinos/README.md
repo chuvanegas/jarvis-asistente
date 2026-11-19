@@ -13,7 +13,7 @@ Firmware del Flipper Zero en español, basado en Momentum-Firmware, con herramie
 | `fuentes/` | Fuentes del Flipper con tildes y ñ, y la herramienta que las genera |
 | `animaciones/` | Animaciones del delfín para el escritorio y burbujas en español |
 | `glosario/sistema.json` | Los 811 textos del sistema traducidos y revisados para que quepan en pantalla |
-| `catalogo/` | Navegador web de las 549 apps (https://claude.ai/artifact/U3e7yxabF5F9ZMoeqsr3so) y `apps.json` |
+| `catalogo/` | Navegador web de las 645 apps (https://claude.ai/artifact/U3e7yxabF5F9ZMoeqsr3so) y `apps.json` |
 | `herramientas/traducir_con_claude.py` | Traduce con Claude, por lotes, los textos de las apps |
 | `traductor/` | Traductor web (https://claude.ai/artifact/Pihzt6uoV3HECqW97PSJTh). `plantilla.html` + `glosario_es.json` generan `index.html` |
 
