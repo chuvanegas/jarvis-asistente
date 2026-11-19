@@ -1,0 +1,122 @@
+<title>Catálogo DelfínOS</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap">
+<style>
+/* Layout: cabecera con buscador y filtros fijos; rejilla de tarjetas de apps debajo */
+:root{
+  color-scheme:dark;
+  --bg:#0c0d16; --panel:#151827; --panel2:#1a1d30; --line:#272b44;
+  --fg:#e9eaf3; --mut:#9aa0bf; --accent:#ff7a3c; --accent2:#8b6cff; --cyan:#2fd8c6; --green:#3ad17a;
+  --f-display:"Space Grotesk",ui-sans-serif,system-ui,sans-serif;
+  --f-body:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:14.5px;line-height:1.5}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header{padding-block:30px 10px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand svg{width:40px;height:40px}
+h1{font-family:var(--f-display);font-size:25px;margin:0;letter-spacing:-.01em}
+.sub{color:var(--mut);margin:4px 0 0;font-size:14px}
+.stats{display:flex;gap:22px;flex-wrap:wrap;margin:16px 0 4px}
+.stat b{font-family:var(--f-display);font-size:22px;color:var(--cyan)}
+.stat span{color:var(--mut);font-size:12.5px;display:block}
+.controls{position:sticky;top:0;z-index:5;background:linear-gradient(var(--bg) 70%,transparent);padding-block:12px;margin-top:6px}
+#buscar{width:100%;background:#0a0b13;color:var(--fg);border:1px solid var(--line);border-radius:10px;padding:11px 13px;font:15px var(--f-body)}
+#buscar::placeholder{color:var(--mut)}
+.chips{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}
+.chip{font:600 12.5px var(--f-body);padding:7px 12px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--mut);cursor:pointer;white-space:nowrap}
+.chip[aria-pressed="true"]{background:var(--panel2);color:var(--fg);border-color:#3a3f63}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px;margin:14px 0 50px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:14px;min-width:0;display:flex;flex-direction:column;gap:6px}
+.card h3{font-family:var(--f-display);font-size:15px;margin:0;overflow-wrap:anywhere}
+.card p{margin:0;color:var(--mut);font-size:13px;overflow-wrap:anywhere}
+.meta{display:flex;gap:7px;align-items:center;flex-wrap:wrap;margin-top:2px}
+.tag{font:600 10.5px var(--f-body);padding:2px 8px;border-radius:999px;white-space:nowrap}
+.tag.cat{background:#8b6cff22;color:#b9a6ff}
+.tag.src{background:#ffffff0d;color:var(--mut)}
+.tag.src.m{background:#ff7a3c1f;color:var(--accent)}
+.vacio{color:var(--mut);padding:30px 0;text-align:center;grid-column:1/-1}
+.pie{color:var(--mut);font-size:12.5px;border-top:1px solid var(--line);padding:16px 0 40px;margin-top:10px}
+.pie a{color:var(--cyan)}
+[hidden]{display:none!important}
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff7a3c"/><stop offset="1" stop-color="#7c5cff"/></linearGradient></defs><rect width="100" height="100" rx="24" fill="url(#g)"/><path d="M18 40c15-5 28-3 37 6 5-10 14-14 26-14-3 6-3 11-1 15 6 3 10 9 10 16-11-4-18-2-23 3-7 6-16 8-27 4-12-4-19-12-21-24 0-3 0-5-1-6z" fill="#fff"/><circle cx="33" cy="42" r="3.2" fill="#ff7a3c"/></svg>
+      <div><h1>Catálogo DelfínOS</h1><p class="sub">Las mejores apps del Flipper Zero, curadas y sin repetir.</p></div>
+    </div>
+    <div class="stats">
+      <div class="stat"><b id="n-total">—</b><span>apps en total</span></div>
+      <div class="stat"><b id="n-mom">—</b><span>de Momentum</span></div>
+      <div class="stat"><b id="n-cat">—</b><span>del catálogo oficial</span></div>
+      <div class="stat"><b id="n-vis">—</b><span>se muestran</span></div>
+    </div>
+  </header>
+
+  <div class="controls">
+    <input type="search" id="buscar" placeholder="Buscar app… (nombre o descripción)" aria-label="Buscar app">
+    <div class="chips" id="chips" role="group" aria-label="Filtrar por categoría"></div>
+  </div>
+
+  <div class="grid" id="grid"><div class="vacio">Cargando catálogo…</div></div>
+
+  <div class="pie">
+    Fuentes: <b>Momentum</b> (base de DelfínOS) y el <b>catálogo oficial de Flipper</b>, sin apps repetidas.
+    Se irán agregando las mejores de la comunidad después de probarlas.
+    Los nombres y descripciones se traducen al español junto con el firmware.
+    Uso educativo y de laboratorio; revisa las leyes de tu país.
+  </div>
+</div>
+
+<script>
+let apps = [], cat = "Todas", q = "";
+const $ = (id) => document.getElementById(id);
+const norm = (s) => (s || "").toLowerCase();
+
+function pintar() {
+  const grid = $("grid");
+  const vis = apps.filter(a =>
+    (cat === "Todas" || a.cat === cat) &&
+    (!q || norm(a.name).includes(q) || norm(a.desc).includes(q) || norm(a.appid).includes(q)));
+  $("n-vis").textContent = vis.length;
+  grid.replaceChildren();
+  if (!vis.length) { const d = document.createElement("div"); d.className = "vacio"; d.textContent = "Ninguna app coincide con la búsqueda."; grid.append(d); return; }
+  const frag = document.createDocumentFragment();
+  for (const a of vis) {
+    const c = document.createElement("div"); c.className = "card";
+    const h = document.createElement("h3"); h.textContent = a.name; c.append(h);
+    if (a.desc) { const p = document.createElement("p"); p.textContent = a.desc; c.append(p); }
+    const m = document.createElement("div"); m.className = "meta";
+    const tc = document.createElement("span"); tc.className = "tag cat"; tc.textContent = a.cat; m.append(tc);
+    const ts = document.createElement("span"); ts.className = "tag src" + (a.fuente === "Momentum" ? " m" : ""); ts.textContent = a.fuente; m.append(ts);
+    c.append(m); frag.append(c);
+  }
+  grid.append(frag);
+}
+
+function chips() {
+  const cats = ["Todas", ...[...new Set(apps.map(a => a.cat))].sort()];
+  const cont = $("chips"); cont.replaceChildren();
+  for (const c of cats) {
+    const b = document.createElement("button");
+    b.className = "chip"; b.textContent = c === "Todas" ? "Todas" : c + " (" + apps.filter(a => a.cat === c).length + ")";
+    b.setAttribute("aria-pressed", c === cat);
+    b.onclick = () => { cat = c; for (const x of cont.children) x.setAttribute("aria-pressed", "false"); b.setAttribute("aria-pressed", "true"); pintar(); };
+    cont.append(b);
+  }
+}
+
+$("buscar").oninput = (e) => { q = norm(e.target.value); pintar(); };
+
+fetch("apps.json").then(r => r.json()).then(data => {
+  apps = data;
+  $("n-total").textContent = apps.length;
+  $("n-mom").textContent = apps.filter(a => a.fuente === "Momentum").length;
+  $("n-cat").textContent = apps.filter(a => a.fuente !== "Momentum").length;
+  chips(); pintar();
+}).catch(() => { $("grid").replaceChildren(Object.assign(document.createElement("div"), { className: "vacio", textContent: "No se pudo cargar el catálogo." })); });
+</script>

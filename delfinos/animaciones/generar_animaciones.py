@@ -137,7 +137,7 @@ Bubble slots: 1
 Slot: 0
 X: 2
 Y: 4
-Text: ¡Hola! Soy\\nDelfínOS
+Text: DELFINOS_SALUDO
 AlignH: Right
 AlignV: Bottom
 StartFrame: 4
@@ -157,9 +157,8 @@ def anim_logo(salida):
         d.polygon(poli, fill=1)
         ox, oy = transformar(OJO, 27, 27 + dy, 0.55, -0.35, False)
         d.point((round(ox), round(oy)), fill=0)
-        texto(d, 54, 22, "DelfínOS")
-        texto(d, 54, 34, "Flipper Zero", "u8g2_font_haxrcorp4089_es")
-        texto(d, 54, 43, "en español", "u8g2_font_haxrcorp4089_es")
+        texto(d, 54, 24, "DelfínOS")
+        texto(d, 54, 37, "Flipper Zero", "u8g2_font_haxrcorp4089_es")
         olas(d, i * 4, base=56)
         frames.append(im)
     meta = """Filetype: Flipper Animation

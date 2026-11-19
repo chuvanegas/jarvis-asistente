@@ -69,7 +69,7 @@ def aplicar_parches(fw):
         print(f"   ✓ {p.name}")
 
 
-def traducir(fw):
+def traducir(fw, apps=False):
     paso(3, "Traduciendo el sistema al español")
     terminos, no_traducir = dt.cargar_glosario(RAIZ_DELFINOS / "glosario_es.json")
     protegidos = dt.nombres_de_apps(fw / "applications")
@@ -81,7 +81,20 @@ def traducir(fw):
                                              raiz_comparaciones=fw / "applications")
         total += n
         print(f"   ✓ {c}: {n} textos en {archivos} archivos")
-    print(f"   Total: {total} textos")
+    print(f"   Sistema: {total} textos")
+    if apps:
+        # Las apps externas (bundled de Momentum + las que descargaste) se traducen con lo que
+        # haya en el glosario. Los textos aún no traducidos quedan en inglés, sin romper nada.
+        for c in ("applications/external", "applications_user"):
+            if not (fw / c).is_dir():
+                continue
+            n_app, n, archivos = 0, 0, 0
+            for app in sorted(p for p in (fw / c).iterdir() if p.is_dir()):
+                nn, na, _ = dt.traducir_carpeta(app, terminos, no_traducir, fam_nombre=True,
+                                                raiz_comparaciones=app)
+                if nn:
+                    n_app += 1; n += nn; archivos += na
+            print(f"   ✓ {c}: {n} textos en {archivos} archivos de {n_app} apps")
 
 
 def preparar_fuentes(fw):
@@ -117,7 +130,10 @@ def instalar_fuentes(fuentes):
         print("   ✓", r)
 
 
-def animaciones(fw):
+SALUDO = {"es": "¡Hola! Soy\\nDelfínOS", "en": "Hi! I'm\\nDelfinOS"}
+
+
+def animaciones(fw, idioma="es"):
     paso(5, "Animaciones y burbujas del delfín")
     destino = fw / "assets/dolphin/external"
     origen = RAIZ_DELFINOS / "animaciones/dolphin"
@@ -125,6 +141,10 @@ def animaciones(fw):
         if (destino / nombre).exists():
             shutil.rmtree(destino / nombre)
         shutil.copytree(origen / nombre, destino / nombre)
+    # El saludo del salto va según el idioma (el meta trae el marcador DELFINOS_SALUDO).
+    meta_salto = destino / "L1_DelfinOS_Salto_128x64" / "meta.txt"
+    meta_salto.write_text(meta_salto.read_text(encoding="utf-8").replace("DELFINOS_SALUDO", SALUDO[idioma]),
+                          encoding="utf-8")
     manifiesto = destino / "manifest.txt"
     m = manifiesto.read_text(encoding="utf-8")
     for nombre, peso in ANIMACIONES.items():
@@ -134,6 +154,8 @@ def animaciones(fw):
     manifiesto.write_text(m, encoding="utf-8")
     print(f"   ✓ {len(ANIMACIONES)} animaciones de DelfínOS en el escritorio")
 
+    if idioma != "es":
+        return
     burbujas = json.loads((RAIZ_DELFINOS / "animaciones/burbujas_es.json").read_text(encoding="utf-8"))
     n = 0
     for meta in sorted((fw / "assets/dolphin").glob("*/*/meta.txt")):
@@ -156,6 +178,11 @@ def main():
     ap = argparse.ArgumentParser(description="Convierte Momentum en DelfínOS.")
     ap.add_argument("firmware", type=Path, help="carpeta del clon de Momentum (p. ej. ~/Documents/DelfinOS)")
     ap.add_argument("--version", help="etiqueta de Momentum a usar, p. ej. mntm-012")
+    ap.add_argument("--con-apps", action="store_true",
+                    help="traducir también las apps externas (usa el glosario; lo que falte queda en inglés)")
+    ap.add_argument("--idioma", choices=["es", "en"], default="es",
+                    help="es: DelfínOS en español (por defecto). en: DelfínOS en inglés "
+                         "(logo, animaciones y nombres de DelfínOS, pero sin traducir los textos)")
     a = ap.parse_args()
     fw = a.firmware.expanduser().resolve()
     if not (fw / "fbt").exists() or not (fw / "applications").is_dir():
@@ -166,11 +193,16 @@ def main():
     if a.version:
         cambiar_version(fw, a.version)
     fuentes = preparar_fuentes(fw)
-    aplicar_parches(fw)
-    traducir(fw)
+    if a.idioma == "es":
+        aplicar_parches(fw)
+        traducir(fw, apps=a.con_apps)
+    else:
+        paso(2, "Idioma inglés: se omite la traducción (se mantiene el texto original)")
+        paso(3, "DelfínOS en inglés: solo marca, fuentes y animaciones")
     instalar_fuentes(fuentes)
-    animaciones(fw)
-    print("\n✓ Listo. Ahora compila con:  ./compilar_delfinos.sh " + str(fw))
+    animaciones(fw, a.idioma)
+    marca = "es" if a.idioma == "es" else "en"
+    print(f"\n✓ Listo (idioma: {a.idioma}). Ahora compila con:  ./compilar_delfinos.sh {fw} 0.1-{marca}")
 
 
 if __name__ == "__main__":

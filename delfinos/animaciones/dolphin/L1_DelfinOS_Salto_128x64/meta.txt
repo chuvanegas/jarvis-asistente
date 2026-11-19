@@ -16,7 +16,7 @@ Bubble slots: 1
 Slot: 0
 X: 2
 Y: 4
-Text: ¡Hola! Soy\nDelfínOS
+Text: DELFINOS_SALUDO
 AlignH: Right
 AlignV: Bottom
 StartFrame: 4

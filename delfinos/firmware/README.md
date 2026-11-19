@@ -16,9 +16,14 @@ Qué hace, en orden:
 |---|---|
 | Versión | Pasa tu copia a `mntm-012`, la estable (la que tienes ahora es `dev`, menos probada) |
 | Parches | Nombres del menú principal y de Ajustes en español (solo lo que se ve) |
-| Traducción | 1.261 textos del sistema en 328 archivos, con el glosario de 841 términos |
+| Traducción | 1.261 textos del sistema, con el glosario; con `--con-apps` también las apps externas |
 | Fuentes | Las 4 fuentes de pantalla con á é í ó ú ü ñ ¿ ¡ (+734 bytes) |
 | Animaciones | 2 animaciones de DelfínOS en el escritorio y las burbujas del delfín en español |
+
+Opciones:
+- `--idioma es` (por defecto): DelfínOS en español.
+- `--idioma en`: DelfínOS en **inglés** — con el logo, las fuentes y las animaciones de DelfínOS, pero sin traducir los textos. Para ofrecer las dos versiones en la web.
+- `--con-apps`: traduce también las apps externas con lo que haya en el glosario (lo que falte queda en inglés, sin romper nada).
 
 Para deshacer todo y volver a Momentum limpio:
 
@@ -26,13 +31,34 @@ Para deshacer todo y volver a Momentum limpio:
 cd ~/Documents/DelfinOS && git checkout -- . && git clean -fd assets applications
 ```
 
-## 2. Compilar
+## 2. Traducir las apps externas (opcional, una sola vez)
+
+Momentum trae 237 apps y el catálogo oficial aporta otras 312 (ver `delfinos/catalogo/`). Para traducir sus textos de pantalla al español, usa Claude por lotes:
 
 ```bash
-./compilar_delfinos.sh ~/Documents/DelfinOS 0.1
+pip install anthropic
+export ANTHROPIC_API_KEY=sk-ant-...        # o: ant auth login
+python3 ../herramientas/traducir_con_claude.py ~/Documents/DelfinOS/applications/external
 ```
 
-Deja el paquete en `firmware/dist/flipper-z-f7-update-delfinos-0.1.tgz`.
+- Solo pide lo que falta; guarda cada lote al vuelo (si se corta, se vuelve a correr y sigue).
+- Valida cada traducción (formato %d/%s, saltos de línea, que quepa en pantalla) y reintenta una vez; lo dudoso queda en `glosario/apps_revisar.json` para que lo mires.
+- Al terminar, los términos entran en `glosario_es.json`. Luego vuelve a correr `aplicar_delfinos.py ... --con-apps` para aplicarlos.
+
+## 3. Compilar (una versión por idioma)
+
+```bash
+# Español
+python3 aplicar_delfinos.py ~/Documents/DelfinOS --version mntm-012 --con-apps
+./compilar_delfinos.sh ~/Documents/DelfinOS 0.1-es
+
+# Inglés (empieza de una copia limpia)
+cd ~/Documents/DelfinOS && git checkout -- . && git clean -fd assets applications && cd -
+python3 aplicar_delfinos.py ~/Documents/DelfinOS --idioma en
+./compilar_delfinos.sh ~/Documents/DelfinOS 0.1-en
+```
+
+Deja los paquetes en `firmware/dist/`. Sube los dos `.tgz` al servidor y pon sus URLs en `PAQUETES` dentro de `delfinos/index.html` para que el botón de instalar ofrezca español e inglés.
 
 ## 3. Instalar
 

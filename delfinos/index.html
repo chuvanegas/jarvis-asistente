@@ -70,7 +70,16 @@
     font-weight:800;color:#fff;background:linear-gradient(135deg,var(--accent2),var(--accent))}
   .istep h4{font-size:15px;margin-bottom:4px}
   .istep p{font-size:13px;color:var(--mut)}
+  .idioma{display:inline-flex;gap:6px;background:#ffffff08;border:1px solid var(--line);border-radius:12px;padding:5px;margin-bottom:16px}
+  .lang{font:600 14px inherit;padding:8px 16px;border-radius:9px;border:none;background:transparent;color:var(--mut);cursor:pointer}
+  .lang[aria-pressed="true"]{background:var(--accent);color:#1b0c03}
   #connectBtn{font-size:16px;padding:15px 30px;display:inline-block}
+  .donar{border:1px solid #3ad17a44;border-radius:18px;padding:26px;background:linear-gradient(180deg,#3ad17a12,transparent),var(--card);backdrop-filter:blur(12px);text-align:center}
+  .donar h2{font-size:23px;margin:0 0 8px}
+  .donar p{color:var(--mut);max-width:520px;margin:0 auto 18px}
+  .creador{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:14px;padding:12px 18px;background:#ffffff06;margin-bottom:18px}
+  .creador .av{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;font-weight:800;color:#fff;flex-shrink:0}
+  .creador b{font-size:15px}.creador span{display:block;font-size:12.5px;color:var(--mut)}
   #connectBtn[aria-disabled="true"]{opacity:.6;cursor:default;transform:none}
   .istatus{margin-top:18px;font-size:14px;color:var(--mut);min-height:22px}
   .istatus.ok{color:var(--green)}.istatus.err{color:var(--amber)}
@@ -206,6 +215,7 @@
       <a href="#catalogo">Catálogo</a>
       <a href="#calidad">Calidad</a>
       <a href="#admin">Admin</a>
+      <a href="#donar">Donar</a>
       <a href="#etica">Uso ético</a>
     </div>
   </div>
@@ -240,6 +250,10 @@
         <div class="istep"><div class="k">1</div><h4>Conecta el Flipper</h4><p>Por cable USB a tu computador, con qFlipper cerrado</p></div>
         <div class="istep"><div class="k">2</div><h4>Pulsa instalar</h4><p>Se abre Flipper Lab con DelfínOS listo</p></div>
         <div class="istep"><div class="k">3</div><h4>Espera y listo</h4><p>Unos 3 minutos. Tus archivos de la SD se conservan</p></div>
+      </div>
+      <div class="idioma" role="group" aria-label="Idioma de DelfínOS">
+        <button class="lang" id="lang-es" aria-pressed="true">🇪🇸 Español</button>
+        <button class="lang" id="lang-en" aria-pressed="false">🇬🇧 English</button>
       </div>
       <a class="btn primary" id="connectBtn" href="#instalar" aria-disabled="true">🔌 Instalar DelfínOS · primer build en camino</a>
       <div class="istatus" id="istatus">El botón se activa en cuanto publiquemos el primer paquete en nuestro servidor.</div>
@@ -337,7 +351,8 @@
   </section>
 
   <section id="catalogo">
-    <div class="shead"><span class="em">🧰</span><h2>Catálogo de herramientas</h2><p>las mejores de cada categoría, sin repetir</p></div>
+    <div class="shead"><span class="em">🧰</span><h2>Catálogo de herramientas</h2><p>549 apps, las mejores de cada categoría, sin repetir</p></div>
+    <p style="margin:-10px 0 18px"><a class="btn primary" href="https://claude.ai/artifact/U3e7yxabF5F9ZMoeqsr3so" target="_blank" rel="noopener">🔎 Ver el catálogo completo (549 apps)</a></p>
     <div class="grid">
       <div class="cat" style="--c:#ff7a3c"><div class="ic">📡</div><span class="tag">Sub-GHz · Radio</span><h3>Radiofrecuencia</h3>
         <ul><li>Lectura y reenvío <span>— garajes, barreras, timbres (300–928 MHz)</span></li><li>Sub-GHz Bruteforcer</li><li>Weather Station <span>— sensores de clima</span></li><li>Spectrum Analyzer</li></ul></div>
@@ -412,11 +427,25 @@
     </div>
   </section>
 
+  <section id="donar">
+    <div class="donar">
+      <div class="creador">
+        <div class="av">C</div>
+        <div style="text-align:left"><b>Creado por Chu</b><span>Creador y mantenedor de DelfínOS 🐬</span></div>
+      </div>
+      <h2>💚 Apoya el proyecto</h2>
+      <p>DelfínOS es gratis y de código abierto, hecho para que cualquier hispanohablante aproveche su Flipper Zero. Si te sirve y quieres que siga creciendo, una donación ayuda a pagar el servidor y el tiempo de desarrollo.</p>
+      <a class="btn primary" id="donarBtn" href="#donar" aria-disabled="true">☕ Donar · enlace en camino</a>
+      <p class="reqs" style="margin-top:14px">Toda donación es voluntaria. DelfínOS seguirá siendo gratis igual.</p>
+    </div>
+  </section>
+
   <section id="etica">
     <div class="notice warn">
-      <h3>⚖️ Uso responsable</h3>
-      <p>DelfínOS es una herramienta de <b>aprendizaje y concientización</b> en seguridad. Úsala solo sobre <b>tus propios equipos</b> o en laboratorios con autorización. Las leyes sobre seguridad informática y espectro radioeléctrico <b>varían según el país</b>: es tu responsabilidad conocer y cumplir las de tu región.</p>
-      <p>Por eso DelfínOS <b>no incluye jammers</b> ni herramientas de ataque indiscriminado: interfieren a terceros y son ilegales en la mayoría de países. Enseñamos cómo funcionan las vulnerabilidades y cómo protegerse, sin entregar el arma.</p>
+      <h3>⚖️ Aviso legal y uso responsable</h3>
+      <p>DelfínOS es un proyecto <b>exclusivamente educativo y de laboratorio</b>, para aprender y concientizar sobre seguridad. Úsalo solo sobre <b>tus propios equipos</b> o en entornos con autorización expresa.</p>
+      <p>Los autores y colaboradores de DelfínOS <b>no se hacen responsables del uso indebido</b> que terceros hagan de este software ni de las herramientas que incluye. Toda la responsabilidad recae en quien lo usa.</p>
+      <p>Las leyes sobre seguridad informática y espectro radioeléctrico <b>varían según el país</b>: es tu responsabilidad conocer y cumplir las de tu región. Algunas herramientas pueden ser ilegales donde vives; úsalas solo si la ley te lo permite.</p>
     </div>
   </section>
 
@@ -425,24 +454,52 @@
 <footer>
   <div class="brand"><svg class="logo" style="width:28px;height:28px"><use href="#delfin"/></svg> DelfínOS</div>
   <p>El sistema operativo del Flipper Zero, en español · para todo el mundo 🌎</p>
-  <p style="margin-top:6px">Software de código abierto · Uso responsable según las leyes de cada país</p>
+  <p style="margin-top:6px">Creado por <b>Chu</b> · Software de código abierto · Uso educativo y responsable según las leyes de cada país</p>
 </footer>
 
 <script>
   // Cuando el paquete esté en el servidor, pon aquí su URL (el servidor debe permitir CORS
   // desde https://lab.flipper.net). Ejemplo: "https://tu-servidor/delfinos/flipper-z-f7-update-delfinos-0.1.tgz"
-  const PAQUETE = "";
+  // Cuando los paquetes estén en el servidor, pon aquí sus URLs (una por idioma).
+  // El servidor debe permitir CORS desde https://lab.flipper.net.
+  const PAQUETES = {
+    es: "",  // p. ej. "https://tu-servidor/delfinos/flipper-z-f7-update-delfinos-0.1-es.tgz"
+    en: "",  // p. ej. "https://tu-servidor/delfinos/flipper-z-f7-update-delfinos-0.1-en.tgz"
+  };
   const VERSION = "0.1";
+  // Pon aquí tu enlace de donación (Ko-fi, PayPal, Buy Me a Coffee...). Vacío = botón en espera.
+  const DONAR_URL = "";
+  (function () {
+    const d = document.getElementById('donarBtn');
+    if (DONAR_URL) {
+      d.href = DONAR_URL; d.target = "_blank"; d.rel = "noopener";
+      d.removeAttribute('aria-disabled'); d.textContent = "☕ Donar";
+    }
+  })();
+  let idioma = "es";
   const btn = document.getElementById('connectBtn');
   const st = document.getElementById('istatus');
-  if (PAQUETE && btn) {
-    btn.href = "https://lab.flipper.net/?url=" + encodeURIComponent(PAQUETE) + "&channel=delfinos&version=" + encodeURIComponent(VERSION);
-    btn.target = "_blank"; btn.rel = "noopener";
-    btn.removeAttribute('aria-disabled');
-    btn.textContent = "🔌 Instalar DelfínOS " + VERSION;
-    st.textContent = "Se abrirá Flipper Lab en otra pestaña. Pulsa Install y espera a que el Flipper reinicie.";
-    st.className = "istatus ok";
+  function pintarInstalador() {
+    for (const l of ["es", "en"]) document.getElementById("lang-" + l).setAttribute("aria-pressed", l === idioma);
+    const url = PAQUETES[idioma];
+    if (url) {
+      btn.href = "https://lab.flipper.net/?url=" + encodeURIComponent(url) + "&channel=delfinos-" + idioma + "&version=" + encodeURIComponent(VERSION);
+      btn.target = "_blank"; btn.rel = "noopener"; btn.removeAttribute('aria-disabled');
+      btn.textContent = (idioma === "es" ? "🔌 Instalar DelfínOS " : "🔌 Install DelfinOS ") + VERSION;
+      st.textContent = idioma === "es"
+        ? "Se abrirá Flipper Lab en otra pestaña. Pulsa Install y espera a que el Flipper reinicie."
+        : "Flipper Lab opens in a new tab. Press Install and wait for the Flipper to reboot.";
+      st.className = "istatus ok";
+    } else {
+      btn.href = "#instalar"; btn.removeAttribute('target'); btn.setAttribute('aria-disabled', 'true');
+      btn.textContent = "🔌 Instalar DelfínOS · primer build en camino";
+      st.textContent = "El botón se activa en cuanto publiquemos el primer paquete (" + (idioma === "es" ? "español" : "inglés") + ") en nuestro servidor.";
+      st.className = "istatus";
+    }
   }
+  document.getElementById("lang-es").onclick = () => { idioma = "es"; pintarInstalador(); };
+  document.getElementById("lang-en").onclick = () => { idioma = "en"; pintarInstalador(); };
+  pintarInstalador();
 </script>
 </body>
 </html>
