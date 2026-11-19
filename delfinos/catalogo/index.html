@@ -101,6 +101,7 @@ h1{font-family:var(--f-display);font-size:25px;margin:0;letter-spacing:-.01em}
       <button class="chip" id="v-estable" aria-pressed="true">✅ Estable</button>
       <button class="chip" id="v-pruebas" aria-pressed="false">🧪 En pruebas</button>
     </div>
+    <div class="chips" id="tipos" role="group" aria-label="Filtrar por tipo" style="margin-bottom:10px"></div>
     <input type="search" id="buscar" placeholder="Buscar app… (nombre o descripción)" aria-label="Buscar app">
     <div class="chips" id="chips" role="group" aria-label="Filtrar por categoría"></div>
   </div>
@@ -116,8 +117,20 @@ h1{font-family:var(--f-display);font-size:25px;margin:0;letter-spacing:-.01em}
 </div>
 
 <script>
-let base = [], agregadas = {}, lista = [], vista = "estable", cat = "Todas", q = "";
+let base = [], agregadas = {}, lista = [], vista = "estable", cat = "Todas", q = "", tipoF = "pro";
 let db = null, puedeEditar = false;
+// Tipos: pro = todo lo útil (seguridad + utilidad + juegos), sin novedades/toys.
+const TIPOS = [
+  ["pro", "⭐ Pro"], ["seguridad", "🛡️ Seguridad"], ["utilidad", "🧰 Utilidad"],
+  ["juego", "🎮 Juegos"], ["novedad", "🎲 Novedades"], ["todas", "Todas"],
+];
+const tipoDe = (a) => a.tipo || (["🎮 Juegos"].includes(a.cat) ? "juego" : "utilidad");
+const pasaTipo = (a) => {
+  const t = tipoDe(a);
+  if (tipoF === "pro") return t !== "novedad";
+  if (tipoF === "todas") return true;
+  return t === tipoF;
+};
 const CATS = ["🎮 Juegos", "🛠️ Herramientas", "📡 Sub-GHz", "💳 NFC", "💳 RFID", "📺 Infrarrojo",
   "🎵 Multimedia", "⌨️ USB / BadUSB", "🔵 Bluetooth", "🔌 GPIO / Hardware", "🔑 iButton"];
 const $ = (id) => document.getElementById(id);
@@ -146,12 +159,12 @@ function refrescar() {
   $("v-estable").textContent = "✅ Estable (" + estable.length + ")";
   $("v-pruebas").textContent = "🧪 En pruebas (" + pruebas.length + ")";
   lista = vista === "estable" ? estable : pruebas;
-  chips(); pintar();
+  tipos(); chips(); pintar();
 }
 
 function pintar() {
   const grid = $("grid");
-  const vis = lista.filter(a =>
+  const vis = lista.filter(a => pasaTipo(a) &&
     (cat === "Todas" || a.cat === cat) &&
     (!q || norm(a.name).includes(q) || norm(a.desc).includes(q) || norm(a.appid).includes(q)));
   $("n-vis").textContent = vis.length;
@@ -195,13 +208,26 @@ function pintar() {
   grid.append(frag);
 }
 
+function tipos() {
+  const cont = $("tipos"); cont.replaceChildren();
+  for (const [k, etiqueta] of TIPOS) {
+    const n = k === "todas" ? lista.length : lista.filter(a => (k === "pro" ? tipoDe(a) !== "novedad" : tipoDe(a) === k)).length;
+    const b = document.createElement("button");
+    b.className = "chip"; b.textContent = etiqueta + " (" + n + ")";
+    b.setAttribute("aria-pressed", k === tipoF);
+    b.onclick = () => { tipoF = k; cat = "Todas"; for (const x of cont.children) x.setAttribute("aria-pressed", "false"); b.setAttribute("aria-pressed", "true"); chips(); pintar(); };
+    cont.append(b);
+  }
+}
+
 function chips() {
-  const cats = ["Todas", ...[...new Set(lista.map(a => a.cat))].sort()];
+  const porTipo = lista.filter(pasaTipo);
+  const cats = ["Todas", ...[...new Set(porTipo.map(a => a.cat))].sort()];
   const cont = $("chips"); cont.replaceChildren();
   if (!cats.includes(cat)) cat = "Todas";
   for (const c of cats) {
     const b = document.createElement("button");
-    b.className = "chip"; b.textContent = c === "Todas" ? "Todas" : c + " (" + lista.filter(a => a.cat === c).length + ")";
+    b.className = "chip"; b.textContent = c === "Todas" ? "Todas" : c + " (" + porTipo.filter(a => a.cat === c).length + ")";
     b.setAttribute("aria-pressed", c === cat);
     b.onclick = () => { cat = c; for (const x of cont.children) x.setAttribute("aria-pressed", "false"); b.setAttribute("aria-pressed", "true"); pintar(); };
     cont.append(b);
