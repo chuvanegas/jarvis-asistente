@@ -70,7 +70,8 @@
     font-weight:800;color:#fff;background:linear-gradient(135deg,var(--accent2),var(--accent))}
   .istep h4{font-size:15px;margin-bottom:4px}
   .istep p{font-size:13px;color:var(--mut)}
-  #connectBtn{font-size:16px;padding:15px 30px}
+  #connectBtn{font-size:16px;padding:15px 30px;display:inline-block}
+  #connectBtn[aria-disabled="true"]{opacity:.6;cursor:default;transform:none}
   .istatus{margin-top:18px;font-size:14px;color:var(--mut);min-height:22px}
   .istatus.ok{color:var(--green)}.istatus.err{color:var(--amber)}
   .reqs{margin-top:16px;font-size:12.5px;color:var(--mut)}
@@ -234,15 +235,15 @@
     <div class="installer">
       <svg style="width:54px;height:54px;margin-bottom:14px"><use href="#delfin"/></svg>
       <h2>Instala DelfínOS desde el navegador</h2>
-      <p class="lead">Sin programas, sin comandos. Conecta tu Flipper Zero por USB y graba el sistema operativo directo desde aquí.</p>
+      <p class="lead">Sin programas, sin comandos. Conecta tu Flipper Zero por USB y la instalación corre en Flipper Lab, el instalador web oficial de Flipper.</p>
       <div class="isteps">
-        <div class="istep"><div class="k">1</div><h4>Conecta el Flipper</h4><p>Por cable USB a tu computador</p></div>
-        <div class="istep"><div class="k">2</div><h4>Pulsa instalar</h4><p>El navegador detecta tu equipo</p></div>
-        <div class="istep"><div class="k">3</div><h4>Espera y listo</h4><p>DelfínOS queda grabado</p></div>
+        <div class="istep"><div class="k">1</div><h4>Conecta el Flipper</h4><p>Por cable USB a tu computador, con qFlipper cerrado</p></div>
+        <div class="istep"><div class="k">2</div><h4>Pulsa instalar</h4><p>Se abre Flipper Lab con DelfínOS listo</p></div>
+        <div class="istep"><div class="k">3</div><h4>Espera y listo</h4><p>Unos 3 minutos. Tus archivos de la SD se conservan</p></div>
       </div>
-      <button class="btn primary" id="connectBtn">🔌 Conectar e instalar DelfínOS</button>
-      <div class="istatus" id="istatus"></div>
-      <p class="reqs">Requiere <b>Chrome</b> o <b>Edge</b> en computador (usan WebSerial). Desde el celular, usa la app de Flipper. · Comando manual en Mac: <code>./fbt flash_usb</code></p>
+      <a class="btn primary" id="connectBtn" href="#instalar" aria-disabled="true">🔌 Instalar DelfínOS · primer build en camino</a>
+      <div class="istatus" id="istatus">El botón se activa en cuanto publiquemos el primer paquete en nuestro servidor.</div>
+      <p class="reqs">Requiere <b>Chrome</b> o <b>Edge</b> en computador (usan WebSerial). · Sin internet: en qFlipper, <b>Install from file</b> y elige el <code>.tgz</code> de DelfínOS. · Base: Momentum <code>mntm-012</code> (estable).</p>
     </div>
   </section>
 
@@ -428,16 +429,20 @@
 </footer>
 
 <script>
-  const btn=document.getElementById('connectBtn');
-  const st=document.getElementById('istatus');
-  function set(msg,cls){st.textContent=msg;st.className='istatus '+(cls||'');}
-  btn&&btn.addEventListener('click',async()=>{
-    if(!('serial' in navigator)){set('Abre esta página en Chrome o Edge desde un computador para instalar.','err');return;}
-    try{set('Selecciona tu Flipper Zero en la ventana del navegador…');
-      await navigator.serial.requestPort();
-      set('✓ Flipper detectado. El grabado de DelfínOS se activa cuando publiquemos el primer build. ¡Ya casi!','ok');
-    }catch(e){set('No se seleccionó ningún equipo. Conéctalo por USB e inténtalo de nuevo.','err');}
-  });
+  // Cuando el paquete esté en el servidor, pon aquí su URL (el servidor debe permitir CORS
+  // desde https://lab.flipper.net). Ejemplo: "https://tu-servidor/delfinos/flipper-z-f7-update-delfinos-0.1.tgz"
+  const PAQUETE = "";
+  const VERSION = "0.1";
+  const btn = document.getElementById('connectBtn');
+  const st = document.getElementById('istatus');
+  if (PAQUETE && btn) {
+    btn.href = "https://lab.flipper.net/?url=" + encodeURIComponent(PAQUETE) + "&channel=delfinos&version=" + encodeURIComponent(VERSION);
+    btn.target = "_blank"; btn.rel = "noopener";
+    btn.removeAttribute('aria-disabled');
+    btn.textContent = "🔌 Instalar DelfínOS " + VERSION;
+    st.textContent = "Se abrirá Flipper Lab en otra pestaña. Pulsa Install y espera a que el Flipper reinicie.";
+    st.className = "istatus ok";
+  }
 </script>
 </body>
 </html>

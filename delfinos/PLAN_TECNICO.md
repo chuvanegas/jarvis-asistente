@@ -48,7 +48,10 @@ No existe un emulador completo y maduro del Flipper que ejecute cualquier app, a
 
 ## Hoja de ruta
 1. **Etapa 1 — Mac y primer build**: Command Line Tools ✅, git ✅, clon de Momentum ✅ (renombrado a `DelfinOS`), VS Code, primer `./fbt` sin cambios.
-2. **Etapa 2 — Identidad y español**: nombre, logo, arranque; aplicar glosario a los menús; compilar y grabar en el Flipper.
-3. **Etapa 3 — Herramienta de administrador**: traductor + `ufbt` para apps de terceros; luego ventana gráfica en la Mac.
-4. **Etapa 4 — Servidor**: publicar web + instalador conectado a un build real; API del catálogo.
+2. **Etapa 2 — Identidad y español**: ✅ sistema traducido (1.261 textos), fuentes con tildes y ñ, menú en español, animaciones del delfín, base estable `mntm-012` (`firmware/aplicar_delfinos.py`). Falta: compilar y probar en el Flipper.
+3. **Etapa 3 — Herramienta de administrador** (✅ traductor web y de Mac, con reglas de seguridad): traductor + `ufbt` para apps de terceros; luego ventana gráfica en la Mac.
+4. **Etapa 4 — Servidor**: ✅ instalador web vía Flipper Lab (`lab.flipper.net/?url=`). Falta: subir el `.tgz` al servidor con CORS para lab.flipper.net; API del catálogo.
 5. **Etapa 5 — Pipeline**: compilación automática (CI), staging, Flipper de pruebas, publicación.
+
+## Apps externas (siguiente)
+Momentum trae 245 apps externas con unos 5.500 textos de pantalla. El plan: elegir las mejores de cada categoría (Momentum + catálogo oficial + comunidad), traducirlas por tandas con el traductor y publicarlas en el catálogo de DelfínOS después de probarlas.

@@ -1,0 +1,23 @@
+Filetype: Flipper Animation
+Version: 1
+
+Width: 128
+Height: 64
+Passive frames: 4
+Active frames: 8
+Frames order: 0 1 2 3 4 5 6 7 8 9 10 11
+Active cycles: 2
+Frame rate: 4
+Duration: 3600
+Active cooldown: 5
+
+Bubble slots: 1
+
+Slot: 0
+X: 2
+Y: 4
+Text: ¡Hola! Soy\nDelfínOS
+AlignH: Right
+AlignV: Bottom
+StartFrame: 4
+EndFrame: 7

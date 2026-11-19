@@ -1,0 +1,101 @@
+diff --git a/applications/services/gui/delfinos_nombres.h b/applications/services/gui/delfinos_nombres.h
+new file mode 100644
+index 0000000..1798e33
+--- /dev/null
++++ b/applications/services/gui/delfinos_nombres.h
+@@ -0,0 +1,41 @@
++/**
++ * DelfínOS: nombres en español de las apps del sistema, SOLO para mostrarlos.
++ *
++ * El nombre interno (name= en application.fam) se queda en inglés porque con él
++ * abren las apps el celular, qFlipper, los atajos y los Favoritos.
++ */
++#pragma once
++
++#include <string.h>
++
++typedef struct {
++    const char* interno;
++    const char* visible;
++} DelfinosNombre;
++
++static const DelfinosNombre delfinos_nombres[] = {
++    {"Infrared", "Infrarrojo"},
++    {"Momentum", "DelfínOS"},
++    {"About", "Acerca de"},
++    {"Clock & Alarm", "Reloj y alarma"},
++    {"Desktop", "Escritorio"},
++    {"Expansion Modules", "Módulos externos"},
++    {"Input", "Botones"},
++    {"LCD and Notifications", "Pantalla y avisos"},
++    {"Passport", "Pasaporte"},
++    {"Power", "Energía"},
++    {"Storage", "Almacenamiento"},
++    {"System", "Sistema"},
++    {"Bluetooth Remote", "Mando Bluetooth"},
++    {"USB Remote", "Mando USB"},
++    {"JS Runner", "Ejecutar JS"},
++    {"FindMy Flipper", "Buscar Flipper"},
++};
++
++static inline const char* delfinos_nombre_visible(const char* interno) {
++    if(!interno) return interno;
++    for(size_t i = 0; i < sizeof(delfinos_nombres) / sizeof(delfinos_nombres[0]); i++) {
++        if(strcmp(interno, delfinos_nombres[i].interno) == 0) return delfinos_nombres[i].visible;
++    }
++    return interno;
++}
+diff --git a/applications/services/gui/modules/menu.c b/applications/services/gui/modules/menu.c
+index 153de3e..5a4f934 100644
+--- a/applications/services/gui/modules/menu.c
++++ b/applications/services/gui/modules/menu.c
+@@ -1,6 +1,7 @@
+ #include "menu.h"
+ 
+ #include "locale/locale.h"
++#include <gui/delfinos_nombres.h>
+ #include <gui/elements.h>
+ #include <assets_icons.h>
+ #include <gui/icon_i.h>
+@@ -50,7 +51,7 @@ static void menu_get_name(MenuItem* item, FuriString* name, bool shorter) {
+     furi_string_set(name, item->label);
+     if(shorter) {
+         if(!furi_string_cmp(name, "Momentum")) {
+-            furi_string_set(name, "MNTM");
++            furi_string_set(name, "Delfín");
+             return;
+         } else if(!furi_string_cmp(name, "125 kHz RFID")) {
+             furi_string_set(name, "RFID");
+@@ -58,8 +59,12 @@ static void menu_get_name(MenuItem* item, FuriString* name, bool shorter) {
+         } else if(!furi_string_cmp(name, "Sub-GHz")) {
+             furi_string_set(name, "SubGHz");
+             return;
++        } else if(!furi_string_cmp(name, "Infrared")) {
++            furi_string_set(name, "IR");
++            return;
+         }
+     }
++    furi_string_set(name, delfinos_nombre_visible(item->label));
+     if(furi_string_start_with_str(name, "[")) {
+         size_t trim = furi_string_search_str(name, "] ", 1);
+         if(trim != FURI_STRING_FAILURE) {
+diff --git a/applications/services/loader/loader_menu.c b/applications/services/loader/loader_menu.c
+index adc95f0..09c1a88 100644
+--- a/applications/services/loader/loader_menu.c
++++ b/applications/services/loader/loader_menu.c
+@@ -1,5 +1,6 @@
+ #include <gui/modules/menu.h>
+ #include <gui/modules/submenu.h>
++#include <gui/delfinos_nombres.h>
+ #include <assets_icons.h>
+ #include <applications.h>
+ #include <archive/helpers/archive_favorites.h>
+@@ -360,7 +361,7 @@ static void loader_menu_build_submenu(LoaderMenuApp* app, LoaderMenu* loader_men
+     for(size_t i = 0; i < FLIPPER_SETTINGS_APPS_COUNT; i++) {
+         submenu_add_item_ex(
+             app->settings_menu,
+-            FLIPPER_SETTINGS_APPS[i].name,
++            delfinos_nombre_visible(FLIPPER_SETTINGS_APPS[i].name),
+             i,
+             loader_menu_settings_menu_callback,
+             NULL);

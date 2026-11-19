@@ -1,0 +1,121 @@
+{
+ "_info": "Textos de las burbujas del delfín, en el mismo orden que aparecen en cada meta.txt (\\n = salto de línea).",
+ "L1_Boxing_128x64": [
+  "¡¡¡RAYOS!!!",
+  "¿Y tú qué\nmiras?!"
+ ],
+ "L1_Cry_128x64": [
+  "Te extraño",
+  "mi amigo...",
+  "¿Por qué\nnunca estás?"
+ ],
+ "L1_Happy_holidays_128x64": [
+  " ¡FELICES\nFIESTAS!"
+ ],
+ "L1_Kaiju_128x64": [
+  "Qué onda",
+  "¿Qué acaba",
+  "de pasar?",
+  "Ni idea"
+ ],
+ "L1_Laptop_128x51": [
+  "Debo descansar",
+  "pero hoy no"
+ ],
+ "L1_Leaving_sad_128x64": [
+  "Adiós.",
+  "Olvidé algo..."
+ ],
+ "L1_Mad_fist_128x64": [
+  "¿¡Te parezco\nun chiste?!"
+ ],
+ "L1_My_dude_128x64": [
+  "Mi pana",
+  "Mi pana"
+ ],
+ "L1_Painting_128x64": [
+  "Sin errores,",
+  "solo felices\n accidentes"
+ ],
+ "L1_Procrastinating_128x64": [
+  "Ya vuelvo\nal trabajo"
+ ],
+ "L1_Read_books_128x64": [
+  "Giro obvio"
+ ],
+ "L1_Sad_song_128x64": [
+  "Solo yo",
+  "No quiero",
+  "estar",
+  "solo yo",
+  "nunca más",
+  "No importa",
+  "Encontraré",
+  "a alguien como",
+  "túuuuu",
+  "Solo te deseo",
+  "lo mejor",
+  "a ti",
+  "¿En qué me",
+  "convertí?",
+  "Mi querido",
+  "amigo",
+  "Todos",
+  "lo sé",
+  "se van",
+  "al\n final",
+  "Pudimos\n haber sido",
+  "tan buenos\n juntos",
+  "Pudimos\n haber vivido",
+  "este baile\n por siempre",
+  "Pero ahora",
+  "¿quién va a",
+  "bailar",
+  "conmigo?",
+  "Por favor",
+  "quédate"
+ ],
+ "L1_Senpai_128x64": [
+  "¡¡¡SENPAI!!!"
+ ],
+ "L1_Showtime_128x64": [
+  "¡A ESCENA!"
+ ],
+ "L1_Sleep_128x64": [
+  "En un sueño,\npodía caminar...",
+  "¡DIOS MÍO!",
+  "Solo un sueño..."
+ ],
+ "L1_Sleigh_ride_128x64": [
+  "¡¡AAAAaAAAAYYy!!"
+ ],
+ "L1_Tv_128x47": [
+  "Toma la pastilla roja",
+  "Hago mejores chistes"
+ ],
+ "L1_Wardriving_128x64": [
+  "¡Hackeado!"
+ ],
+ "L1_Waves_128x50": [
+  "¡Soy feliz,\nmi amigo!",
+  "¡Hasta luego\ny gracias por\nel pescado!",
+  "Ojalá pudiera",
+  "nadar todo el día"
+ ],
+ "L2_Coding_in_the_shell_128x64": [
+  "¡BUEN TRABAJO!"
+ ],
+ "L2_Hacking_pc_128x64": [
+  "Métete con\nel mejor,",
+  "y cae como\nel resto."
+ ],
+ "L2_Soldering_128x64": [
+  "Ocupado ahora"
+ ],
+ "L3_Freedom_2_dolphins_128x64": [
+  "¡Gracias, pana!"
+ ],
+ "L1_BadBattery_128x47": [
+  "¡Me siento mal!\nMe muero..."
+ ]
+}

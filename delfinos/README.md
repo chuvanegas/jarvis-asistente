@@ -9,6 +9,10 @@ Firmware del Flipper Zero en español, basado en Momentum-Firmware, con herramie
 | `HISTORIAL.md` | Resumen de decisiones del chat original y estado en la Mac |
 | `glosario_es.json` | Glosario inglés → español (`terminos`) y lista de marcas/términos que no se traducen (`no_traducir`) |
 | `herramientas/delfin_traductor.py` | Traductor para la Mac: traduce una app a una copia `_es` y lista los pendientes |
+| `firmware/` | **Convierte Momentum en DelfínOS y lo compila** (ver `firmware/README.md`) |
+| `fuentes/` | Fuentes del Flipper con tildes y ñ, y la herramienta que las genera |
+| `animaciones/` | Animaciones del delfín para el escritorio y burbujas en español |
+| `glosario/sistema.json` | Los 811 textos del sistema traducidos y revisados para que quepan en pantalla |
 | `traductor/` | Traductor web (https://claude.ai/artifact/Pihzt6uoV3HECqW97PSJTh). `plantilla.html` + `glosario_es.json` generan `index.html` |
 
 ## Traducir una app
