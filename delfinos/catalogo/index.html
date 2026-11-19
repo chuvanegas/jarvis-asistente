@@ -29,10 +29,16 @@ h1{font-family:var(--f-display);font-size:25px;margin:0;letter-spacing:-.01em}
 .chip{font:600 12.5px var(--f-body);padding:7px 12px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--mut);cursor:pointer;white-space:nowrap}
 .chip[aria-pressed="true"]{background:var(--panel2);color:var(--fg);border-color:#3a3f63}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px;margin:14px 0 50px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:14px;min-width:0;display:flex;flex-direction:column;gap:6px}
-.card h3{font-family:var(--f-display);font-size:15px;margin:0;overflow-wrap:anywhere}
-.card p{margin:0;color:var(--mut);font-size:13px;overflow-wrap:anywhere}
-.meta{display:flex;gap:7px;align-items:center;flex-wrap:wrap;margin-top:2px}
+/* Tarjeta estilo tienda de apps (como la de Flipper): ícono + nombre + categoría */
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px;min-width:0;display:flex;flex-direction:column;gap:9px;transition:border-color .15s,transform .15s}
+.card:hover{border-color:#3a3f63;transform:translateY(-2px)}
+.card-head{display:flex;gap:11px;align-items:center;min-width:0}
+.card-ico{width:46px;height:46px;flex-shrink:0;border-radius:12px;display:grid;place-items:center;font-size:22px;background:var(--ico,#8b6cff22);box-shadow:inset 0 0 0 1px #ffffff12}
+.card-tit{min-width:0}
+.card h3{font-family:var(--f-display);font-size:15.5px;margin:0;overflow-wrap:anywhere;line-height:1.2}
+.card-cat{font-size:12px;color:var(--mut);margin-top:2px}
+.card p{margin:0;color:#b6bcd8;font-size:13px;overflow-wrap:anywhere;line-height:1.45;flex:1}
+.meta{display:flex;gap:7px;align-items:center;flex-wrap:wrap;margin-top:auto;padding-top:2px}
 .tag{font:600 10.5px var(--f-body);padding:2px 8px;border-radius:999px;white-space:nowrap}
 .tag.cat{background:#8b6cff22;color:#b9a6ff}
 .tag.src{background:#ffffff0d;color:var(--mut)}
@@ -130,6 +136,14 @@ const SERVIDOR = "";
 const TIPOS = [
   ["todas", "Todas"], ["seguridad", "🛡️ Seguridad"], ["utilidad", "🧰 Utilidad"], ["juego", "🎮 Juegos"],
 ];
+// Color del ícono según la categoría (como los iconos de colores de la tienda de Flipper)
+const COLOR_CAT = {
+  "🎮 Juegos": "#8b6cff33", "🛠️ Herramientas": "#2fd8c633", "📡 Sub-GHz": "#ff7a3c33",
+  "💳 NFC": "#2fd8c633", "💳 RFID": "#3ad17a33", "📺 Infrarrojo": "#8b6cff33",
+  "🎵 Multimedia": "#ff5a6a33", "⌨️ USB / BadUSB": "#ffb84d33", "🔵 Bluetooth": "#5b8cff33",
+  "🔌 GPIO / Hardware": "#2fd8c633", "🔑 iButton": "#ffb84d33",
+};
+const colorCat = (c) => COLOR_CAT[c] || "#8b6cff33";
 const tipoDe = (a) => a.tipo || (a.cat === "🎮 Juegos" ? "juego" : "utilidad");
 const pasaTipo = (a) => tipoF === "todas" || tipoDe(a) === tipoF;
 const CATS = ["🎮 Juegos", "🛠️ Herramientas", "📡 Sub-GHz", "💳 NFC", "💳 RFID", "📺 Infrarrojo",
@@ -178,10 +192,17 @@ function pintar() {
   const frag = document.createDocumentFragment();
   for (const a of vis) {
     const c = document.createElement("div"); c.className = "card";
-    const h = document.createElement("h3"); h.textContent = a.name; c.append(h);
+    // Cabecera estilo tienda: ícono (emoji de la categoría) + nombre + categoría
+    const head = document.createElement("div"); head.className = "card-head";
+    const ico = document.createElement("div"); ico.className = "card-ico";
+    const emoji = (a.cat.match(/^\S+/) || ["📦"])[0];
+    ico.textContent = emoji; ico.style.setProperty("--ico", colorCat(a.cat));
+    const tit = document.createElement("div"); tit.className = "card-tit";
+    const h = document.createElement("h3"); h.textContent = a.name; tit.append(h);
+    const sc = document.createElement("div"); sc.className = "card-cat"; sc.textContent = a.cat.replace(/^\S+\s*/, "");
+    tit.append(sc); head.append(ico, tit); c.append(head);
     if (a.desc) { const p = document.createElement("p"); p.textContent = a.desc; c.append(p); }
     const m = document.createElement("div"); m.className = "meta";
-    const tc = document.createElement("span"); tc.className = "tag cat"; tc.textContent = a.cat; m.append(tc);
     const nueva = !!agregadas[a.appid];
     const ts = document.createElement("span");
     ts.className = "tag " + (nueva ? "nueva" : a.fuente === "Momentum" ? "src m" : "src");
