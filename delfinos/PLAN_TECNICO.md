@@ -53,5 +53,8 @@ No existe un emulador completo y maduro del Flipper que ejecute cualquier app, a
 4. **Etapa 4 — Servidor**: ✅ instalador web vía Flipper Lab (`lab.flipper.net/?url=`). Falta: subir el `.tgz` al servidor con CORS para lab.flipper.net; API del catálogo.
 5. **Etapa 5 — Pipeline**: compilación automática (CI), staging, Flipper de pruebas, publicación.
 
+## Catálogo con panel de administrador ✅
+El navegador web del catálogo (delfinos/catalogo/) lleva un panel de administrador: cuando traduces una app con el Traductor DelfínOS y la pruebas en el Flipper, la agregas al catálogo desde ahí. Se guarda en una base de datos compartida y la ven todos. Solo quien tiene permiso de edición ve el panel y puede agregar o quitar; los visitantes solo leen.
+
 ## Apps externas (siguiente)
 Momentum trae 245 apps externas con unos 5.500 textos de pantalla. El plan: elegir las mejores de cada categoría (Momentum + catálogo oficial + comunidad), traducirlas por tandas con el traductor y publicarlas en el catálogo de DelfínOS después de probarlas.

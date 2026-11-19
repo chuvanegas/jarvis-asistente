@@ -40,6 +40,26 @@ h1{font-family:var(--f-display);font-size:25px;margin:0;letter-spacing:-.01em}
 .vacio{color:var(--mut);padding:30px 0;text-align:center;grid-column:1/-1}
 .pie{color:var(--mut);font-size:12.5px;border-top:1px solid var(--line);padding:16px 0 40px;margin-top:10px}
 .pie a{color:var(--cyan)}
+/* Panel de administrador: agregar app probada */
+.admin{border:1px solid #3ad17a44;border-radius:14px;background:linear-gradient(180deg,#3ad17a10,transparent),var(--panel);padding:16px;margin:12px 0}
+.admin h2{font-family:var(--f-display);font-size:16px;margin:0 0 4px}
+.admin p.ayuda{margin:0 0 12px;color:var(--mut);font-size:13px}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:620px){.form{grid-template-columns:1fr}}
+.form label{display:flex;flex-direction:column;gap:4px;font-size:12px;color:var(--mut)}
+.form .ancho{grid-column:1/-1}
+.form input,.form select,.form textarea{background:#0a0b13;color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font:13.5px var(--f-body)}
+.form textarea{resize:vertical;min-height:52px}
+.form .acc{grid-column:1/-1;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.chk{display:flex;gap:7px;align-items:center;font-size:13px;color:var(--fg)}
+.btn{font:600 13.5px var(--f-body);padding:9px 16px;border-radius:9px;border:1px solid var(--line);background:var(--panel2);color:var(--fg);cursor:pointer}
+.btn.ok{background:var(--green);border-color:var(--green);color:#06240f}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.aviso{font-size:13px;margin-top:8px}
+.aviso.ok{color:var(--green)}.aviso.err{color:#ffb84d}
+.tag.nueva{background:#3ad17a22;color:var(--green)}
+.card .quitar{align-self:flex-start;background:none;border:none;color:var(--mut);cursor:pointer;font-size:12px;padding:0;margin-top:2px}
+.card .quitar:hover{color:#ff5a6a}
 [hidden]{display:none!important}
 </style>
 
@@ -57,6 +77,23 @@ h1{font-family:var(--f-display);font-size:25px;margin:0;letter-spacing:-.01em}
     </div>
   </header>
 
+  <section class="admin" id="admin" hidden>
+    <h2>➕ Agregar app probada al catálogo</h2>
+    <p class="ayuda">Cuando traduzcas una app con el <a href="https://claude.ai/artifact/Pihzt6uoV3HECqW97PSJTh" target="_blank" rel="noopener" style="color:var(--cyan)">Traductor DelfínOS</a> y la pruebes en tu Flipper, agrégala aquí. Se guarda y la verán todos. Solo tú (y quien tenga permiso de edición) ves este panel.</p>
+    <form class="form" id="form" autocomplete="off">
+      <label>ID de la app (carpeta)<input id="f-appid" required placeholder="mi_app" pattern="[A-Za-z0-9_\-]+"></label>
+      <label>Nombre visible<input id="f-name" required placeholder="Mi App"></label>
+      <label class="ancho">Descripción (en español)<textarea id="f-desc" placeholder="Qué hace la app, en una frase."></textarea></label>
+      <label>Categoría<select id="f-cat"></select></label>
+      <label>Fuente<input id="f-fuente" value="Comunidad" placeholder="Comunidad / GitHub…"></label>
+      <div class="acc">
+        <span class="chk"><input type="checkbox" id="f-probada" checked><label for="f-probada" style="flex-direction:row">Probada en un Flipper</label></span>
+        <button class="btn ok" type="submit" id="f-guardar">Agregar al catálogo</button>
+        <span class="aviso" id="f-aviso" aria-live="polite"></span>
+      </div>
+    </form>
+  </section>
+
   <div class="controls">
     <input type="search" id="buscar" placeholder="Buscar app… (nombre o descripción)" aria-label="Buscar app">
     <div class="chips" id="chips" role="group" aria-label="Filtrar por categoría"></div>
@@ -73,9 +110,24 @@ h1{font-family:var(--f-display);font-size:25px;margin:0;letter-spacing:-.01em}
 </div>
 
 <script>
-let apps = [], cat = "Todas", q = "";
+let base = [], agregadas = {}, apps = [], cat = "Todas", q = "";
+let db = null, puedeEditar = false;
+const CATS = ["🎮 Juegos", "🛠️ Herramientas", "📡 Sub-GHz", "💳 NFC", "💳 RFID", "📺 Infrarrojo",
+  "🎵 Multimedia", "⌨️ USB / BadUSB", "🔵 Bluetooth", "🔌 GPIO / Hardware", "🔑 iButton"];
 const $ = (id) => document.getElementById(id);
 const norm = (s) => (s || "").toLowerCase();
+const limpiarId = (s) => (s || "").trim().replace(/[^A-Za-z0-9_\-]/g, "_").slice(0, 60);
+
+function fusionar() {
+  const porId = {};
+  for (const a of base) porId[a.appid] = a;
+  for (const a of Object.values(agregadas)) porId[a.appid] = a;  // la agregada pisa a la base del mismo id
+  apps = Object.values(porId).sort((a, b) => (a.cat + a.name).toLowerCase() < (b.cat + b.name).toLowerCase() ? -1 : 1);
+  $("n-total").textContent = apps.length;
+  $("n-mom").textContent = apps.filter(a => a.fuente === "Momentum").length;
+  $("n-cat").textContent = apps.filter(a => a.fuente !== "Momentum").length;
+  chips(); pintar();
+}
 
 function pintar() {
   const grid = $("grid");
@@ -92,8 +144,16 @@ function pintar() {
     if (a.desc) { const p = document.createElement("p"); p.textContent = a.desc; c.append(p); }
     const m = document.createElement("div"); m.className = "meta";
     const tc = document.createElement("span"); tc.className = "tag cat"; tc.textContent = a.cat; m.append(tc);
-    const ts = document.createElement("span"); ts.className = "tag src" + (a.fuente === "Momentum" ? " m" : ""); ts.textContent = a.fuente; m.append(ts);
-    c.append(m); frag.append(c);
+    const nueva = !!agregadas[a.appid];
+    const ts = document.createElement("span");
+    ts.className = "tag " + (nueva ? "nueva" : a.fuente === "Momentum" ? "src m" : "src");
+    ts.textContent = nueva ? (a.probada ? "✓ Probada" : "Agregada") : a.fuente; m.append(ts);
+    c.append(m);
+    if (nueva && puedeEditar) {
+      const x = document.createElement("button"); x.className = "quitar"; x.textContent = "Quitar del catálogo";
+      x.onclick = () => quitar(a.appid); c.append(x);
+    }
+    frag.append(c);
   }
   grid.append(frag);
 }
@@ -112,11 +172,52 @@ function chips() {
 
 $("buscar").oninput = (e) => { q = norm(e.target.value); pintar(); };
 
-fetch("apps.json").then(r => r.json()).then(data => {
-  apps = data;
-  $("n-total").textContent = apps.length;
-  $("n-mom").textContent = apps.filter(a => a.fuente === "Momentum").length;
-  $("n-cat").textContent = apps.filter(a => a.fuente !== "Momentum").length;
-  chips(); pintar();
-}).catch(() => { $("grid").replaceChildren(Object.assign(document.createElement("div"), { className: "vacio", textContent: "No se pudo cargar el catálogo." })); });
+// ---- cargar base + apps agregadas (base de datos compartida) ----
+fetch("apps.json").then(r => r.json()).then(data => { base = data; fusionar(); })
+  .catch(() => { $("grid").replaceChildren(Object.assign(document.createElement("div"), { className: "vacio", textContent: "No se pudo cargar el catálogo." })); });
+
+for (const c of CATS) { const o = document.createElement("option"); o.value = o.textContent = c; $("f-cat").append(o); }
+
+async function conectar() {
+  const cl = window.claude;
+  if (!cl || !cl.use) return;  // sin runtime: solo lectura de la base
+  const [d, u] = await Promise.all([cl.use("db"), cl.use("user")]);
+  puedeEditar = u ? !!u.canEdit() : false;
+  if (puedeEditar) $("admin").hidden = false;
+  if (!d) return;
+  db = d;
+  const t = setTimeout(() => {}, 10000);
+  db.collection("apps").onSnapshot((snap) => {
+    clearTimeout(t);
+    agregadas = {};
+    snap.docs.forEach((s) => { const v = s.data(); if (v && v.appid) agregadas[v.appid] = v; });
+    fusionar();
+  }, () => {});
+}
+
+$("form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const aviso = $("f-aviso");
+  const appid = limpiarId($("f-appid").value);
+  const name = $("f-name").value.trim();
+  if (!appid || !name) { aviso.textContent = "Pon al menos el ID y el nombre."; aviso.className = "aviso err"; return; }
+  const app = { appid, name, cat: $("f-cat").value, desc: $("f-desc").value.trim(),
+                fuente: $("f-fuente").value.trim() || "Comunidad", probada: $("f-probada").checked, fecha: Date.now() };
+  if (!db || !puedeEditar) { aviso.textContent = "Abre esta página en claude.ai con permiso de edición para guardar."; aviso.className = "aviso err"; return; }
+  $("f-guardar").disabled = true;
+  try {
+    await db.collection("apps").doc(appid).set(app);
+    aviso.textContent = "✓ " + name + " agregada al catálogo."; aviso.className = "aviso ok";
+    $("form").reset(); $("f-fuente").value = "Comunidad"; $("f-probada").checked = true;
+  } catch (err) {
+    aviso.textContent = "No se pudo guardar: " + (err.message || err.code); aviso.className = "aviso err";
+  } finally { $("f-guardar").disabled = false; }
+});
+
+async function quitar(appid) {
+  if (!db || !puedeEditar) return;
+  try { await db.collection("apps").doc(appid).delete(); } catch (e) {}
+}
+
+conectar();
 </script>
