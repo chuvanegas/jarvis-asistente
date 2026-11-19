@@ -263,15 +263,6 @@
 "tipo": "juego"
 },
 {
-"appid": "banana",
-"name": "Banana",
-"cat": "🎮 Juegos",
-"desc": "Banana. A todos les gusta la banana.",
-"fuente": "Catálogo oficial",
-"github": "https://github.com/DrEverr/FlipperApps",
-"tipo": "novedad"
-},
-{
 "appid": "beepback",
 "name": "BEEPBACK",
 "cat": "🎮 Juegos",
@@ -384,7 +375,7 @@
 "desc": "Juego de adivinar el color",
 "fuente": "Momentum",
 "github": "https://github.com/leedave/Leeds-Flipper-Zero-Applications",
-"tipo": "novedad"
+"tipo": "juego"
 },
 {
 "appid": "game_connect_wires",
@@ -423,15 +414,6 @@
 "tipo": "juego"
 },
 {
-"appid": "random_decision_maker",
-"name": "Decision Maker",
-"cat": "🎮 Juegos",
-"desc": "Gira una ruleta para elegir una opción al azar.",
-"fuente": "Catálogo oficial",
-"github": "https://github.com/Gerijacki/random_decision_maker",
-"tipo": "novedad"
-},
-{
 "appid": "dice_app",
 "name": "Dice D&D",
 "cat": "🎮 Juegos",
@@ -441,30 +423,12 @@
 "tipo": "juego"
 },
 {
-"appid": "digital_kaleidoscope",
-"name": "Digital Kaleidoscope",
-"cat": "🎮 Juegos",
-"desc": "El Caleidoscopio Digital convierte tu Flipper en un visualizador animado de bolsillo. Elige entre cuatro estilos y ajusta la densidad del patrón",
-"fuente": "Catálogo oficial",
-"github": "https://github.com/JamesR555/digital_kaleidoscope",
-"tipo": "novedad"
-},
-{
 "appid": "doom",
 "name": "DOOM",
 "cat": "🎮 Juegos",
 "desc": "¿Correrá Doom?",
 "fuente": "Momentum",
 "tipo": "juego"
-},
-{
-"appid": "dragotchi",
-"name": "Dragotchi",
-"cat": "🎮 Juegos",
-"desc": "Mascota virtual: cría un dragón que percibe el mundo real.",
-"fuente": "Catálogo oficial",
-"github": "https://github.com/Mohnki/dragotchi-flipper",
-"tipo": "novedad"
 },
 {
 "appid": "drifter",
@@ -538,15 +502,6 @@
 "tipo": "juego"
 },
 {
-"appid": "flipperpose",
-"name": "Flipper Poser",
-"cat": "🎮 Juegos",
-"desc": "¡App sencilla para posar a tu mascota del Flipper en fotos!",
-"fuente": "Catálogo oficial",
-"github": "https://github.com/MrNull1/flipperpose",
-"tipo": "novedad"
-},
-{
 "appid": "flippy_road",
 "name": "Flippy Road",
 "cat": "🎮 Juegos",
@@ -563,24 +518,6 @@
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Abzac/fliprogue",
 "tipo": "juego"
-},
-{
-"appid": "fortune_cookie",
-"name": "Fortune Cookie",
-"cat": "🎮 Juegos",
-"desc": "La app de galleta de la fortuna te da una frase motivadora o una fortuna al azar cada vez que la abres,",
-"fuente": "Catálogo oficial",
-"github": "https://github.com/evillero/fortune_cookie",
-"tipo": "novedad"
-},
-{
-"appid": "fortune_spinner",
-"name": "Fortune Spinner",
-"cat": "🎮 Juegos",
-"desc": "Gira para SÍ, NO o QUIZÁS",
-"fuente": "Catálogo oficial",
-"github": "https://github.com/xantopren/fortune-spinner",
-"tipo": "novedad"
 },
 {
 "appid": "furious_birds",
@@ -614,16 +551,7 @@
 "desc": "Una app sencilla",
 "fuente": "Momentum",
 "github": "https://github.com/user/template",
-"tipo": "novedad"
-},
-{
-"appid": "grimoire",
-"name": "Grimoire",
-"cat": "🎮 Juegos",
-"desc": "Un péndulo, un sigilo, un talismán y una varita, con la hora planetaria en cada página. Izquierda y Derecha pasan páginas.",
-"fuente": "Catálogo oficial",
-"github": "https://github.com/rseufert/grimoire",
-"tipo": "novedad"
+"tipo": "juego"
 },
 {
 "appid": "flipper_gurpil",
@@ -750,24 +678,6 @@
 "tipo": "juego"
 },
 {
-"appid": "eightball",
-"name": "Magic 8-ball",
-"cat": "🎮 Juegos",
-"desc": "Implementación sencilla de la clásica bola mágica 8 (Magic 8-ball).",
-"fuente": "Catálogo oficial",
-"github": "https://github.com/stevenquinn/flipper-8-ball",
-"tipo": "novedad"
-},
-{
-"appid": "matagotchi",
-"name": "Matagotchi",
-"cat": "🎮 Juegos",
-"desc": "Matagotchi: un juego tipo Tamagotchi(R) para el Flipper",
-"fuente": "Catálogo oficial",
-"github": "https://github.com/MrModd/Matagotchi",
-"tipo": "novedad"
-},
-{
 "appid": "microcity",
 "name": "MicroCity",
 "cat": "🎮 Juegos",
@@ -800,7 +710,7 @@
 "cat": "🎮 Juegos",
 "desc": "",
 "fuente": "Momentum",
-"tipo": "novedad"
+"tipo": "juego"
 },
 {
 "appid": "myblab",
@@ -916,7 +826,7 @@
 "desc": "Juega piedra, papel o tijera",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/xantopren/rock-paper-scissors",
-"tipo": "novedad"
+"tipo": "juego"
 },
 {
 "appid": "roots_of_life",
@@ -961,7 +871,7 @@
 "desc": "Un juego para el Flipper Zero.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/nostrumuva/secret_toggle",
-"tipo": "novedad"
+"tipo": "juego"
 },
 {
 "appid": "simon_says",
@@ -1027,15 +937,6 @@
 "tipo": "juego"
 },
 {
-"appid": "spectre",
-"name": "Spectre",
-"cat": "🎮 Juegos",
-"desc": "Kit de caza de fantasmas: aguja tipo EMF, caja de espíritus, voz y radar, con un nivel de energía compartido. Es un juguete: entradas reales alimentan",
-"fuente": "Catálogo oficial",
-"github": "https://github.com/rseufert/spectre",
-"tipo": "novedad"
-},
-{
 "appid": "stack_game",
 "name": "Stack",
 "cat": "🎮 Juegos",
@@ -1090,29 +991,12 @@
 "tipo": "juego"
 },
 {
-"appid": "tama_p1",
-"name": "Tamagotchi",
-"cat": "🎮 Juegos",
-"desc": "",
-"fuente": "Momentum",
-"tipo": "novedad"
-},
-{
 "appid": "tanks",
 "name": "Tanks",
 "cat": "🎮 Juegos",
 "desc": "",
 "fuente": "Momentum",
 "tipo": "juego"
-},
-{
-"appid": "tarot",
-"name": "Tarot",
-"cat": "🎮 Juegos",
-"desc": "Tirada de tarot para el Flipper",
-"fuente": "Catálogo oficial",
-"github": "https://github.com/pionaiki/fz-tarot",
-"tipo": "novedad"
 },
 {
 "appid": "tetris",
@@ -1207,7 +1091,7 @@
 "cat": "🎮 Juegos",
 "desc": "Versión ladradora de Space Invaders.",
 "fuente": "Momentum",
-"tipo": "novedad"
+"tipo": "juego"
 },
 {
 "appid": "yatzee",
@@ -1217,15 +1101,6 @@
 "fuente": "Momentum",
 "github": "https://github.com/emfleak/flipperzero-yatzee",
 "tipo": "juego"
-},
-{
-"appid": "yulia_cats",
-"name": "Yulia's Cats",
-"cat": "🎮 Juegos",
-"desc": "Mascota virtual acogedora. Yulia comparte cuarto con sus dos gatos: Nugget, un viejo atigrado con calcetines blancos, y Baby, una gata gris gordita",
-"fuente": "Catálogo oficial",
-"github": "https://github.com/rseufert/yulia_cats",
-"tipo": "novedad"
 },
 {
 "appid": "racso_zero",
@@ -1290,15 +1165,6 @@
 "tipo": "utilidad"
 },
 {
-"appid": "etch",
-"name": "Etch a Sketch",
-"cat": "🎵 Multimedia",
-"desc": "Convierte el Flipper en un Etch A Sketch (pizarra mágica)",
-"fuente": "Momentum",
-"github": "https://github.com/SimplyMinimal/FlipperZero-Etch-A-Sketch",
-"tipo": "novedad"
-},
-{
 "appid": "executor_keychain",
 "name": "Flipper Keyller",
 "cat": "🎵 Multimedia",
@@ -1324,15 +1190,6 @@
 "fuente": "Momentum",
 "github": "https://github.com/LTVA1/flizzer_tracker",
 "tipo": "utilidad"
-},
-{
-"appid": "fmatrix",
-"name": "Fmatrix",
-"cat": "🎵 Multimedia",
-"desc": "Muestra un salvapantallas de 'lluvia matrix'.",
-"fuente": "Momentum",
-"github": "https://github.com/user/misterwaztaken",
-"tipo": "novedad"
 },
 {
 "appid": "handpan_chords",
@@ -3139,15 +2996,6 @@
 "tipo": "seguridad"
 },
 {
-"appid": "flipagotchi",
-"name": "Flipagotchi",
-"cat": "🔌 GPIO / Hardware",
-"desc": "Flipagotchi",
-"fuente": "Catálogo oficial",
-"github": "https://github.com/Matt-London/pwnagotchi-flipper",
-"tipo": "novedad"
-},
-{
 "appid": "flipboard_blinky",
 "name": "FlipBoard Blinky",
 "cat": "🔌 GPIO / Hardware",
@@ -4207,15 +4055,6 @@
 "tipo": "utilidad"
 },
 {
-"appid": "ghost_tracker",
-"name": "Ghost Tracker",
-"cat": "🛠️ Herramientas",
-"desc": "Instrumentos de investigación paranormal: medidor EMF, caja de espíritus y REM Pod",
-"fuente": "Catálogo oficial",
-"github": "https://github.com/Zinetick/ghost_tracker",
-"tipo": "utilidad"
-},
-{
 "appid": "gitphin",
 "name": "Gitphin",
 "cat": "🛠️ Herramientas",
@@ -4526,15 +4365,6 @@
 "tipo": "utilidad"
 },
 {
-"appid": "pet_your_dolphin",
-"name": "Pet Your Dolphin",
-"cat": "🛠️ Herramientas",
-"desc": "¡La app Pet Your Dolphin te deja visitar a tu delfincito! Pasa a diario a acariciarlo para mejorar su ánimo y ganar XP.",
-"fuente": "Catálogo oficial",
-"github": "https://github.com/dwight9339/pet_your_dolphin",
-"tipo": "novedad"
-},
-{
 "appid": "pocket_cvss",
 "name": "Pocket CVSS",
 "cat": "🛠️ Herramientas",
@@ -4658,15 +4488,6 @@
 "fuente": "Catálogo oficial",
 "github": "https://github.com/H4W9/SKIDcity_App",
 "tipo": "utilidad"
-},
-{
-"appid": "smack_my_dolphin_up",
-"name": "Smack My Dolphin Up!",
-"cat": "🛠️ Herramientas",
-"desc": "Smack My Dolphin Up!",
-"fuente": "Catálogo oficial",
-"github": "https://github.com/siberianbot/smack-my-dolphin-up",
-"tipo": "novedad"
 },
 {
 "appid": "smoke_free",
@@ -5139,14 +4960,6 @@
 "fuente": "Comunidad",
 "github": "https://github.com/apfxtech/FlipperTowerDefense",
 "tipo": "juego"
-},
-{
-"appid": "dvd_bounce",
-"name": "DVD Bouncer",
-"cat": "🎮 Juegos",
-"desc": "",
-"fuente": "Comunidad",
-"tipo": "novedad"
 },
 {
 "appid": "princeofarabia",

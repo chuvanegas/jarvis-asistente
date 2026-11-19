@@ -117,20 +117,14 @@ h1{font-family:var(--f-display);font-size:25px;margin:0;letter-spacing:-.01em}
 </div>
 
 <script>
-let base = [], agregadas = {}, lista = [], vista = "estable", cat = "Todas", q = "", tipoF = "pro";
+let base = [], agregadas = {}, lista = [], vista = "estable", cat = "Todas", q = "", tipoF = "todas";
 let db = null, puedeEditar = false;
-// Tipos: pro = todo lo útil (seguridad + utilidad + juegos), sin novedades/toys.
+// Tipos: seguridad (RF/NFC/hardware), utilidad (herramientas útiles) y juegos.
 const TIPOS = [
-  ["pro", "⭐ Pro"], ["seguridad", "🛡️ Seguridad"], ["utilidad", "🧰 Utilidad"],
-  ["juego", "🎮 Juegos"], ["novedad", "🎲 Novedades"], ["todas", "Todas"],
+  ["todas", "Todas"], ["seguridad", "🛡️ Seguridad"], ["utilidad", "🧰 Utilidad"], ["juego", "🎮 Juegos"],
 ];
-const tipoDe = (a) => a.tipo || (["🎮 Juegos"].includes(a.cat) ? "juego" : "utilidad");
-const pasaTipo = (a) => {
-  const t = tipoDe(a);
-  if (tipoF === "pro") return t !== "novedad";
-  if (tipoF === "todas") return true;
-  return t === tipoF;
-};
+const tipoDe = (a) => a.tipo || (a.cat === "🎮 Juegos" ? "juego" : "utilidad");
+const pasaTipo = (a) => tipoF === "todas" || tipoDe(a) === tipoF;
 const CATS = ["🎮 Juegos", "🛠️ Herramientas", "📡 Sub-GHz", "💳 NFC", "💳 RFID", "📺 Infrarrojo",
   "🎵 Multimedia", "⌨️ USB / BadUSB", "🔵 Bluetooth", "🔌 GPIO / Hardware", "🔑 iButton"];
 const $ = (id) => document.getElementById(id);
@@ -211,7 +205,7 @@ function pintar() {
 function tipos() {
   const cont = $("tipos"); cont.replaceChildren();
   for (const [k, etiqueta] of TIPOS) {
-    const n = k === "todas" ? lista.length : lista.filter(a => (k === "pro" ? tipoDe(a) !== "novedad" : tipoDe(a) === k)).length;
+    const n = k === "todas" ? lista.length : lista.filter(a => tipoDe(a) === k).length;
     const b = document.createElement("button");
     b.className = "chip"; b.textContent = etiqueta + " (" + n + ")";
     b.setAttribute("aria-pressed", k === tipoF);
