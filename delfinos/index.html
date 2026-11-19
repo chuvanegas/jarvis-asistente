@@ -480,8 +480,8 @@
       btn.target = "_blank"; btn.rel = "noopener"; btn.removeAttribute('aria-disabled');
       btn.textContent = (idioma === "es" ? "🔌 Instalar DelfínOS " : "🔌 Install DelfinOS ") + VERSION;
       st.textContent = idioma === "es"
-        ? "Se abrirá Flipper Lab en otra pestaña. Pulsa Install y espera a que el Flipper reinicie."
-        : "Flipper Lab opens in a new tab. Press Install and wait for the Flipper to reboot.";
+        ? "Se abre Flipper Lab (el instalador oficial del Flipper) en otra pestaña, ya con DelfínOS cargado. Verás «delfinos» como firmware: pulsa Install y espera a que el Flipper reinicie. El sistema que queda instalado es DelfínOS."
+        : "Flipper Lab (the official Flipper installer) opens in a new tab with DelfinOS loaded. You'll see 'delfinos' as the firmware: press Install and wait for the Flipper to reboot. What gets installed is DelfinOS.";
       st.className = "istatus ok";
     } else {
       btn.href = "#instalar"; btn.removeAttribute('target'); btn.setAttribute('aria-disabled', 'true');
