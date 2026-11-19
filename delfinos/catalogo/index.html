@@ -7,7 +7,7 @@
 :root{
   color-scheme:dark;
   --bg:#0c0d16; --panel:#151827; --panel2:#1a1d30; --line:#272b44;
-  --fg:#e9eaf3; --mut:#9aa0bf; --accent:#ff7a3c; --accent2:#8b6cff; --cyan:#2fd8c6; --green:#3ad17a;
+  --fg:#e9eaf3; --mut:#9aa0bf; --accent:#ff7a3c; --accent2:#8b6cff; --cyan:#2fd8c6; --green:#3ad17a; --warn:#ffb84d;
   --f-display:"Space Grotesk",ui-sans-serif,system-ui,sans-serif;
   --f-body:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
 }
@@ -60,6 +60,9 @@ h1{font-family:var(--f-display);font-size:25px;margin:0;letter-spacing:-.01em}
 .tag.nueva{background:#3ad17a22;color:var(--green)}
 .card .quitar{align-self:flex-start;background:none;border:none;color:var(--mut);cursor:pointer;font-size:12px;padding:0;margin-top:2px}
 .card .quitar:hover{color:#ff5a6a}
+.compila-res{grid-column:1/-1;margin:6px 0 0;padding:8px 10px;border-radius:8px;background:#0a0b13;border:1px solid var(--line);font:11.5px/1.45 ui-monospace,Menlo,monospace;white-space:pre-wrap;overflow-wrap:anywhere;max-height:180px;overflow:auto;color:var(--mut)}
+.compila-res.ok{border-color:#3ad17a55;color:var(--green)}
+.compila-res.err{border-color:#ffb84d55;color:var(--warn)}
 [hidden]{display:none!important}
 </style>
 
@@ -119,6 +122,10 @@ h1{font-family:var(--f-display);font-size:25px;margin:0;letter-spacing:-.01em}
 <script>
 let base = [], agregadas = {}, lista = [], vista = "estable", cat = "Todas", q = "", tipoF = "todas";
 let db = null, puedeEditar = false;
+// URL de tu servidor de compilación (delfinos/servidor). Vacío = sin servidor aún.
+// Ejemplo: "https://build.tu-dominio.com". Solo funciona si sirves esta web desde tu
+// servidor (los artefactos de claude.ai bloquean llamadas externas por CSP).
+const SERVIDOR = "";
 // Tipos: seguridad (RF/NFC/hardware), utilidad (herramientas útiles) y juegos.
 const TIPOS = [
   ["todas", "Todas"], ["seguridad", "🛡️ Seguridad"], ["utilidad", "🧰 Utilidad"], ["juego", "🎮 Juegos"],
@@ -186,6 +193,10 @@ function pintar() {
     c.append(m);
     if (nueva && puedeEditar) {
       const acc = document.createElement("div"); acc.style.cssText = "display:flex;gap:12px;flex-wrap:wrap;margin-top:2px";
+      if (a.github) {
+        const cp = document.createElement("button"); cp.className = "quitar"; cp.style.color = "var(--cyan)"; cp.textContent = "🔨 Compilar y validar";
+        cp.onclick = () => compilar(a, cp, c); acc.append(cp);
+      }
       if (a.estado !== "estable") {
         const pr = document.createElement("button"); pr.className = "quitar"; pr.style.color = "var(--green)"; pr.textContent = "✓ Pasar a estable";
         pr.onclick = () => promover(a.appid); acc.append(pr);
@@ -354,6 +365,36 @@ async function cambiarEstado(appid, estado) {
 }
 const promover = (id) => cambiarEstado(id, "estable");
 const aPruebas = (id) => cambiarEstado(id, "pruebas");
+
+// Compila la app en tu servidor y muestra el resultado/errores en la misma tarjeta.
+async function compilar(a, boton, tarjeta) {
+  let caja = tarjeta.querySelector(".compila-res");
+  if (!caja) { caja = document.createElement("pre"); caja.className = "compila-res"; tarjeta.append(caja); }
+  if (!SERVIDOR) {
+    caja.className = "compila-res err";
+    caja.textContent = "Para compilar desde la web necesitas tu servidor de compilación (ver delfinos/servidor) y poner su URL en SERVIDOR. Compilar un .fap no se puede dentro de una página web sola.";
+    return;
+  }
+  boton.disabled = true; const antes = boton.textContent; boton.textContent = "Compilando…";
+  caja.className = "compila-res"; caja.textContent = "Clonando y compilando en el servidor…";
+  try {
+    const r = await fetch(SERVIDOR.replace(/\/$/, "") + "/compilar-app", {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ github_url: a.github }),
+    });
+    const d = await r.json();
+    if (d.ok) {
+      caja.className = "compila-res ok";
+      caja.textContent = "✓ Compiló: " + (d.nombre || "app.fap") + "\n" + (d.errores || "").slice(-1500);
+    } else {
+      caja.className = "compila-res err";
+      caja.textContent = "✗ No compiló:\n" + (d.errores || d.detail || "error desconocido").slice(-2500);
+    }
+  } catch (e) {
+    caja.className = "compila-res err";
+    caja.textContent = "No pude hablar con el servidor de compilación (" + (e.message || e) + "). ¿Está encendido y la web servida desde tu dominio?";
+  } finally { boton.disabled = false; boton.textContent = antes; }
+}
 async function quitar(appid) { if (db && puedeEditar) { try { await db.collection("apps").doc(appid).delete(); } catch (e) {} } }
 
 conectar();
