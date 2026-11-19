@@ -87,8 +87,10 @@ h1{font-family:var(--f-display);font-size:25px;margin:0;letter-spacing:-.01em}
       <label class="ancho">Descripción (en español)<textarea id="f-desc" placeholder="Qué hace la app, en una frase."></textarea></label>
       <label>Categoría<select id="f-cat"></select></label>
       <label>Fuente<input id="f-fuente" value="GitHub" placeholder="GitHub / Comunidad…"></label>
+      <div class="ancho aviso err" id="f-previo" hidden></div>
       <div class="acc">
         <button class="btn ok" type="submit" id="f-guardar">Agregar a pruebas</button>
+        <span class="chk" id="f-forzar-wrap" hidden><input type="checkbox" id="f-forzar"><label for="f-forzar" style="flex-direction:row">Agregar de todos modos</label></span>
         <span class="aviso" id="f-aviso" aria-live="polite"></span>
       </div>
     </form>
@@ -248,25 +250,81 @@ async function conectar() {
   }, () => {});
 }
 
+// ---- detección de duplicados: ¿esta app ya está en el catálogo? ----
+const simplificar = (s) => norm(s).replace(/\[[^\]]*\]/g, "").replace(/\.git$/, "").replace(/[^a-z0-9]+/g, " ")
+  .replace(/\b(flipper|zero|app|fap|the|for|de|la|el)\b/g, " ").replace(/\s+/g, " ").trim();
+const repoDe = (u) => { const m = (u || "").toLowerCase().match(/github\.com[/:]([^/\s]+\/[^/\s#?]+?)(?:\.git)?\/?$/); return m ? m[1] : ""; };
+function fichas(tokens) { return new Set(tokens.split(" ").filter(Boolean)); }
+function parecidoNombre(a, b) {
+  const sa = simplificar(a), sb = simplificar(b);
+  if (!sa || !sb) return 0;
+  if (sa === sb) return 1;
+  const A = fichas(sa), B = fichas(sb);
+  const inter = [...A].filter(x => B.has(x)).length;
+  const jac = inter / Math.max(A.size, B.size);
+  const subconjunto = inter > 0 && inter === Math.min(A.size, B.size);  // el más corto cabe en el otro
+  return subconjunto ? Math.max(jac, 0.7) : jac;
+}
+function buscarDuplicado(appid, name, github) {
+  const todas = [...base, ...Object.values(agregadas)];
+  const repo = repoDe(github);
+  for (const a of todas) {
+    if (a.appid === appid) return { app: a, por: "el mismo id de app (" + appid + ")", fuerte: true };
+    if (repo && repoDe(a.github) === repo) return { app: a, por: "el mismo repositorio de GitHub", fuerte: true };
+  }
+  let mejor = null;
+  for (const a of todas) {
+    const s = parecidoNombre(name, a.name);
+    if (s >= 0.6 && (!mejor || s > mejor.s)) mejor = { app: a, s };
+  }
+  if (mejor) return { app: mejor.app, por: "un nombre muy parecido (" + mejor.app.name + ")", fuerte: mejor.s >= 0.95 };
+  return null;
+}
+function dondeEsta(a) {
+  if (!agregadas[a.appid]) return "Estable";
+  return agregadas[a.appid].estado === "estable" ? "Estable" : "En pruebas";
+}
+
 $("form").addEventListener("submit", async (e) => {
   e.preventDefault();
   const aviso = $("f-aviso");
   const appid = limpiarId($("f-appid").value);
   const name = $("f-name").value.trim();
   if (!appid || !name) { aviso.textContent = "Pon al menos el ID y el nombre."; aviso.className = "aviso err"; return; }
+  const github = $("f-github").value.trim();
+  const forzar = $("f-forzar").checked;
+
+  const dup = buscarDuplicado(appid, name, github);
+  if (dup && !forzar) {
+    aviso.innerHTML = "⚠️ <b>Ya existe una app así</b> en «" + dondeEsta(dup.app) + "»: <b>" +
+      dup.app.name.replace(/[<>&]/g, "") + "</b>, por " + dup.por + "." +
+      (dup.fuerte ? " No se agregó para no repetir." : " Si de verdad es distinta, marca «Agregar de todos modos».");
+    aviso.className = "aviso err";
+    $("f-forzar-wrap").hidden = false;
+    return;
+  }
+
   const app = { appid, name, cat: $("f-cat").value, desc: $("f-desc").value.trim(),
-                fuente: $("f-fuente").value.trim() || "GitHub", github: $("f-github").value.trim(),
+                fuente: $("f-fuente").value.trim() || "GitHub", github,
                 estado: "pruebas", fecha: Date.now() };
   if (!db || !puedeEditar) { aviso.textContent = "Abre esta página en claude.ai con permiso de edición para guardar."; aviso.className = "aviso err"; return; }
   $("f-guardar").disabled = true;
   try {
     await db.collection("apps").doc(appid).set(app);
-    aviso.textContent = "✓ " + name + " agregada a En pruebas."; aviso.className = "aviso ok";
-    $("form").reset(); $("f-fuente").value = "GitHub";
+    aviso.textContent = "✓ " + name + " es nueva — agregada a En pruebas. Ahora clónala y tradúcela con clonar_app.py.";
+    aviso.className = "aviso ok";
+    $("form").reset(); $("f-fuente").value = "GitHub"; $("f-forzar-wrap").hidden = true;
     if (vista !== "pruebas") elegirVista("pruebas");
   } catch (err) {
     aviso.textContent = "No se pudo guardar: " + (err.message || err.code); aviso.className = "aviso err";
   } finally { $("f-guardar").disabled = false; }
+});
+// Al cambiar id/nombre/github, aviso en vivo si ya existe (sin guardar).
+for (const id of ["f-appid", "f-name", "f-github"]) $(id).addEventListener("input", () => {
+  const dup = buscarDuplicado(limpiarId($("f-appid").value), $("f-name").value.trim(), $("f-github").value.trim());
+  const pre = $("f-previo");
+  if (dup) { pre.textContent = "⚠️ Parece que ya existe: " + dup.app.name + " (" + dondeEsta(dup.app) + ")"; pre.hidden = false; }
+  else { pre.hidden = true; $("f-forzar-wrap").hidden = true; $("f-forzar").checked = false; }
 });
 
 async function cambiarEstado(appid, estado) {

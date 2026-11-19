@@ -19,6 +19,7 @@ Cuando una funcione bien, la agregas a "Estable" en el catálogo web.
 """
 import argparse
 import re
+import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -27,6 +28,42 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import delfin_traductor as dt  # noqa: E402
 
 RE_GITHUB = re.compile(r"github\.com[/:]([^/\s]+)/([^/\s#?]+?)(?:\.git)?(?:/tree/[^/]+/(.+))?/?$", re.I)
+CATALOGO = Path(__file__).resolve().parent.parent / "catalogo" / "apps.json"
+
+
+def _simplificar(s):
+    s = re.sub(r"\[[^\]]*\]", "", (s or "").lower())
+    s = re.sub(r"[^a-z0-9]+", " ", s)
+    s = re.sub(r"\b(flipper|zero|app|fap|the|for|de|la|el)\b", " ", s)
+    return set(w for w in s.split() if w)
+
+
+def buscar_duplicado(appid, name, github):
+    """¿Esta app ya está en el catálogo? Devuelve (app, motivo) o None."""
+    if not CATALOGO.exists():
+        return None
+    import json
+    repo = (re.search(r"github\.com[/:]([^/\s]+/[^/\s#?]+?)(?:\.git)?/?$", (github or "").lower()) or [None, None])[1]
+    cat = json.loads(CATALOGO.read_text(encoding="utf-8"))
+    A = _simplificar(name)
+    mejor = None
+    for a in cat:
+        if a["appid"] == appid:
+            return a, f"el mismo id de app ({appid})"
+        ar = (re.search(r"github\.com[/:]([^/\s]+/[^/\s#?]+?)(?:\.git)?/?$", (a.get("github") or "").lower()) or [None, None])[1]
+        if repo and ar == repo:
+            return a, "el mismo repositorio de GitHub"
+        B = _simplificar(a["name"])
+        if A and B:
+            inter = len(A & B)
+            jac = inter / max(len(A), len(B))
+            if inter and inter == min(len(A), len(B)):
+                jac = max(jac, 0.7)
+            if jac >= 0.6 and (not mejor or jac > mejor[1]):
+                mejor = (a, jac)
+    if mejor:
+        return mejor[0], f"un nombre muy parecido ({mejor[0]['name']})"
+    return None
 
 
 def parsear(url):
@@ -70,6 +107,7 @@ def main():
                     help="carpeta del firmware (por defecto ~/Documents/DelfinOS)")
     ap.add_argument("--commit", help="commit exacto a clonar (recomendado para que no cambie)")
     ap.add_argument("--traducir", action="store_true", help="traducir los textos de pantalla al español")
+    ap.add_argument("--forzar", action="store_true", help="quedarse con la app aunque ya exista una parecida")
     a = ap.parse_args()
 
     fw = a.firmware.expanduser().resolve()
@@ -86,6 +124,21 @@ def main():
         sys.exit("Clonado, pero no encontré application.fam. ¿Es una app del Flipper? "
                  f"Revisa {carpeta}")
     print(f"✓ App: {info['name']}  ·  id: {info['appid']}  ·  categoría: {info['cat'] or '—'}")
+
+    # ¿Ya existe en el catálogo? (no repetir)
+    dup = buscar_duplicado(info["appid"], info["name"], a.url)
+    if dup and not a.forzar:
+        otra, motivo = dup
+        print("\n" + "=" * 56)
+        print("⚠️  ALERTA: YA EXISTE UNA APP ASÍ EN TU CATÁLOGO")
+        print(f"    «{otra['name']}» ({otra.get('fuente', '')}) — coincide por {motivo}.")
+        print("    No la agrego para no repetir. Si de verdad es distinta,")
+        print("    vuelve a correr con  --forzar.")
+        print("=" * 56)
+        shutil.rmtree(destino)
+        return 1
+    if dup and a.forzar:
+        print(f"   (ya había una parecida: {dup[0]['name']}; la agregas igual por --forzar)")
 
     if a.traducir:
         terminos, no_traducir = dt.cargar_glosario(dt.GLOSARIO_DEFECTO)

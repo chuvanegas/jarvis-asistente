@@ -116,3 +116,7 @@ cd ~/Documents/DelfinOS
 Si funciona bien, la pasas a **Estable** en el catálogo web (botón «✓ Pasar a estable»). Consejo: usa `--commit SHA` para clonar una versión fija y que no cambie bajo tus pies.
 
 > El build del firmware incluye lo que haya en `applications_user/`, así que un paquete hecho con apps en pruebas es tu **build de pruebas**. Para el **build estable**, parte de una copia limpia (sin `applications_user/`) y solo con lo aprobado.
+
+### No repetir: alerta de duplicados
+
+Antes de quedarse con una app, `clonar_app.py` compara su id, su repo de GitHub y su nombre contra las del catálogo (`catalogo/apps.json`). Si ya existe una parecida, **te avisa y no la agrega** (borra el clon). Si de verdad es distinta, repite con `--forzar`. El catálogo web hace la misma comprobación cuando pegas un enlace: te avisa en vivo y bloquea los duplicados fuertes (mismo id o mismo repo).
