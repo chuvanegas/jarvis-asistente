@@ -1,0 +1,433 @@
+<title>Traductor DelfínOS</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<style>
+/* Layout: banco de trabajo de dos columnas — app a la izquierda, glosario a la derecha; una columna en celular */
+:root{
+  color-scheme:dark;
+  --bg:#0c0d16; --panel:#141626; --panel2:#1a1d30; --line:#272b44;
+  --fg:#e9eaf3; --mut:#9a9fbd; --accent:#ff7a3c; --accent2:#8b6cff;
+  --lcd:#f3a81c; --lcd-ink:#1a1205; --ok:#3ad17a; --warn:#ffb84d; --bad:#ff5a6a;
+  --f-display:"Space Grotesk",ui-sans-serif,system-ui,sans-serif;
+  --f-body:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:14.5px;line-height:1.5}
+.wrap{max-width:1180px;margin:0 auto;padding-block:28px 60px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:22px}
+header svg{width:44px;height:44px;flex-shrink:0}
+h1{font-family:var(--f-display);font-size:26px;margin:0;letter-spacing:-.01em;text-wrap:balance}
+header p{margin:2px 0 0;color:var(--mut);font-size:14px}
+h2{font-family:var(--f-display);font-size:17px;margin:0 0 12px;letter-spacing:-.005em}
+.grid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:18px;align-items:start}
+@media(max-width:900px){.grid{grid-template-columns:minmax(0,1fr)}}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;min-width:0}
+.stack{display:flex;flex-direction:column;gap:18px;min-width:0}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+.tab{font:600 13px var(--f-body);padding:8px 13px;border-radius:9px;border:1px solid var(--line);background:transparent;color:var(--mut);cursor:pointer}
+.tab[aria-selected="true"]{background:var(--panel2);color:var(--fg);border-color:#3a3f63}
+.drop{border:1.5px dashed #3a3f63;border-radius:12px;padding:22px;text-align:center;background:#ffffff04;transition:.15s}
+.drop.over{border-color:var(--accent);background:#ff7a3c10}
+.drop p{margin:0 0 10px;color:var(--mut)}
+.drop b{color:var(--fg)}
+input[type=file]{color:var(--mut);font-size:13px;max-width:100%}
+textarea{width:100%;min-height:150px;resize:vertical;background:#0a0b13;color:var(--fg);border:1px solid var(--line);border-radius:10px;padding:12px;font:13px/1.5 var(--f-mono)}
+input[type=text],input[type=search]{background:#0a0b13;color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:7px 10px;font:13px var(--f-body);min-width:0;width:100%}
+button{font-family:var(--f-body)}
+.btn{font-weight:600;font-size:13.5px;padding:9px 15px;border-radius:9px;border:1px solid var(--line);background:var(--panel2);color:var(--fg);cursor:pointer;white-space:nowrap}
+.btn:hover{border-color:#4a5080}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#1b0c03}
+.btn.small{padding:6px 10px;font-size:12.5px}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+:focus-visible{outline:2px solid var(--accent2);outline-offset:2px}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.muted{color:var(--mut)}
+.note{font-size:12.5px;color:var(--mut);margin:10px 0 0}
+.pill{display:inline-flex;align-items:center;gap:6px;font:600 12px var(--f-body);padding:4px 10px;border-radius:999px;border:1px solid var(--line);background:#ffffff06}
+.pill.ok{color:var(--ok);border-color:#3ad17a44}.pill.warn{color:var(--warn);border-color:#ffb84d44}
+.pill.ex{color:var(--lcd);border-color:#f3a81c55}
+/* LCD resumen */
+.lcd{background:var(--lcd);color:var(--lcd-ink);border-radius:10px;padding:14px 16px;font-family:var(--f-mono);box-shadow:inset 0 0 0 3px #00000022;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.lcd div{min-width:0}
+.lcd b{display:block;font-size:26px;line-height:1.1;font-variant-numeric:tabular-nums}
+.lcd span{font-size:11.5px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;opacity:.8}
+.list{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.item{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px;padding:9px 12px;border-top:1px solid var(--line);align-items:center;font-size:13.5px}
+.item:first-child{border-top:none}
+.item .en,.item .es{font-family:var(--f-mono);font-size:12.5px;overflow-wrap:anywhere}
+.item .es{color:var(--lcd)}
+.item .meta{grid-column:1/-1;font-size:11.5px;color:var(--mut);margin-top:-4px;overflow-wrap:anywhere}
+.pend{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr) auto}
+@media(max-width:560px){.pend{grid-template-columns:minmax(0,1fr)}.pend .acts{justify-content:flex-start}}
+.acts{display:flex;gap:6px;justify-content:flex-end;flex-wrap:wrap}
+.count{font:600 11px var(--f-mono);color:var(--mut);margin-left:6px}
+.scroll{max-height:420px;overflow-y:auto}
+.empty{padding:16px;color:var(--mut);font-size:13.5px;text-align:center}
+.gl-item{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) auto;gap:8px;padding:7px 12px;border-top:1px solid var(--line);font:12.5px var(--f-mono);align-items:center}
+.gl-item:first-child{border-top:none}
+.gl-item .es{color:var(--lcd);overflow-wrap:anywhere}.gl-item .en{overflow-wrap:anywhere}
+.tag{font:600 10.5px var(--f-body);padding:2px 7px;border-radius:999px;background:#8b6cff22;color:#b9a6ff;white-space:nowrap}
+.tag.nt{background:#ffffff10;color:var(--mut)}
+.x{background:none;border:none;color:var(--mut);cursor:pointer;font-size:15px;padding:0 4px}
+.x:hover{color:var(--bad)}
+.status{font-size:13px;min-height:20px;margin-top:10px}
+.status.ok{color:var(--ok)}.status.err{color:var(--warn)}
+.steps{margin:0;padding-left:20px;color:var(--mut);font-size:13.5px;display:flex;flex-direction:column;gap:4px}
+.steps code,.note code{font-family:var(--f-mono);color:var(--fg);font-size:12.5px}
+pre.code{background:#0a0b13;border:1px solid var(--line);border-radius:10px;padding:12px;font:12.5px/1.5 var(--f-mono);overflow-x:auto;margin:0;max-height:300px}
+[hidden]{display:none!important}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+  <header>
+    <svg viewBox="0 0 100 100" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff7a3c"/><stop offset="1" stop-color="#7c5cff"/></linearGradient></defs><rect width="100" height="100" rx="24" fill="url(#g)"/><path d="M18 40c15-5 28-3 37 6 5-10 14-14 26-14-3 6-3 11-1 15 6 3 10 9 10 16-11-4-18-2-23 3-7 6-16 8-27 4-12-4-19-12-21-24 0-3 0-5-1-6z" fill="#fff"/><circle cx="33" cy="42" r="3.2" fill="#ff7a3c"/></svg>
+    <div>
+      <h1>Traductor DelfínOS</h1>
+      <p>Carga una app del Flipper Zero en inglés y te la devuelve en español, lista para compilar con <span style="font-family:var(--f-mono)">ufbt</span>.</p>
+    </div>
+  </header>
+
+  <div class="grid">
+    <div class="stack">
+      <section class="panel" aria-labelledby="h-cargar">
+        <h2 id="h-cargar">1. Carga la app</h2>
+        <div class="tabs" role="tablist">
+          <button class="tab" role="tab" id="tab-zip" aria-selected="true" data-modo="zip">Archivo .zip</button>
+          <button class="tab" role="tab" id="tab-carpeta" aria-selected="false" data-modo="carpeta">Carpeta</button>
+          <button class="tab" role="tab" id="tab-pegar" aria-selected="false" data-modo="pegar">Pegar código</button>
+        </div>
+        <div id="modo-zip" class="drop">
+          <p>Arrastra aquí el <b>.zip</b> de la app, o archivos <b>.c / .h / .fam</b></p>
+          <input type="file" id="in-zip" accept=".zip,.c,.h,.cpp,.hpp,.fam" multiple>
+        </div>
+        <div id="modo-carpeta" class="drop" hidden>
+          <p>Elige la <b>carpeta</b> de la app (la que tiene <b>application.fam</b>)</p>
+          <input type="file" id="in-carpeta" webkitdirectory directory multiple>
+        </div>
+        <div id="modo-pegar" hidden>
+          <textarea id="in-pegar" spellcheck="false" placeholder='submenu_add_item(menu, "Read", 0, cb, app);'></textarea>
+          <div class="row" style="margin-top:10px"><button class="btn primary" id="btn-pegar">Traducir código</button></div>
+        </div>
+        <div class="row" style="margin-top:12px">
+          <span class="pill ex" id="pill-ejemplo">Ejemplo cargado: mi_control (app de muestra)</span>
+          <span class="muted" style="font-size:12.5px" id="origen"></span>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="h-res">
+        <h2 id="h-res">2. Resultado</h2>
+        <div class="lcd" aria-live="polite">
+          <div><b id="n-trad">0</b><span>Traducidos</span></div>
+          <div><b id="n-arch">0</b><span>Archivos</span></div>
+          <div><b id="n-pend">0</b><span>Pendientes</span></div>
+        </div>
+        <div class="row" style="margin-top:14px">
+          <button class="btn primary" id="btn-zip">Descargar app traducida (.zip)</button>
+          <button class="btn" id="btn-copiar" hidden>Copiar código traducido</button>
+        </div>
+        <div class="status" id="st-desc"></div>
+        <div id="salida-pegar" hidden><pre class="code" id="out-pegar"></pre></div>
+        <h2 style="margin-top:18px;font-size:15px">Cambios <span class="count" id="c-cambios"></span></h2>
+        <div class="list scroll" id="cambios"></div>
+      </section>
+
+      <section class="panel" aria-labelledby="h-pend">
+        <h2 id="h-pend">3. Pendientes <span class="count" id="c-pend"></span></h2>
+        <p class="muted" style="margin:-4px 0 12px;font-size:13px">Textos que parecen de la pantalla y no están en el glosario. Escribe la traducción y pulsa <b>Agregar</b>. Si es una marca o un término técnico, pulsa <b>No traducir</b>.</p>
+        <div class="list scroll" id="pendientes"></div>
+      </section>
+    </div>
+
+    <div class="stack">
+      <section class="panel" aria-labelledby="h-glo">
+        <h2 id="h-glo">Glosario <span class="count" id="c-glo"></span></h2>
+        <input type="search" id="buscar" placeholder="Buscar término…" aria-label="Buscar en el glosario">
+        <div class="row" style="margin:10px 0">
+          <span class="pill" id="pill-db">Conectando…</span>
+        </div>
+        <div class="list scroll" id="glosario" style="max-height:520px"></div>
+        <div class="row" style="margin-top:12px">
+          <button class="btn small" id="btn-glo">Descargar glosario_es.json</button>
+        </div>
+        <p class="note">Reemplaza con este archivo el <code>glosario_es.json</code> del proyecto para que el traductor de la Mac use los mismos términos.</p>
+      </section>
+
+      <section class="panel" aria-labelledby="h-sig">
+        <h2 id="h-sig">Después: compilar en tu Mac</h2>
+        <ol class="steps">
+          <li>Descomprime el <code>.zip</code> traducido.</li>
+          <li>En la Terminal: <code>cd mi_app_es</code></li>
+          <li>Compila: <code>ufbt</code> (el <code>.fap</code> sale en <code>dist/</code>)</li>
+          <li>Pruébalo en el Flipper: <code>ufbt launch</code></li>
+          <li>Si funciona, súbelo al panel de administrador para staging.</li>
+        </ol>
+        <p class="note">El original nunca se modifica. Solo se cambian textos que coinciden exacto con el glosario; los <code>#include</code>, los identificadores y en <code>application.fam</code> todo menos <code>name</code> quedan igual.</p>
+      </section>
+    </div>
+  </div>
+</div>
+
+<script>
+const GLOSARIO_BASE = __GLOSARIO__;
+const EXTENSIONES = [".c",".h",".cpp",".hpp",".fam"];
+const EJEMPLO = {
+  nombre: "mi_control",
+  archivos: {
+    "mi_control/application.fam": 'App(\n    appid="mi_control",\n    name="Universal Remotes",\n    apptype=FlipperAppType.EXTERNAL,\n    entry_point="mi_control_app",\n    fap_category="Infrared",\n)\n',
+    "mi_control/mi_control.c": '#include <furi.h>\n#include <gui/modules/submenu.h>\n#define TAG "mi_control"\n\nstatic void menu_init(Submenu* menu, void* app) {\n    submenu_add_item(menu, "Learn New Remote", 0, cb, app);\n    submenu_add_item(menu, "Saved", 1, cb, app);\n    submenu_add_item(menu, "Settings", 2, cb, app);\n    submenu_add_item(menu, "About", 3, cb, app);\n}\n\nstatic void scene_send(Widget* w) {\n    widget_add_string_element(w, 64, 10, AlignCenter, AlignTop, FontPrimary, "Send");\n    widget_add_string_element(w, 64, 30, AlignCenter, AlignTop, FontSecondary, "Hold to repeat signal");\n    widget_add_button_element(w, GuiButtonTypeLeft, "Back", cb, w);\n    widget_add_button_element(w, GuiButtonTypeRight, "Retry", cb, w);\n    FURI_LOG_I(TAG, "scene_send");\n}\n\nstatic const char* brands[] = {"Samsung", "LG", "Sony"};\n'
+  }
+};
+
+const $ = (id) => document.getElementById(id);
+let extras = new Map();   // id -> {en, es, tipo}
+let entrada = { nombre: EJEMPLO.nombre, archivos: { ...EJEMPLO.archivos }, modo: "archivos" };
+let resultado = null;
+let db = null, puedeEditar = false;
+
+// ---- glosario ----
+function glosario() {
+  const terminos = { ...GLOSARIO_BASE.terminos };
+  const noTrad = new Set(GLOSARIO_BASE.no_traducir);
+  for (const t of extras.values()) {
+    if (t.tipo === "no_traducir") { noTrad.add(t.en); delete terminos[t.en]; }
+    else { terminos[t.en] = t.es; noTrad.delete(t.en); }
+  }
+  return { terminos, noTrad };
+}
+function idDe(en) { // FNV-1a -> id seguro para db
+  let h = 0x811c9dc5;
+  for (const ch of en) { h ^= ch.codePointAt(0); h = Math.imul(h, 0x01000193) >>> 0; }
+  return "t" + h.toString(16) + "-" + en.length;
+}
+
+// ---- traducción (mismo criterio que delfin_traductor.py) ----
+const LITERAL = /"((?:[^"\\\n]|\\.)*)"/g;
+const dec = (s) => s.replace(/\\(n|"|\\)/g, (m, c) => c === "n" ? "\n" : c);
+const enc = (s) => s.replace(/\\/g, "\\\\").replace(/"/g, '\\"').replace(/\n/g, "\\n");
+function pareceInterfaz(texto) {
+  const t = texto.trim();
+  if (t.length < 3 || t.length > 60) return false;
+  if (!/[A-Za-z]{2,}/.test(t)) return false;
+  if (/[\/\\_]|\.(c|h|fap|txt|sub|nfc|ir|rfid|ibtn)\b|^%|^[A-Z0-9_]+$/.test(t)) return false;
+  if (/^[a-z0-9_.\-]+$/.test(t)) return false;
+  return true;
+}
+function traducirArchivo(ruta, codigo, g, pendientes, cambios) {
+  const ext = ruta.slice(ruta.lastIndexOf(".")).toLowerCase();
+  let n = 0;
+  const lineas = codigo.split("\n");
+  lineas.forEach((linea, i) => {
+    if (linea.trimStart().startsWith("#include")) return;
+    if (ext === ".fam" && !/^\s*name\s*=/.test(linea)) return;
+    lineas[i] = linea.replace(LITERAL, (m, cuerpo) => {
+      const orig = dec(cuerpo);
+      if (Object.prototype.hasOwnProperty.call(g.terminos, orig)) {
+        n++; cambios.push({ ruta, linea: i + 1, en: orig, es: g.terminos[orig] });
+        return '"' + enc(g.terminos[orig]) + '"';
+      }
+      if (!g.noTrad.has(orig) && pareceInterfaz(orig)) {
+        const p = pendientes.get(orig) || { n: 0, donde: ruta.split("/").pop() + ":" + (i + 1) };
+        p.n++; pendientes.set(orig, p);
+      }
+      return m;
+    });
+  });
+  return { codigo: lineas.join("\n"), n };
+}
+function traducir() {
+  const g = glosario();
+  const pendientes = new Map(), cambios = [], salida = {};
+  let total = 0, archivos = 0;
+  for (const [ruta, codigo] of Object.entries(entrada.archivos)) {
+    const esCodigo = EXTENSIONES.some((e) => ruta.toLowerCase().endsWith(e)) || entrada.modo === "pegar";
+    if (!esCodigo) { salida[ruta] = codigo; continue; }
+    const r = traducirArchivo(entrada.modo === "pegar" ? "codigo.c" : ruta, codigo, g, pendientes, cambios);
+    salida[ruta] = r.codigo; total += r.n; if (r.n) archivos++;
+  }
+  resultado = { salida, total, archivos, pendientes, cambios };
+  pintar();
+}
+
+// ---- interfaz ----
+function el(tag, cls, txt) { const e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; }
+function pintar() {
+  const r = resultado;
+  $("n-trad").textContent = r.total;
+  $("n-arch").textContent = entrada.modo === "pegar" ? "—" : r.archivos;
+  $("n-pend").textContent = r.pendientes.size;
+  $("c-cambios").textContent = r.cambios.length ? `(${r.cambios.length})` : "";
+  $("c-pend").textContent = r.pendientes.size ? `(${r.pendientes.size})` : "";
+  const esPegar = entrada.modo === "pegar";
+  $("btn-zip").hidden = esPegar; $("btn-copiar").hidden = !esPegar; $("salida-pegar").hidden = !esPegar;
+  if (esPegar) $("out-pegar").textContent = Object.values(r.salida)[0] || "";
+
+  const lc = $("cambios"); lc.replaceChildren();
+  if (!r.cambios.length) lc.append(el("div", "empty", "Ningún texto coincidió con el glosario todavía."));
+  for (const c of r.cambios) {
+    const it = el("div", "item");
+    it.append(el("div", "en", c.en), el("div", "es", "→ " + c.es),
+      el("div", "meta", esPegar ? `línea ${c.linea}` : `${c.ruta} · línea ${c.linea}`));
+    lc.append(it);
+  }
+
+  const lp = $("pendientes"); lp.replaceChildren();
+  if (!r.pendientes.size) lp.append(el("div", "empty", "Sin pendientes. Todo lo que parece de pantalla ya está en el glosario."));
+  const orden = [...r.pendientes.entries()].sort((a, b) => b[1].n - a[1].n || a[0].localeCompare(b[0]));
+  orden.forEach(([en, p], k) => {
+    const it = el("div", "item pend");
+    const izq = el("div", "en", en); izq.append(el("span", "count", `${p.n}× · ${p.donde}`));
+    const inp = el("input"); inp.type = "text"; inp.id = "pend-" + k; inp.placeholder = "Traducción al español"; inp.setAttribute("aria-label", "Traducción de " + en);
+    const acts = el("div", "acts");
+    const bA = el("button", "btn small primary", "Agregar");
+    const bN = el("button", "btn small", "No traducir");
+    bA.onclick = () => { const es = inp.value.trim(); if (!es) { inp.focus(); return; } guardarTermino({ en, es, tipo: "traducir" }); };
+    inp.onkeydown = (e) => { if (e.key === "Enter") bA.click(); };
+    bN.onclick = () => guardarTermino({ en, es: "", tipo: "no_traducir" });
+    acts.append(bA, bN); it.append(izq, inp, acts); lp.append(it);
+  });
+  pintarGlosario();
+}
+function pintarGlosario() {
+  const q = $("buscar").value.trim().toLowerCase();
+  const lista = $("glosario"); lista.replaceChildren();
+  const filas = [];
+  for (const t of extras.values()) filas.push({ ...t, extra: true });
+  for (const [en, es] of Object.entries(GLOSARIO_BASE.terminos)) if (!extras.has(idDe(en))) filas.push({ en, es, tipo: "traducir" });
+  for (const en of GLOSARIO_BASE.no_traducir) if (!extras.has(idDe(en))) filas.push({ en, es: "", tipo: "no_traducir" });
+  const vis = filas.filter((f) => !q || f.en.toLowerCase().includes(q) || f.es.toLowerCase().includes(q));
+  const g = glosario();
+  $("c-glo").textContent = `(${Object.keys(g.terminos).length} términos · ${g.noTrad.size} sin traducir)`;
+  if (!vis.length) lista.append(el("div", "empty", "Nada coincide con la búsqueda."));
+  for (const f of vis.slice(0, 400)) {
+    const it = el("div", "gl-item");
+    it.append(el("div", "en", f.en.replace(/\n/g, "⏎")));
+    if (f.tipo === "no_traducir") { const c = el("div"); c.append(el("span", "tag nt", "no traducir")); it.append(c); }
+    else it.append(el("div", "es", f.es.replace(/\n/g, "⏎")));
+    const der = el("div", "acts");
+    if (f.extra) {
+      der.append(el("span", "tag", "agregado"));
+      if (puedeEditar || !db) { const x = el("button", "x", "×"); x.title = "Quitar"; x.setAttribute("aria-label", "Quitar " + f.en); x.onclick = () => borrarTermino(f.en); der.append(x); }
+    }
+    it.append(der); lista.append(it);
+  }
+}
+
+// ---- persistencia: db compartida (editores) o este navegador ----
+const LS = "delfinos-glosario-extra";
+function guardarLocal() { try { localStorage.setItem(LS, JSON.stringify([...extras.values()])); } catch (e) {} }
+function cargarLocal() { try { (JSON.parse(localStorage.getItem(LS) || "[]")).forEach((t) => extras.set(idDe(t.en), t)); } catch (e) {} }
+async function guardarTermino(t) {
+  const id = idDe(t.en);
+  extras.set(id, t); traducir();
+  if (db && puedeEditar) {
+    try { await db.collection("glosario").doc(id).set({ en: t.en, es: t.es, tipo: t.tipo, fecha: Date.now() }); }
+    catch (e) { estadoDb("No se pudo guardar en la nube: " + (e.message || e.code), "warn"); }
+  } else guardarLocal();
+}
+async function borrarTermino(en) {
+  const id = idDe(en);
+  extras.delete(id); traducir();
+  if (db && puedeEditar) { try { await db.collection("glosario").doc(id).delete(); } catch (e) {} }
+  else guardarLocal();
+}
+function estadoDb(txt, cls) { const p = $("pill-db"); p.textContent = txt; p.className = "pill " + (cls || ""); }
+
+async function conectar() {
+  const c = window.claude;
+  if (!c || !c.use) { cargarLocal(); estadoDb("Términos nuevos se guardan en este navegador"); traducir(); return; }
+  const [d, u] = await Promise.all([c.use("db"), c.use("user")]);
+  puedeEditar = u ? !!u.canEdit() : false;
+  if (!d) { db = null; cargarLocal(); estadoDb("Términos nuevos se guardan en este navegador"); traducir(); return; }
+  db = d;
+  estadoDb(puedeEditar ? "Glosario compartido · puedes agregar" : "Glosario compartido · solo lectura (tus términos quedan en este navegador)", puedeEditar ? "ok" : "warn");
+  if (!puedeEditar) cargarLocal();
+  const timer = setTimeout(() => estadoDb("El glosario compartido tarda en responder", "warn"), 10000);
+  db.collection("glosario").onSnapshot((snap) => {
+    clearTimeout(timer);
+    if (puedeEditar) extras = new Map();
+    snap.docs.forEach((s) => { const v = s.data(); if (v && typeof v.en === "string") extras.set(s.id, { en: v.en, es: String(v.es || ""), tipo: v.tipo === "no_traducir" ? "no_traducir" : "traducir" }); });
+    if (!puedeEditar) cargarLocal();
+    traducir();
+  }, () => { clearTimeout(timer); estadoDb("Sin glosario compartido · se guarda en este navegador", "warn"); });
+}
+
+// ---- carga de archivos ----
+function setOrigen(txt, ejemplo) { $("origen").textContent = txt; $("pill-ejemplo").hidden = !ejemplo; }
+async function cargarArchivos(lista) {
+  const archivos = {}; let nombre = "app";
+  for (const f of lista) {
+    if (f.name.toLowerCase().endsWith(".zip")) {
+      const zip = await JSZip.loadAsync(f);
+      nombre = f.name.replace(/\.zip$/i, "");
+      for (const [ruta, z] of Object.entries(zip.files)) {
+        if (z.dir || ruta.startsWith("__MACOSX/") || ruta.split("/").pop().startsWith("._")) continue;
+        archivos[ruta] = EXTENSIONES.some((e) => ruta.toLowerCase().endsWith(e)) ? await z.async("string") : await z.async("uint8array");
+      }
+    } else {
+      const ruta = f.webkitRelativePath || f.name;
+      if (f.webkitRelativePath) nombre = f.webkitRelativePath.split("/")[0];
+      archivos[ruta] = EXTENSIONES.some((e) => ruta.toLowerCase().endsWith(e)) ? await f.text() : new Uint8Array(await f.arrayBuffer());
+    }
+  }
+  const nCod = Object.keys(archivos).filter((r) => EXTENSIONES.some((e) => r.toLowerCase().endsWith(e))).length;
+  if (!nCod) { $("st-desc").textContent = "No encontré archivos .c, .h o .fam. Revisa que sea la carpeta o el .zip de una app."; $("st-desc").className = "status err"; return; }
+  entrada = { nombre, archivos, modo: "archivos" };
+  setOrigen(`${nombre} · ${nCod} archivos de código`, false);
+  $("st-desc").textContent = ""; traducir();
+}
+document.querySelectorAll(".tab").forEach((t) => t.onclick = () => {
+  document.querySelectorAll(".tab").forEach((x) => x.setAttribute("aria-selected", x === t));
+  ["zip", "carpeta", "pegar"].forEach((m) => $("modo-" + m).hidden = m !== t.dataset.modo);
+});
+$("in-zip").onchange = (e) => e.target.files.length && cargarArchivos([...e.target.files]).catch(errCarga);
+$("in-carpeta").onchange = (e) => e.target.files.length && cargarArchivos([...e.target.files]).catch(errCarga);
+function errCarga(e) { $("st-desc").textContent = "No pude leer ese archivo: " + (e.message || e); $("st-desc").className = "status err"; }
+const drop = $("modo-zip");
+drop.addEventListener("dragover", (e) => { e.preventDefault(); drop.classList.add("over"); });
+drop.addEventListener("dragleave", () => drop.classList.remove("over"));
+drop.addEventListener("drop", (e) => { e.preventDefault(); drop.classList.remove("over"); if (e.dataTransfer.files.length) cargarArchivos([...e.dataTransfer.files]).catch(errCarga); });
+$("btn-pegar").onclick = () => {
+  const txt = $("in-pegar").value; if (!txt.trim()) { $("in-pegar").focus(); return; }
+  entrada = { nombre: "codigo", archivos: { "codigo.c": txt }, modo: "pegar" };
+  setOrigen("código pegado", false); traducir();
+};
+$("buscar").oninput = pintarGlosario;
+
+// ---- descargas ----
+async function guardar(filename, data) {
+  const st = $("st-desc");
+  const dl = window.claude && window.claude.use ? await window.claude.use("downloads") : null;
+  if (!dl) { st.textContent = "Las descargas no están disponibles en esta vista. Abre la página en claude.ai desde un navegador."; st.className = "status err"; return; }
+  try { await dl.save({ filename, data }); st.textContent = "✓ " + filename + " guardado."; st.className = "status ok"; }
+  catch (e) { st.textContent = e.code === "declined" ? "Descarga cancelada." : "No se pudo descargar (" + (e.code || e.message) + ")."; st.className = "status err"; }
+}
+$("btn-zip").onclick = async () => {
+  if (!resultado) return;
+  const zip = new JSZip();
+  for (const [ruta, cont] of Object.entries(resultado.salida)) {
+    const partes = ruta.split("/");
+    const r = partes.length > 1 ? [partes[0] + "_es", ...partes.slice(1)].join("/") : entrada.nombre + "_es/" + ruta;
+    zip.file(r, cont);
+  }
+  const blob = await zip.generateAsync({ type: "blob" });
+  guardar(entrada.nombre + "_es.zip", blob);
+};
+$("btn-copiar").onclick = () => {
+  const txt = $("out-pegar").textContent;
+  navigator.clipboard.writeText(txt).then(() => { $("st-desc").textContent = "✓ Copiado."; $("st-desc").className = "status ok"; })
+    .catch(() => { const r = document.createRange(); r.selectNodeContents($("out-pegar")); const s = getSelection(); s.removeAllRanges(); s.addRange(r); $("st-desc").textContent = "Selecciona y copia con Cmd+C."; });
+};
+$("btn-glo").onclick = () => {
+  const g = glosario();
+  const out = { _info: GLOSARIO_BASE._info, terminos: g.terminos, no_traducir: [...g.noTrad] };
+  guardar("glosario_es.json", JSON.stringify(out, null, 2) + "\n");
+};
+
+setOrigen("", true);
+traducir();
+conectar();
+</script>

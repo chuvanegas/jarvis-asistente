@@ -8,7 +8,8 @@ Firmware del Flipper Zero en español, basado en Momentum-Firmware, con herramie
 | `PLAN_TECNICO.md` | Arquitectura, fuentes, reglas y hoja de ruta |
 | `HISTORIAL.md` | Resumen de decisiones del chat original y estado en la Mac |
 | `glosario_es.json` | Glosario inglés → español (`terminos`) y lista de marcas/términos que no se traducen (`no_traducir`) |
-| `herramientas/delfin_traductor.py` | Traduce una app a una copia `_es` y lista los textos pendientes |
+| `herramientas/delfin_traductor.py` | Traductor para la Mac: traduce una app a una copia `_es` y lista los pendientes |
+| `traductor/` | Traductor web (https://claude.ai/artifact/Pihzt6uoV3HECqW97PSJTh). `plantilla.html` + `glosario_es.json` generan `index.html` |
 
 ## Traducir una app
 ```bash
