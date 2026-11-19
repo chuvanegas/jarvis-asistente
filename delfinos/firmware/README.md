@@ -92,3 +92,27 @@ Falta: el `./fbt` completo, que el firmware quepa en la memoria y una vuelta por
 
 - Fuentes: `python3 ../fuentes/generar_fuentes.py <Momentum>/lib/u8g2/u8g2_fonts.c <u8g2>/csrc/u8g2_fonts.c ../fuentes/u8g2_fuentes_es.c`
 - Animaciones: `python3 ../animaciones/generar_animaciones.py ../animaciones/dolphin` (requiere Pillow)
+
+## 4. Probar apps nuevas desde GitHub (zona de pruebas)
+
+Hay dos zonas, igual que en el catálogo web:
+
+- **Estable**: las apps de Momentum (y las que promuevas). Es lo que instala la gente.
+- **Pruebas**: lo que vas encontrando y clonando. Viven en `applications_user/` y no tocan las de Momentum.
+
+Encontraste una app en GitHub y la quieres probar:
+
+```bash
+python3 ../herramientas/clonar_app.py https://github.com/usuario/mi-app --traducir
+```
+
+La clona en `~/Documents/DelfinOS/applications_user/mi-app`, la traduce con el glosario y te dice cómo probarla en el Flipper:
+
+```bash
+cd ~/Documents/DelfinOS
+./fbt launch APPSRC=applications_user/mi-app
+```
+
+Si funciona bien, la pasas a **Estable** en el catálogo web (botón «✓ Pasar a estable»). Consejo: usa `--commit SHA` para clonar una versión fija y que no cambie bajo tus pies.
+
+> El build del firmware incluye lo que haya en `applications_user/`, así que un paquete hecho con apps en pruebas es tu **build de pruebas**. Para el **build estable**, parte de una copia limpia (sin `applications_user/`) y solo con lo aprobado.

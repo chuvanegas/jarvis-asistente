@@ -70,31 +70,35 @@ h1{font-family:var(--f-display);font-size:25px;margin:0;letter-spacing:-.01em}
       <div><h1>Catálogo DelfínOS</h1><p class="sub">Las mejores apps del Flipper Zero, curadas y sin repetir.</p></div>
     </div>
     <div class="stats">
-      <div class="stat"><b id="n-total">—</b><span>apps en total</span></div>
+      <div class="stat"><b id="n-estable">—</b><span>estables</span></div>
+      <div class="stat"><b id="n-pruebas">—</b><span>en pruebas</span></div>
       <div class="stat"><b id="n-mom">—</b><span>de Momentum</span></div>
-      <div class="stat"><b id="n-cat">—</b><span>del catálogo oficial</span></div>
       <div class="stat"><b id="n-vis">—</b><span>se muestran</span></div>
     </div>
   </header>
 
   <section class="admin" id="admin" hidden>
-    <h2>➕ Agregar app probada al catálogo</h2>
-    <p class="ayuda">Cuando traduzcas una app con el <a href="https://claude.ai/artifact/Pihzt6uoV3HECqW97PSJTh" target="_blank" rel="noopener" style="color:var(--cyan)">Traductor DelfínOS</a> y la pruebes en tu Flipper, agrégala aquí. Se guarda y la verán todos. Solo tú (y quien tenga permiso de edición) ves este panel.</p>
+    <h2>➕ Agregar app a <b>En pruebas</b></h2>
+    <p class="ayuda">Pega el <b>enlace de GitHub</b> de una app que encontraste, o llénalo a mano. Entra a tu lista <b>En pruebas</b>. Cuando la clones, traduzcas y pruebes en tu Flipper, la pasas a <b>Estable</b> con el botón «✓ Pasar a estable». Solo tú (y quien tenga permiso de edición) ves este panel.</p>
     <form class="form" id="form" autocomplete="off">
+      <label class="ancho">Enlace de GitHub (opcional)<input id="f-github" placeholder="https://github.com/usuario/mi-app-flipper" inputmode="url"></label>
       <label>ID de la app (carpeta)<input id="f-appid" required placeholder="mi_app" pattern="[A-Za-z0-9_\-]+"></label>
       <label>Nombre visible<input id="f-name" required placeholder="Mi App"></label>
       <label class="ancho">Descripción (en español)<textarea id="f-desc" placeholder="Qué hace la app, en una frase."></textarea></label>
       <label>Categoría<select id="f-cat"></select></label>
-      <label>Fuente<input id="f-fuente" value="Comunidad" placeholder="Comunidad / GitHub…"></label>
+      <label>Fuente<input id="f-fuente" value="GitHub" placeholder="GitHub / Comunidad…"></label>
       <div class="acc">
-        <span class="chk"><input type="checkbox" id="f-probada" checked><label for="f-probada" style="flex-direction:row">Probada en un Flipper</label></span>
-        <button class="btn ok" type="submit" id="f-guardar">Agregar al catálogo</button>
+        <button class="btn ok" type="submit" id="f-guardar">Agregar a pruebas</button>
         <span class="aviso" id="f-aviso" aria-live="polite"></span>
       </div>
     </form>
   </section>
 
   <div class="controls">
+    <div class="chips" id="vistas" role="group" aria-label="Lista" style="margin-bottom:10px">
+      <button class="chip" id="v-estable" aria-pressed="true">✅ Estable</button>
+      <button class="chip" id="v-pruebas" aria-pressed="false">🧪 En pruebas</button>
+    </div>
     <input type="search" id="buscar" placeholder="Buscar app… (nombre o descripción)" aria-label="Buscar app">
     <div class="chips" id="chips" role="group" aria-label="Filtrar por categoría"></div>
   </div>
@@ -110,7 +114,7 @@ h1{font-family:var(--f-display);font-size:25px;margin:0;letter-spacing:-.01em}
 </div>
 
 <script>
-let base = [], agregadas = {}, apps = [], cat = "Todas", q = "";
+let base = [], agregadas = {}, lista = [], vista = "estable", cat = "Todas", q = "";
 let db = null, puedeEditar = false;
 const CATS = ["🎮 Juegos", "🛠️ Herramientas", "📡 Sub-GHz", "💳 NFC", "💳 RFID", "📺 Infrarrojo",
   "🎵 Multimedia", "⌨️ USB / BadUSB", "🔵 Bluetooth", "🔌 GPIO / Hardware", "🔑 iButton"];
@@ -118,25 +122,43 @@ const $ = (id) => document.getElementById(id);
 const norm = (s) => (s || "").toLowerCase();
 const limpiarId = (s) => (s || "").trim().replace(/[^A-Za-z0-9_\-]/g, "_").slice(0, 60);
 
-function fusionar() {
+// Estable = base (549) + agregadas marcadas "estable". Pruebas = agregadas "pruebas".
+function listas() {
   const porId = {};
-  for (const a of base) porId[a.appid] = a;
-  for (const a of Object.values(agregadas)) porId[a.appid] = a;  // la agregada pisa a la base del mismo id
-  apps = Object.values(porId).sort((a, b) => (a.cat + a.name).toLowerCase() < (b.cat + b.name).toLowerCase() ? -1 : 1);
-  $("n-total").textContent = apps.length;
-  $("n-mom").textContent = apps.filter(a => a.fuente === "Momentum").length;
-  $("n-cat").textContent = apps.filter(a => a.fuente !== "Momentum").length;
+  for (const a of base) porId[a.appid] = { ...a, estado: "estable" };
+  const pruebas = [];
+  for (const a of Object.values(agregadas)) {
+    if (a.estado === "estable") porId[a.appid] = a; else pruebas.push(a);
+  }
+  const estable = Object.values(porId).sort(ordena);
+  pruebas.sort(ordena);
+  return { estable, pruebas };
+}
+const ordena = (a, b) => (a.cat + a.name).toLowerCase() < (b.cat + b.name).toLowerCase() ? -1 : 1;
+
+function refrescar() {
+  const { estable, pruebas } = listas();
+  $("n-estable").textContent = estable.length;
+  $("n-pruebas").textContent = pruebas.length;
+  $("n-mom").textContent = estable.filter(a => a.fuente === "Momentum").length;
+  $("v-estable").textContent = "✅ Estable (" + estable.length + ")";
+  $("v-pruebas").textContent = "🧪 En pruebas (" + pruebas.length + ")";
+  lista = vista === "estable" ? estable : pruebas;
   chips(); pintar();
 }
 
 function pintar() {
   const grid = $("grid");
-  const vis = apps.filter(a =>
+  const vis = lista.filter(a =>
     (cat === "Todas" || a.cat === cat) &&
     (!q || norm(a.name).includes(q) || norm(a.desc).includes(q) || norm(a.appid).includes(q)));
   $("n-vis").textContent = vis.length;
   grid.replaceChildren();
-  if (!vis.length) { const d = document.createElement("div"); d.className = "vacio"; d.textContent = "Ninguna app coincide con la búsqueda."; grid.append(d); return; }
+  if (!vis.length) {
+    const d = document.createElement("div"); d.className = "vacio";
+    d.textContent = vista === "pruebas" ? "Aún no hay apps en pruebas. Pega un enlace de GitHub arriba para agregar una." : "Ninguna app coincide con la búsqueda.";
+    grid.append(d); return;
+  }
   const frag = document.createDocumentFragment();
   for (const a of vis) {
     const c = document.createElement("div"); c.className = "card";
@@ -147,11 +169,24 @@ function pintar() {
     const nueva = !!agregadas[a.appid];
     const ts = document.createElement("span");
     ts.className = "tag " + (nueva ? "nueva" : a.fuente === "Momentum" ? "src m" : "src");
-    ts.textContent = nueva ? (a.probada ? "✓ Probada" : "Agregada") : a.fuente; m.append(ts);
+    ts.textContent = nueva ? (a.estado === "estable" ? "✓ Estable" : "🧪 Pruebas") : a.fuente; m.append(ts);
+    if (a.github) {
+      const g = document.createElement("a"); g.className = "tag src"; g.href = a.github; g.target = "_blank"; g.rel = "noopener"; g.textContent = "GitHub ↗";
+      m.append(g);
+    }
     c.append(m);
     if (nueva && puedeEditar) {
-      const x = document.createElement("button"); x.className = "quitar"; x.textContent = "Quitar del catálogo";
-      x.onclick = () => quitar(a.appid); c.append(x);
+      const acc = document.createElement("div"); acc.style.cssText = "display:flex;gap:12px;flex-wrap:wrap;margin-top:2px";
+      if (a.estado !== "estable") {
+        const pr = document.createElement("button"); pr.className = "quitar"; pr.style.color = "var(--green)"; pr.textContent = "✓ Pasar a estable";
+        pr.onclick = () => promover(a.appid); acc.append(pr);
+      } else {
+        const pr = document.createElement("button"); pr.className = "quitar"; pr.textContent = "↩ Volver a pruebas";
+        pr.onclick = () => aPruebas(a.appid); acc.append(pr);
+      }
+      const x = document.createElement("button"); x.className = "quitar"; x.textContent = "Quitar";
+      x.onclick = () => quitar(a.appid); acc.append(x);
+      c.append(acc);
     }
     frag.append(c);
   }
@@ -159,24 +194,42 @@ function pintar() {
 }
 
 function chips() {
-  const cats = ["Todas", ...[...new Set(apps.map(a => a.cat))].sort()];
+  const cats = ["Todas", ...[...new Set(lista.map(a => a.cat))].sort()];
   const cont = $("chips"); cont.replaceChildren();
+  if (!cats.includes(cat)) cat = "Todas";
   for (const c of cats) {
     const b = document.createElement("button");
-    b.className = "chip"; b.textContent = c === "Todas" ? "Todas" : c + " (" + apps.filter(a => a.cat === c).length + ")";
+    b.className = "chip"; b.textContent = c === "Todas" ? "Todas" : c + " (" + lista.filter(a => a.cat === c).length + ")";
     b.setAttribute("aria-pressed", c === cat);
     b.onclick = () => { cat = c; for (const x of cont.children) x.setAttribute("aria-pressed", "false"); b.setAttribute("aria-pressed", "true"); pintar(); };
     cont.append(b);
   }
 }
 
+function elegirVista(v) {
+  vista = v;
+  $("v-estable").setAttribute("aria-pressed", v === "estable");
+  $("v-pruebas").setAttribute("aria-pressed", v === "pruebas");
+  cat = "Todas"; refrescar();
+}
+$("v-estable").onclick = () => elegirVista("estable");
+$("v-pruebas").onclick = () => elegirVista("pruebas");
 $("buscar").oninput = (e) => { q = norm(e.target.value); pintar(); };
 
 // ---- cargar base + apps agregadas (base de datos compartida) ----
-fetch("apps.json").then(r => r.json()).then(data => { base = data; fusionar(); })
+fetch("apps.json").then(r => r.json()).then(data => { base = data; refrescar(); })
   .catch(() => { $("grid").replaceChildren(Object.assign(document.createElement("div"), { className: "vacio", textContent: "No se pudo cargar el catálogo." })); });
 
 for (const c of CATS) { const o = document.createElement("option"); o.value = o.textContent = c; $("f-cat").append(o); }
+
+// Pegar un enlace de GitHub rellena el id y el nombre con el nombre del repo.
+$("f-github").addEventListener("input", (e) => {
+  const m = e.target.value.match(/github\.com\/([^/\s]+)\/([^/\s#?]+)/i);
+  if (!m) return;
+  const repo = m[2].replace(/\.git$/i, "");
+  if (!$("f-appid").value) $("f-appid").value = limpiarId(repo);
+  if (!$("f-name").value) $("f-name").value = repo.replace(/[-_]+/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+});
 
 async function conectar() {
   const cl = window.claude;
@@ -191,7 +244,7 @@ async function conectar() {
     clearTimeout(t);
     agregadas = {};
     snap.docs.forEach((s) => { const v = s.data(); if (v && v.appid) agregadas[v.appid] = v; });
-    fusionar();
+    refrescar();
   }, () => {});
 }
 
@@ -202,22 +255,28 @@ $("form").addEventListener("submit", async (e) => {
   const name = $("f-name").value.trim();
   if (!appid || !name) { aviso.textContent = "Pon al menos el ID y el nombre."; aviso.className = "aviso err"; return; }
   const app = { appid, name, cat: $("f-cat").value, desc: $("f-desc").value.trim(),
-                fuente: $("f-fuente").value.trim() || "Comunidad", probada: $("f-probada").checked, fecha: Date.now() };
+                fuente: $("f-fuente").value.trim() || "GitHub", github: $("f-github").value.trim(),
+                estado: "pruebas", fecha: Date.now() };
   if (!db || !puedeEditar) { aviso.textContent = "Abre esta página en claude.ai con permiso de edición para guardar."; aviso.className = "aviso err"; return; }
   $("f-guardar").disabled = true;
   try {
     await db.collection("apps").doc(appid).set(app);
-    aviso.textContent = "✓ " + name + " agregada al catálogo."; aviso.className = "aviso ok";
-    $("form").reset(); $("f-fuente").value = "Comunidad"; $("f-probada").checked = true;
+    aviso.textContent = "✓ " + name + " agregada a En pruebas."; aviso.className = "aviso ok";
+    $("form").reset(); $("f-fuente").value = "GitHub";
+    if (vista !== "pruebas") elegirVista("pruebas");
   } catch (err) {
     aviso.textContent = "No se pudo guardar: " + (err.message || err.code); aviso.className = "aviso err";
   } finally { $("f-guardar").disabled = false; }
 });
 
-async function quitar(appid) {
+async function cambiarEstado(appid, estado) {
   if (!db || !puedeEditar) return;
-  try { await db.collection("apps").doc(appid).delete(); } catch (e) {}
+  const a = agregadas[appid]; if (!a) return;
+  try { await db.collection("apps").doc(appid).set({ ...a, estado, fecha: Date.now() }); } catch (e) {}
 }
+const promover = (id) => cambiarEstado(id, "estable");
+const aPruebas = (id) => cambiarEstado(id, "pruebas");
+async function quitar(appid) { if (db && puedeEditar) { try { await db.collection("apps").doc(appid).delete(); } catch (e) {} } }
 
 conectar();
 </script>
