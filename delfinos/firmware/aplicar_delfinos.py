@@ -44,6 +44,21 @@ def git(fw, *args, check=True):
     return subprocess.run(["git", "-C", str(fw), *args], check=check, capture_output=True, text=True)
 
 
+def payloads_badusb(fw):
+    """Copia los payloads de demostración (educativos, inofensivos) a la carpeta BadUSB."""
+    origen = RAIZ_DELFINOS / "payloads"
+    destino = fw / "applications/main/bad_usb/resources/badusb/DelfinOS"
+    base = fw / "applications/main/bad_usb/resources/badusb"
+    if not base.is_dir():
+        return  # esta versión no trae payloads empacados; se saltan
+    destino.mkdir(parents=True, exist_ok=True)
+    n = 0
+    for f in sorted(origen.glob("*.txt")):
+        shutil.copy2(f, destino / f.name)
+        n += 1
+    print(f"   ✓ {n} payloads de demostración BadUSB (educativos)")
+
+
 def paso(n, texto):
     print(f"\n[{n}] {texto}")
 
@@ -201,6 +216,8 @@ def main():
         paso(3, "DelfínOS en inglés: solo marca, fuentes y animaciones")
     instalar_fuentes(fuentes)
     animaciones(fw, a.idioma)
+    paso(6, "Payloads BadUSB de demostración")
+    payloads_badusb(fw)
     marca = "es" if a.idioma == "es" else "en"
     print(f"\n✓ Listo (idioma: {a.idioma}). Ahora compila con:  ./compilar_delfinos.sh {fw} 0.1-{marca}")
 

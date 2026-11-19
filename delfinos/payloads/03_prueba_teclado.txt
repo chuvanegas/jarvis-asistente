@@ -1,0 +1,14 @@
+REM DelfínOS · Demo BadUSB 03 — Prueba de diseño de teclado
+REM Educativo: verifica que tu layout (ES/US) escribe bien los simbolos.
+DEFAULTDELAY 200
+GUI r
+DELAY 500
+STRING notepad
+ENTER
+DELAY 800
+STRING Prueba de teclado DelfinOS:
+ENTER
+STRING abcABC 123 . , - _ : / @ ( ) ? ! + =
+ENTER
+STRING Si algun simbolo salio mal, cambia el diseno de teclado en la app BadUSB.
+ENTER

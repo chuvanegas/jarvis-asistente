@@ -1,0 +1,20 @@
+REM DelfínOS · Demo BadUSB 02 — Concientización en seguridad
+REM Educativo: escribe un mensaje de concientización. No descarga ni ejecuta nada.
+DEFAULTDELAY 200
+GUI r
+DELAY 500
+STRING notepad
+ENTER
+DELAY 800
+STRING LECCION DE SEGURIDAD
+ENTER
+STRING ---------------------
+ENTER
+STRING 1. Nunca conectes una memoria USB que te encuentres o que no sea tuya.
+ENTER
+STRING 2. Un USB puede escribir como un teclado y actuar en segundos.
+ENTER
+STRING 3. Bloquea tu equipo cuando te alejes (Windows: tecla Windows + L).
+ENTER
+STRING 4. Lo que acabas de ver fue inofensivo. Un atacante NO seria amable.
+ENTER

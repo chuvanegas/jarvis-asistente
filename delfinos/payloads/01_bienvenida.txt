@@ -1,0 +1,15 @@
+REM DelfínOS · Demo BadUSB 01 — Bienvenida
+REM Educativo: abre el Bloc de notas y escribe un mensaje. No toca el sistema.
+REM Diseño de teclado: Español (ES). Cambia a US si tu teclado es en inglés.
+DEFAULTDELAY 200
+GUI r
+DELAY 500
+STRING notepad
+ENTER
+DELAY 800
+STRING Hola, soy DelfinOS en tu Flipper Zero.
+ENTER
+STRING Esto es una demostracion BadUSB: el Flipper se hizo pasar por un teclado
+ENTER
+STRING y escribio esto solo. Asi de rapido actua un dispositivo USB.
+ENTER
