@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DelfínOS — El sistema operativo del Flipper Zero, en español</title>
+<meta name="description" content="DelfínOS: firmware del Flipper Zero en español. Instálalo desde la web, con las mejores herramientas curadas y probadas. Para todo el mundo.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23ff7a3c'/%3E%3Cpath d='M20 38c14-4 26-2 34 6 5-9 13-13 24-13-3 6-3 10-1 14 6 3 9 8 9 15-10-3-16-2-21 2-6 5-15 7-25 4-11-3-18-11-20-22 0-3 0-5 0-6z' fill='white'/%3E%3Ccircle cx='34' cy='40' r='3' fill='%23ff7a3c'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#0a0b14; --card:#151827cc; --line:#262a3f;
+    --txt:#e8eaf2; --mut:#9aa0bf; --accent:#ff7a3c; --accent2:#7c5cff;
+    --cyan:#2fd8c6; --green:#3ad17a; --red:#ff5a6a; --amber:#ffb84d;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--txt);background:var(--bg);line-height:1.55;overflow-x:hidden}
+  .bg-mesh{position:fixed;inset:0;z-index:-2;background:
+      radial-gradient(60% 50% at 12% 8%, #ff7a3c26 0%, transparent 60%),
+      radial-gradient(50% 50% at 88% 12%, #7c5cff30 0%, transparent 60%),
+      radial-gradient(70% 60% at 50% 100%, #2fd8c61f 0%, transparent 60%),var(--bg)}
+  .bg-grid{position:fixed;inset:0;z-index:-1;opacity:.35;
+    background-image:linear-gradient(#ffffff08 1px,transparent 1px),linear-gradient(90deg,#ffffff08 1px,transparent 1px);
+    background-size:44px 44px;mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000 30%,transparent 80%)}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+
+  nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:#0a0b14aa;border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+  .brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:19px;letter-spacing:-.01em}
+  .brand .logo{width:34px;height:34px;flex-shrink:0}
+  .nav-links{display:flex;gap:24px;font-size:14px}
+  .nav-links a{color:var(--mut);text-decoration:none;transition:.2s}
+  .nav-links a:hover{color:var(--txt)}
+  @media(max-width:640px){.nav-links{display:none}}
+
+  header.hero{padding:72px 20px 40px;text-align:center}
+  .logo-big{width:112px;height:112px;margin:0 auto 26px;filter:drop-shadow(0 16px 40px #ff7a3c55)}
+  .badge{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--mut);
+    border:1px solid var(--line);background:#ffffff08;padding:7px 14px;border-radius:999px;margin-bottom:22px}
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green)}
+  h1{font-size:clamp(36px,6.5vw,64px);line-height:1.04;letter-spacing:-.025em;font-weight:800;
+    background:linear-gradient(120deg,#fff 15%,var(--accent) 55%,var(--accent2) 100%);
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .hero p.sub{max-width:640px;margin:20px auto 0;color:var(--mut);font-size:clamp(15px,2.4vw,18px)}
+  .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+  .btn{padding:14px 24px;border-radius:12px;font-weight:600;font-size:15px;text-decoration:none;cursor:pointer;
+    border:1px solid var(--line);color:var(--txt);transition:.2s;background:#ffffff08;font-family:inherit}
+  .btn:hover{transform:translateY(-2px);border-color:#ffffff30}
+  .btn.primary{background:linear-gradient(120deg,var(--accent),#ff5a6a);border:none;color:#fff;box-shadow:0 10px 30px -8px #ff7a3c88}
+  .stats{display:flex;gap:30px;justify-content:center;flex-wrap:wrap;margin-top:46px}
+  .stat b{display:block;font-size:30px;font-weight:800;background:linear-gradient(120deg,#fff,var(--cyan));
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .stat span{font-size:13px;color:var(--mut)}
+
+  section{padding:46px 0}
+  .shead{display:flex;align-items:baseline;gap:14px;margin-bottom:24px;flex-wrap:wrap}
+  .shead h2{font-size:27px;font-weight:700;letter-spacing:-.015em}
+  .shead .em{font-size:23px}
+  .shead p{color:var(--mut);font-size:14px}
+
+  .installer{border:1px solid #ff7a3c44;border-radius:22px;padding:34px;
+    background:linear-gradient(180deg,#ff7a3c10,#7c5cff0a),var(--card);backdrop-filter:blur(14px);text-align:center}
+  .installer h2{font-size:28px;margin-bottom:8px}
+  .installer .lead{color:var(--mut);max-width:520px;margin:0 auto 26px;font-size:15px}
+  .isteps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0 auto 28px;max-width:720px}
+  @media(max-width:620px){.isteps{grid-template-columns:1fr}}
+  .istep{border:1px solid var(--line);border-radius:14px;padding:18px 14px;background:#ffffff06}
+  .istep .k{width:30px;height:30px;border-radius:9px;margin:0 auto 10px;display:grid;place-items:center;
+    font-weight:800;color:#fff;background:linear-gradient(135deg,var(--accent2),var(--accent))}
+  .istep h4{font-size:15px;margin-bottom:4px}
+  .istep p{font-size:13px;color:var(--mut)}
+  #connectBtn{font-size:16px;padding:15px 30px}
+  .istatus{margin-top:18px;font-size:14px;color:var(--mut);min-height:22px}
+  .istatus.ok{color:var(--green)}.istatus.err{color:var(--amber)}
+  .reqs{margin-top:16px;font-size:12.5px;color:var(--mut)}
+  .reqs code{font-family:ui-monospace,Menlo,monospace;color:var(--cyan)}
+
+  .feat{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+  .fcard{border:1px solid var(--line);border-radius:16px;padding:22px;background:var(--card);backdrop-filter:blur(10px);transition:.25s}
+  .fcard:hover{transform:translateY(-3px);border-color:#ffffff22}
+  .fcard .ic{font-size:24px;margin-bottom:10px}
+  .fcard h3{font-size:16px;margin-bottom:5px}
+  .fcard p{font-size:13.5px;color:var(--mut)}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+  .cat{border:1px solid var(--line);border-radius:18px;padding:22px;background:var(--card);backdrop-filter:blur(12px);transition:.25s;position:relative;overflow:hidden}
+  .cat::before{content:"";position:absolute;inset:0 0 auto 0;height:2px;background:linear-gradient(90deg,transparent,var(--c,#ff7a3c),transparent);opacity:.7}
+  .cat:hover{transform:translateY(-4px);border-color:#ffffff22}
+  .cat .ic{font-size:26px;margin-bottom:10px}
+  .cat h3{font-size:18px;margin-bottom:4px}
+  .cat .tag{font-size:12px;color:var(--c,#ff7a3c);font-weight:600;letter-spacing:.03em;text-transform:uppercase}
+  .cat ul{list-style:none;margin-top:14px;display:flex;flex-direction:column;gap:9px}
+  .cat li{font-size:14px;display:flex;gap:9px;align-items:flex-start}
+  .cat li span{color:var(--mut)}
+  .cat li::before{content:"▹";color:var(--c,#ff7a3c);flex-shrink:0}
+
+  .flow{display:flex;align-items:stretch;gap:12px;flex-wrap:wrap;justify-content:center}
+  .fnode{flex:1;min-width:150px;border:1px solid var(--line);border-radius:14px;padding:18px;background:#ffffff06;text-align:center}
+  .fnode .n{font-size:22px;margin-bottom:8px}
+  .fnode h4{font-size:14px;margin-bottom:4px}
+  .fnode p{font-size:12.5px;color:var(--mut)}
+  .farrow{align-self:center;color:var(--accent);font-size:20px}
+  @media(max-width:620px){.farrow{transform:rotate(90deg)}}
+
+  .repos{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
+  .repo{border:1px solid var(--line);border-radius:14px;padding:16px;background:#ffffff06}
+  .repo h4{font-size:14px;font-family:ui-monospace,Menlo,monospace;color:var(--cyan);margin-bottom:5px;word-break:break-all}
+  .repo p{font-size:13px;color:var(--mut)}
+
+  .notice{border:1px solid var(--line);border-radius:16px;padding:20px 22px;background:var(--card);backdrop-filter:blur(12px)}
+  .notice.warn{border-color:#ffb84d44;background:linear-gradient(180deg,#ffb84d12,transparent)}
+  .notice h3{font-size:16px;margin-bottom:8px;display:flex;align-items:center;gap:9px}
+  .notice p{color:var(--mut);font-size:14.5px}.notice p+p{margin-top:8px}
+
+  /* ===== EMULADOR (CSS puro, sin JS) ===== */
+  .emu{display:flex;flex-direction:column;align-items:center;gap:16px}
+  .device{width:306px;max-width:100%;background:linear-gradient(180deg,#f3f4f7,#d7dade);border-radius:28px;
+    padding:20px 20px 26px;box-shadow:0 36px 70px -24px #000c,inset 0 2px 3px #fff}
+  .emu-r{position:absolute;opacity:0;pointer-events:none;width:0;height:0}
+  .screen-bezel{background:#23251a;border-radius:11px;padding:13px;box-shadow:inset 0 3px 10px #000a}
+  .screen{width:100%;height:252px;background:#f3a81c;border-radius:5px;padding:9px 10px;
+    color:#1a1205;font-family:ui-monospace,Menlo,monospace;font-weight:700;overflow:hidden;position:relative;
+    box-shadow:inset 0 0 0 2px #0002;display:flex;flex-direction:column}
+  .scr-top{display:flex;justify-content:space-between;align-items:center;font-size:11px;opacity:.85;
+    border-bottom:1.5px solid #1a120544;padding-bottom:3px;margin-bottom:4px;flex-shrink:0}
+  .scr-top .dolf{width:20px;height:15px;vertical-align:-2px;margin-right:4px}
+  .mlist{overflow-y:auto;flex:1}
+  .row{display:flex;gap:8px;padding:4px 7px;font-size:13.5px;border-radius:3px;align-items:center;cursor:pointer;white-space:nowrap}
+  .row .ri{width:30px;flex-shrink:0;opacity:.75;font-size:11px}
+  .row:hover,.row:active{background:#1a1205;color:#f3a81c}
+  .app-view{display:none;flex:1;flex-direction:column}
+  .arow{font-size:13px;padding:4px 7px;opacity:.9}
+  .arow:first-of-type{background:#1a1205;color:#f3a81c;border-radius:3px}
+  .backbtn{margin-top:auto;display:block;text-align:center;font-size:12.5px;cursor:pointer;
+    background:#1a120518;border:1px solid #1a120544;border-radius:5px;padding:5px;flex-shrink:0}
+  .backbtn:active{background:#1a1205;color:#f3a81c}
+  /* conmutación por radios */
+  .emu-r:checked ~ .screen-bezel .menu-view{display:none}
+  #v-0:checked ~ .screen-bezel .app-view[data-app="0"]{display:flex}
+  #v-1:checked ~ .screen-bezel .app-view[data-app="1"]{display:flex}
+  #v-2:checked ~ .screen-bezel .app-view[data-app="2"]{display:flex}
+  #v-3:checked ~ .screen-bezel .app-view[data-app="3"]{display:flex}
+  #v-4:checked ~ .screen-bezel .app-view[data-app="4"]{display:flex}
+  #v-5:checked ~ .screen-bezel .app-view[data-app="5"]{display:flex}
+  #v-6:checked ~ .screen-bezel .app-view[data-app="6"]{display:flex}
+  #v-7:checked ~ .screen-bezel .app-view[data-app="7"]{display:flex}
+  #v-8:checked ~ .screen-bezel .app-view[data-app="8"]{display:flex}
+  #v-9:checked ~ .screen-bezel .app-view[data-app="9"]{display:flex}
+  #v-10:checked ~ .screen-bezel .app-view[data-app="10"]{display:flex}
+  #v-menu:checked ~ .screen-bezel .menu-view{display:flex;flex-direction:column;flex:1}
+  .controls{margin-top:22px;display:flex;justify-content:center}
+  .emu-hint{font-size:13.5px;color:var(--mut);text-align:center;max-width:300px}
+  .emu-hint b{color:var(--txt)}
+
+  /* ADMIN */
+  #adminToggle{position:absolute;opacity:0;width:0;height:0}
+  .admin-card{border:1px solid #7c5cff55;border-radius:20px;padding:28px;
+    background:linear-gradient(180deg,#7c5cff14,transparent),var(--card);backdrop-filter:blur(12px);max-width:560px;margin:0 auto}
+  .admin-login{display:flex;flex-direction:column;gap:12px;max-width:340px;margin:0 auto}
+  .fld{display:flex;flex-direction:column;gap:5px;text-align:left}
+  .fld label{font-size:13px;color:var(--mut)}
+  .fld input{background:#0a0b14;border:1px solid var(--line);border-radius:10px;padding:11px 13px;color:var(--txt);font-size:15px;font-family:inherit}
+  .enter-btn{cursor:pointer;text-align:center;background:linear-gradient(120deg,var(--accent2),#5b3fd6);color:#fff;font-weight:700;padding:13px;border-radius:11px;transition:.15s}
+  .enter-btn:active{transform:translateY(1px)}
+  .admin-panel{display:none}
+  #adminToggle:checked ~ .admin-login{display:none}
+  #adminToggle:checked ~ .admin-panel{display:block}
+  .upload{border:2px dashed var(--line);border-radius:14px;padding:26px;text-align:center;background:#ffffff05;margin:6px 0 14px}
+  .upload input[type=file]{margin-top:12px;color:var(--mut);font-size:12.5px;max-width:100%}
+  .stage-item{display:flex;align-items:center;justify-content:space-between;gap:10px;border:1px solid var(--line);
+    border-radius:12px;padding:12px 14px;margin-top:10px;background:#ffffff06;flex-wrap:wrap}
+  .stage-item .nm{font-weight:600;font-size:14px;font-family:ui-monospace,Menlo,monospace}
+  .stage-item .st{font-size:12px;color:var(--amber);margin-top:2px}
+  .stage-item .st.done{color:var(--green)}
+  .mini{padding:7px 13px;border-radius:9px;font-size:12.5px;font-weight:600;border:1px solid var(--line);
+    background:#ffffff0d;color:var(--txt);cursor:pointer;font-family:inherit}
+  .mini.ok{background:linear-gradient(120deg,var(--green),#2bb866);border:none;color:#06240f}
+  .admin-note{font-size:12.5px;color:var(--mut);border-top:1px solid var(--line);margin-top:18px;padding-top:14px;line-height:1.6}
+
+  footer{padding:50px 20px 60px;text-align:center;color:var(--mut);font-size:13px;border-top:1px solid var(--line);margin-top:30px}
+  footer .brand{justify-content:center;margin-bottom:12px}
+  .mono{font-family:ui-monospace,Menlo,monospace}
+</style>
+</head>
+<body>
+<div class="bg-mesh"></div>
+<div class="bg-grid"></div>
+
+<svg style="display:none"><symbol id="delfin" viewBox="0 0 100 100">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#ff7a3c"/><stop offset="1" stop-color="#7c5cff"/></linearGradient></defs>
+  <rect width="100" height="100" rx="24" fill="url(#g)"/>
+  <path d="M18 40c15-5 28-3 37 6 5-10 14-14 26-14-3 6-3 11-1 15 6 3 10 9 10 16-11-4-18-2-23 3-7 6-16 8-27 4-12-4-19-12-21-24 0-3 0-5 -1-6z" fill="#fff"/>
+  <circle cx="33" cy="42" r="3.2" fill="#ff7a3c"/>
+  <path d="M63 70c-2 6-7 10-14 11" fill="none" stroke="#ffffff66" stroke-width="3" stroke-linecap="round"/>
+</symbol></svg>
+
+<nav>
+  <div class="wrap">
+    <div class="brand"><svg class="logo"><use href="#delfin"/></svg> DelfínOS</div>
+    <div class="nav-links">
+      <a href="#instalar">Instalar</a>
+      <a href="#preview">Vista previa</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#calidad">Calidad</a>
+      <a href="#admin">Admin</a>
+      <a href="#etica">Uso ético</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <svg class="logo-big"><use href="#delfin"/></svg>
+    <span class="badge"><span class="dot"></span> El sistema operativo del Flipper Zero · en español · para todo el mundo</span>
+    <h1>DelfínOS</h1>
+    <p class="sub">El firmware del Flipper Zero <b>en español</b>, con las mejores herramientas curadas y probadas. Se instala desde la web en un clic: conectas tu Flipper y listo. 🌎</p>
+    <div class="cta">
+      <a class="btn primary" href="#instalar">⚡ Instalar ahora</a>
+      <a class="btn" href="#preview">👀 Probar demo</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>1 clic</b><span>instalación web</span></div>
+      <div class="stat"><b>9</b><span>categorías de herramientas</span></div>
+      <div class="stat"><b>100%</b><span>español · probado · estable</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section id="instalar">
+    <div class="installer">
+      <svg style="width:54px;height:54px;margin-bottom:14px"><use href="#delfin"/></svg>
+      <h2>Instala DelfínOS desde el navegador</h2>
+      <p class="lead">Sin programas, sin comandos. Conecta tu Flipper Zero por USB y graba el sistema operativo directo desde aquí.</p>
+      <div class="isteps">
+        <div class="istep"><div class="k">1</div><h4>Conecta el Flipper</h4><p>Por cable USB a tu computador</p></div>
+        <div class="istep"><div class="k">2</div><h4>Pulsa instalar</h4><p>El navegador detecta tu equipo</p></div>
+        <div class="istep"><div class="k">3</div><h4>Espera y listo</h4><p>DelfínOS queda grabado</p></div>
+      </div>
+      <button class="btn primary" id="connectBtn">🔌 Conectar e instalar DelfínOS</button>
+      <div class="istatus" id="istatus"></div>
+      <p class="reqs">Requiere <b>Chrome</b> o <b>Edge</b> en computador (usan WebSerial). Desde el celular, usa la app de Flipper. · Comando manual en Mac: <code>./fbt flash_usb</code></p>
+    </div>
+  </section>
+
+  <!-- EMULADOR -->
+  <section id="preview">
+    <div class="shead"><span class="em">👀</span><h2>Mira tu Flipper con DelfínOS</h2><p>toca las opciones en la pantalla</p></div>
+    <div class="emu">
+      <div class="device">
+        <input class="emu-r" type="radio" name="emuv" id="v-menu" checked>
+        <input class="emu-r" type="radio" name="emuv" id="v-0">
+        <input class="emu-r" type="radio" name="emuv" id="v-1">
+        <input class="emu-r" type="radio" name="emuv" id="v-2">
+        <input class="emu-r" type="radio" name="emuv" id="v-3">
+        <input class="emu-r" type="radio" name="emuv" id="v-4">
+        <input class="emu-r" type="radio" name="emuv" id="v-5">
+        <input class="emu-r" type="radio" name="emuv" id="v-6">
+        <input class="emu-r" type="radio" name="emuv" id="v-7">
+        <input class="emu-r" type="radio" name="emuv" id="v-8">
+        <input class="emu-r" type="radio" name="emuv" id="v-9">
+        <input class="emu-r" type="radio" name="emuv" id="v-10">
+        <div class="screen-bezel">
+          <div class="screen">
+            <div class="scr-top">
+              <span><svg class="dolf" viewBox="0 0 100 74"><path d="M8 34c15-5 28-3 37 6 5-10 14-14 26-14-3 6-3 11-1 15 6 3 10 9 10 16-11-4-18-2-23 3-7 6-16 8-27 4-12-4-19-12-21-24 0-3 0-5-1-6z" fill="#1a1205"/><circle cx="23" cy="36" r="3" fill="#f3a81c"/></svg>DelfínOS</span>
+              <span>Español</span>
+            </div>
+            <div class="menu-view mlist">
+              <label class="row" for="v-0"><span class="ri">((·))</span>Sub-GHz</label>
+              <label class="row" for="v-1"><span class="ri">[=]</span>125 kHz RFID</label>
+              <label class="row" for="v-2"><span class="ri">&lt;N&gt;</span>NFC</label>
+              <label class="row" for="v-3"><span class="ri">&gt;o&lt;</span>Infrarrojo</label>
+              <label class="row" for="v-4"><span class="ri">|||</span>GPIO</label>
+              <label class="row" for="v-5"><span class="ri">o-o</span>iButton</label>
+              <label class="row" for="v-6"><span class="ri">[K]</span>BadUSB</label>
+              <label class="row" for="v-7"><span class="ri">(B)</span>Bluetooth</label>
+              <label class="row" for="v-8"><span class="ri">:D</span>Juegos</label>
+              <label class="row" for="v-9"><span class="ri">::</span>Apps</label>
+              <label class="row" for="v-10"><span class="ri">%</span>Ajustes</label>
+            </div>
+            <div class="app-view" data-app="0">
+              <div class="arow">Leer</div><div class="arow">Guardados</div><div class="arow">Agregar manual</div><div class="arow">Frecuencia</div>
+              <label class="backbtn" for="v-menu">↩ Atrás</label></div>
+            <div class="app-view" data-app="1">
+              <div class="arow">Leer</div><div class="arow">Guardados</div><div class="arow">Agregar manual</div>
+              <label class="backbtn" for="v-menu">↩ Atrás</label></div>
+            <div class="app-view" data-app="2">
+              <div class="arow">Leer</div><div class="arow">Detectar lector</div><div class="arow">Guardados</div>
+              <label class="backbtn" for="v-menu">↩ Atrás</label></div>
+            <div class="app-view" data-app="3">
+              <div class="arow">Mando universal</div><div class="arow">Leer</div><div class="arow">Guardados</div>
+              <label class="backbtn" for="v-menu">↩ Atrás</label></div>
+            <div class="app-view" data-app="4">
+              <div class="arow">Lector I2C</div><div class="arow">Pines</div><div class="arow">Consola USB-UART</div>
+              <label class="backbtn" for="v-menu">↩ Atrás</label></div>
+            <div class="app-view" data-app="5">
+              <div class="arow">Leer</div><div class="arow">Guardados</div><div class="arow">Agregar manual</div>
+              <label class="backbtn" for="v-menu">↩ Atrás</label></div>
+            <div class="app-view" data-app="6">
+              <div class="arow">Elegir script</div><div class="arow">Diseño de teclado</div>
+              <label class="backbtn" for="v-menu">↩ Atrás</label></div>
+            <div class="app-view" data-app="7">
+              <div class="arow">Escanear BLE</div><div class="arow">Mando remoto</div>
+              <label class="backbtn" for="v-menu">↩ Atrás</label></div>
+            <div class="app-view" data-app="8">
+              <div class="arow">DOOM</div><div class="arow">Tetris</div><div class="arow">Snake</div><div class="arow">2048</div>
+              <label class="backbtn" for="v-menu">↩ Atrás</label></div>
+            <div class="app-view" data-app="9">
+              <div class="arow">Herramientas</div><div class="arow">Autenticador</div><div class="arow">Editor Hex</div>
+              <label class="backbtn" for="v-menu">↩ Atrás</label></div>
+            <div class="app-view" data-app="10">
+              <div class="arow">Región</div><div class="arow">Pantalla</div><div class="arow">Idioma: Español</div><div class="arow">Acerca de</div>
+              <label class="backbtn" for="v-menu">↩ Atrás</label></div>
+          </div>
+        </div>
+      </div>
+      <p class="emu-hint">👆 <b>Toca una herramienta</b> en la pantalla para abrirla, y <b>Atrás</b> para volver. Demostración visual del menú en español.</p>
+    </div>
+  </section>
+
+  <section id="porque">
+    <div class="shead"><span class="em">✨</span><h2>Por qué DelfínOS</h2><p>lo que nos hace diferentes</p></div>
+    <div class="feat">
+      <div class="fcard"><div class="ic">🇪🇸</div><h3>En español, de verdad</h3><p>Menús, mensajes y guías traducidos. El único firmware pensado para hispanohablantes.</p></div>
+      <div class="fcard"><div class="ic">🛡️</div><h3>Curado, sin basura</h3><p>Lo mejor del catálogo oficial, Momentum y la comunidad. Sin apps rotas ni jammers ilegales.</p></div>
+      <div class="fcard"><div class="ic">🧪</div><h3>Probado antes de publicar</h3><p>Cada app pasa por un pipeline de pruebas. Si no funciona, no entra. Estabilidad real.</p></div>
+      <div class="fcard"><div class="ic">🎨</div><h3>Menú moderno e iconos</h3><p>Interfaz cuidada, pack de iconos propio y pantalla de arranque con el delfín.</p></div>
+      <div class="fcard"><div class="ic">🕹️</div><h3>Con juegos incluidos</h3><p>DOOM, Tetris, Snake y más, listos desde el primer arranque.</p></div>
+      <div class="fcard"><div class="ic">🌎</div><h3>Para todo el mundo</h3><p>Acceso libre desde cualquier país, con instalación web y documentación abierta.</p></div>
+      <div class="fcard"><div class="ic">🌐</div><h3>Ajustes por región</h3><p>Bandas Sub-GHz legales de tu país (315/433/868 MHz), teclados BadUSB por idioma y bases de IR regionales. Sin límites innecesarios.</p></div>
+    </div>
+  </section>
+
+  <section id="catalogo">
+    <div class="shead"><span class="em">🧰</span><h2>Catálogo de herramientas</h2><p>las mejores de cada categoría, sin repetir</p></div>
+    <div class="grid">
+      <div class="cat" style="--c:#ff7a3c"><div class="ic">📡</div><span class="tag">Sub-GHz · Radio</span><h3>Radiofrecuencia</h3>
+        <ul><li>Lectura y reenvío <span>— garajes, barreras, timbres (300–928 MHz)</span></li><li>Sub-GHz Bruteforcer</li><li>Weather Station <span>— sensores de clima</span></li><li>Spectrum Analyzer</li></ul></div>
+      <div class="cat" style="--c:#2fd8c6"><div class="ic">💳</div><span class="tag">NFC / RFID</span><h3>Tarjetas y acceso</h3>
+        <ul><li>Lectura y clonación <span>— 125 kHz y 13,56 MHz</span></li><li>Picopass · NFC Magic</li><li>Seader <span>— credenciales SEOS</span></li><li>FlipperAmiibo</li></ul></div>
+      <div class="cat" style="--c:#7c5cff"><div class="ic">📺</div><span class="tag">Infrarrojo</span><h3>Control universal</h3>
+        <ul><li>Universal Remote <span>— TVs, aires</span></li><li>TV-B-Gone</li><li>IR Intervalometer <span>— cámaras</span></li></ul></div>
+      <div class="cat" style="--c:#3ad17a"><div class="ic">📶</div><span class="tag">WiFi · ESP32</span><h3>Redes inalámbricas</h3>
+        <ul><li>WiFi Marauder</li><li>Evil Portal <span>— demos de phishing</span></li><li>ESP Flasher · WiFi Map</li></ul></div>
+      <div class="cat" style="--c:#ffb84d"><div class="ic">⌨️</div><span class="tag">BadUSB · HID</span><h3>Inyección de teclado</h3>
+        <ul><li>BadUSB <span>— se hace pasar por teclado</span></li><li>DuckyScript</li><li>Payloads propios</li></ul></div>
+      <div class="cat" style="--c:#ff5a6a"><div class="ic">🔵</div><span class="tag">Bluetooth · BLE</span><h3>Bluetooth</h3>
+        <ul><li>Escaneo BLE</li><li>BLE Spam <span>— pruebas de ruido</span></li><li>Mando / HID BLE</li></ul></div>
+      <div class="cat" style="--c:#2fd8c6"><div class="ic">🔌</div><span class="tag">GPIO · Hardware</span><h3>Electrónica</h3>
+        <ul><li>iButton</li><li>Lector GPIO / I²C</li><li>Signal Generator</li></ul></div>
+      <div class="cat" style="--c:#7c5cff"><div class="ic">🛠️</div><span class="tag">Utilidades</span><h3>Herramientas</h3>
+        <ul><li>Authenticator <span>— 2FA/TOTP</span></li><li>Hex Editor</li><li>Calculadora · Reloj · QR</li></ul></div>
+      <div class="cat" style="--c:#ff7a3c"><div class="ic">🎮</div><span class="tag">Juegos</span><h3>Diversión</h3>
+        <ul><li>DOOM · Tetris · Snake</li><li>2048 · Ajedrez</li><li>DnD Dice</li></ul></div>
+    </div>
+  </section>
+
+  <section id="calidad">
+    <div class="shead"><span class="em">🧪</span><h2>Cómo garantizamos la estabilidad</h2><p>nada roto llega a ti</p></div>
+    <div class="flow">
+      <div class="fnode"><div class="n">📥</div><h4>1. Fuente</h4><p>Se vigilan los repos buenos (oficial, Momentum, comunidad)</p></div>
+      <div class="farrow">→</div>
+      <div class="fnode"><div class="n">⚙️</div><h4>2. Compila</h4><p>Build automático contra DelfínOS. Si falla, se rechaza solo</p></div>
+      <div class="farrow">→</div>
+      <div class="fnode"><div class="n">🧫</div><h4>3. Pruebas</h4><p>Se prueba en un Flipper dedicado antes de aprobar</p></div>
+      <div class="farrow">→</div>
+      <div class="fnode"><div class="n">✅</div><h4>4. Catálogo</h4><p>Solo lo que funciona llega a tu equipo</p></div>
+    </div>
+  </section>
+
+  <section id="fuentes">
+    <div class="shead"><span class="em">📦</span><h2>Fuentes abiertas</h2><p>de dónde sale lo mejor</p></div>
+    <div class="repos">
+      <div class="repo"><h4>Next-Flip/Momentum-Firmware</h4><p>La base de DelfínOS.</p></div>
+      <div class="repo"><h4>flipperdevices/flipper-application-catalog</h4><p>Catálogo oficial, auto-actualiza.</p></div>
+      <div class="repo"><h4>flipperdevices/flipperzero-good-faps</h4><p>Apps oficiales extra.</p></div>
+      <div class="repo"><h4>xMasterX/all-the-plugins</h4><p>Mega-colección comunitaria.</p></div>
+      <div class="repo"><h4>UberGuidoZ/Flipper</h4><p>Bases de IR y Sub-GHz, docs.</p></div>
+      <div class="repo"><h4>djsime1/awesome-flipperzero</h4><p>Índice maestro del ecosistema.</p></div>
+    </div>
+  </section>
+
+  <section id="admin">
+    <div class="shead"><span class="em">🔐</span><h2>Panel de administrador</h2><p>cargar, probar y aprobar apps traducidas</p></div>
+    <div class="admin-card">
+      <input type="checkbox" id="adminToggle">
+      <div class="admin-login">
+        <div class="fld"><label>Usuario</label><input type="text" placeholder="admin" autocomplete="off"></div>
+        <div class="fld"><label>Contraseña</label><input type="password" placeholder="••••••••" autocomplete="off"></div>
+        <label class="enter-btn" for="adminToggle">🔑 Iniciar como administrador</label>
+        <p style="font-size:12px;color:var(--mut);text-align:center">Demostración de la interfaz · la validación real va en tu servidor</p>
+      </div>
+      <div class="admin-panel">
+        <div class="upload">
+          📦 <b>Cargar app traducida (.fap)</b>
+          <div style="color:var(--mut);font-size:13px;margin-top:4px">Selecciona el archivo compilado para enviarlo a pruebas</div>
+          <input type="file" accept=".fap" multiple>
+        </div>
+        <div style="font-size:14px;font-weight:600;margin:14px 0 2px">🧪 En pruebas (staging)</div>
+        <div class="stage-item"><div><div class="nm">wifi_marauder.fap</div><div class="st">⏳ Pendiente de prueba</div></div>
+          <div style="display:flex;gap:8px"><button class="mini">Probar</button><button class="mini ok">Aprobar</button></div></div>
+        <div class="stage-item"><div><div class="nm">nfc_playlist.fap</div><div class="st done">✓ Probada — lista</div></div>
+          <div style="display:flex;gap:8px"><button class="mini">Ver</button><button class="mini ok">Publicar</button></div></div>
+        <div class="admin-note">⚠️ Esta es la <b>interfaz</b> del panel. La autenticación y el guardado de archivos se conectan a <b>tu servidor</b> cuando montemos el backend. <b>No pongas una contraseña real</b> en una página pública: cualquiera podría verla en el código.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="etica">
+    <div class="notice warn">
+      <h3>⚖️ Uso responsable</h3>
+      <p>DelfínOS es una herramienta de <b>aprendizaje y concientización</b> en seguridad. Úsala solo sobre <b>tus propios equipos</b> o en laboratorios con autorización. Las leyes sobre seguridad informática y espectro radioeléctrico <b>varían según el país</b>: es tu responsabilidad conocer y cumplir las de tu región.</p>
+      <p>Por eso DelfínOS <b>no incluye jammers</b> ni herramientas de ataque indiscriminado: interfieren a terceros y son ilegales en la mayoría de países. Enseñamos cómo funcionan las vulnerabilidades y cómo protegerse, sin entregar el arma.</p>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="brand"><svg class="logo" style="width:28px;height:28px"><use href="#delfin"/></svg> DelfínOS</div>
+  <p>El sistema operativo del Flipper Zero, en español · para todo el mundo 🌎</p>
+  <p style="margin-top:6px">Software de código abierto · Uso responsable según las leyes de cada país</p>
+</footer>
+
+<script>
+  const btn=document.getElementById('connectBtn');
+  const st=document.getElementById('istatus');
+  function set(msg,cls){st.textContent=msg;st.className='istatus '+(cls||'');}
+  btn&&btn.addEventListener('click',async()=>{
+    if(!('serial' in navigator)){set('Abre esta página en Chrome o Edge desde un computador para instalar.','err');return;}
+    try{set('Selecciona tu Flipper Zero en la ventana del navegador…');
+      await navigator.serial.requestPort();
+      set('✓ Flipper detectado. El grabado de DelfínOS se activa cuando publiquemos el primer build. ¡Ya casi!','ok');
+    }catch(e){set('No se seleccionó ningún equipo. Conéctalo por USB e inténtalo de nuevo.','err');}
+  });
+</script>
+</body>
+</html>
