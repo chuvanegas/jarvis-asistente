@@ -3,7 +3,7 @@
 "appid": "claude_remote_usb",
 "name": "Agentic Remote USB",
 "cat": "⌨️ USB / BadUSB",
-"desc": "One-handed remote for AI coding agents (Claude Code). D-pad control, macros, offline manual + quiz.",
+"desc": "Control de una mano para agentes de IA (Claude Code). Pad direccional, macros, manual y quiz sin conexión.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Wet-wr-Labs/claupper"
 },
@@ -11,7 +11,7 @@
 "appid": "bc_scanner",
 "name": "BarCode ScannerE",
 "cat": "⌨️ USB / BadUSB",
-"desc": "Emulates a barcode scanner for testing cash registers. Why buy a scanner when you have a flipper?",
+"desc": "Emula un lector de códigos de barras para probar cajas registradoras. ¿Para qué comprar un lector si tienes un Flipper?",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/polarikus/flipper-zero_bc_scanner_emulator"
 },
@@ -19,7 +19,7 @@
 "appid": "bettermouse",
 "name": "Better Mouse",
 "cat": "⌨️ USB / BadUSB",
-"desc": "A USB mouse remote for the Flipper Zero that actually feels like a mouse.",
+"desc": "Control de ratón USB para el Flipper que de verdad se siente como un ratón.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Timon-sys/Bettermouse"
 },
@@ -27,7 +27,7 @@
 "appid": "ccid_test",
 "name": "CCID",
 "cat": "⌨️ USB / BadUSB",
-"desc": "Turns your Flipper Zero into a USB smart card reader. While the app is open, the",
+"desc": "Convierte tu Flipper en un lector de tarjetas inteligentes por USB. Mientras la app está abierta, el",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/kidbomb/flipper-ccid-app"
 },
@@ -35,7 +35,7 @@
 "appid": "mouse_click_recorder",
 "name": "Click Recorder",
 "cat": "⌨️ USB / BadUSB",
-"desc": "Turn your Flipper Zero into a powerful mouse automation tool. Record, replay, randomize, or spam mouse clicks over USB or Bluetooth. No software needed on the t",
+"desc": "Convierte tu Flipper en una potente herramienta de automatización de ratón. Graba, repite, aleatoriza o repite en ráfaga clics por USB o Bluetooth. Sin software en el equ",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/0x78f1935/Click-Recorder"
 },
@@ -43,7 +43,7 @@
 "appid": "flipbase",
 "name": "FlipBase",
 "cat": "⌨️ USB / BadUSB",
-"desc": "FlipBase A Flipper Zero app that acts as a Disney Infinity base over USB, so the game sees characters, play sets and power discs without a physical base. Tested",
+"desc": "FlipBase hace que el Flipper actúe como una base de Disney Infinity por USB, para que el juego vea personajes, play sets y discos sin base física. Probado",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Space-Raler/FlipBase"
 },
@@ -51,7 +51,7 @@
 "appid": "ham",
 "name": "HAM",
 "cat": "⌨️ USB / BadUSB",
-"desc": "HAM - Human Activity Mimic",
+"desc": "HAM - imita actividad humana",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/lumen-rot/flipper-ham"
 },
@@ -59,7 +59,7 @@
 "appid": "jiggler",
 "name": "Jiggler",
 "cat": "⌨️ USB / BadUSB",
-"desc": "A mouse jiggler that keeps a computer awake without getting in your way.",
+"desc": "Mueve el ratón para mantener el computador despierto sin estorbarte.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/rseufert/jiggler"
 },
@@ -67,7 +67,7 @@
 "appid": "ldtoypad",
 "name": "LEGO Dimensions Toy Pad",
 "cat": "⌨️ USB / BadUSB",
-"desc": "USB Toy Pad emulator for Lego Dimensions",
+"desc": "Emulador de Toy Pad USB para Lego Dimensions",
 "fuente": "Momentum",
 "github": "https://github.com/SegerEnd/Flipper-Zero-LD-Toypad-Emulator"
 },
@@ -75,14 +75,14 @@
 "appid": "mass_storage",
 "name": "Mass Storage",
 "cat": "⌨️ USB / BadUSB",
-"desc": "Implements a mass storage device over USB for disk images",
+"desc": "Implementa un dispositivo de almacenamiento masivo por USB para imágenes de disco",
 "fuente": "Momentum"
 },
 {
 "appid": "mouse_jiggler",
 "name": "Mouse Jiggler",
 "cat": "⌨️ USB / BadUSB",
-"desc": "A simple mouse jiggler for the Flipper Zero",
+"desc": "Movedor de ratón sencillo para el Flipper",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/DavidBerdik/flipper-mouse-jiggler"
 },
@@ -90,7 +90,7 @@
 "appid": ".f0_mtp",
 "name": "MTP",
 "cat": "⌨️ USB / BadUSB",
-"desc": "Use Flipper Zero as a MTP device.",
+"desc": "Usa el Flipper como dispositivo MTP.",
 "fuente": "Momentum",
 "github": "https://github.com/Alex4386/f0-mtp"
 },
@@ -98,7 +98,7 @@
 "appid": "pc_monitor_usb",
 "name": "PC Monitor USB",
 "cat": "⌨️ USB / BadUSB",
-"desc": "PC resource monitor & USB soundboard pad",
+"desc": "Monitor de recursos del PC y pad de sonidos por USB",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/DonJulve/Flipper-Zero-PC-Monitor-USB"
 },
@@ -106,7 +106,7 @@
 "appid": "portal_of_flipper",
 "name": "Portal Of Flipper",
 "cat": "⌨️ USB / BadUSB",
-"desc": "USB emulator",
+"desc": "Emulador USB",
 "fuente": "Momentum",
 "github": "https://github.com/sanjay900/portal_of_flipper"
 },
@@ -114,7 +114,7 @@
 "appid": "usb_cdrom",
 "name": "USB CD-ROM",
 "cat": "⌨️ USB / BadUSB",
-"desc": "USB CD-ROM makes your Flipper Zero appear to a computer as a USB CD/DVD-ROM drive. The disc in the drive is an ISO image from the SD card, and you can swap disc",
+"desc": "USB CD-ROM hace que el Flipper aparezca ante el computador como una unidad CD/DVD. El disco es una imagen ISO de la SD y puedes cambiarla",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/piersroberts/flippercd"
 },
@@ -122,14 +122,14 @@
 "appid": "usb_ccb",
 "name": "USB Consumer Control",
 "cat": "⌨️ USB / BadUSB",
-"desc": "USB Consumer Control",
+"desc": "Control de consumo USB",
 "fuente": "Momentum"
 },
 {
 "appid": "usb_floppy",
 "name": "USB Floppy",
 "cat": "⌨️ USB / BadUSB",
-"desc": "USB Floppy makes your Flipper Zero appear to a computer as a USB floppy drive. Select a 720K or 1.44M disk image from the SD card and the host can read it, writ",
+"desc": "USB Floppy hace que el Flipper aparezca como una disquetera USB. Elige una imagen de 720K o 1.44M de la SD y el equipo la lee y escribe",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/piersroberts/flipperfloppy"
 },
@@ -137,14 +137,14 @@
 "appid": "xinput_controller",
 "name": "USB Game Controller",
 "cat": "⌨️ USB / BadUSB",
-"desc": "An app that emulates XInput controllers",
+"desc": "App que emula controles XInput",
 "fuente": "Momentum"
 },
 {
 "appid": "twentyq",
 "name": "20 Questions",
 "cat": "🎮 Juegos",
-"desc": "Think of anything real: an animal, a food, an object, a place. Your Flipper asks up to 20 yes/no questions and tries to name it. No network, no phone, no cloud.",
+"desc": "Piensa en algo real: un animal, una comida, un objeto, un lugar. El Flipper hace hasta 20 preguntas de sí/no y trata de adivinarlo. Sin red, sin celular, sin nube.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Cheesedog223/20Q_Flipper0"
 },
@@ -152,14 +152,14 @@
 "appid": "game_2048",
 "name": "2048",
 "cat": "🎮 Juegos",
-"desc": "Play the port of the 2048 game on Flipper Zero.",
+"desc": "Juega el port del 2048 en el Flipper.",
 "fuente": "Momentum"
 },
 {
 "appid": "4inrow",
 "name": "4 in a Row",
 "cat": "🎮 Juegos",
-"desc": "4 in row Game",
+"desc": "Juego 4 en raya",
 "fuente": "Momentum",
 "github": "https://github.com/leo-need-more-coffee/flipperzero-4inrow"
 },
@@ -167,21 +167,21 @@
 "appid": "air_arkanoid",
 "name": "Air Arkanoid",
 "cat": "🎮 Juegos",
-"desc": "Arkanoid game that supports the Video Game Module motion sensor",
+"desc": "Arkanoid con soporte del sensor de movimiento del Video Game Module",
 "fuente": "Momentum"
 },
 {
 "appid": "air_labyrinth",
 "name": "Air Labyrinth",
 "cat": "🎮 Juegos",
-"desc": "Labyrinth game v0.1 that supports the Video Game Module motion sensor. Written by @CodeAllNight (",
+"desc": "Juego de laberinto v0.1 con soporte del sensor de movimiento del Video Game Module. Por @CodeAllNight (",
 "fuente": "Momentum"
 },
 {
 "appid": "apple_grabber",
 "name": "Apple Grabber",
 "cat": "🎮 Juegos",
-"desc": "Apple grabber game, default mode is vertical",
+"desc": "Juego de atrapar manzanas; el modo por defecto es vertical",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/d7d8/apple-grabber"
 },
@@ -189,7 +189,7 @@
 "appid": "arddrivin",
 "name": "Ardudrivin",
 "cat": "🎮 Juegos",
-"desc": "Race game ported to Flipper Zero.",
+"desc": "Juego de carreras adaptado al Flipper.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/apfxtech/FlipperDrivin"
 },
@@ -197,7 +197,7 @@
 "appid": "ardugolf",
 "name": "ArduGolf",
 "cat": "🎮 Juegos",
-"desc": "3D mini-golf game ported to Flipper Zero.",
+"desc": "Minigolf 3D adaptado al Flipper Zero.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/apfxtech/FlipperGolf"
 },
@@ -205,7 +205,7 @@
 "appid": "arduventure",
 "name": "Arduventure",
 "cat": "🎮 Juegos",
-"desc": "A top-down action adventure ported to Flipper Zero.",
+"desc": "Aventura de acción con vista cenital, adaptada al Flipper.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/apfxtech/FlipperArduventure"
 },
@@ -213,14 +213,14 @@
 "appid": "arkanoid",
 "name": "Arkanoid",
 "cat": "🎮 Juegos",
-"desc": "Arkanoid Game",
+"desc": "Juego Arkanoid",
 "fuente": "Momentum"
 },
 {
 "appid": "asteroids",
 "name": "Asteroids",
 "cat": "🎮 Juegos",
-"desc": "Asteroids game",
+"desc": "Juego Asteroids",
 "fuente": "Momentum",
 "github": "https://github.com/antirez/flipper-asteroids"
 },
@@ -228,7 +228,7 @@
 "appid": "flipper_avocado_zero",
 "name": "Avocado Zero",
 "cat": "🎮 Juegos",
-"desc": "Avocado pit care sim: clean water, grow roots, avoid grime.",
+"desc": "Simulador de cuidar una semilla de aguacate: agua limpia, echa raíces, evita la suciedad.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Endika/flipper-avocado-zero"
 },
@@ -236,7 +236,7 @@
 "appid": "banana",
 "name": "Banana",
 "cat": "🎮 Juegos",
-"desc": "Banana. Everyone loves banana.",
+"desc": "Banana. A todos les gusta la banana.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/DrEverr/FlipperApps"
 },
@@ -244,7 +244,7 @@
 "appid": "beepback",
 "name": "BEEPBACK",
 "cat": "🎮 Juegos",
-"desc": "A memory game for Flipper Zero. Five buttons, five tones. The Flipper plays",
+"desc": "Juego de memoria. Cinco botones, cinco tonos. El Flipper toca",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/h4sw5q2wr9-byte/BEEPBACK"
 },
@@ -252,21 +252,21 @@
 "appid": "blackjack",
 "name": "BlackJack",
 "cat": "🎮 Juegos",
-"desc": "Blackjack Game",
+"desc": "Juego de Blackjack",
 "fuente": "Momentum"
 },
 {
 "appid": "bomberduck",
 "name": "Bomberduck",
 "cat": "🎮 Juegos",
-"desc": "Bomberduck(Bomberman) Game",
+"desc": "Juego Bomberduck (tipo Bomberman)",
 "fuente": "Momentum"
 },
 {
 "appid": "bounce",
 "name": "Bounce",
 "cat": "🎮 Juegos",
-"desc": "A tribute to the classic Nokia Bounce. Roll a ball through eight brick levels,",
+"desc": "Homenaje al clásico Nokia Bounce. Rueda una pelota por ocho niveles de ladrillos,",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/tomxposed/flipper-bounce"
 },
@@ -274,7 +274,7 @@
 "appid": "brainy",
 "name": "Brainy",
 "cat": "🎮 Juegos",
-"desc": "Classic Simon Says memory game with a pixel-art brain mascot. Follow the sequence of flashing buttons for as long as you can!",
+"desc": "Clásico Simón dice con una mascota cerebro en pixel-art. ¡Sigue la secuencia de botones que parpadean tanto como puedas!",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/deya-eldeen/flipperzero-brainy"
 },
@@ -282,7 +282,7 @@
 "appid": "bzzbzz",
 "name": "BzzBzz",
 "cat": "🎮 Juegos",
-"desc": "Haptic rhythm-matching game",
+"desc": "Juego háptico de seguir el ritmo",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/ikiruneo/bzzbzz"
 },
@@ -290,7 +290,7 @@
 "appid": "catacombs",
 "name": "Catacombs Of The Damned!",
 "cat": "🎮 Juegos",
-"desc": "Ten floors of a generated dungeon, cleared with fireballs",
+"desc": "Diez pisos de una mazmorra generada, que limpias con bolas de fuego",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/apfxtech/FlipperCatacombs"
 },
@@ -298,7 +298,7 @@
 "appid": "cell_lab",
 "name": "Cell Lab",
 "cat": "🎮 Juegos",
-"desc": "A tiny pixel-world life simulator for Flipper Zero.",
+"desc": "Pequeño simulador de vida en un mundo de píxeles.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/PilotOfAsuka/cell_lab_fliperzero"
 },
@@ -306,7 +306,7 @@
 "appid": "checkers",
 "name": "Checkers",
 "cat": "🎮 Juegos",
-"desc": "Checkers for Flipper",
+"desc": "Damas para el Flipper",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/H4W9/FlipCheckers"
 },
@@ -314,7 +314,7 @@
 "appid": "chess",
 "name": "Chess",
 "cat": "🎮 Juegos",
-"desc": "Chess for Flipper",
+"desc": "Ajedrez para el Flipper",
 "fuente": "Momentum",
 "github": "https://github.com/xtruan/flipper-chess"
 },
@@ -322,7 +322,7 @@
 "appid": "cidr_challenge",
 "name": "CIDR Challenge",
 "cat": "🎮 Juegos",
-"desc": "IPv4 subnetting trainer for Flipper Zero",
+"desc": "Entrenador de subneteo IPv4 para el Flipper",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/AlastorApps/cidrchallengef0"
 },
@@ -330,7 +330,7 @@
 "appid": "citybloxx",
 "name": "City Bloxx",
 "cat": "🎮 Juegos",
-"desc": "A game based on City Bloxx",
+"desc": "Juego basado en City Bloxx",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Milk-Cool/fz-citybloxx"
 },
@@ -338,7 +338,7 @@
 "appid": "color_guess",
 "name": "Color Guess",
 "cat": "🎮 Juegos",
-"desc": "Color Guessing Game",
+"desc": "Juego de adivinar el color",
 "fuente": "Momentum",
 "github": "https://github.com/leedave/Leeds-Flipper-Zero-Applications"
 },
@@ -346,7 +346,7 @@
 "appid": "game_connect_wires",
 "name": "Connect Wires",
 "cat": "🎮 Juegos",
-"desc": "A famous puzzle game",
+"desc": "Un famoso juego de rompecabezas",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/AlexTaran/flipperzero"
 },
@@ -354,7 +354,7 @@
 "appid": "countdown",
 "name": "CountDown",
 "cat": "🎮 Juegos",
-"desc": "Solve target number from 6 numbers like the CountDown TV Show",
+"desc": "Resuelve el número objetivo con 6 cifras, como en el programa CountDown",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/sistemasorp/flipper-countdown"
 },
@@ -362,7 +362,7 @@
 "appid": "cribbage_calc",
 "name": "Cribbage Calc",
 "cat": "🎮 Juegos",
-"desc": "Quickly count a cribbage hand or crib",
+"desc": "Cuenta rápido una mano de cribbage",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/dchristiansen/cribCalc"
 },
@@ -370,7 +370,7 @@
 "appid": "deadzone",
 "name": "DeadZone",
 "cat": "🎮 Juegos",
-"desc": "Fight through tough challenges, dodge enemy fire, and avoid the falling obstacles to survive!",
+"desc": "¡Supera retos difíciles, esquiva el fuego enemigo y evita los obstáculos que caen para sobrevivir!",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/retrooper/deadzone"
 },
@@ -378,7 +378,7 @@
 "appid": "random_decision_maker",
 "name": "Decision Maker",
 "cat": "🎮 Juegos",
-"desc": "Spin a roulette to pick a random option for you.",
+"desc": "Gira una ruleta para elegir una opción al azar.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Gerijacki/random_decision_maker"
 },
@@ -386,7 +386,7 @@
 "appid": "dice_app",
 "name": "Dice D&D",
 "cat": "🎮 Juegos",
-"desc": "Dice rolling, types: Coin, d4, d6, d8, d10, d12, d20, d100",
+"desc": "Tirar dados: moneda, d4, d6, d8, d10, d12, d20, d100",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Ka3u6y6a/flipper-zero-dice"
 },
@@ -394,7 +394,7 @@
 "appid": "digital_kaleidoscope",
 "name": "Digital Kaleidoscope",
 "cat": "🎮 Juegos",
-"desc": "Digital Kaleidoscope turns your Flipper Zero into a pocket-sized animated visualizer. Choose from four distinct kaleidoscope styles and adjust the pattern densi",
+"desc": "El Caleidoscopio Digital convierte tu Flipper en un visualizador animado de bolsillo. Elige entre cuatro estilos y ajusta la densidad del patrón",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/JamesR555/digital_kaleidoscope"
 },
@@ -402,14 +402,14 @@
 "appid": "doom",
 "name": "DOOM",
 "cat": "🎮 Juegos",
-"desc": "Will it run Doom?",
+"desc": "¿Correrá Doom?",
 "fuente": "Momentum"
 },
 {
 "appid": "dragotchi",
 "name": "Dragotchi",
 "cat": "🎮 Juegos",
-"desc": "A dragon-raising virtual pet for the Flipper Zero that senses the real world.",
+"desc": "Mascota virtual: cría un dragón que percibe el mundo real.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Mohnki/dragotchi-flipper"
 },
@@ -417,7 +417,7 @@
 "appid": "drifter",
 "name": "Drifter",
 "cat": "🎮 Juegos",
-"desc": "Drifter is a boat game for the Flipper Zero",
+"desc": "Drifter es un juego de barcos para el Flipper",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/jean-edouard/flipperzero-drifter"
 },
@@ -425,7 +425,7 @@
 "appid": "elementis_zeta",
 "name": "Elementis Zeta",
 "cat": "🎮 Juegos",
-"desc": "Elementis Zeta is a creature-collecting RPG for the Flipper Zero. Explore towns, routes, caves and gyms, catch and train original creatures, win eight medals an",
+"desc": "Elementis Zeta es un RPG de capturar criaturas para el Flipper. Explora pueblos, rutas, cuevas y gimnasios, captura y entrena criaturas originales, gana ocho medallas y",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/jahziel1/Elementis-Zeta"
 },
@@ -433,7 +433,7 @@
 "appid": "fighterjet",
 "name": "Fighter Jet",
 "cat": "🎮 Juegos",
-"desc": "Game about flying a fighter jet anf hunting down enemies.",
+"desc": "Juego de pilotar un caza y cazar enemigos.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Erbonator3000/flipper-fighter-jet"
 },
@@ -449,14 +449,14 @@
 "appid": "flappy_bird",
 "name": "Flappy Bird",
 "cat": "🎮 Juegos",
-"desc": "Flappy Bird Game",
+"desc": "Juego Flappy Bird",
 "fuente": "Momentum"
 },
 {
 "appid": "flight_assault",
 "name": "Flight Assault",
 "cat": "🎮 Juegos",
-"desc": "Flight Assault is a dynamic action game for flipperzero where players control a spacecraft engaged in combat against enemy ships approaching from different dire",
+"desc": "Flight Assault es un juego de acción: controlas una nave en combate contra naves enemigas que llegan desde distintas direcciones",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/evillero/flight_assault"
 },
@@ -464,7 +464,7 @@
 "appid": "flipcraft",
 "name": "Flipcraft",
 "cat": "🎮 Juegos",
-"desc": "Flipcraft is a real voxel survival sandbox for Flipper Zero",
+"desc": "Flipcraft es un sandbox de supervivencia con voxels para el Flipper",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/apfxtech/Flipcraft"
 },
@@ -472,7 +472,7 @@
 "appid": "flipper_hero",
 "name": "Flipper Hero",
 "cat": "🎮 Juegos",
-"desc": "Flipper Hero Game",
+"desc": "Juego Flipper Hero",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/mentoster/flipper-hero"
 },
@@ -480,7 +480,7 @@
 "appid": "flipperpose",
 "name": "Flipper Poser",
 "cat": "🎮 Juegos",
-"desc": "A simple app to pose your flipper buddy for photos!",
+"desc": "¡App sencilla para posar a tu mascota del Flipper en fotos!",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/MrNull1/flipperpose"
 },
@@ -488,7 +488,7 @@
 "appid": "flippy_road",
 "name": "Flippy Road",
 "cat": "🎮 Juegos",
-"desc": "Cross roads and rivers in a Frogger-inspired platformer",
+"desc": "Cruza calles y ríos en un plataformas inspirado en Frogger",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/rkilpadi/flippy-road"
 },
@@ -496,7 +496,7 @@
 "appid": "fliprogue",
 "name": "FlipRogue",
 "cat": "🎮 Juegos",
-"desc": "A tiny roguelike RPG for Flipper Zero: ASCII dungeons, charms, hazards, and monster trouble.",
+"desc": "Pequeño RPG roguelike: mazmorras ASCII, amuletos, peligros y monstruos.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Abzac/fliprogue"
 },
@@ -504,7 +504,7 @@
 "appid": "fortune_cookie",
 "name": "Fortune Cookie",
 "cat": "🎮 Juegos",
-"desc": "The Fortune Cookie app delivers a random motivational quote or fortune each time you open it,",
+"desc": "La app de galleta de la fortuna te da una frase motivadora o una fortuna al azar cada vez que la abres,",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/evillero/fortune_cookie"
 },
@@ -512,7 +512,7 @@
 "appid": "fortune_spinner",
 "name": "Fortune Spinner",
 "cat": "🎮 Juegos",
-"desc": "Spin for YES, NO, or MAYBE",
+"desc": "Gira para SÍ, NO o QUIZÁS",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/xantopren/fortune-spinner"
 },
@@ -520,7 +520,7 @@
 "appid": "furious_birds",
 "name": "Furious Birds",
 "cat": "🎮 Juegos",
-"desc": "Furious Birds game",
+"desc": "Juego Furious Birds",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/bmstr-ru/furious-birds"
 },
@@ -528,21 +528,21 @@
 "appid": "game15",
 "name": "Game 15",
 "cat": "🎮 Juegos",
-"desc": "Logic Game",
+"desc": "Juego de lógica",
 "fuente": "Momentum"
 },
 {
 "appid": "gameoflife",
 "name": "Game of Life",
 "cat": "🎮 Juegos",
-"desc": "Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970.",
+"desc": "Life, el autómata celular ideado por el matemático británico John Horton Conway en 1970.",
 "fuente": "Momentum"
 },
 {
 "appid": "geometry_flip",
 "name": "Geometry Flip",
 "cat": "🎮 Juegos",
-"desc": "A simple app",
+"desc": "Una app sencilla",
 "fuente": "Momentum",
 "github": "https://github.com/user/template"
 },
@@ -550,7 +550,7 @@
 "appid": "grimoire",
 "name": "Grimoire",
 "cat": "🎮 Juegos",
-"desc": "A pendulum, a sigil, a talisman and a wand, with the planetary hour on every page. Left and Right turn the pages.",
+"desc": "Un péndulo, un sigilo, un talismán y una varita, con la hora planetaria en cada página. Izquierda y Derecha pasan páginas.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/rseufert/grimoire"
 },
@@ -558,7 +558,7 @@
 "appid": "flipper_gurpil",
 "name": "Gurpil",
 "cat": "🎮 Juegos",
-"desc": "Endless side-scroller: pick your wheel shape, the terrain decides your speed.",
+"desc": "Scroller lateral sin fin: elige la forma de tu rueda y el terreno decide tu velocidad.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Endika/flipper-gurpil"
 },
@@ -566,7 +566,7 @@
 "appid": "hangman",
 "name": "Hangman",
 "cat": "🎮 Juegos",
-"desc": "Hangman is a guessing game. Flipper thinks of a word and the gamer tries to guess it by suggesting letters within a certain number of guesses.",
+"desc": "El ahorcado: el Flipper piensa una palabra y tú tratas de adivinarla sugiriendo letras en un número de intentos.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/bolknote/Flipper-Zero-Hangman-Game"
 },
@@ -574,7 +574,7 @@
 "appid": "game_hanoi_towers",
 "name": "Hanoi Towers",
 "cat": "🎮 Juegos",
-"desc": "A puzzle game about moving tower of disks to another stick",
+"desc": "Rompecabezas: mueve la torre de discos a otra varilla",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/AlexTaran/flipperzero"
 },
@@ -582,7 +582,7 @@
 "appid": "hazke",
 "name": "Hazke",
 "cat": "🎮 Juegos",
-"desc": "A wireframe 3D space trading and combat game. Fly between sixteen star systems, trade 17 goods, take jobs from planets and fight pirates. Hazke started on the M",
+"desc": "Juego 3D de comercio y combate espacial en wireframe. Vuela entre dieciséis sistemas, comercia 17 bienes, toma trabajos de planetas y pelea con piratas. Hazke empezó en la M",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/therezor/hazke-flipper"
 },
@@ -590,14 +590,14 @@
 "appid": "heap_defence",
 "name": "Heap Defence",
 "cat": "🎮 Juegos",
-"desc": "Heap Defence game from hackathon (aka Stack Attack)",
+"desc": "Juego Heap Defence de una hackathon (alias Stack Attack)",
 "fuente": "Momentum"
 },
 {
 "appid": "holdem",
 "name": "Hold 'em",
 "cat": "🎮 Juegos",
-"desc": "Hold 'em is a native single-player Texas Hold'em game built for Flipper Zero.",
+"desc": "Hold 'em es un Texas Hold'em de un jugador para el Flipper.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/code-phreak/flipper-holdem"
 },
@@ -605,7 +605,7 @@
 "appid": "flipper_impostor_game",
 "name": "Impostor Game",
 "cat": "🎮 Juegos",
-"desc": "Undercover-style party game: impostors get a hint, crew gets the secret word.",
+"desc": "Juego de fiesta estilo impostor: los impostores reciben una pista y el resto la palabra secreta.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Endika/flipper-impostor-game"
 },
@@ -613,7 +613,7 @@
 "appid": "ironwyrm",
 "name": "IRONWYRM",
 "cat": "🎮 Juegos",
-"desc": "Giant mechs rule the wasteland; strategically attach modular plates to your WYRM and survive as long as you can! I'd love to hear your feedback or review on my ",
+"desc": "¡Mechas gigantes dominan el páramo; engancha placas modulares a tu WYRM y sobrevive lo más posible! Me encantaría tu opinión o reseña",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Atompunk78/IRONWYRM"
 },
@@ -621,7 +621,7 @@
 "appid": "jetpack_game",
 "name": "Jetpack Game",
 "cat": "🎮 Juegos",
-"desc": "Jetpack Game",
+"desc": "Juego Jetpack",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/timstrasser/flipper-jetpack-game"
 },
@@ -636,7 +636,7 @@
 "appid": "kcline",
 "name": "KC Line",
 "cat": "🎮 Juegos",
-"desc": "A simple one line bit munching game.",
+"desc": "Juego sencillo de una línea de comer bits.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/HappyAmos/Flipper_FAPS"
 },
@@ -644,7 +644,7 @@
 "appid": "laser_tag",
 "name": "Laser Tag",
 "cat": "🎮 Juegos",
-"desc": "Laser Tag game for Flipper Zero",
+"desc": "Juego de Láser Tag para el Flipper",
 "fuente": "Momentum",
 "github": "https://github.com/RocketGod-Git/Flipper-Zero-Laser-Tag"
 },
@@ -652,7 +652,7 @@
 "appid": "lettercade",
 "name": "Lettercade",
 "cat": "🎮 Juegos",
-"desc": "Three letter-themed arcade games for Flipper Zero: Letters Rain, Snake Letters, and Tennis Letters.",
+"desc": "Tres juegos arcade con letras: Letters Rain, Snake Letters y Tennis Letters.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/andreimagic/flipper-lettercade"
 },
@@ -660,7 +660,7 @@
 "appid": "lifecounter",
 "name": "Lifecounter",
 "cat": "🎮 Juegos",
-"desc": "Life tracker for collectible card games such as Flesh and Blood, Magic the Gathering, Sorcery, Lorcana etc.",
+"desc": "Marcador de vidas para juegos de cartas como Flesh and Blood, Magic, Sorcery, Lorcana, etc.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/antsy/Lifecounter"
 },
@@ -668,7 +668,7 @@
 "appid": "eightball",
 "name": "Magic 8-ball",
 "cat": "🎮 Juegos",
-"desc": "This is a simple implementation of the classic Magic 8-ball game for the flipper zero.",
+"desc": "Implementación sencilla de la clásica bola mágica 8 (Magic 8-ball).",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/stevenquinn/flipper-8-ball"
 },
@@ -676,7 +676,7 @@
 "appid": "matagotchi",
 "name": "Matagotchi",
 "cat": "🎮 Juegos",
-"desc": "Matagotchi: a Tamagotchi(R) like game for Flipper Zero",
+"desc": "Matagotchi: un juego tipo Tamagotchi(R) para el Flipper",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/MrModd/Matagotchi"
 },
@@ -684,7 +684,7 @@
 "appid": "microcity",
 "name": "MicroCity",
 "cat": "🎮 Juegos",
-"desc": "MicroCity is a SimCity-style city builder for Flipper Zero",
+"desc": "MicroCity es un constructor de ciudades estilo SimCity para el Flipper",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/apfxtech/FlipperMicroCity"
 },
@@ -692,7 +692,7 @@
 "appid": "minesweeper_redux",
 "name": "Mine Sweeper",
 "cat": "🎮 Juegos",
-"desc": "Flipper Zero Minesweeper Implementation",
+"desc": "Buscaminas para el Flipper Zero",
 "fuente": "Momentum",
 "github": "https://github.com/squee72564/F0_Minesweeper_Fap"
 },
@@ -700,7 +700,7 @@
 "appid": "morse_trainer",
 "name": "Morse Trainer",
 "cat": "🎮 Juegos",
-"desc": "Learn Morse code from zero through progressive levels",
+"desc": "Aprende código Morse desde cero con niveles progresivos",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/barismert98/flipper-morse-trainer"
 },
@@ -715,7 +715,7 @@
 "appid": "myblab",
 "name": "Mystic Balloon",
 "cat": "🎮 Juegos",
-"desc": "A simple fly-platformer where the character hovers through levels using balloons, ported to Flipper Zero.",
+"desc": "Plataformas sencillo donde el personaje flota por los niveles con globos, adaptado al Flipper.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/apfxtech/FlipperMysticBalloon"
 },
@@ -723,7 +723,7 @@
 "appid": "nupogodi",
 "name": "Nu pogodi",
 "cat": "🎮 Juegos",
-"desc": "Elektronika IM-02 - Nu, Pogodi!",
+"desc": "Elektronika IM-02 - ¡Nu, Pogodi!",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/sionyx/flipper_nupogodi"
 },
@@ -731,7 +731,7 @@
 "appid": "nw_crawl",
 "name": "NW Crawl",
 "cat": "🎮 Juegos",
-"desc": "A tiny roguelike set on the alphabet streets of NW Portland. Start on Burnside and head north one street per floor (Couch, Davis, Everett ... Thurman) until you",
+"desc": "Roguelike pequeño en las calles con nombres del abecedario del NW de Portland. Empiezas en Burnside y subes una calle por piso (Couch, Davis, Everett... Thurman) hasta que",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/rseufert/nw_crawl"
 },
@@ -739,7 +739,7 @@
 "appid": "pinball0",
 "name": "Pinball0",
 "cat": "🎮 Juegos",
-"desc": "Pinball game",
+"desc": "Juego de pinball",
 "fuente": "Momentum",
 "github": "https://github.com/rdefeo/pinball0"
 },
@@ -747,7 +747,7 @@
 "appid": "pod",
 "name": "Pod",
 "cat": "🎮 Juegos",
-"desc": "Pod turns your Flipper into a calling card. Leave it running while you walk around, and it quietly broadcasts who you are over sub-GHz and listens for others do",
+"desc": "Pod convierte tu Flipper en una tarjeta de presentación. Déjalo corriendo al caminar: emite quién eres por Sub-GHz y escucha a otros",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/thecoolguy2001/flipper-pod"
 },
@@ -755,7 +755,7 @@
 "appid": "flipper_pong",
 "name": "Pong",
 "cat": "🎮 Juegos",
-"desc": "Simple pong game",
+"desc": "Juego de Pong simple",
 "fuente": "Momentum",
 "github": "https://github.com/nmrr/flipperzero-pong"
 },
@@ -763,7 +763,7 @@
 "appid": "portal_putt",
 "name": "Portal Putt",
 "cat": "🎮 Juegos",
-"desc": "Minigolf across two worlds: nine holes that alternate between fantasy and sci-fi, with portals, gravity wells, lava rivers, conveyors, crystal bumpers, a patrol",
+"desc": "Minigolf en dos mundos: nueve hoyos que alternan fantasía y ciencia ficción, con portales, pozos de gravedad, ríos de lava, cintas, topes de cristal y una patrul",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/rseufert/portal_putt"
 },
@@ -771,14 +771,14 @@
 "appid": "quadrastic",
 "name": "Quadrastic",
 "cat": "🎮 Juegos",
-"desc": "Quadrastic is a simple addicting game inspired by the Arduboy game of the same name",
+"desc": "Quadrastic es un juego simple y adictivo inspirado en el juego de Arduboy del mismo nombre",
 "fuente": "Momentum"
 },
 {
 "appid": "questions",
 "name": "Questions",
 "cat": "🎮 Juegos",
-"desc": "Game contains questions to ask you friend, couple or someone new on party to get to know each other better.",
+"desc": "Juego con preguntas para conocer mejor a un amigo, tu pareja o alguien nuevo en una fiesta.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/nikilark/flipper_questions"
 },
@@ -786,7 +786,7 @@
 "appid": "race_game",
 "name": "Race Game",
 "cat": "🎮 Juegos",
-"desc": "3-lane racing game with power-ups, combos, and night mode",
+"desc": "Juego de carreras de 3 carriles con potenciadores, combos y modo nocturno",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/mrc19056/flipper-race-game"
 },
@@ -794,7 +794,7 @@
 "appid": "reaction_time",
 "name": "Reaction Time",
 "cat": "🎮 Juegos",
-"desc": "A simple reaction time game for Flipper Zero. Wait for the signal, then press OK as fast as you can.",
+"desc": "Juego de tiempo de reacción: espera la señal y pulsa OK lo más rápido que puedas.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/luvrltop/ReactionTime"
 },
@@ -802,7 +802,7 @@
 "appid": "reversi",
 "name": "Reversi",
 "cat": "🎮 Juegos",
-"desc": "Reversi game, the game controls should be intuitive. Longs press on OK opens the menu to start a new game.",
+"desc": "Juego Reversi con controles intuitivos. Mantén OK para abrir el menú y empezar otra partida.",
 "fuente": "Momentum",
 "github": "https://github.com/dimat/flipperzero-reversi"
 },
@@ -810,7 +810,7 @@
 "appid": "pixel_rps",
 "name": "Rock Paper Scissors",
 "cat": "🎮 Juegos",
-"desc": "Play rock, paper, or scissors",
+"desc": "Juega piedra, papel o tijera",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/xantopren/rock-paper-scissors"
 },
@@ -818,7 +818,7 @@
 "appid": "roots_of_life",
 "name": "Roots of Life",
 "cat": "🎮 Juegos",
-"desc": "A zen-puzzle game for FlipperZero, puzzle made on GlobalGameJam23 (theme: Roots)",
+"desc": "Rompecabezas zen, hecho en la GlobalGameJam23 (tema: Raíces)",
 "fuente": "Momentum",
 "github": "https://github.com/Xorboo/root-of-life"
 },
@@ -826,7 +826,7 @@
 "appid": "roulette",
 "name": "Roulette",
 "cat": "🎮 Juegos",
-"desc": "Roulette is a six-chamber revolver game for the Flipper Zero. One bullet, six chambers, and a cylinder that advances one position with every trigger pull. Survi",
+"desc": "Roulette es un juego de revólver de seis recámaras para el Flipper. Una bala, seis recámaras y un cilindro que avanza con cada disparo. Sobrev",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/thecoolguy2001/flipper-roulette"
 },
@@ -834,7 +834,7 @@
 "appid": "rubiks_cube_scrambler",
 "name": "Rubik's Cube Scrambler",
 "cat": "🎮 Juegos",
-"desc": "App generates random moves to scramble a Rubik's cube.",
+"desc": "Genera movimientos aleatorios para mezclar un cubo de Rubik.",
 "fuente": "Momentum",
 "github": "https://github.com/RaZeSloth/flipperzero-rubiks-cube-scrambler"
 },
@@ -842,7 +842,7 @@
 "appid": "scorched_tanks",
 "name": "Scorched Tanks",
 "cat": "🎮 Juegos",
-"desc": "A Flipper Zero game inspired by scorched earth",
+"desc": "Juego inspirado en Scorched Earth",
 "fuente": "Momentum",
 "github": "https://github.com/jasniec/flipper-scorched-tanks-game"
 },
@@ -850,7 +850,7 @@
 "appid": "secret_toggle",
 "name": "SecretToggle",
 "cat": "🎮 Juegos",
-"desc": "A game for the Flipper Zero device.",
+"desc": "Un juego para el Flipper Zero.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/nostrumuva/secret_toggle"
 },
@@ -858,7 +858,7 @@
 "appid": "simon_says",
 "name": "Simon Says",
 "cat": "🎮 Juegos",
-"desc": "A Simon Says Game",
+"desc": "Juego de Simón dice",
 "fuente": "Momentum",
 "github": "https://github.com/SimplyMinimal/FlipperZero-SimonSays"
 },
@@ -866,7 +866,7 @@
 "appid": "slotmachine",
 "name": "Slot Machine",
 "cat": "🎮 Juegos",
-"desc": "Simple Slots simulator game",
+"desc": "Juego simulador de tragamonedas sencillo",
 "fuente": "Momentum",
 "github": "https://github.com/Daniel-dev-s/flipperzero-slots"
 },
@@ -874,7 +874,7 @@
 "appid": "xyz_vh8t_slots",
 "name": "Slots",
 "cat": "🎮 Juegos",
-"desc": "A high-fidelity slot machine for your Flipper Zero. When you're bored and feeling lucky, jump into this \"all-ways\" simulator and see if you can hit the jackpot!",
+"desc": "Tragamonedas de alta fidelidad para tu Flipper. Cuando estés aburrido y con suerte, entra al simulador y busca el premio mayor.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/vh8t/flipperzero-slots"
 },
@@ -882,7 +882,7 @@
 "appid": "snake20",
 "name": "Snake 2.0",
 "cat": "🎮 Juegos",
-"desc": "Advanced Snake Game (Remake of original Snake)",
+"desc": "Snake avanzado (nueva versión del Snake original)",
 "fuente": "Momentum",
 "github": "https://github.com/Willzvul/Snake_2.0"
 },
@@ -890,7 +890,7 @@
 "appid": "racso_sokoban",
 "name": "Sokoban",
 "cat": "🎮 Juegos",
-"desc": "Sokoban is a classic puzzle game. Your objective is to push all the boxes onto the targets.",
+"desc": "Sokoban, un rompecabezas clásico. Empuja todas las cajas hasta los objetivos.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Racso/fzero-apps"
 },
@@ -898,7 +898,7 @@
 "appid": "solitaire",
 "name": "Solitaire",
 "cat": "🎮 Juegos",
-"desc": "Klondike Solitaire card game",
+"desc": "Solitario Klondike",
 "fuente": "Momentum",
 "github": "https://github.com/doofy-dev/flipper_solitaire"
 },
@@ -906,7 +906,7 @@
 "appid": "spaceimpactii985e",
 "name": "Space Impact II",
 "cat": "🎮 Juegos",
-"desc": "Space Impact II clone",
+"desc": "Clon de Space Impact II",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Erbonator3000/Flipper-Zero-Space-Impact-II"
 },
@@ -914,7 +914,7 @@
 "appid": "spectre",
 "name": "Spectre",
 "cat": "🎮 Juegos",
-"desc": "A ghost hunting kit: an EMF-style needle, a spirit box, a spirit voice and a radar, all driven by one shared spirit energy level. It is a toy: real inputs feed ",
+"desc": "Kit de caza de fantasmas: aguja tipo EMF, caja de espíritus, voz y radar, con un nivel de energía compartido. Es un juguete: entradas reales alimentan",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/rseufert/spectre"
 },
@@ -922,7 +922,7 @@
 "appid": "stack_game",
 "name": "Stack",
 "cat": "🎮 Juegos",
-"desc": "Classic skill and timing game where you layer falling blocks to build the highest tower.",
+"desc": "Juego clásico de habilidad y tiempo: apila bloques que caen para levantar la torre más alta.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/bergr22/Stack"
 },
@@ -930,7 +930,7 @@
 "appid": "stack_attack",
 "name": "Stack Attack",
 "cat": "🎮 Juegos",
-"desc": "Push crates, fill rows, don't get crushed. A remake of the legendary Siemens mobile game",
+"desc": "Empuja cajas, llena filas, no te aplasten. Nueva versión del legendario juego de móviles Siemens",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Negenii/flipper-stack-attack"
 },
@@ -938,7 +938,7 @@
 "appid": "stratahero",
 "name": "Stratagem Hero",
 "cat": "🎮 Juegos",
-"desc": "Stratagem Hero game made after arcade game with the same name inside Helldivers 2 video game.",
+"desc": "Juego Stratagem Hero, basado en el minijuego del mismo nombre de Helldivers 2.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/maximkulkin/flipper-zero-stratagem-hero"
 },
@@ -946,7 +946,7 @@
 "appid": "sudoku",
 "name": "Sudoku",
 "cat": "🎮 Juegos",
-"desc": "- ok - increment number",
+"desc": "- ok - aumentar número",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/profelis/fz-sudoku"
 },
@@ -954,7 +954,7 @@
 "appid": "swimmy_fish",
 "name": "Swimmy Fish",
 "cat": "🎮 Juegos",
-"desc": "A game about a fish",
+"desc": "Un juego sobre un pez",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Invizabel/fish"
 },
@@ -962,7 +962,7 @@
 "appid": "t_rex_runner",
 "name": "T-Rex Runner",
 "cat": "🎮 Juegos",
-"desc": "Play the port of the Chrome browser T-Rex game on your Flipper Zero.",
+"desc": "Juega el port del juego del T-Rex del navegador Chrome en tu Flipper.",
 "fuente": "Momentum",
 "github": "https://github.com/Rrycbarm/t-rex-runner"
 },
@@ -984,7 +984,7 @@
 "appid": "tarot",
 "name": "Tarot",
 "cat": "🎮 Juegos",
-"desc": "Tarot spread for Flipper Zero",
+"desc": "Tirada de tarot para el Flipper",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/pionaiki/fz-tarot"
 },
@@ -992,21 +992,21 @@
 "appid": "tetris",
 "name": "Tetris",
 "cat": "🎮 Juegos",
-"desc": "Tetris Game",
+"desc": "Juego Tetris",
 "fuente": "Momentum"
 },
 {
 "appid": "tictactoe",
 "name": "Tic Tac Toe",
 "cat": "🎮 Juegos",
-"desc": "Tic Tac Toe game, for 2 players, play on one device",
+"desc": "Tres en raya para 2 jugadores en un mismo equipo",
 "fuente": "Momentum"
 },
 {
 "appid": "flipper_trivia_zero",
 "name": "Trivia Zero",
 "cat": "🎮 Juegos",
-"desc": "Bilingual flashcard trivia: random questions with reveal-on-OK, two languages shipped.",
+"desc": "Trivia con tarjetas bilingües: preguntas al azar que se revelan con OK, en dos idiomas.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Endika/flipper-trivia-zero"
 },
@@ -1014,7 +1014,7 @@
 "appid": "flipper_tutu",
 "name": "Tutu",
 "cat": "🎮 Juegos",
-"desc": "Sliding car puzzle (Rush Hour) with 100 levels of increasing difficulty.",
+"desc": "Rompecabezas de carros deslizantes (Rush Hour) con 100 niveles de dificultad creciente.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Endika/flipper-tutu"
 },
@@ -1022,7 +1022,7 @@
 "appid": "racso_ultimate_tic_tac_toe",
 "name": "Ultimate Tic-Tac-Toe",
 "cat": "🎮 Juegos",
-"desc": "About Ultimate Tic-Tac-Toe",
+"desc": "Tres en raya definitivo (Ultimate Tic-Tac-Toe)",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Racso/fzero-apps"
 },
@@ -1030,7 +1030,7 @@
 "appid": "umpire_indicator",
 "name": "Umpire Indicator",
 "cat": "🎮 Juegos",
-"desc": "Umpire indicators keep track of balls, strikes, and outs for Baseball and Softball",
+"desc": "Indicadores de árbitro que llevan la cuenta de bolas, strikes y outs para béisbol y softbol",
 "fuente": "Momentum",
 "github": "https://github.com/RocketGod-Git/Flipper-Zero-Umpire-Indicator"
 },
@@ -1038,7 +1038,7 @@
 "appid": "game_vexed",
 "name": "Vexed",
 "cat": "🎮 Juegos",
-"desc": "Vexed is puzzle game, where your goal is to clear level from bricks in in smallest possible count of moves. Easy to learn, hard to master",
+"desc": "Vexed es un rompecabezas donde debes limpiar el nivel de ladrillos en la menor cantidad de movimientos. Fácil de aprender, difícil de dominar",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/dlvoy/flipper-zero-vexed"
 },
@@ -1046,14 +1046,14 @@
 "appid": "videopoker",
 "name": "Video Poker",
 "cat": "🎮 Juegos",
-"desc": "Video poker is a casino game based on five-card draw poker",
+"desc": "Video poker, un juego de casino basado en el póker de cinco cartas",
 "fuente": "Momentum"
 },
 {
 "appid": "volorsavanna",
 "name": "Volor Savanna",
 "cat": "🎮 Juegos",
-"desc": "A text adventure game",
+"desc": "Juego de aventura de texto",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Invizabel/VolorSavanna"
 },
@@ -1061,7 +1061,7 @@
 "appid": "wave",
 "name": "Wave",
 "cat": "🎮 Juegos",
-"desc": "AI generated game that replicates gameplay for a wave from Geometry Dash",
+"desc": "Juego generado por IA que imita la jugabilidad de una wave de Geometry Dash",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Sladkisnovraper/Wave-game-for-Flipper-Zero"
 },
@@ -1069,14 +1069,14 @@
 "appid": "yapinvaders",
 "name": "Yappy Invaders",
 "cat": "🎮 Juegos",
-"desc": "Yappy version of Space Invaders.",
+"desc": "Versión ladradora de Space Invaders.",
 "fuente": "Momentum"
 },
 {
 "appid": "yatzee",
 "name": "Yatzee",
 "cat": "🎮 Juegos",
-"desc": "Yahtzee game",
+"desc": "Juego Yahtzee",
 "fuente": "Momentum",
 "github": "https://github.com/emfleak/flipperzero-yatzee"
 },
@@ -1084,7 +1084,7 @@
 "appid": "yulia_cats",
 "name": "Yulia's Cats",
 "cat": "🎮 Juegos",
-"desc": "A cozy virtual pet. Yulia shares a little room with her two cats: Nugget, an elderly tiger-striped gentleman with white socks, and Baby, a chonky grey cat with ",
+"desc": "Mascota virtual acogedora. Yulia comparte cuarto con sus dos gatos: Nugget, un viejo atigrado con calcetines blancos, y Baby, una gata gris gordita",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/rseufert/yulia_cats"
 },
@@ -1092,7 +1092,7 @@
 "appid": "racso_zero",
 "name": "ZERO!",
 "cat": "🎮 Juegos",
-"desc": "ZERO! is a card game where the aim is to get rid of all your cards before your opponents! The game implements the rules of the classic card game UNO, with adapt",
+"desc": "¡ZERO! es un juego de cartas donde ganas al quedarte sin cartas antes que tus rivales! Implementa las reglas del clásico UNO, con adapt",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Racso/fzero-apps"
 },
@@ -1100,14 +1100,14 @@
 "appid": "zombiez",
 "name": "Zombiez",
 "cat": "🎮 Juegos",
-"desc": "Defend your walls from the zombies",
+"desc": "Defiende tus muros de los zombis",
 "fuente": "Momentum"
 },
 {
 "appid": "ai_composer",
 "name": "AI Composer",
 "cat": "🎵 Multimedia",
-"desc": "A tiny neural network that writes brand-new melodies on your Flipper Zero and plays them on its speaker. Everything runs on the device: no internet, no computer",
+"desc": "Una pequeña red neuronal que compone melodías nuevas en tu Flipper y las toca por el altavoz. Todo corre en el equipo: sin internet, sin computador",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/TheProductAgency/flipper-ai-composer"
 },
@@ -1115,7 +1115,7 @@
 "appid": "atm",
 "name": "ATM player",
 "cat": "🎵 Multimedia",
-"desc": "ATM player",
+"desc": "Reproductor ATM",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/apfxtech/FlipperATM"
 },
@@ -1123,7 +1123,7 @@
 "appid": "bible_bsb",
 "name": "Bible [BSB]",
 "cat": "🎵 Multimedia",
-"desc": "Read the Berean Standard Bible on Flipper Zero. The chapter text is bundled with the app, so reading works with no network connection and no extra download.",
+"desc": "Lee la Biblia Berean Standard en el Flipper. El texto va dentro de la app, así que funciona sin conexión y sin descargas.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/dpshde/bible-bsb"
 },
@@ -1131,7 +1131,7 @@
 "appid": "bpm_tapper",
 "name": "BPM Tapper",
 "cat": "🎵 Multimedia",
-"desc": "Tap center button to measure BPM",
+"desc": "Toca el botón central para medir los BPM",
 "fuente": "Momentum",
 "github": "https://github.com/panki27/bpm-tapper"
 },
@@ -1139,7 +1139,7 @@
 "appid": "ear_trainer",
 "name": "Ear Trainer",
 "cat": "🎵 Multimedia",
-"desc": "Learn intervals, chords and scales by ear",
+"desc": "Aprende intervalos, acordes y escalas de oído",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/barismert98/flipper-ear-trainer"
 },
@@ -1147,7 +1147,7 @@
 "appid": "etch",
 "name": "Etch a Sketch",
 "cat": "🎵 Multimedia",
-"desc": "Turn the Flipper Zero into an Etch A Sketch",
+"desc": "Convierte el Flipper en un Etch A Sketch (pizarra mágica)",
 "fuente": "Momentum",
 "github": "https://github.com/SimplyMinimal/FlipperZero-Etch-A-Sketch"
 },
@@ -1155,7 +1155,7 @@
 "appid": "executor_keychain",
 "name": "Flipper Keyller",
 "cat": "🎵 Multimedia",
-"desc": "Flipper Keyller is an app for the Flipper Zero that emulates the iconic sounds of the classic 80s keychain.",
+"desc": "Flipper Keyller emula los sonidos icónicos del clásico llavero de los años 80.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/EstebanFuentealba/Flipper-Keyller"
 },
@@ -1163,7 +1163,7 @@
 "appid": "flippiano",
 "name": "FlipPiano",
 "cat": "🎵 Multimedia",
-"desc": "14-key 2-octave mini piano app with frequency display and volume controls.",
+"desc": "Mini piano de 14 teclas y 2 octavas, con frecuencia y control de volumen.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/bergr22/FlipPiano"
 },
@@ -1171,7 +1171,7 @@
 "appid": "flizzer_tracker",
 "name": "Flizzer Tracker",
 "cat": "🎵 Multimedia",
-"desc": "An advanced Flipper Zero chiptune tracker with 4 channels",
+"desc": "Tracker de chiptune avanzado con 4 canales",
 "fuente": "Momentum",
 "github": "https://github.com/LTVA1/flizzer_tracker"
 },
@@ -1179,7 +1179,7 @@
 "appid": "fmatrix",
 "name": "Fmatrix",
 "cat": "🎵 Multimedia",
-"desc": "Displays a 'matrix rain' screensaver.",
+"desc": "Muestra un salvapantallas de 'lluvia matrix'.",
 "fuente": "Momentum",
 "github": "https://github.com/user/misterwaztaken"
 },
@@ -1187,7 +1187,7 @@
 "appid": "handpan_chords",
 "name": "Handpan Chords",
 "cat": "🎵 Multimedia",
-"desc": "See which pads to strike for any chord on your handpan",
+"desc": "Muestra qué parches tocar para cualquier acorde en tu handpan",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/NoodleNugget-com/handpan_chords"
 },
@@ -1195,7 +1195,7 @@
 "appid": "image_viewer",
 "name": "Image Viewer",
 "cat": "🎵 Multimedia",
-"desc": "Image viewer for flipper zero!",
+"desc": "¡Visor de imágenes para el Flipper!",
 "fuente": "Momentum",
 "github": "https://github.com/polioan/flipper-zero-image-viewer"
 },
@@ -1203,21 +1203,21 @@
 "appid": "metronome",
 "name": "Metronome",
 "cat": "🎵 Multimedia",
-"desc": "Metronome app",
+"desc": "App de metrónomo",
 "fuente": "Momentum"
 },
 {
 "appid": "morse_code",
 "name": "Morse Code",
 "cat": "🎵 Multimedia",
-"desc": "Simple Morse Code parser",
+"desc": "Analizador de código Morse simple",
 "fuente": "Momentum"
 },
 {
 "appid": "morse_master",
 "name": "Morse Master",
 "cat": "🎵 Multimedia",
-"desc": "A comprehensive Morse code learning and practice app.",
+"desc": "App completa para aprender y practicar código Morse.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/w84death/morse-master"
 },
@@ -1225,7 +1225,7 @@
 "appid": "mp3_player",
 "name": "MP3 Player",
 "cat": "🎵 Multimedia",
-"desc": "Play any MP3 from the SD card through the internal speaker, a MAX98357A amplifier, or a filtered PAM8403 board.",
+"desc": "Reproduce cualquier MP3 de la SD por el altavoz interno, un amplificador MAX98357A o una placa PAM8403 con filtro.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/coolshrimp/flipperzero-mp3-player"
 },
@@ -1233,21 +1233,21 @@
 "appid": "music_player",
 "name": "Music Player",
 "cat": "🎵 Multimedia",
-"desc": "An app to play RTTL music files",
+"desc": "App para reproducir música en formato RTTTL",
 "fuente": "Momentum"
 },
 {
 "appid": "paint",
 "name": "Paint",
 "cat": "🎵 Multimedia",
-"desc": "A basic Paint app, Click Ok to draw dot, hold Ok to enable drawing continuously, hold Back to clear the screen",
+"desc": "App de dibujo básica: OK para un punto, mantén OK para dibujar seguido, mantén Atrás para borrar",
 "fuente": "Momentum"
 },
 {
 "appid": "fzspground",
 "name": "Space Playground",
 "cat": "🎵 Multimedia",
-"desc": "A simple space simulation playground for Flipper Zero",
+"desc": "Patio de juego de simulación espacial sencillo",
 "fuente": "Momentum",
 "github": "https://github.com/alanfortlink/fzspground"
 },
@@ -1255,7 +1255,7 @@
 "appid": "step_seq",
 "name": "Step Seq",
 "cat": "🎵 Multimedia",
-"desc": "A step sequencer for the Flipper's piezo speaker, with a melody grid and a drum row.",
+"desc": "Secuenciador por pasos para el altavoz piezo del Flipper, con rejilla de melodía y fila de batería.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/rseufert/step_seq"
 },
@@ -1263,7 +1263,7 @@
 "appid": "taiko_player",
 "name": "Taiko Player",
 "cat": "🎵 Multimedia",
-"desc": "A lightweight TJA chart player for Flipper Zero. Play backing music through the built-in speaker, watch scrolling notes, and optionally send drum-hit pulses to ",
+"desc": "Reproductor ligero de partituras TJA: suena la música por el altavoz, ves las notas desplazarse y puede enviar pulsos de tambor a",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/ZeroNinx/flipper-zero-taiko-player"
 },
@@ -1271,7 +1271,7 @@
 "appid": "text2sam",
 "name": "Text to SAM",
 "cat": "🎵 Multimedia",
-"desc": "Convert text to speech on your Flipper Zero with SAM (Software Automatic Mouth).",
+"desc": "Convierte texto a voz en tu Flipper con SAM (Software Automatic Mouth).",
 "fuente": "Momentum",
 "github": "https://github.com/Round-Pi/flipperzero-text2sam"
 },
@@ -1279,7 +1279,7 @@
 "appid": "tuning_fork",
 "name": "Tuning Fork",
 "cat": "🎵 Multimedia",
-"desc": "Tuning fork for tuning musical instruments and more",
+"desc": "Diapasón para afinar instrumentos musicales y más",
 "fuente": "Momentum",
 "github": "https://github.com/besya/flipperzero-tuning-fork"
 },
@@ -1287,14 +1287,14 @@
 "appid": "usb_midi",
 "name": "USB-MIDI",
 "cat": "🎵 Multimedia",
-"desc": "Turn Flipper into MIDI instrument",
+"desc": "Convierte el Flipper en un instrumento MIDI",
 "fuente": "Momentum"
 },
 {
 "appid": "video_player",
 "name": "Video Player",
 "cat": "🎵 Multimedia",
-"desc": "An app that plays video along with sound on Flipper Zero.",
+"desc": "App que reproduce video con sonido en el Flipper.",
 "fuente": "Momentum",
 "github": "https://github.com/LTVA1/flipper_video_player"
 },
@@ -1302,14 +1302,14 @@
 "appid": "wav_player",
 "name": "WAV Player",
 "cat": "🎵 Multimedia",
-"desc": "Audio player for WAV files, recommended to convert files to unsigned 8-bit PCM stereo, but it may work with others too",
+"desc": "Reproductor de archivos WAV; se recomienda convertirlos a PCM estéreo 8-bit sin signo, aunque puede funcionar con otros",
 "fuente": "Momentum"
 },
 {
 "appid": "ami_tool",
 "name": "Amiibo Toolkit",
 "cat": "💳 NFC",
-"desc": "An Amiibo toolkit for Flipper Zero",
+"desc": "Kit de herramientas Amiibo",
 "fuente": "Momentum",
 "github": "https://github.com/Firefox2100/flipper-amiibo-toolkit"
 },
@@ -1317,7 +1317,7 @@
 "appid": "biovault",
 "name": "BioVault",
 "cat": "💳 NFC",
-"desc": "BioVault keeps a password vault encrypted on an NFC implant, unlockable",
+"desc": "BioVault guarda un baúl de contraseñas cifrado en un implante NFC, que se desbloquea",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/flamebarke/biovault-flipper"
 },
@@ -1325,7 +1325,7 @@
 "appid": "k2_rfid",
 "name": "CFS RFID",
 "cat": "💳 NFC",
-"desc": "Creality K2/K1/CFS RFID Spool Reader, Writer & Emulator",
+"desc": "Lector, grabador y emulador de carretes RFID Creality K2/K1/CFS",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/mitchsurp/K2-RFID-Flipper"
 },
@@ -1333,7 +1333,7 @@
 "appid": "cfs_tag_writer",
 "name": "CFS Tag Writer",
 "cat": "💳 NFC",
-"desc": "Read, write, clone, and erase CFS filament spool NFC tags on the Flipper.",
+"desc": "Lee, escribe, clona y borra etiquetas NFC de carretes de filamento CFS en el Flipper.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/pwschattenberg/cfs-tag-writer"
 },
@@ -1341,7 +1341,7 @@
 "appid": "cfs_tag_writer_plus",
 "name": "CFS Tag Writer+",
 "cat": "💳 NFC",
-"desc": "Read, write, clone, and erase CFS filament spool NFC tags on the Flipper, with",
+"desc": "Lee, escribe, clona y borra etiquetas NFC de carretes de filamento CFS en el Flipper, con",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/BaniMun/cfs-tag-writer"
 },
@@ -1349,7 +1349,7 @@
 "appid": "chaos_id",
 "name": "ChaosID",
 "cat": "💳 NFC",
-"desc": "Card forensics + risk classification + MIFARE Classic dictionary attack",
+"desc": "Análisis forense de tarjetas + clasificación de riesgo + ataque de diccionario MIFARE Classic",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/cybersantana83/ChaosID"
 },
@@ -1357,7 +1357,7 @@
 "appid": "cyborg_detector",
 "name": "Cyborg Detector",
 "cat": "💳 NFC",
-"desc": "App generates a continous NFC field to make body mod implant LEDs glow. Tested on a Dangerous Things xSIID.",
+"desc": "Genera un campo NFC continuo para encender los LED de un implante. Probado en un Dangerous Things xSIID.",
 "fuente": "Momentum",
 "github": "https://github.com/RocketGod-Git/Flipper-Zero-Cyborg-Detector"
 },
@@ -1365,7 +1365,7 @@
 "appid": "dfc",
 "name": "DFC",
 "cat": "💳 NFC",
-"desc": "Read and emulate generic MIFARE DESFire-compatible NFC credentials on Flipper Zero.",
+"desc": "Lee y emula credenciales NFC compatibles con MIFARE DESFire en el Flipper.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/cindersocket/dfc-flipper"
 },
@@ -1373,7 +1373,7 @@
 "appid": "emrtd",
 "name": "eMRTD Reader",
 "cat": "💳 NFC",
-"desc": "Reads the contactless chip of an electronic identity document - a passport, a",
+"desc": "Lee el chip sin contacto de un documento de identidad electrónico: un pasaporte, un",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/filipsedivy/emrtd-flipperzero"
 },
@@ -1381,7 +1381,7 @@
 "appid": "flipncgm",
 "name": "flipnCGM",
 "cat": "💳 NFC",
-"desc": "A Flipper Zero application that reads Abbott FreeStyle Libre continuous glucose monitor (CGM) sensor serial numbers via NFC and optionally logs them to the SD c",
+"desc": "Lee por NFC el número de serie del sensor de glucosa Abbott FreeStyle Libre (CGM) y puede guardarlo en la SD",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/darendarrow/flipnCGM"
 },
@@ -1389,28 +1389,28 @@
 "appid": "picopass",
 "name": "HID iClass (PicoPass)",
 "cat": "💳 NFC",
-"desc": "App to communicate with PicoPass(iClass) tags",
+"desc": "App para comunicarse con etiquetas PicoPass (iClass)",
 "fuente": "Momentum"
 },
 {
 "appid": "metroflip",
 "name": "Metroflip",
 "cat": "💳 NFC",
-"desc": "An implementation of metrodroid on the flipper",
+"desc": "Una implementación de Metrodroid en el Flipper",
 "fuente": "Momentum"
 },
 {
 "appid": "mfkey",
 "name": "MFKey",
 "cat": "💳 NFC",
-"desc": "MIFARE Classic key recovery tool",
+"desc": "Herramienta para recuperar llaves de MIFARE Classic",
 "fuente": "Momentum"
 },
 {
 "appid": "mfp_reader",
 "name": "MFP Reader",
 "cat": "💳 NFC",
-"desc": "A standalone application for reading, dumping and emulating MIFARE Plus SL3 smart cards on the Flipper Zero. Implements the full MFP SL3 protocol over ISO 14443",
+"desc": "App independiente para leer, volcar y emular tarjetas MIFARE Plus SL3 en el Flipper. Implementa el protocolo MFP SL3 completo sobre ISO 14443",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Defensor7/flipperzero-mfp-reader"
 },
@@ -1418,7 +1418,7 @@
 "appid": "miband_nfc",
 "name": "Mi Band NFC",
 "cat": "💳 NFC",
-"desc": "Read, write and emulate NFC data on Xiaomi Mi Band devices using Flipper Zero.",
+"desc": "Lee, escribe y emula datos NFC de pulseras Xiaomi Mi Band con el Flipper.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/LucaTomei/flipper-miband-nfc-writer"
 },
@@ -1426,14 +1426,14 @@
 "appid": "mfc_editor",
 "name": "MIFARE Classic Editor",
 "cat": "💳 NFC",
-"desc": "Application for viewing and editing MIFARE Classic .nfc files",
+"desc": "App para ver y editar archivos .nfc de MIFARE Classic",
 "fuente": "Momentum"
 },
 {
 "appid": "mifare_fuzzer",
 "name": "Mifare Fuzzer",
 "cat": "💳 NFC",
-"desc": "App emulates Mifare Classic cards with various UIDs to check how reader reacts on them",
+"desc": "Emula tarjetas Mifare Classic con varios UID para ver cómo reacciona el lector",
 "fuente": "Momentum",
 "github": "https://github.com/spheeere98/mifare_fuzzer"
 },
@@ -1441,7 +1441,7 @@
 "appid": "mtools",
 "name": "MTools",
 "cat": "💳 NFC",
-"desc": "Magic tag tools for MIFARE Classic and ISO15693",
+"desc": "Herramientas para tarjetas mágicas MIFARE Classic e ISO15693",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/mtoolstec/flipper-mtools"
 },
@@ -1449,7 +1449,7 @@
 "appid": "networking_nfc_qr_app",
 "name": "Networking NFC + QR",
 "cat": "💳 NFC",
-"desc": "Emulate NFC and display QR codes simultaneously",
+"desc": "Emula NFC y muestra códigos QR a la vez",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/DonJulve/Networking_NFC_QR_Flipper_Zero"
 },
@@ -1457,7 +1457,7 @@
 "appid": "nfc_apdu_runner",
 "name": "NFC APDU Runner",
 "cat": "💳 NFC",
-"desc": "Run APDU commands from script files",
+"desc": "Ejecuta comandos APDU desde archivos de script",
 "fuente": "Momentum",
 "github": "https://github.com/SpenserCai/nfc_apdu_runner"
 },
@@ -1465,35 +1465,35 @@
 "appid": "nfc_magic",
 "name": "NFC Magic",
 "cat": "💳 NFC",
-"desc": "Application for writing to NFC tags with modifiable sector 0",
+"desc": "App para escribir en etiquetas NFC con sector 0 modificable",
 "fuente": "Momentum"
 },
 {
 "appid": "nfc_maker",
 "name": "NFC Maker",
 "cat": "💳 NFC",
-"desc": "Create NFC files for BT MACs, Contacts, Links, Emails, Phones, Text and WiFis",
+"desc": "Crea archivos NFC para MAC Bluetooth, contactos, enlaces, correos, teléfonos, texto y WiFi",
 "fuente": "Momentum"
 },
 {
 "appid": "nfc_login",
 "name": "NFC PC Login",
 "cat": "💳 NFC",
-"desc": "NFC based desktop login using USB HID or BLE HID",
+"desc": "Inicio de sesión en el escritorio por NFC usando HID USB o HID BLE",
 "fuente": "Momentum"
 },
 {
 "appid": "nfc_playlist",
 "name": "NFC Playlist",
 "cat": "💳 NFC",
-"desc": "A Tool used to running through a list of NFC cards",
+"desc": "Herramienta para recorrer una lista de tarjetas NFC",
 "fuente": "Momentum"
 },
 {
 "appid": "nfc_stock_manager",
 "name": "NFC Stock Manager",
 "cat": "💳 NFC",
-"desc": "NFC-based inventory: scan a tag to open or create an item, edit stock, location and minimum, with multi-warehouse DB and CSV export.",
+"desc": "Inventario por NFC: escanea una etiqueta para abrir o crear un artículo, edita stock, ubicación y mínimo, con base multi-almacén y exportación a CSV.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Endika/flipper-nfc-stock"
 },
@@ -1501,7 +1501,7 @@
 "appid": "nfc_tools",
 "name": "NFC Tools",
 "cat": "💳 NFC",
-"desc": "NFC Tools can read and write your NFC tags",
+"desc": "NFC Tools lee y escribe tus etiquetas NFC",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/wakdev/nfctools-fz"
 },
@@ -1509,7 +1509,7 @@
 "appid": "nfcurl",
 "name": "NFC URL",
 "cat": "💳 NFC",
-"desc": "A Flipper Zero application that generates and emulates NFC tags that point to URLs.",
+"desc": "App que genera y emula etiquetas NFC que apuntan a URLs.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/y-dejong/nfcurl"
 },
@@ -1517,14 +1517,14 @@
 "appid": "nfc_eink",
 "name": "NFC-Eink",
 "cat": "💳 NFC",
-"desc": "Application for emulation and writing to NFC Eink tags",
+"desc": "App para emular y escribir etiquetas NFC de tinta electrónica (Eink)",
 "fuente": "Momentum"
 },
 {
 "appid": "openprinttag",
 "name": "OpenPrintTag",
 "cat": "💳 NFC",
-"desc": "OpenPrintTag for Flipper Zero",
+"desc": "OpenPrintTag para el Flipper",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Houzvicka/FlipperPrintTag"
 },
@@ -1532,7 +1532,7 @@
 "appid": "passy",
 "name": "Passport Reader",
 "cat": "💳 NFC",
-"desc": "eMRTD Reader",
+"desc": "Lector eMRTD",
 "fuente": "Momentum",
 "github": "https://github.com/bettse/passy"
 },
@@ -1540,7 +1540,7 @@
 "appid": "saflip",
 "name": "SaFlip",
 "cat": "💳 NFC",
-"desc": "SaFlip Hospitality Tool for Flipper Zero",
+"desc": "SaFlip, herramienta de hostelería para el Flipper",
 "fuente": "Momentum",
 "github": "https://github.com/aaronjamt/saflip"
 },
@@ -1555,14 +1555,14 @@
 "appid": "seos",
 "name": "Seos Compatible",
 "cat": "💳 NFC",
-"desc": "Seos compatible reader/emulator",
+"desc": "Lector/emulador compatible con Seos",
 "fuente": "Momentum"
 },
 {
 "appid": "specter",
 "name": "Specter",
 "cat": "💳 NFC",
-"desc": "Passively sense active 13.56 MHz NFC readers and skimmers with the onboard NFC chip. No extra hardware, never transmits.",
+"desc": "Detecta de forma pasiva lectores y skimmers NFC activos de 13,56 MHz con el chip NFC interno. Sin hardware extra, nunca transmite.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/at0m-b0mb/Specter-FlipperZero"
 },
@@ -1570,7 +1570,7 @@
 "appid": "tonuino_writer",
 "name": "TonUINO Writer",
 "cat": "💳 NFC",
-"desc": "NFC card writer for TonUINO audio boxes",
+"desc": "Grabador de tarjetas NFC para cajas de audio TonUINO",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Bastelsaal/tonuino-flipper-zero"
 },
@@ -1578,7 +1578,7 @@
 "appid": "udecard",
 "name": "UDECard",
 "cat": "💳 NFC",
-"desc": "Analyse student ID cards from the University of Duisburg-Essen (Intercard).",
+"desc": "Analiza carnets de estudiante de la Universidad de Duisburg-Essen (Intercard).",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/hahnworks/UDECard"
 },
@@ -1586,7 +1586,7 @@
 "appid": "vb_migrate",
 "name": "VB Migration Assistant",
 "cat": "💳 NFC",
-"desc": "VB Lab Migration Assistant for Flipper Zero",
+"desc": "Asistente de migración de VB Lab para el Flipper",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/GMMan/flipperzero-vb-migrate"
 },
@@ -1594,7 +1594,7 @@
 "appid": "vk_thermo",
 "name": "VK Thermo",
 "cat": "💳 NFC",
-"desc": "Read temperature from your VivoKey Thermo via NFC. Supports multi-Thermo tracking, history, and graph views.",
+"desc": "Lee la temperatura de tu VivoKey Thermo por NFC. Soporta varios Thermo, historial y gráficas.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/VivoKey/vkthermo-flipper"
 },
@@ -1602,7 +1602,7 @@
 "appid": "weebo",
 "name": "Weebo",
 "cat": "💳 NFC",
-"desc": "An NTAG215 parser, writer, emulator, remixer, duplicator",
+"desc": "Analiza, escribe, emula, remezcla y duplica NTAG215",
 "fuente": "Momentum",
 "github": "https://github.com/bettse/weebo"
 },
@@ -1610,7 +1610,7 @@
 "appid": "xiaomi_filter_reset",
 "name": "Xiaomi Filter Reset",
 "cat": "💳 NFC",
-"desc": "Reset or check the filter-life counter on Xiaomi air purifier NFC filters.",
+"desc": "Reinicia o consulta el contador de vida del filtro en los purificadores Xiaomi por NFC.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/khmm12/flipper-xiaomi-filter-reset"
 },
@@ -1618,7 +1618,7 @@
 "appid": "em4100_generator",
 "name": "EM4100 Key Generator",
 "cat": "💳 RFID",
-"desc": "Generates EM4100 key lists from selected rfid key file for RFID fuzzer app",
+"desc": "Genera listas de llaves EM4100 desde un archivo RFID para la app RFID fuzzer",
 "fuente": "Momentum",
 "github": "https://github.com/Milk-Cool/fz-em4100-generator"
 },
@@ -1626,7 +1626,7 @@
 "appid": "fdxb_maker",
 "name": "FDX-B Maker",
 "cat": "💳 RFID",
-"desc": "Construct fully ISO-compliant FDX-B animal microchip data right on your Flipper Zero! The data gets stored as plain RFID files on the SD card, which you can the",
+"desc": "¡Crea datos de microchip animal FDX-B totalmente compatibles con ISO en tu Flipper! Se guardan como archivos RFID en la SD, que luego puedes",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/snowsign/fdxb-maker"
 },
@@ -1634,7 +1634,7 @@
 "appid": "h10301_writer",
 "name": "H10301 Writer",
 "cat": "💳 RFID",
-"desc": "H10301 Writer for Flipper Zero",
+"desc": "Grabador H10301 para el Flipper",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Zacvr/h10301_writer"
 },
@@ -1642,7 +1642,7 @@
 "appid": "fuzzer_rfid",
 "name": "RFID Fuzzer",
 "cat": "💳 RFID",
-"desc": "Fuzzer for lfrfid readers",
+"desc": "Fuzzer para lectores de RFID (LF)",
 "fuente": "Momentum",
 "github": "https://github.com/DarkFlippers/Multi_Fuzzer"
 },
@@ -1650,7 +1650,7 @@
 "appid": "rfid_maker",
 "name": "RFID Maker",
 "cat": "💳 RFID",
-"desc": "Created by: KindaCharming",
+"desc": "Creado por: KindaCharming",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/jeremydbean/FlipperRFIDMaker"
 },
@@ -1658,7 +1658,7 @@
 "appid": "simultaneous_rfid_reader",
 "name": "Simultaneous UHF RFID Reader",
 "cat": "💳 RFID",
-"desc": "Simultaneous UHF RFID Reader that supports the M6E Nano, M7E Hecto, and YRM1000 series Readers. Read up to 150 UHF tags per second [Using ThingMagic Readers]!",
+"desc": "Lector RFID UHF simultáneo compatible con M6E Nano, M7E Hecto y YRM1000. ¡Lee hasta 150 etiquetas UHF por segundo con lectores ThingMagic!",
 "fuente": "Momentum",
 "github": "https://github.com/haffnerriley/Simultaneous-UHF-RFID-FlipperZero"
 },
@@ -1666,7 +1666,7 @@
 "appid": "t5577_multiwriter",
 "name": "T5577 Multiwriter",
 "cat": "💳 RFID",
-"desc": "Application for writing several keys to one t5577",
+"desc": "App para escribir varias llaves en un t5577",
 "fuente": "Momentum",
 "github": "https://github.com/Leptopt1los/t5577_multiwriter"
 },
@@ -1688,7 +1688,7 @@
 "appid": "chief_cooker",
 "name": "Chief Cooker",
 "cat": "📡 Sub-GHz",
-"desc": "A simple app",
+"desc": "Una app sencilla",
 "fuente": "Momentum",
 "github": "https://github.com/denr01/FZ-ChiefCooker"
 },
@@ -1696,7 +1696,7 @@
 "appid": "esubghz_chat",
 "name": "Enhanced Sub-Ghz Chat",
 "cat": "📡 Sub-GHz",
-"desc": "Send text messages over Sub-GHz radio to another Flippers",
+"desc": "Envía mensajes de texto por radio Sub-GHz a otros Flippers",
 "fuente": "Momentum",
 "github": "https://github.com/twisted-pear/esubghz_chat"
 },
@@ -1704,7 +1704,7 @@
 "appid": "aprstx",
 "name": "Flipper ham APRS TX",
 "cat": "📡 Sub-GHz",
-"desc": "Flipper ham APRS TX",
+"desc": "Transmisor APRS de radioaficionado (ham) para el Flipper",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/yo3gnd/flipper-zero-aprs-tx"
 },
@@ -1712,14 +1712,14 @@
 "appid": "flipper_share",
 "name": "Flipper Share",
 "cat": "📡 Sub-GHz",
-"desc": "Direct file transfer between flippers via Sub-GHz",
+"desc": "Transferencia directa de archivos entre Flippers por Sub-GHz",
 "fuente": "Momentum"
 },
 {
 "appid": "hc11_modem",
 "name": "HC-11 Modem",
 "cat": "📡 Sub-GHz",
-"desc": "HC-11 wireless modem",
+"desc": "Módem inalámbrico HC-11",
 "fuente": "Momentum",
 "github": "https://github.com/Giraut/flipper_zero_hc11_wireless_modem"
 },
@@ -1727,7 +1727,7 @@
 "appid": "morse_beacon",
 "name": "Morse Beacon",
 "cat": "📡 Sub-GHz",
-"desc": "Sub-GHz Morse station ID and text beacon",
+"desc": "Identificador de estación Morse y baliza de texto por Sub-GHz",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/jdmills-edu/flipper-morse-beacon"
 },
@@ -1735,28 +1735,28 @@
 "appid": "fmf_to_sub",
 "name": "Music to Sub-GHz Radio",
 "cat": "📡 Sub-GHz",
-"desc": "Converts Flipper music files (.FMF and .TXT) into Sub-GHz files (.SUB).",
+"desc": "Convierte archivos de música del Flipper (.FMF y .TXT) en archivos Sub-GHz (.SUB).",
 "fuente": "Momentum"
 },
 {
 "appid": "pocsag_pager",
 "name": "POCSAG Pager",
 "cat": "📡 Sub-GHz",
-"desc": "App can capture POCSAG 1200 messages on CC1101 supported frequencies.",
+"desc": "Captura mensajes POCSAG 1200 en las frecuencias que soporta el CC1101.",
 "fuente": "Momentum"
 },
 {
 "appid": "protoview",
 "name": "ProtoView",
 "cat": "📡 Sub-GHz",
-"desc": "Digital signal detection, visualization, editing and reply tool",
+"desc": "Herramienta para detectar, visualizar, editar y responder señales digitales",
 "fuente": "Momentum"
 },
 {
 "appid": "radio_scanner",
 "name": "Radio Scanner",
 "cat": "📡 Sub-GHz",
-"desc": "Scanner for Flipper",
+"desc": "Escáner para el Flipper",
 "fuente": "Momentum",
 "github": "https://github.com/RocketGod-Git/Flipper-Zero-Radio-Scanner"
 },
@@ -1764,7 +1764,7 @@
 "appid": "meal_pager",
 "name": "Restaurant Pager",
 "cat": "📡 Sub-GHz",
-"desc": "This app triggers restaurant pagers in a brute force manner, useful to test if devices are still functional.",
+"desc": "Dispara buscapersonas de restaurante por fuerza bruta, útil para probar si los equipos siguen funcionando.",
 "fuente": "Momentum",
 "github": "https://github.com/leedave/flipper-zero-meal-pager"
 },
@@ -1772,7 +1772,7 @@
 "appid": "rfsurvey",
 "name": "RF Survey",
 "cat": "📡 Sub-GHz",
-"desc": "Sweep a frequency range, log RSSI to CSV, locate a source and capture it.",
+"desc": "Barre un rango de frecuencias, registra el RSSI a CSV, localiza una fuente y la captura.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/tbelbek/flipper-rf-survey"
 },
@@ -1780,14 +1780,14 @@
 "appid": "rolling_flaws",
 "name": "Rolling Flaws",
 "cat": "📡 Sub-GHz",
-"desc": "Rolling code receiver (version 1.5), used to learn about rolling code flaws. Watch video at",
+"desc": "Receptor de código rodante (v1.5), para aprender sobre fallos del código rodante. Mira el video en",
 "fuente": "Momentum"
 },
 {
 "appid": "rs41_tracker",
 "name": "RS41 Tracker",
 "cat": "📡 Sub-GHz",
-"desc": "RS41 radiosonde receiver & decoder",
+"desc": "Receptor y decodificador de radiosonda RS41",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/yeckel/RS41flipper"
 },
@@ -1795,21 +1795,21 @@
 "appid": "spectrum_analyzer",
 "name": "Spectrum Analyzer",
 "cat": "📡 Sub-GHz",
-"desc": "Displays a spectrogram chart to visually represent RF signals around you.",
+"desc": "Muestra un espectrograma para representar visualmente las señales de radio a tu alrededor.",
 "fuente": "Momentum"
 },
 {
 "appid": "sub_analyzer",
 "name": "Sub Analyzer",
 "cat": "📡 Sub-GHz",
-"desc": "Analyze SubGhz .sub files to extract all signal properties",
+"desc": "Analiza archivos .sub de Sub-GHz para extraer todas las propiedades de la señal",
 "fuente": "Momentum"
 },
 {
 "appid": "sub_dup_finder",
 "name": "Sub Duplicate Finder",
 "cat": "📡 Sub-GHz",
-"desc": "A Flipper Zero application to identify, manage, and safely clean up duplicate Sub-GHz (.sub) files.",
+"desc": "Identifica, gestiona y limpia de forma segura archivos Sub-GHz (.sub) duplicados.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Endika/flipper-sub-dup"
 },
@@ -1824,14 +1824,14 @@
 "appid": "subghz_playlist",
 "name": "Sub-GHz Playlist",
 "cat": "📡 Sub-GHz",
-"desc": "App works with list of sub-ghz files from .txt file that contains paths to target files.",
+"desc": "Trabaja con una lista de archivos Sub-GHz desde un .txt con las rutas de los archivos.",
 "fuente": "Momentum"
 },
 {
 "appid": "subghz_playlist_creator",
 "name": "Sub-GHz Playlist Creator",
 "cat": "📡 Sub-GHz",
-"desc": "App for creating or editing SubGhz playlists",
+"desc": "App para crear o editar listas de reproducción Sub-GHz",
 "fuente": "Momentum",
 "github": "https://github.com/coolerUA/Sub-Ghz-Playlist-Creator"
 },
@@ -1839,7 +1839,7 @@
 "appid": "subghz_raw_edit",
 "name": "Sub-GHz RAW Edit",
 "cat": "📡 Sub-GHz",
-"desc": "A tiny on-device waveform editor for Flipper Zero that trims RAW .sub captures down to just the part you care about.",
+"desc": "Editor de onda pequeño que recorta capturas RAW .sub a solo la parte que te importa.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Lechnio/SubGHz-RAW-Edit"
 },
@@ -1847,7 +1847,7 @@
 "appid": "subghz_remote_ofw",
 "name": "Sub-GHz Remote",
 "cat": "📡 Sub-GHz",
-"desc": "SubGhz Remote, uses up to 5 .sub files",
+"desc": "Mando Sub-GHz, usa hasta 5 archivos .sub",
 "fuente": "Momentum",
 "github": "https://github.com/DarkFlippers/SubGHz_Remote"
 },
@@ -1855,7 +1855,7 @@
 "appid": "subghz_remote",
 "name": "Sub-GHz Remote",
 "cat": "📡 Sub-GHz",
-"desc": "SubGhz Remote, uses up to 5 .sub files",
+"desc": "Mando Sub-GHz, usa hasta 5 archivos .sub",
 "fuente": "Momentum",
 "github": "https://github.com/DarkFlippers/SubGHz_Remote"
 },
@@ -1863,7 +1863,7 @@
 "appid": "subghz_scheduler",
 "name": "Sub-GHz Scheduler",
 "cat": "📡 Sub-GHz",
-"desc": "Send a Sub-GHz signal repeatedly at a given interval.",
+"desc": "Envía una señal Sub-GHz repetidamente a un intervalo dado.",
 "fuente": "Momentum",
 "github": "https://github.com/shalebridge/flipper-subghz-scheduler"
 },
@@ -1871,7 +1871,7 @@
 "appid": "subhound",
 "name": "Subhound",
 "cat": "📡 Sub-GHz",
-"desc": "Automated classifier for Flipper Zero BinRAW '.sub' captures. Identifies 17 ISM-band signal types — garage remotes, TPMS, weather stations, utility meters, alar",
+"desc": "Clasificador automático de capturas BinRAW '.sub'. Identifica 17 tipos de señal de banda ISM: mandos de garaje, TPMS, estaciones de clima, medidores, alar",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/maxwalks/subhound"
 },
@@ -1879,7 +1879,7 @@
 "appid": "tpms_bridge",
 "name": "TPMS Bridge",
 "cat": "📡 Sub-GHz",
-"desc": "Reads the tyre pressure sensors in car wheels and shows what they report",
+"desc": "Lee los sensores de presión de las llantas del carro y muestra lo que reportan",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/VishovVladimir/flipper-zero-tpms"
 },
@@ -1887,7 +1887,7 @@
 "appid": "tpms",
 "name": "TPMS Reader",
 "cat": "📡 Sub-GHz",
-"desc": "Use SubGHz and RFID to read or activate TPMS sensors",
+"desc": "Usa Sub-GHz y RFID para leer o activar sensores TPMS",
 "fuente": "Momentum",
 "github": "https://github.com/wosk/flipperzero-tpms"
 },
@@ -1895,7 +1895,7 @@
 "appid": "walkie_talkie",
 "name": "Walkie Talkie",
 "cat": "📡 Sub-GHz",
-"desc": "Receive-only FRS channel activity and RSSI scanner",
+"desc": "Escáner de actividad y RSSI de canales FRS (solo recepción)",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/coolshrimp/flipperzero-walkie-talkie"
 },
@@ -1903,14 +1903,14 @@
 "appid": "weather_station",
 "name": "Weather Station",
 "cat": "📡 Sub-GHz",
-"desc": "Receive weather data from a wide range of supported Sub-1GHz remote sensor",
+"desc": "Recibe datos de clima de una amplia gama de sensores remotos Sub-1GHz",
 "fuente": "Momentum"
 },
 {
 "appid": "ac_fujitsu_general_indoor_ir_remote",
 "name": "AC Fujitsu General Remote",
 "cat": "📺 Infrarrojo",
-"desc": "FlipperZero remote app for AC Fujitsu General ASHG12KPCE",
+"desc": "Mando a distancia para el aire Fujitsu General ASHG12KPCE",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/j-stud-res/flipper-ac-fujitsu-general-remote"
 },
@@ -1918,7 +1918,7 @@
 "appid": "xremote",
 "name": "Cross Remote",
 "cat": "📺 Infrarrojo",
-"desc": "One-Click, sends multiple commands",
+"desc": "Un clic, envía varios comandos",
 "fuente": "Momentum",
 "github": "https://github.com/leedave/flipper-zero-cross-remote"
 },
@@ -1926,7 +1926,7 @@
 "appid": "daikin64_ac_remote",
 "name": "Daikin64 AC Remote",
 "cat": "📺 Infrarrojo",
-"desc": "Daikin64 APGS02-compatible AC remote",
+"desc": "Control de aire acondicionado compatible con Daikin64 APGS02",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/mrcalifornium/flipperzero-daikin64-ac-remote"
 },
@@ -1934,7 +1934,7 @@
 "appid": "flame_rng",
 "name": "Flame RNG",
 "cat": "📺 Infrarrojo",
-"desc": "An RNG intended for use with flames and other IR sources.",
+"desc": "Generador de números aleatorios pensado para llamas y otras fuentes IR.",
 "fuente": "Momentum",
 "github": "https://github.com/OrionW06/Flame-RNG"
 },
@@ -1942,7 +1942,7 @@
 "appid": "flipirfreq",
 "name": "FlipIRFreq",
 "cat": "📺 Infrarrojo",
-"desc": "Send IR in carrier or low-frequency pulse modes with adjustable frequency, duty cycle, and output.",
+"desc": "Envía IR en modos de portadora o pulso de baja frecuencia, con frecuencia, ciclo de trabajo y salida ajustables.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/jsammarco/FlipIRFreq"
 },
@@ -1950,14 +1950,14 @@
 "appid": "hitachi_ac_remote",
 "name": "Hitachi AC Remote",
 "cat": "📺 Infrarrojo",
-"desc": "Hitachi Air Conditioner remote controller",
+"desc": "Mando del aire acondicionado Hitachi",
 "fuente": "Momentum"
 },
 {
 "appid": "htw_ac_remote",
 "name": "HTW AC Remote",
 "cat": "📺 Infrarrojo",
-"desc": "HTW air conditioner IR remote control",
+"desc": "Control IR para aire acondicionado HTW",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/sokogen/flipperzero-htw-ac-remote"
 },
@@ -1965,7 +1965,7 @@
 "appid": "infrafi",
 "name": "InfraFi",
 "cat": "📺 Infrarrojo",
-"desc": "Transmit WiFi credentials via IR to a Linux server",
+"desc": "Transmite credenciales WiFi por IR a un servidor Linux",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/amd989/InfraFi"
 },
@@ -1973,7 +1973,7 @@
 "appid": "ir_builder",
 "name": "IR Builder",
 "cat": "📺 Infrarrojo",
-"desc": "Create saved TV remotes from Universal Remote signal positions.",
+"desc": "Guarda mandos de TV a partir de las posiciones del Mando Universal.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/sanoobis/IR-Builder"
 },
@@ -1981,7 +1981,7 @@
 "appid": "ir_intervalometer",
 "name": "IR Intervalometer",
 "cat": "📺 Infrarrojo",
-"desc": "Intervalometer for Pentax, Canon, Nikon, and Sony cameras. Uses IR shutter release.",
+"desc": "Intervalómetro para cámaras Pentax, Canon, Nikon y Sony. Dispara por IR.",
 "fuente": "Momentum",
 "github": "https://github.com/Nitepone/flipper-intervalometer"
 },
@@ -1989,7 +1989,7 @@
 "appid": "irpad",
 "name": "IR Pad",
 "cat": "📺 Infrarrojo",
-"desc": "Customizable portrait IR remote with an on-device editor.",
+"desc": "Control IR vertical personalizable, con editor en el equipo.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/tbelbek/flipper-ir-pad"
 },
@@ -1997,7 +1997,7 @@
 "appid": "ir_remote",
 "name": "IR Remote",
 "cat": "📺 Infrarrojo",
-"desc": "Bind any IR remote button to each button on flipper d-pad, provides another way to use flipper as IR remote.",
+"desc": "Asigna cualquier botón de un control IR a cada botón del pad del Flipper; otra forma de usarlo como control IR.",
 "fuente": "Momentum",
 "github": "https://github.com/Hong5489/ir_remote"
 },
@@ -2005,14 +2005,14 @@
 "appid": "ir_scope",
 "name": "IR Scope",
 "cat": "📺 Infrarrojo",
-"desc": "App allows to see incoming IR signals.",
+"desc": "Permite ver las señales IR entrantes.",
 "fuente": "Momentum"
 },
 {
 "appid": "lasko_automator",
 "name": "Lasko 2519 Timer",
 "cat": "📺 Infrarrojo",
-"desc": "Automates certain Lasko Tower Fans (e.g. model 2519) by cycling the power ON and OFF at configurable intervals. Features: - Custom ON/OFF durations (default 20m",
+"desc": "Automatiza ciertos ventiladores de torre Lasko (p. ej. 2519) encendiéndolos y apagándolos en intervalos. Permite duraciones ON/OFF propias (por defecto 20m",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/LN4CY/lasko-2519-timer"
 },
@@ -2028,14 +2028,14 @@
 "appid": "midea_ac_remote",
 "name": "Midea AC Remote",
 "cat": "📺 Infrarrojo",
-"desc": "Midea Electric Air Conditioner remote control",
+"desc": "Mando del aire acondicionado eléctrico Midea",
 "fuente": "Momentum"
 },
 {
 "appid": "miele_scout",
 "name": "Miele Scout RX2",
 "cat": "📺 Infrarrojo",
-"desc": "Miele Scout RX2 - Flipper Zero Remote",
+"desc": "Miele Scout RX2 - mando para el Flipper",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/kallevaravas/flipper-miele-scout"
 },
@@ -2043,14 +2043,14 @@
 "appid": "mitsubishi_ac_remote",
 "name": "Mitsubishi AC Remote",
 "cat": "📺 Infrarrojo",
-"desc": "Mitsubishi Electric Air Conditioner remote control",
+"desc": "Mando del aire acondicionado Mitsubishi Electric",
 "fuente": "Momentum"
 },
 {
 "appid": "mitsubishi_ac_remote_new_protocol",
 "name": "Mitsubishi AC Remote(New)",
 "cat": "📺 Infrarrojo",
-"desc": "Mitsubishi AC Remote for newer models",
+"desc": "Mando de aire Mitsubishi para modelos nuevos",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Str4ch/flipperzero-mitsubishi-ac-remote-new-protocol"
 },
@@ -2058,7 +2058,7 @@
 "appid": "onkyo_remote",
 "name": "Onkyo Remote",
 "cat": "📺 Infrarrojo",
-"desc": "A dedicated infrared remote for the Onkyo GX-30ARC. Instead of paging through a",
+"desc": "Control infrarrojo dedicado para el Onkyo GX-30ARC. En vez de pasar páginas por un",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/gergely-xyz/OnkyoRemote"
 },
@@ -2066,7 +2066,7 @@
 "appid": "pause_timer",
 "name": "Pause Timer",
 "cat": "📺 Infrarrojo",
-"desc": "Pause your show when the ad break ends",
+"desc": "Reanuda tu programa cuando termina la tanda de anuncios",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Matt-London/pause_timer"
 },
@@ -2074,7 +2074,7 @@
 "appid": "polk_magnifimini_remote",
 "name": "Polk MagnifiMini Remote",
 "cat": "📺 Infrarrojo",
-"desc": "IR remote for the Polk MagnifiMini soundbar",
+"desc": "Control IR para la barra de sonido Polk MagnifiMini",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/varunyellina/flipper-ir-remote-polkmagnifi"
 },
@@ -2082,7 +2082,7 @@
 "appid": "roku_app",
 "name": "Roku App",
 "cat": "📺 Infrarrojo",
-"desc": "Control your Roku TV from one interface",
+"desc": "Controla tu TV Roku desde una sola interfaz",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/sifi11/Flipper-Roku-App"
 },
@@ -2090,7 +2090,7 @@
 "appid": "samsung_ac_remote",
 "name": "Samsung AC Remote",
 "cat": "📺 Infrarrojo",
-"desc": "Samsung Electric Air Conditioner remote control",
+"desc": "Mando del aire acondicionado eléctrico Samsung",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/dappermint/samsung-ac-remote-flipper-app"
 },
@@ -2098,7 +2098,7 @@
 "appid": "tama_connect",
 "name": "TamaConnect",
 "cat": "📺 Infrarrojo",
-"desc": "Infrared companion for virtual pet devices",
+"desc": "Compañero infrarrojo para mascotas virtuales",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/s2013p/TamaConnect"
 },
@@ -2106,7 +2106,7 @@
 "appid": "tamagometer_companion",
 "name": "Tamagometer",
 "cat": "📺 Infrarrojo",
-"desc": "Tamagometer Companion",
+"desc": "Compañero del Tamagometer",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/zacharesmer/tamagometer-companion-flipper"
 },
@@ -2114,7 +2114,7 @@
 "appid": "timed_remote",
 "name": "Timed Remote",
 "cat": "📺 Infrarrojo",
-"desc": "Send IR commands after timed duration.",
+"desc": "Envía comandos IR tras un tiempo definido.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/anders-dc/timed-remote"
 },
@@ -2122,7 +2122,7 @@
 "appid": "flipper_tv_remote",
 "name": "TV Remote",
 "cat": "📺 Infrarrojo",
-"desc": "Turn your Flipper Zero into a fully functional TV remote. Record buttons from any IR remote and replay them from your Flipper — no original remote needed.",
+"desc": "Convierte tu Flipper en un control de TV completo. Graba botones de cualquier control IR y repítelos desde el Flipper, sin el control original.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/jmanion0139/flipper_tv_remote"
 },
@@ -2130,7 +2130,7 @@
 "appid": "xbox_controller",
 "name": "Xbox Controller",
 "cat": "📺 Infrarrojo",
-"desc": "Infrared remote control for Xbox One",
+"desc": "Control infrarrojo para Xbox One",
 "fuente": "Momentum",
 "github": "https://github.com/gebeto/flipper-xbox-controller"
 },
@@ -2138,7 +2138,7 @@
 "appid": "flipper_xremote",
 "name": "XRemote",
 "cat": "📺 Infrarrojo",
-"desc": "Advanced infrared remote application",
+"desc": "App avanzada de control infrarrojo",
 "fuente": "Momentum",
 "github": "https://github.com/kala13x/flipper-xremote"
 },
@@ -2146,7 +2146,7 @@
 "appid": "24cxxprog",
 "name": "24cxxprog",
 "cat": "🔌 GPIO / Hardware",
-"desc": "EEPROM 24Cxx programmer via I2C",
+"desc": "Programador de EEPROM 24Cxx por I2C",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/kamylwnb/24cxxprog"
 },
@@ -2154,7 +2154,7 @@
 "appid": "401_digilab",
 "name": "401/DigiLab",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Companion app for the Lab401 DigiLab",
+"desc": "App compañera del Lab401 DigiLab",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/lab-401/fzDigiLab"
 },
@@ -2162,14 +2162,14 @@
 "appid": "blackhat",
 "name": "[A33] Flipper Blackhat",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Control of the flipper blackhat device",
+"desc": "Control del dispositivo blackhat del Flipper",
 "fuente": "Momentum"
 },
 {
 "appid": "uv_meter_as7331",
 "name": "[AS7331] UV Meter",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Measure UV radiation using the AS7331 sensor",
+"desc": "Mide radiación UV con el sensor AS7331",
 "fuente": "Momentum",
 "github": "https://github.com/michaelbaisch/uv_meter"
 },
@@ -2177,14 +2177,14 @@
 "appid": "avr_isp",
 "name": "[AVR] AVR Flasher",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Application for flashing AVR microcontrollers",
+"desc": "App para grabar microcontroladores AVR",
 "fuente": "Momentum"
 },
 {
 "appid": "lightmeter",
 "name": "[BH1750] Lightmeter",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Lightmeter app for photography",
+"desc": "App de fotómetro para fotografía",
 "fuente": "Momentum",
 "github": "https://github.com/oleksiikutuzov/flipperzero-lightmeter"
 },
@@ -2206,14 +2206,14 @@
 "appid": "evil_portal",
 "name": "[ESP32] Evil Portal",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Create an evil captive portal Wi-Fi access point",
+"desc": "Crea un punto de acceso Wi-Fi con portal cautivo malicioso (demostración de phishing)",
 "fuente": "Momentum"
 },
 {
 "appid": "gemini_ia",
 "name": "[ESP32] Gemini IA",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Companion app for interfacing with Gemini IA using the Flipper Zero",
+"desc": "App compañera para usar la IA Gemini con el Flipper",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/d4rks1d33/Gemini-Flipper"
 },
@@ -2228,7 +2228,7 @@
 "appid": "hotspot_arcade",
 "name": "[ESP32] Hotspot Arcade",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Offline multiplayer party games on an ESP32 WiFi board; friends join your WiFi and play in their phone browser.",
+"desc": "Juegos de fiesta multijugador sin conexión en una placa ESP32 WiFi; tus amigos entran a tu WiFi y juegan desde el navegador del celular.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/tarikbc/hotspot-arcade"
 },
@@ -2236,7 +2236,7 @@
 "appid": "flipper_wifi_census",
 "name": "[ESP32] WiFi Census",
 "cat": "🔌 GPIO / Hardware",
-"desc": "WiFi Census listens for the probe requests phones and laptops broadcast while looking for known networks. Nothing is transmitted and nothing is connected to: th",
+"desc": "WiFi Census escucha las peticiones de sondeo que emiten celulares y portátiles al buscar redes conocidas. No transmite ni se conecta a nada:",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Endika/flipper-wifi-census"
 },
@@ -2251,7 +2251,7 @@
 "appid": "camera_suite",
 "name": "[ESP32CAM] Camera Suite",
 "cat": "🔌 GPIO / Hardware",
-"desc": "A camera suite application for the Flipper Zero ESP32-CAM module.",
+"desc": "Suite de cámara para el módulo ESP32-CAM del Flipper.",
 "fuente": "Momentum",
 "github": "https://github.com/CodyTolene/Flipper-Zero-Cam"
 },
@@ -2259,21 +2259,21 @@
 "appid": "wardriver",
 "name": "[ESP32GPS] Wardriver",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Sniff WiFi access points with GPS location coordinates",
+"desc": "Detecta puntos de acceso WiFi con coordenadas GPS",
 "fuente": "Momentum"
 },
 {
 "appid": "esp8266_deauther",
 "name": "[ESP8266] Deauther",
 "cat": "🔌 GPIO / Hardware",
-"desc": "DSTIKE Deauther module interface, based on ESP8266",
+"desc": "Interfaz del módulo deauther DSTIKE, basado en ESP8266",
 "fuente": "Momentum"
 },
 {
 "appid": "esp8266_wifi_deauther_v2",
 "name": "[ESP8266] Deauther v2",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Works with ESP8266 Deauther v2 by @SpacehuhnTech (github)",
+"desc": "Funciona con el ESP8266 Deauther v2 de @SpacehuhnTech (github)",
 "fuente": "Momentum",
 "github": "https://github.com/Timmotools/flipperzero_esp8266_deautherv2"
 },
@@ -2295,14 +2295,14 @@
 "appid": "wifi_scanner",
 "name": "[ESP] WiFi Scanner",
 "cat": "🔌 GPIO / Hardware",
-"desc": "WiFi scanner module interface, based on ESP8266",
+"desc": "Interfaz del módulo escáner WiFi, basado en ESP8266",
 "fuente": "Momentum"
 },
 {
 "appid": "flip_tdi",
 "name": "[FTDI232H] FlipTDI",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Flipper FTDI232H emulator.",
+"desc": "Emulador FTDI232H para el Flipper.",
 "fuente": "Momentum"
 },
 {
@@ -2317,7 +2317,7 @@
 "appid": "malveke_gb_emulator",
 "name": "[GB] Emulator",
 "cat": "🔌 GPIO / Hardware",
-"desc": "GAME BOY Emulator (POC).",
+"desc": "Emulador de GAME BOY (prueba de concepto).",
 "fuente": "Momentum",
 "github": "https://github.com/EstebanFuentealba/MALVEKE-Flipper-Zero"
 },
@@ -2325,7 +2325,7 @@
 "appid": "malveke_gb_link_camera",
 "name": "[GB] Link-Camera",
 "cat": "🔌 GPIO / Hardware",
-"desc": "extract your GAME BOY Camera picture via WIFI, so they can be easily shared with your phone, tablet or pc. Easy to use, just hook up to your GAME BOY and print ",
+"desc": "Extrae la foto de tu GAME BOY Camera por WiFi para compartirla fácil con tu celular, tablet o PC. Fácil de usar: conéctalo a tu GAME BOY e imprime",
 "fuente": "Momentum",
 "github": "https://github.com/EstebanFuentealba/MALVEKE-Flipper-Zero"
 },
@@ -2333,7 +2333,7 @@
 "appid": "malveke_gb_live_camera",
 "name": "[GB] Live Camera",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Insert a GAME BOY Camera cartridge, you can use it as a camera and take snapshots from the Flipper Zero.",
+"desc": "Inserta un cartucho de GAME BOY Camera y úsalo como cámara para tomar fotos desde el Flipper.",
 "fuente": "Momentum",
 "github": "https://github.com/EstebanFuentealba/MALVEKE-Flipper-Zero"
 },
@@ -2341,7 +2341,7 @@
 "appid": "malveke_gb_photo",
 "name": "[GB] Photo",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Game Boy Camera save RAM photo to BMP from the Flipper Zero.",
+"desc": "Guarda en BMP las fotos de la RAM de la Game Boy Camera desde el Flipper.",
 "fuente": "Momentum",
 "github": "https://github.com/EstebanFuentealba/MALVEKE-Flipper-Zero"
 },
@@ -2349,7 +2349,7 @@
 "appid": "malveke_pin_test",
 "name": "[GB] PIN Test",
 "cat": "🔌 GPIO / Hardware",
-"desc": "ESP32 GAME BOY CAMERA live feed and photo capture, use left/right for exposition and center for saving a screenshot.",
+"desc": "Transmisión en vivo y captura de fotos con ESP32 GAME BOY CAMERA: izquierda/derecha para la exposición y centro para guardar una captura.",
 "fuente": "Momentum",
 "github": "https://github.com/EstebanFuentealba/MALVEKE-Flipper-Zero"
 },
@@ -2357,7 +2357,7 @@
 "appid": "pokemon",
 "name": "[GB] Pokemon Trading",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Pokemon exchange from Flipper Zero to Game Boy, supports Generation I & II non-Japanese games",
+"desc": "Intercambio de Pokémon del Flipper a la Game Boy; soporta juegos no japoneses de Generación I y II",
 "fuente": "Momentum",
 "github": "https://github.com/kbembedded/Flipper-Zero-Game-Boy-Pokemon-Trading"
 },
@@ -2380,28 +2380,28 @@
 "appid": "gpio_explorer_app",
 "name": "[GPIO] Explorer",
 "cat": "🔌 GPIO / Hardware",
-"desc": "The most complete app to start exploring the GPIO functionalities",
+"desc": "La app más completa para empezar a explorar las funciones del GPIO",
 "fuente": "Momentum"
 },
 {
 "appid": "longwave_clock",
 "name": "[GPIO] Longwave Clock",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Decode or demonstrate long wave time signals",
+"desc": "Decodifica o demuestra señales horarias de onda larga",
 "fuente": "Momentum"
 },
 {
 "appid": "flipperscope",
 "name": "[GPIO] Oscilloscope",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Oscilloscope application - apply signal to pin 16/PC0, with a voltage ranging from 0V to 2.5V and ground to pin 18/GND",
+"desc": "App de osciloscopio: aplica la señal al pin 16/PC0 (de 0V a 2.5V) y tierra al pin 18/GND",
 "fuente": "Momentum"
 },
 {
 "appid": "gpio_reader_a",
 "name": "[GPIO] Reader (aureli1c)",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Read GPIO pins states, and display them on the screen",
+"desc": "Lee el estado de los pines GPIO y lo muestra en pantalla",
 "fuente": "Momentum",
 "github": "https://github.com/aureli1c/flipperzero_GPIO_read"
 },
@@ -2416,21 +2416,21 @@
 "appid": "gpio_sentry_safe",
 "name": "[GPIO] Sentry Safe",
 "cat": "🔌 GPIO / Hardware",
-"desc": "App exploiting vulnerability to open any Sentry Safe and Master Lock electronic safes without pin code.",
+"desc": "App que aprovecha una vulnerabilidad para abrir cajas fuertes electrónicas Sentry Safe y Master Lock sin PIN.",
 "fuente": "Momentum"
 },
 {
 "appid": "signal_generator",
 "name": "[GPIO] Signal Generator",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Control GPIO pins to generate digital signals",
+"desc": "Controla los pines GPIO para generar señales digitales",
 "fuente": "Momentum"
 },
 {
 "appid": "timelapse",
 "name": "[GPIO] Timelapse",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Simple intervalometer/timelapse app",
+"desc": "App sencilla de intervalómetro/timelapse",
 "fuente": "Momentum",
 "github": "https://github.com/theageoflove/flipperzero-zeitraffer"
 },
@@ -2438,7 +2438,7 @@
 "appid": "unitemp",
 "name": "[GPIO] Unitemp",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Application for reading temperature, humidity and pressure sensors like a DHT11/22, DS18B20, BMP280, HTU21 and more",
+"desc": "App para leer sensores de temperatura, humedad y presión como DHT11/22, DS18B20, BMP280, HTU21 y más",
 "fuente": "Momentum",
 "github": "https://github.com/quen0n/unitemp-flipperzero"
 },
@@ -2446,28 +2446,28 @@
 "appid": "wire_tester",
 "name": "[GPIO] Wire Tester",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Beeps if a wire is continuous",
+"desc": "Pita si un cable tiene continuidad",
 "fuente": "Momentum"
 },
 {
 "appid": "hc_sr04",
 "name": "[HC-SR] Dist. Sensor",
 "cat": "🔌 GPIO / Hardware",
-"desc": "HC-SR(04) Distance sensor reader",
+"desc": "Lector del sensor de distancia HC-SR(04)",
 "fuente": "Momentum"
 },
 {
 "appid": "i2ctools",
 "name": "[I2C] i2c Tools",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Set of i2c tools",
+"desc": "Conjunto de herramientas I2C",
 "fuente": "Momentum"
 },
 {
 "appid": "ina_meter",
 "name": "[INA2xx] INA Meter",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Application for reading TI INAxxx sensors.",
+"desc": "App para leer sensores TI INAxxx.",
 "fuente": "Momentum",
 "github": "https://github.com/cepetr/flipper-tina"
 },
@@ -2482,7 +2482,7 @@
 "appid": "flipper_geiger",
 "name": "[J305] Geiger Counter",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Works with J305 Geiger tube on external board",
+"desc": "Funciona con un tubo Geiger J305 en placa externa",
 "fuente": "Momentum",
 "github": "https://github.com/nmrr/flipperzero-geigercounter"
 },
@@ -2497,7 +2497,7 @@
 "appid": "flashlight",
 "name": "[LED] Flashlight",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Enables 3.3v on pin 7/C3 when you press Ok and leaves it on when you exit app",
+"desc": "Activa 3.3V en el pin 7/C3 al pulsar OK y lo deja encendido al salir",
 "fuente": "Momentum",
 "github": "https://github.com/xMasterX/flipper-flashlight"
 },
@@ -2505,7 +2505,7 @@
 "appid": "magspoof",
 "name": "[MAG] MagSpoof",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Enables wireless transmission of magstripe data",
+"desc": "Permite transmitir datos de banda magnética de forma inalámbrica",
 "fuente": "Momentum",
 "github": "https://github.com/zacharyweiss/magspoof_flipper"
 },
@@ -2513,7 +2513,7 @@
 "appid": "mayhem_camera",
 "name": "[MAYHEM] Camera",
 "cat": "🔌 GPIO / Hardware",
-"desc": "ESP32-CAM live feed and photo capture, use left/right for orientation/mode, up/down for brightness and center for saving a screenshot. [Unplug the USB cable to ",
+"desc": "Transmisión en vivo y captura de fotos con ESP32-CAM: izquierda/derecha orientación/modo, arriba/abajo brillo y centro para guardar. [Desconecta el USB para",
 "fuente": "Momentum",
 "github": "https://github.com/Z4urce/flipper-camera"
 },
@@ -2521,42 +2521,42 @@
 "appid": "mayhem_marauder",
 "name": "[MAYHEM] Marauder",
 "cat": "🔌 GPIO / Hardware",
-"desc": "ESP32-CAM version of Marauder. Includes all functionality from the original plus some options to trigger the camera and flashlight. [Unplug the USB cable to tes",
+"desc": "Versión ESP32-CAM de Marauder. Incluye todo lo del original más opciones para la cámara y la linterna. [Desconecta el USB para prob",
 "fuente": "Momentum"
 },
 {
 "appid": "mayhem_morseflash",
 "name": "[MAYHEM] Morse Flash",
 "cat": "🔌 GPIO / Hardware",
-"desc": "ESP32-CAM app to stream a message in morse using the powerful flashlight. [Unplug the USB cable to test with Mayhem]",
+"desc": "App ESP32-CAM que emite un mensaje en Morse con la linterna potente. [Desconecta el USB para probar con Mayhem]",
 "fuente": "Momentum"
 },
 {
 "appid": "mayhem_motion",
 "name": "[MAYHEM] Motion Detection",
 "cat": "🔌 GPIO / Hardware",
-"desc": "ESP32-CAM Motion detection. It generates a beep when motion is detected. Can be extended to trigger more stuff in the code. [Unplug the USB cable to test with M",
+"desc": "Detección de movimiento con ESP32-CAM. Pita al detectar movimiento. Se puede ampliar en el código para disparar más cosas. [Desconecta el USB para probar con M",
 "fuente": "Momentum"
 },
 {
 "appid": "mayhem_nannycam",
 "name": "[MAYHEM] Nanny Cam",
 "cat": "🔌 GPIO / Hardware",
-"desc": "ESP32-CAM simple app to start a remote camera. [Unplug the USB cable to test with Mayhem]",
+"desc": "App ESP32-CAM sencilla para iniciar una cámara remota. [Desconecta el USB para probar con Mayhem]",
 "fuente": "Momentum"
 },
 {
 "appid": "mayhem_qrcode",
 "name": "[MAYHEM] QR Code",
 "cat": "🔌 GPIO / Hardware",
-"desc": "ESP32-CAM simple app to show a payload from QR codes. Can be extended to trigger more stuff in the code. [Unplug the USB cable to test with Mayhem]",
+"desc": "App ESP32-CAM que muestra un payload desde códigos QR. Se puede ampliar en el código. [Desconecta el USB para probar con Mayhem]",
 "fuente": "Momentum"
 },
 {
 "appid": "co2_logger",
 "name": "[MH-Z19] CO2 Logger",
 "cat": "🔌 GPIO / Hardware",
-"desc": "CO2 Logger with CSV export",
+"desc": "Registrador de CO2 con exportación a CSV",
 "fuente": "Momentum",
 "github": "https://github.com/harryob2/co2_logger"
 },
@@ -2564,7 +2564,7 @@
 "appid": "mh_z19",
 "name": "[MH-Z19] CO2 sensor",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Measuring carbon dioxide (CO2) with mh-z19",
+"desc": "Mide dióxido de carbono (CO2) con el MH-Z19",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/meshchaninov/flipper-zero-mh-z19"
 },
@@ -2572,7 +2572,7 @@
 "appid": "stepcounter",
 "name": "[Mx2125] Step Counter",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Step Counter/Pedometer using Memsic2125 module.",
+"desc": "Cuentapasos (podómetro) con el módulo Memsic2125.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/grugnoymeme/flipperzero-StepCounter-fap"
 },
@@ -2580,14 +2580,14 @@
 "appid": "gps_nmea",
 "name": "[NMEA] GPS",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Works with GPS modules via UART, using NMEA protocol.",
+"desc": "Funciona con módulos GPS por UART, usando el protocolo NMEA.",
 "fuente": "Momentum"
 },
 {
 "appid": "nearby_files",
 "name": "[NMEA] Nearby Files",
 "cat": "🔌 GPIO / Hardware",
-"desc": "A GPS-enabled file browser that displays files sorted by distance from your current location.",
+"desc": "Explorador de archivos con GPS que los ordena por distancia desde tu ubicación.",
 "fuente": "Momentum"
 },
 {
@@ -2601,7 +2601,7 @@
 "appid": "nrf24channelscanner",
 "name": "[NRF24] Channel Scan",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Scans 2.4Ghz frequency for usage data.",
+"desc": "Escanea la banda de 2,4 GHz para ver el uso.",
 "fuente": "Momentum",
 "github": "https://github.com/htotoo/NRF24ChannelScanner"
 },
@@ -2609,7 +2609,7 @@
 "appid": "nrf24mousejacker",
 "name": "[NRF24] Mouse Jacker",
 "cat": "🔌 GPIO / Hardware",
-"desc": "App works with NRF24 Sniffer app to perform mousejack attacks",
+"desc": "Funciona con la app NRF24 Sniffer para ataques mousejack",
 "fuente": "Momentum"
 },
 {
@@ -2623,7 +2623,7 @@
 "appid": "nrf24sniff",
 "name": "[NRF24] Sniffer",
 "cat": "🔌 GPIO / Hardware",
-"desc": "App captures addresses to use with NRF24 Mouse Jacker app to perform mousejack attacks",
+"desc": "Captura direcciones para usarlas con la app NRF24 Mouse Jacker en ataques mousejack",
 "fuente": "Momentum"
 },
 {
@@ -2637,7 +2637,7 @@
 "appid": "radar_scanner",
 "name": "[RCWL0516] Radar Scan",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Detects the movement of living things using radar",
+"desc": "Detecta el movimiento de seres vivos con radar",
 "fuente": "Momentum",
 "github": "https://github.com/MatthewKuKanich/flipper-radar"
 },
@@ -2645,14 +2645,14 @@
 "appid": "spi_mem_manager",
 "name": "[SPI] SPI Mem Manager",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Application for reading and writing 25-series SPI memory chips",
+"desc": "App para leer y escribir chips de memoria SPI de la serie 25",
 "fuente": "Momentum"
 },
 {
 "appid": "flipper_spi_terminal",
 "name": "[SPI] Terminal",
 "cat": "🔌 GPIO / Hardware",
-"desc": "A Terminal Application for the SPI interface",
+"desc": "Terminal para la interfaz SPI",
 "fuente": "Momentum",
 "github": "https://github.com/janwiesemann/flipper-spi-terminal"
 },
@@ -2660,42 +2660,42 @@
 "appid": "dap_link",
 "name": "[SWD-JTAG] DAP Link",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Enables use of Flipper as a debug probe for ARM devices, implements the CMSIS-DAP protocol",
+"desc": "Usa el Flipper como sonda de depuración para dispositivos ARM; implementa el protocolo CMSIS-DAP",
 "fuente": "Momentum"
 },
 {
 "appid": "swd_probe",
 "name": "[SWD] SWD Probe",
 "cat": "🔌 GPIO / Hardware",
-"desc": "ARM SWD (Single Wire Debug) Probe",
+"desc": "Sonda ARM SWD (depuración de un solo cable)",
 "fuente": "Momentum"
 },
 {
 "appid": "fm_radio",
 "name": "[TEA5767] FM Radio",
 "cat": "🔌 GPIO / Hardware",
-"desc": "FM Radio App",
+"desc": "App de radio FM",
 "fuente": "Momentum"
 },
 {
 "appid": "uart_terminal",
 "name": "[UART] UART Terminal",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Control various devices via the Flipper Zero UART interface.",
+"desc": "Controla varios dispositivos por la interfaz UART del Flipper.",
 "fuente": "Momentum"
 },
 {
 "appid": "vgm_air_mouse",
 "name": "[VGM] Air Mouse",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Turn Flipper Zero with the Video Game Module into an air mouse",
+"desc": "Convierte el Flipper con el Video Game Module en un ratón de aire",
 "fuente": "Momentum"
 },
 {
 "appid": "vgm_game_remote",
 "name": "[VGM] Game Remote",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Companion app for the VGM Game Engine",
+"desc": "App compañera del motor de juegos VGM",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/jblanked/pico-game-engine"
 },
@@ -2703,14 +2703,14 @@
 "appid": "video_game_module_tool",
 "name": "[VGM] Video Game Module Tool",
 "cat": "🔌 GPIO / Hardware",
-"desc": "This app is a standalone firmware updater/installer for the Video Game Module",
+"desc": "App para actualizar/instalar el firmware del Video Game Module",
 "fuente": "Momentum"
 },
 {
 "appid": "eth_troubleshooter",
 "name": "[W5500] Ethernet",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Test your Ethernet connection with W5500 module and Flipper",
+"desc": "Prueba tu conexión Ethernet con el módulo W5500 y el Flipper",
 "fuente": "Momentum",
 "github": "https://github.com/xMasterX/all-the-plugins"
 },
@@ -2718,7 +2718,7 @@
 "appid": "wii_ec_anal",
 "name": "[WII] EC Analyser",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Wii Extension Controller Protocol Analyser",
+"desc": "Analizador del protocolo de controles de extensión de Wii",
 "fuente": "Momentum",
 "github": "https://github.com/csBlueChip/FlipperZero_plugin_WiiChuck"
 },
@@ -2726,7 +2726,7 @@
 "appid": "sio2flip",
 "name": "Atari SIO Emulator",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Atari SIO Peripheral Emulator for Flipper Zero",
+"desc": "Emulador de periférico Atari SIO",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/cepetr/sio2flip"
 },
@@ -2734,7 +2734,7 @@
 "appid": "bme680_flipper_zero",
 "name": "BME680",
 "cat": "🔌 GPIO / Hardware",
-"desc": "BME680 sensor via I2C",
+"desc": "Sensor BME680 por I2C",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/kamylwnb/bme680_flipper_zero"
 },
@@ -2742,7 +2742,7 @@
 "appid": "canfdhs",
 "name": "CAN-FD-HS",
 "cat": "🔌 GPIO / Hardware",
-"desc": "This software implements an USB to CAN bridge compatible with Linux can-utils and slcan driver.",
+"desc": "Implementa un puente USB-CAN compatible con can-utils de Linux y el driver slcan.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/serma-safety-security/Flipper-Zero-CAN-FD-HS-SW"
 },
@@ -2750,7 +2750,7 @@
 "appid": "co2_detector_mh_z19",
 "name": "CO2 detector MH-Z19",
 "cat": "🔌 GPIO / Hardware",
-"desc": "CO2 Detector MH-Z19 for Flipper Zero",
+"desc": "Detector de CO2 con sensor MH-Z19",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/razerhome/flipper-zero-co2-mh-z19"
 },
@@ -2758,7 +2758,7 @@
 "appid": "fcom",
 "name": "Digimon F-Com",
 "cat": "🔌 GPIO / Hardware",
-"desc": "App for interacting with digimon virtual pets",
+"desc": "App para interactuar con mascotas virtuales Digimon",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/TylerWilley/flipper-f-com"
 },
@@ -2766,7 +2766,7 @@
 "appid": "fake_chip_detector",
 "name": "Fake Chip Detector",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Check whether an I2C sensor really is the chip it was sold as, before you solder it in.",
+"desc": "Comprueba si un sensor I2C es de verdad el chip que te vendieron, antes de soldarlo.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/hleserg/flipper-fake-chip-detector"
 },
@@ -2774,7 +2774,7 @@
 "appid": "fencing_testbox",
 "name": "Fencing Test Box",
 "cat": "🔌 GPIO / Hardware",
-"desc": "A simple emulator of a fencing testbox for the Flipper Zero.",
+"desc": "Emulador sencillo de una caja de esgrima (testbox).",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/aarjaneiro/fencing_testbox"
 },
@@ -2790,35 +2790,35 @@
 "appid": "flipboard_blinky",
 "name": "FlipBoard Blinky",
 "cat": "🔌 GPIO / Hardware",
-"desc": "FlipBoard Blinky turns your FlipBoard into a blinky badge.",
+"desc": "FlipBoard Blinky convierte tu FlipBoard en una chapa con luces.",
 "fuente": "Momentum"
 },
 {
 "appid": "flipboard_keyboard",
 "name": "FlipBoard Keyboard",
 "cat": "🔌 GPIO / Hardware",
-"desc": "FlipBoard Keyboard turns your FlipBoard into a keyboard.",
+"desc": "FlipBoard Keyboard convierte tu FlipBoard en un teclado.",
 "fuente": "Momentum"
 },
 {
 "appid": "flipboard_signal",
 "name": "FlipBoard Signal",
 "cat": "🔌 GPIO / Hardware",
-"desc": "FlipBoard Signal turns your FlipBoard into a signal sender.",
+"desc": "FlipBoard Signal convierte tu FlipBoard en un emisor de señales.",
 "fuente": "Momentum"
 },
 {
 "appid": "flipboard_simon",
 "name": "FlipBoard Simon",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Simon memory game for the FlipBoard.",
+"desc": "Juego de memoria Simón para el FlipBoard.",
 "fuente": "Momentum"
 },
 {
 "appid": "flip_downloader",
 "name": "FlipDownloader",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Download apps and assets via WiFi directly to your Flipper Zero",
+"desc": "Descarga apps y recursos por WiFi directo a tu Flipper",
 "fuente": "Momentum",
 "github": "https://github.com/jblanked/FlipDownloader"
 },
@@ -2826,7 +2826,7 @@
 "appid": "flip_gemini",
 "name": "FlipGemini",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Chat with Google's Gemini AI on your Flipper Zero",
+"desc": "Chatea con la IA Gemini de Google en tu Flipper",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/jblanked/FlipGemini"
 },
@@ -2834,7 +2834,7 @@
 "appid": "flip_library",
 "name": "FlipLibrary",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Utilize WiFi to retrieve data from 20 different APIs",
+"desc": "Usa WiFi para traer datos de 20 APIs distintas",
 "fuente": "Momentum",
 "github": "https://github.com/jblanked/FlipLibrary"
 },
@@ -2842,7 +2842,7 @@
 "appid": "flip_map",
 "name": "FlipMap",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Find Flipper Zero Users",
+"desc": "Encuentra usuarios de Flipper Zero",
 "fuente": "Momentum",
 "github": "https://github.com/jblanked/FlipMap"
 },
@@ -2850,7 +2850,7 @@
 "appid": "flipper_blinker",
 "name": "Flipper Blinker",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Transmit Morse code with an external LED connected to GPIO PC3.",
+"desc": "Transmite código Morse con un LED externo conectado al GPIO PC3.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/T3chieJack/FlipperBlinker"
 },
@@ -2858,7 +2858,7 @@
 "appid": "flipper_gb_printer",
 "name": "Flipper GB Printer",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Flipper Game Boy Printer",
+"desc": "Impresora Game Boy en el Flipper",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/kbembedded/flipper-gb-printer"
 },
@@ -2866,7 +2866,7 @@
 "appid": "flipper_http",
 "name": "FlipperHTTP",
 "cat": "🔌 GPIO / Hardware",
-"desc": "FlipperHTTP Companion App",
+"desc": "App compañera de FlipperHTTP",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/jblanked/FlipperHTTP-App"
 },
@@ -2874,7 +2874,7 @@
 "appid": "flip_rpi",
 "name": "FlipRPI",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Use your Flipper Zero to control your Raspberry Pi.",
+"desc": "Usa tu Flipper para controlar tu Raspberry Pi.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/jblanked/FlipRPI"
 },
@@ -2882,7 +2882,7 @@
 "appid": "flip_social",
 "name": "FlipSocial",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Social media platform for the Flipper Zero.",
+"desc": "Red social para el Flipper.",
 "fuente": "Momentum",
 "github": "https://github.com/jblanked/FlipSocial"
 },
@@ -2890,7 +2890,7 @@
 "appid": "flip_telegram",
 "name": "FlipTelegram",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Flipper Zero Telegram Client",
+"desc": "Cliente de Telegram para el Flipper",
 "fuente": "Momentum",
 "github": "https://github.com/jblanked/FlipTelegram"
 },
@@ -2898,7 +2898,7 @@
 "appid": "flip_trader",
 "name": "FlipTrader",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Use WiFi to get the price of stocks and currency pairs on your Flipper Zero.",
+"desc": "Usa WiFi para ver el precio de acciones y pares de divisas en tu Flipper.",
 "fuente": "Momentum",
 "github": "https://github.com/jblanked/FlipTrader"
 },
@@ -2906,7 +2906,7 @@
 "appid": "flip_weather",
 "name": "FlipWeather",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Use WiFi to get GPS and Weather information on your Flipper Zero.",
+"desc": "Usa WiFi para obtener GPS y clima en tu Flipper.",
 "fuente": "Momentum",
 "github": "https://github.com/jblanked/FlipWeather"
 },
@@ -2914,7 +2914,7 @@
 "appid": "flip_wifi",
 "name": "FlipWiFi",
 "cat": "🔌 GPIO / Hardware",
-"desc": "FlipperHTTP companion app.",
+"desc": "App compañera de FlipperHTTP.",
 "fuente": "Momentum",
 "github": "https://github.com/jblanked/FlipWiFi"
 },
@@ -2922,7 +2922,7 @@
 "appid": "flip_world",
 "name": "FlipWorld",
 "cat": "🔌 GPIO / Hardware",
-"desc": "The first open-world multiplayer game, best played with the VGM.",
+"desc": "El primer juego multijugador de mundo abierto, mejor con el VGM.",
 "fuente": "Momentum",
 "github": "https://github.com/jblanked/FlipWorld"
 },
@@ -2930,7 +2930,7 @@
 "appid": "fn_test",
 "name": "FN Tester",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Application for testing the fiscal drive (Only for the Russian market)",
+"desc": "App para probar la unidad fiscal (solo para el mercado ruso)",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/polarikus/flipper-zero_fn_tester"
 },
@@ -2938,7 +2938,7 @@
 "appid": "fred_fm",
 "name": "FReD FM",
 "cat": "🔌 GPIO / Hardware",
-"desc": "FReD FM is a GPIO app for the FReD FM radio board (TEA5767 tuner, PT2257/PT2259-S volume, RDS decode). Requires the FReD FM expansion board (PCB v1.1, Tindie) —",
+"desc": "FReD FM es una app GPIO para la placa de radio FReD FM (sintonizador TEA5767, volumen PT2257/PT2259-S, decodificación RDS). Requiere la placa FReD FM (PCB v1.1, Tindie)",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/pchmielewski1/tea5767-pt22xx-fm-radio-with-volume-control"
 },
@@ -2946,7 +2946,7 @@
 "appid": "free_roam",
 "name": "Free Roam",
 "cat": "🔌 GPIO / Hardware",
-"desc": "3D Open World Multiplayer Game",
+"desc": "Juego multijugador 3D de mundo abierto",
 "fuente": "Momentum",
 "github": "https://github.com/jblanked/Free-Roam"
 },
@@ -2954,7 +2954,7 @@
 "appid": "ghouls",
 "name": "Ghouls",
 "cat": "🔌 GPIO / Hardware",
-"desc": "3D Round-based survival game",
+"desc": "Juego de supervivencia 3D por rondas",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/jblanked/Ghouls-Flipper"
 },
@@ -2962,7 +2962,7 @@
 "appid": "i2c_tools_cli",
 "name": "I2C Tools CLI",
 "cat": "🔌 GPIO / Hardware",
-"desc": "I2C scanner / sender / sniffer with N-byte read, HEX/ASCII view, and a serial CLI (i2c scan/probe/read/write).",
+"desc": "Escáner/emisor/sniffer I2C con lectura de N bytes, vista HEX/ASCII y consola (i2c scan/probe/read/write).",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Tristus1er/flipperzero-i2c-tools-cli"
 },
@@ -2970,7 +2970,7 @@
 "appid": "401_light_msg",
 "name": "Lab401/Light Messenger",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Companion app for the Lab401 Light Messenger",
+"desc": "App compañera del Lab401 Light Messenger",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/lab-401/fzLightMessenger"
 },
@@ -2978,7 +2978,7 @@
 "appid": "lan_tester",
 "name": "LAN Tester",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Portable LAN tester: ARP scan, ping, traceroute, DHCP, LLDP/CDP, port scan, packet capture via W5500",
+"desc": "Probador de LAN portátil: escaneo ARP, ping, traceroute, DHCP, LLDP/CDP, escaneo de puertos y captura de paquetes con W5500",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/dok2d/fz-W5500-lan-analyse"
 },
@@ -2986,7 +2986,7 @@
 "appid": "ld2410_human_detector",
 "name": "LD2410 Human Detector",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Human presence detection using HLK-LD2410 mmWave sensor",
+"desc": "Detección de presencia humana con el sensor mmWave HLK-LD2410",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/sistemasorp/flipper-ld2410_human_detector"
 },
@@ -2994,7 +2994,7 @@
 "appid": "marauder_gui",
 "name": "Marauder GUI",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Marauder GUI is a bilingual Flipper Zero companion application for controlling an ESP32 Marauder",
+"desc": "Marauder GUI es una app compañera bilingüe para controlar un ESP32 Marauder",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/mel4mi/Marauder-GUI-Flipper"
 },
@@ -3002,7 +3002,7 @@
 "appid": "max31855",
 "name": "MAX31855",
 "cat": "🔌 GPIO / Hardware",
-"desc": "MAX31855 Thermocouple Sensor App",
+"desc": "App del sensor de termopar MAX31855",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/skotopes/flipperzero_max31855"
 },
@@ -3010,7 +3010,7 @@
 "appid": "mhz19_uart",
 "name": "MH-Z19 UART",
 "cat": "🔌 GPIO / Hardware",
-"desc": "MH-Z19 sensor app for flipper zero. Uses UART protocol to receive data.",
+"desc": "App del sensor MH-Z19. Usa UART para recibir los datos.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/skotopes/flipperzero_mhz19_uart"
 },
@@ -3018,7 +3018,7 @@
 "appid": "moisture_sensor",
 "name": "Moisture Sensor",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Read values from a capacitive moisture sensor v1.2",
+"desc": "Lee valores de un sensor de humedad capacitivo v1.2",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/smallwat3r/flipperzero-moisture-sensor"
 },
@@ -3026,7 +3026,7 @@
 "appid": "alcohol_sensor",
 "name": "MQ-3 Alcometer",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Alcohol meter (breathalyzer) using MQ-3 sensor",
+"desc": "Medidor de alcohol (alcoholímetro) con sensor MQ-3",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/serjantlk/MQ-3-Alcometer"
 },
@@ -3034,7 +3034,7 @@
 "appid": "noptel_lrf_sampler",
 "name": "Noptel LRF sampler",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Noptel LRF rangefinder sampler",
+"desc": "Muestreador del telémetro Noptel LRF",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Giraut/flipper_zero_noptel_lrf_sampler"
 },
@@ -3042,7 +3042,7 @@
 "appid": "pir_hc_sr501_alarm",
 "name": "PIR HC-SR501 Alarm",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Simple proximity alarm app for Flipper Zero using HC-SR501 PIR sensor.",
+"desc": "App sencilla de alarma de proximidad con sensor PIR HC-SR501.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/ku6a-cj/-PIR-HC-SR501-Proximity-alarm-Flipper-zero"
 },
@@ -3050,7 +3050,7 @@
 "appid": "radsens",
 "name": "RadSens",
 "cat": "🔌 GPIO / Hardware",
-"desc": "App for RadSens module",
+"desc": "App para el módulo RadSens",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/sionyx/flipper_radsens"
 },
@@ -3058,7 +3058,7 @@
 "appid": "sd_spi_app",
 "name": "SD SPI",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Lock and Unlock SD card / Micro SD card through SPI protocol.",
+"desc": "Bloquea y desbloquea tarjetas SD / microSD por el protocolo SPI.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Gl1tchub/Flipperzero-SD-SPI"
 },
@@ -3066,7 +3066,7 @@
 "appid": "servotesterapp",
 "name": "Servo Tester",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Servo tester app for Flipper Zero",
+"desc": "App para probar servos con el Flipper",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/kaklik/ServoTesterApp"
 },
@@ -3074,7 +3074,7 @@
 "appid": "gbhobbytech_servo_tester",
 "name": "Servo Tester+",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Servo Tester+ tests hobby servos using the Flipper Zero GPIO header. Features - Manual, center and sweep modes - 10 degree manual adjustments - On-screen wiring",
+"desc": "Servo Tester+ prueba servos con el conector GPIO del Flipper. Modos manual, centro y barrido; ajustes manuales de 10 grados; diagrama de cableado en pantalla",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/gbhobbytech/flipper-servo-tester"
 },
@@ -3090,7 +3090,7 @@
 "appid": "gbhobbytech_sh1106_test",
 "name": "SH1106 Test",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Test and diagnose external 128x64 SH1106 I2C OLED displays",
+"desc": "Prueba y diagnostica pantallas OLED externas SH1106 I2C de 128x64",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/gbhobbytech/ssd1306_test"
 },
@@ -3098,7 +3098,7 @@
 "appid": "smart_home",
 "name": "Smart Home",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Control Home Assistant devices through a Wi-Fi Developer Board",
+"desc": "Controla dispositivos de Home Assistant mediante una placa Wi-Fi Developer Board",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/biotechnicallc/SmartHome"
 },
@@ -3106,7 +3106,7 @@
 "appid": "ssd1306_test",
 "name": "SSD1306 Test",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Diagnostic tool for SSD1306 I2C OLED displays (128x64, yellow-bar and mono variants)",
+"desc": "Herramienta de diagnóstico para pantallas OLED I2C SSD1306 (128x64, barra amarilla y mono)",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/martinbogo/ssd1306_test"
 },
@@ -3114,7 +3114,7 @@
 "appid": "ssh_runner",
 "name": "SSH Runner",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Run SSH commands and scripts on your servers from the Flipper Zero, over LAN or WiFi.",
+"desc": "Ejecuta comandos y scripts SSH en tus servidores desde el Flipper, por LAN o WiFi.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/SeanChangX/flipper-ssh-runner"
 },
@@ -3122,7 +3122,7 @@
 "appid": "telink_sws",
 "name": "Telink SWS",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Telink SWS Read and program Telink TLSR825x devices using Flipper Zero's GPIO pins and the single-wire SWire debug protocol. Features - Live contact monitoring ",
+"desc": "Telink SWS: lee y programa dispositivos Telink TLSR825x con los pines GPIO del Flipper y el protocolo de un solo cable SWire. Monitoreo de contacto en vivo",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/ngxson/flipper-telink"
 },
@@ -3130,7 +3130,7 @@
 "appid": "tesla_mod",
 "name": "Tesla Mod",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Open-source Tesla CAN bus toolkit for Flipper Zero. It needs an MCP2515 CAN add-on (for example the Electronic Cats CAN Bus Add-On) wired into the car's CAN bus",
+"desc": "Kit de código abierto para el bus CAN de Tesla. Necesita un módulo CAN MCP2515 (por ejemplo el Electronic Cats CAN Bus Add-On) conectado al bus CAN del carro",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/hypery11/flipper-tesla-fsd"
 },
@@ -3138,7 +3138,7 @@
 "appid": "ublox",
 "name": "u-blox GPS",
 "cat": "🔌 GPIO / Hardware",
-"desc": "App to display and log data from a u-blox GPS module connected over",
+"desc": "Muestra y registra datos de un módulo GPS u-blox conectado por",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/liamhays/ublox"
 },
@@ -3146,7 +3146,7 @@
 "appid": "uhf_expansion",
 "name": "UHF Expansion",
 "cat": "🔌 GPIO / Hardware",
-"desc": "UHF RFID inventory reader over GPIO UART",
+"desc": "Lector de inventario RFID UHF por GPIO UART",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/mtoolstec/fz-uhf-expansion"
 },
@@ -3154,7 +3154,7 @@
 "appid": "veml7700luxmeter",
 "name": "VEML7700 Lux Meter",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Lux meter app using VEML7700 sensor for Flipper Zero",
+"desc": "Luxómetro con sensor VEML7700 para el Flipper",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/kamylwnb/Flipper-zero-app-VEML7700"
 },
@@ -3162,7 +3162,7 @@
 "appid": "video_game_module_console",
 "name": "Video Game Module Console",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Flipper Zero console, handling game display rendering and input forwarding",
+"desc": "Consola del Flipper: maneja el dibujo del juego y la entrada de botones",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/jblanked/Video-Game-Module-Console"
 },
@@ -3170,7 +3170,7 @@
 "appid": "water_sensor_reader",
 "name": "Water Sensor reader",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Water Sensor Reader for Flipper Zero",
+"desc": "Lector de sensor de agua para el Flipper",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/MatveyStrelov/flipper-water-sensor"
 },
@@ -3178,7 +3178,7 @@
 "appid": "web_crawler",
 "name": "Web Crawler",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Browse the web, fetch API data, and more.",
+"desc": "Navega la web, consulta APIs y más.",
 "fuente": "Momentum",
 "github": "https://github.com/jblanked/WebCrawler-FlipperZero"
 },
@@ -3186,7 +3186,7 @@
 "appid": "wifi_internet_watch",
 "name": "WiFi Internet Watch",
 "cat": "🔌 GPIO / Hardware",
-"desc": "WiFi Internet Watch connects a Flipper Zero Wi-Fi Developer Board to a selected wireless network and checks internet availability every 60 seconds. Features - S",
+"desc": "WiFi Internet Watch conecta una placa WiFi del Flipper a una red elegida y revisa el internet cada 60 segundos. Características",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/DruzhininPavel/wifi-internet-watch-flipper"
 },
@@ -3194,7 +3194,7 @@
 "appid": "wol_flipper",
 "name": "WoL Flipper",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Wake-on-LAN over the ESP32-S2 WiFi dev board, with a built in flasher",
+"desc": "Wake-on-LAN por la placa WiFi ESP32-S2, con grabador incluido",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/keetsta/wol-flipper"
 },
@@ -3202,7 +3202,7 @@
 "appid": "xbox_postcode_reader",
 "name": "Xbox POST Code Reader",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Read Xbox boot POST codes over I2C and decode them offline",
+"desc": "Lee los códigos POST de arranque de la Xbox por I2C y los decodifica sin conexión",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/coolshrimp/flipperzero-xbox-post-code-reader"
 },
@@ -3210,7 +3210,7 @@
 "appid": "yrm100x_pro",
 "name": "YRM100XPRO",
 "cat": "🔌 GPIO / Hardware",
-"desc": "UHF RFID reader, writer, clone and tag toolkit.",
+"desc": "Kit de lector, grabador, clonador y etiquetas RFID UHF.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/AlexeySmirnov74/YRM100X_PRO"
 },
@@ -3218,7 +3218,7 @@
 "appid": "zeromesh",
 "name": "ZeroMesh",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Meshtastic client with offline vector maps, over serial or Bluetooth",
+"desc": "Cliente Meshtastic con mapas vectoriales sin conexión, por serie o Bluetooth",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/SAMS0N1TE/ZeroMesh"
 },
@@ -3226,7 +3226,7 @@
 "appid": "ibutton_converter",
 "name": "iButton Converter",
 "cat": "🔑 iButton",
-"desc": "Cyfral and Metakom to Dallas converter",
+"desc": "Conversor de Cyfral y Metakom a Dallas",
 "fuente": "Momentum",
 "github": "https://github.com/Leptopt1los/ibutton_converter"
 },
@@ -3234,7 +3234,7 @@
 "appid": "fuzzer_ibtn",
 "name": "iButton Fuzzer",
 "cat": "🔑 iButton",
-"desc": "Fuzzer for ibutton readers",
+"desc": "Fuzzer para lectores de iButton",
 "fuente": "Momentum",
 "github": "https://github.com/DarkFlippers/Multi_Fuzzer"
 },
@@ -3242,7 +3242,7 @@
 "appid": "android_keyboard_bridge",
 "name": "Android KB Bridge",
 "cat": "🔵 Bluetooth",
-"desc": "Android KB Bridge (Flipper)",
+"desc": "Puente de teclado para Android (Flipper)",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/andybeg/AndroidFlipperZeroKBD"
 },
@@ -3250,7 +3250,7 @@
 "appid": "anki_remote",
 "name": "Anki Remote",
 "cat": "🔵 Bluetooth",
-"desc": "What does Anki-Remote do?",
+"desc": "¿Qué hace Anki-Remote?",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Blue5GD/Anki-Remote"
 },
@@ -3258,7 +3258,7 @@
 "appid": "ble_beacon",
 "name": "BLE Beacon",
 "cat": "🔵 Bluetooth",
-"desc": "Simulates unencrypted BLE beacons for testing scanners and smart-home apps",
+"desc": "Simula beacons BLE sin cifrar para probar escáneres y apps de hogar inteligente",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/steanlab/BLE-Beacon"
 },
@@ -3266,14 +3266,14 @@
 "appid": "ble_spam",
 "name": "BLE Spam",
 "cat": "🔵 Bluetooth",
-"desc": "Flood BLE advertisements to cause spammy and annoying popups/notifications",
+"desc": "Satura anuncios BLE para provocar ventanas molestas (prueba de ruido BLE)",
 "fuente": "Momentum"
 },
 {
 "appid": "bt_trigger",
 "name": "BT Trigger",
 "cat": "🔵 Bluetooth",
-"desc": "Control your smartphone camera via your Flipper Zero",
+"desc": "Controla la cámara de tu celular desde el Flipper",
 "fuente": "Momentum",
 "github": "https://github.com/Nem0oo/flipper-zero-bluetooth-trigger"
 },
@@ -3281,7 +3281,7 @@
 "appid": "bthome",
 "name": "BTHome",
 "cat": "🔵 Bluetooth",
-"desc": "This application turns the Flipper Zero into a BTHome beacon, and can be used to integrate the Flipper with home automation systems that support BTHome, such as",
+"desc": "Convierte el Flipper en un beacon BTHome para integrarlo con sistemas de domótica que soporten BTHome, como",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/ghedo/flipper-playground"
 },
@@ -3289,7 +3289,7 @@
 "appid": "claude_buddy",
 "name": "Claude Buddy",
 "cat": "🔵 Bluetooth",
-"desc": "Claude Code companion - physical remote control with audio feedback",
+"desc": "Compañero de Claude Code: control físico con respuesta de audio",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/jxw1102/flipper-claude-buddy"
 },
@@ -3297,7 +3297,7 @@
 "appid": "flight_monitor",
 "name": "Flight Monitor",
 "cat": "🔵 Bluetooth",
-"desc": "War Thunder flight parameters monitor with BLE connectivity",
+"desc": "Monitor de parámetros de vuelo de War Thunder con conexión BLE",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/kamylwnb/flight_monitor"
 },
@@ -3305,7 +3305,7 @@
 "appid": "fliptok_live_chat",
 "name": "FlipTok Live",
 "cat": "🔵 Bluetooth",
-"desc": "FlipTok Live chat display on Flipper Zero via Bluetooth",
+"desc": "Muestra el chat en vivo de FlipTok en el Flipper por Bluetooth",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/kamylwnb/FlipTok_Live_Chat"
 },
@@ -3313,7 +3313,7 @@
 "appid": "kindle_click",
 "name": "Kindle Click",
 "cat": "🔵 Bluetooth",
-"desc": "Turns the Flipper into a remote that a Kindle accepts as a Kindle Click: page forward and back, light up and down, and sleep. The Kindle also shows the Flipper'",
+"desc": "Convierte el Flipper en un control que el Kindle acepta: pasar página adelante y atrás, subir y bajar la luz, y dormir. El Kindle también muestra el del Flipper",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/zuyan9/Flipper-Zero-Kindle-Click"
 },
@@ -3321,7 +3321,7 @@
 "appid": "kota",
 "name": "Kota",
 "cat": "🔵 Bluetooth",
-"desc": "Claude plan usage (session and weekly limits) over Bluetooth",
+"desc": "Uso del plan de Claude (límites de sesión y semanales) por Bluetooth",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/cobanov/kota"
 },
@@ -3329,7 +3329,7 @@
 "appid": "magicband_plus_lights",
 "name": "MagicBand Plus Lights (Unofficial)",
 "cat": "🔵 Bluetooth",
-"desc": "Disney MagicBand + Lights at home",
+"desc": "MagicBand de Disney + luces en casa",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Haw8411/magic-band-plus-lights"
 },
@@ -3337,7 +3337,7 @@
 "appid": "now_playing",
 "name": "Now Playing",
 "cat": "🔵 Bluetooth",
-"desc": "Mac Now Playing display and BLE remote",
+"desc": "Muestra lo que suena en Mac y control por BLE",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Vchekryzhov/mac-media-remote"
 },
@@ -3345,7 +3345,7 @@
 "appid": "pc_health_remote",
 "name": "PC Health Remote",
 "cat": "🔵 Bluetooth",
-"desc": "PC Health Remote",
+"desc": "Mando de salud del PC",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/vladatman/pc-health-remote"
 },
@@ -3353,14 +3353,14 @@
 "appid": "pc_monitor",
 "name": "PC Monitor",
 "cat": "🔵 Bluetooth",
-"desc": "Application for monitoring PC resources",
+"desc": "App para monitorear los recursos del PC",
 "fuente": "Momentum"
 },
 {
 "appid": "access_audit",
 "name": "Access Audit",
 "cat": "🛠️ Herramientas",
-"desc": "Flipper Access Audit",
+"desc": "Auditoría de acceso del Flipper",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/matthewkayne/flipper-access-audit"
 },
@@ -3368,7 +3368,7 @@
 "appid": "ai_dashboard",
 "name": "AI Radar",
 "cat": "🛠️ Herramientas",
-"desc": "Track AI usage windows on Flipper Zero",
+"desc": "Controla tus ventanas de uso de IA en el Flipper",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/T-Damer/flipper-ai-dashboard"
 },
@@ -3376,7 +3376,7 @@
 "appid": "anim_previewer",
 "name": "Anim Previewer",
 "cat": "🛠️ Herramientas",
-"desc": "Browse and preview Flipper Zero dolphin animations directly on the device.",
+"desc": "Explora y previsualiza las animaciones del delfín directamente en el equipo.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/H4W9/AnimationPreviewerFlipperApp"
 },
@@ -3384,7 +3384,7 @@
 "appid": "animation_switcher",
 "name": "Animation Switcher",
 "cat": "🛠️ Herramientas",
-"desc": "Change your background animations on the fly!",
+"desc": "¡Cambia las animaciones de fondo al vuelo!",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/lsalik2/FlipperAnimationSwitcher"
 },
@@ -3392,7 +3392,7 @@
 "appid": "appsearch",
 "name": "App Search",
 "cat": "🛠️ Herramientas",
-"desc": "Launch any installed app or built-in tool, most-used first.",
+"desc": "Abre cualquier app o herramienta instalada, las más usadas primero.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/tbelbek/flipper-app-search"
 },
@@ -3400,7 +3400,7 @@
 "appid": "totp",
 "name": "Authenticator",
 "cat": "🛠️ Herramientas",
-"desc": "Software-based TOTP/HOTP authenticator for Flipper Zero device",
+"desc": "Autenticador TOTP/HOTP por software para el Flipper",
 "fuente": "Momentum",
 "github": "https://github.com/akopachov/flipper-zero_authenticator"
 },
@@ -3408,7 +3408,7 @@
 "appid": "barcode_app",
 "name": "Barcode",
 "cat": "🛠️ Herramientas",
-"desc": "App allows you to display various barcodes on flipper screen",
+"desc": "Permite mostrar varios códigos de barras en la pantalla del Flipper",
 "fuente": "Momentum",
 "github": "https://github.com/Kingal1337/flipper-barcode-generator"
 },
@@ -3416,7 +3416,7 @@
 "appid": "caesar_cipher",
 "name": "Caesar Cipher",
 "cat": "🛠️ Herramientas",
-"desc": "Encrypt and decrypt text using Caesar Cipher",
+"desc": "Cifra y descifra texto con el cifrado César",
 "fuente": "Momentum",
 "github": "https://github.com/panki27/caesar-cipher"
 },
@@ -3424,14 +3424,14 @@
 "appid": "calculator",
 "name": "Calculator",
 "cat": "🛠️ Herramientas",
-"desc": "Calculator, that can calculate simple expressions",
+"desc": "Calculadora que resuelve expresiones simples",
 "fuente": "Momentum"
 },
 {
 "appid": "techart_calendar",
 "name": "Calendar",
 "cat": "🛠️ Herramientas",
-"desc": "Calendar application",
+"desc": "App de calendario",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/techartdev/Calendar"
 },
@@ -3439,14 +3439,14 @@
 "appid": "can_tools",
 "name": "CAN Tools",
 "cat": "🛠️ Herramientas",
-"desc": "CAN Tools, DBC creation, Data decoding",
+"desc": "Herramientas CAN: creación de DBC y decodificación de datos",
 "fuente": "Momentum"
 },
 {
 "appid": "ck42x_passvault",
 "name": "CK42X PassVault",
 "cat": "🛠️ Herramientas",
-"desc": "CK42X.com PIN-gated encrypted password vault with RNG generation and opt-in HID password typing.",
+"desc": "Baúl de contraseñas cifrado de CK42X.com con PIN, generador aleatorio y escritura opcional por HID.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/lordbuffcloud/flipper-ck42x-passvault"
 },
@@ -3461,7 +3461,7 @@
 "appid": "clock",
 "name": "Clock",
 "cat": "🛠️ Herramientas",
-"desc": "This is a simple clock application for the Flipper Zero. It displays the current time and date.",
+"desc": "Reloj sencillo para el Flipper. Muestra la hora y la fecha.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/flipperdevices/flipperzero-good-faps"
 },
@@ -3469,7 +3469,7 @@
 "appid": "clock_o_dial",
 "name": "Clock'o'Dial",
 "cat": "🛠️ Herramientas",
-"desc": "Clock out before burnout!",
+"desc": "¡Fichar la salida antes de quemarte!",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/ManeFunction/clock-o-dial--fz"
 },
@@ -3477,7 +3477,7 @@
 "appid": "coach_watch",
 "name": "Coach Watch",
 "cat": "🛠️ Herramientas",
-"desc": "A coach stopwatch for Flipper Zero. OK starts, stops, and resets. Right records splits. Sessions are saved as text files on the microSD card.",
+"desc": "Cronómetro de entrenador: OK inicia, para y reinicia; Derecha marca vueltas. Las sesiones se guardan como texto en la microSD.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/alaviation/flipper-coach-watch"
 },
@@ -3485,14 +3485,14 @@
 "appid": "combo_cracker",
 "name": "Combo Cracker",
 "cat": "🛠️ Herramientas",
-"desc": "Crack combo locks in 8 attempts or less",
+"desc": "Abre candados de combinación en 8 intentos o menos",
 "fuente": "Momentum"
 },
 {
 "appid": "cntdown_tim",
 "name": "Count Down Timer",
 "cat": "🛠️ Herramientas",
-"desc": "Simple count down timer",
+"desc": "Temporizador de cuenta atrás simple",
 "fuente": "Momentum",
 "github": "https://github.com/0w0mewo/fpz_cntdown_timer"
 },
@@ -3500,7 +3500,7 @@
 "appid": "counter",
 "name": "Counter",
 "cat": "🛠️ Herramientas",
-"desc": "Simple counter",
+"desc": "Contador simple",
 "fuente": "Momentum",
 "github": "https://github.com/Krulknul/dolphin-counter"
 },
@@ -3508,7 +3508,7 @@
 "appid": "cube_timer",
 "name": "Cube Timer",
 "cat": "🛠️ Herramientas",
-"desc": "A speedcubing timer and 3x3 scrambler. Get a scramble, inspect with a WCA-style 15 second countdown, and time your solve with the center button. Your session st",
+"desc": "Cronómetro de speedcubing y mezclador 3x3: obtén una mezcla, inspecciona con cuenta atrás estilo WCA de 15 s y mide tu resolución con el botón central. Tu sesión qu",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/navarr393/CubeTimer"
 },
@@ -3516,7 +3516,7 @@
 "appid": "dcf77_clock_spoof",
 "name": "DCF77 Clock Spoof",
 "cat": "🛠️ Herramientas",
-"desc": "Spoof a DCF77 time signal with a selectable time on the RFID antenna and the A4 GPIO pin",
+"desc": "Simula una señal horaria DCF77 con una hora a elegir en la antena RFID y el pin GPIO A4",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/molodos/dcf77-clock-spoof"
 },
@@ -3524,7 +3524,7 @@
 "appid": "dcf77_clock_sync",
 "name": "DCF77 Clock Sync",
 "cat": "🛠️ Herramientas",
-"desc": "Emulate DCF77 time signal on the RFID antenna and the A4 GPIO pin",
+"desc": "Emula la señal horaria DCF77 en la antena RFID y el pin GPIO A4",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/mdaskalov/dcf77-clock-sync"
 },
@@ -3532,7 +3532,7 @@
 "appid": "dcf77",
 "name": "DCF77 Transmitter",
 "cat": "🛠️ Herramientas",
-"desc": "Radio clock emulator lab / swiss army tool.",
+"desc": "Laboratorio emulador de reloj por radio / navaja suiza.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/arha/flipper-dcf77"
 },
@@ -3540,14 +3540,14 @@
 "appid": "dtmf_dolphin",
 "name": "DTMF Dolphin",
 "cat": "🛠️ Herramientas",
-"desc": "DTMF (Dual-Tone Multi-Frequency) dialer, Bluebox, and Redbox.",
+"desc": "Marcador DTMF (multifrecuencia), Bluebox y Redbox.",
 "fuente": "Momentum"
 },
 {
 "appid": "enigma",
 "name": "Enigma",
 "cat": "🛠️ Herramientas",
-"desc": "Enigma cipher machine simulator",
+"desc": "Simulador de la máquina de cifrado Enigma",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/xtruan/flipper-enigma"
 },
@@ -3555,7 +3555,7 @@
 "appid": "eye_saver",
 "name": "Eye Saver",
 "cat": "🛠️ Herramientas",
-"desc": "Simple eye strain prevention tool using the 20-20-20 rule.",
+"desc": "Herramienta sencilla contra la fatiga visual con la regla 20-20-20.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/paul-sopin/flipper-eye-saver"
 },
@@ -3563,7 +3563,7 @@
 "appid": "faraday",
 "name": "Faraday",
 "cat": "🛠️ Herramientas",
-"desc": "Measure how much a signal-blocking pouch actually blocks, in real decibels, and grade it A+ to F. Sub-GHz key fob and NFC card, plus a leak hunt.",
+"desc": "Mide cuánto bloquea de verdad una funda anti-señal, en decibeles reales, y la califica de A+ a F. Mando Sub-GHz y tarjeta NFC, más una búsqueda de fugas.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/at0m-b0mb/Faraday-FlipperZero"
 },
@@ -3571,7 +3571,7 @@
 "appid": "fast_js_app",
 "name": "FastJS",
 "cat": "🛠️ Herramientas",
-"desc": "Pre-save your JavaScript files for quick execution.",
+"desc": "Guarda de antemano tus archivos JavaScript para ejecutarlos rápido.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/jblanked/FastJS-FlipperZero"
 },
@@ -3579,7 +3579,7 @@
 "appid": "flauncher",
 "name": "Fav Launcher",
 "cat": "🛠️ Herramientas",
-"desc": "Icon-grid launcher for your Flipper favorites.",
+"desc": "Lanzador en rejilla de íconos para tus favoritos del Flipper.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/tbelbek/flipper-fav-launcher"
 },
@@ -3587,7 +3587,7 @@
 "appid": "financial_calc",
 "name": "Financial Calculator",
 "cat": "🛠️ Herramientas",
-"desc": "A simple TVM Calculator",
+"desc": "Calculadora financiera (TVM) simple",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/schaene/Flipper-Financial-Calculator"
 },
@@ -3595,7 +3595,7 @@
 "appid": "fire_string",
 "name": "Fire String",
 "cat": "🛠️ Herramientas",
-"desc": "Generate truly random strings from the Flipper Zero using its IR sensor. Capture the infrared bursts from sparking a flame as an unpredictable entropy source. T",
+"desc": "Genera cadenas realmente aleatorias usando el sensor IR del Flipper. Capta los destellos infrarrojos de una llama como fuente de entropía impredecible.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/RyanAboueljoud/Fire-String"
 },
@@ -3603,7 +3603,7 @@
 "appid": "flipbip",
 "name": "FlipBIP Crypto Wallet",
 "cat": "🛠️ Herramientas",
-"desc": "Crypto wallet for Flipper",
+"desc": "Billetera cripto para el Flipper",
 "fuente": "Momentum",
 "github": "https://github.com/xtruan/FlipBIP"
 },
@@ -3611,7 +3611,7 @@
 "appid": "flip_crypt",
 "name": "FlipCrypt",
 "cat": "🛠️ Herramientas",
-"desc": "Encrypt, decrypt, and hash text using a wide variety of classic and modern crypto tools.",
+"desc": "Cifra, descifra y aplica hash a texto con muchas herramientas criptográficas clásicas y modernas.",
 "fuente": "Momentum",
 "github": "https://github.com/Tyl3rA/FlipCrypt"
 },
@@ -3619,7 +3619,7 @@
 "appid": "flipflash",
 "name": "FlipFlash",
 "cat": "🛠️ Herramientas",
-"desc": "FlipFlash is a Flipper Zero flashcard app that reads flashcards from a text file and support removing cards from the deck. Useful for e.g., leaning language, I ",
+"desc": "FlipFlash es una app de tarjetas de estudio que las lee de un archivo de texto y permite quitar tarjetas del mazo. Útil para aprender idiomas,",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Mushi0/FlippFlash"
 },
@@ -3627,7 +3627,7 @@
 "appid": "flipnote",
 "name": "FlipNote",
 "cat": "🛠️ Herramientas",
-"desc": "Real text editor for Flipper Zero",
+"desc": "Editor de texto de verdad para el Flipper",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/morty517/flipnote"
 },
@@ -3642,7 +3642,7 @@
 "appid": "flippar",
 "name": "FlipPar",
 "cat": "🛠️ Herramientas",
-"desc": "Track golf and disc golf rounds on Flipper Zero.",
+"desc": "Lleva la cuenta de rondas de golf y disc golf en el Flipper.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/jsammarco/FlipPar"
 },
@@ -3650,7 +3650,7 @@
 "appid": "flippass",
 "name": "FlipPass",
 "cat": "🛠️ Herramientas",
-"desc": "KeePass-based password manager with HID writing via USB and Bluetooth.",
+"desc": "Gestor de contraseñas basado en KeePass, con escritura por HID vía USB y Bluetooth.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Arckanos/FlipPass"
 },
@@ -3666,7 +3666,7 @@
 "appid": "flipper_lotto",
 "name": "Flipper Lotto",
 "cat": "🛠️ Herramientas",
-"desc": "Flipper Lottery Number Generator",
+"desc": "Generador de números de lotería",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/molykima/Flipper-Lottery-Number-Generator"
 },
@@ -3674,7 +3674,7 @@
 "appid": "trackerflipx",
 "name": "Flipper Time Tracker",
 "cat": "🛠️ Herramientas",
-"desc": "Flipper Time Tracker is an application for flipperzero device that allows the user to track multiple tasks at the same time.",
+"desc": "Flipper Time Tracker permite seguir varias tareas al mismo tiempo.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/MassivDash/flipper-tracker"
 },
@@ -3682,7 +3682,7 @@
 "appid": "flipper_wedge",
 "name": "Flipper Wedge",
 "cat": "🛠️ Herramientas",
-"desc": "Read RFID/NFC tags and type UIDs as HID keyboard input via USB or Bluetooth. Supports NDEF text records. Inspired by the Dangerous Things KBR1",
+"desc": "Lee etiquetas RFID/NFC y escribe los UID como teclado HID por USB o Bluetooth. Soporta registros de texto NDEF. Inspirado en el Dangerous Things KBR1",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/DangerousThings/flipper-wedge"
 },
@@ -3690,7 +3690,7 @@
 "appid": "flipper_wifi_radio",
 "name": "Flipper WiFi Radio",
 "cat": "🛠️ Herramientas",
-"desc": "Turn your Flipper Zero and an ESP32 WiFi devboard into a pocket radio station.",
+"desc": "Convierte tu Flipper y una placa WiFi ESP32 en una emisora de radio de bolsillo.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/thecoolguy2001/flipper-wifi-radio"
 },
@@ -3698,7 +3698,7 @@
 "appid": "flipper95",
 "name": "Flipper95",
 "cat": "🛠️ Herramientas",
-"desc": "Application to stress test the Flipper by finding Mersenne primes using the Lucas-Lehmer Test,",
+"desc": "App que exige al Flipper buscando primos de Mersenne con el test de Lucas-Lehmer,",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/CookiePLMonster/flipper-bakery"
 },
@@ -3706,7 +3706,7 @@
 "appid": "flipper_track",
 "name": "FlipperTrack",
 "cat": "🛠️ Herramientas",
-"desc": "HID activity simulator for productivity monitoring research",
+"desc": "Simulador de actividad HID para investigación de monitoreo de productividad",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/pinkpwningclub/flipperTrack"
 },
@@ -3714,7 +3714,7 @@
 "appid": "flipperzero_clock",
 "name": "FlipperZero Clock",
 "cat": "🛠️ Herramientas",
-"desc": "FlipperZero Customizable Clock",
+"desc": "Reloj personalizable para el Flipper",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/mdaskalov/flipperzero-clock"
 },
@@ -3722,7 +3722,7 @@
 "appid": "fordradiocode",
 "name": "Ford Radio Codes",
 "cat": "🛠️ Herramientas",
-"desc": "Ford Radio 'M' & 'V' Unlock Code Generator!",
+"desc": "¡Generador del código de desbloqueo 'M' y 'V' de radios Ford!",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/DavidB445/fz_fordradiocodes"
 },
@@ -3730,7 +3730,7 @@
 "appid": "ghost_tracker",
 "name": "Ghost Tracker",
 "cat": "🛠️ Herramientas",
-"desc": "Paranormal investigation instrument - EMF meter, Spirit Box and REM Pod",
+"desc": "Instrumentos de investigación paranormal: medidor EMF, caja de espíritus y REM Pod",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Zinetick/ghost_tracker"
 },
@@ -3738,7 +3738,7 @@
 "appid": "gitphin",
 "name": "Gitphin",
 "cat": "🛠️ Herramientas",
-"desc": "Git hosting in your pocket. Gitphin turns your Flipper Zero into a Git server with a web UI. Your repositories live on the SD card, and you use them from your P",
+"desc": "Alojamiento Git de bolsillo. Gitphin convierte tu Flipper en un servidor Git con interfaz web. Tus repositorios viven en la SD y los usas desde tu PC",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Adhamura/gitphin"
 },
@@ -3746,7 +3746,7 @@
 "appid": "guitar_chords",
 "name": "Guitar Chords",
 "cat": "🛠️ Herramientas",
-"desc": "Guitar Chords turns your Flipper Zero into a chord reference and a practice metronome.",
+"desc": "Guitar Chords convierte tu Flipper en una guía de acordes y un metrónomo de práctica.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/NoodleNugget-com/flipper-guitar-chords"
 },
@@ -3754,7 +3754,7 @@
 "appid": "flipper_habit_flow",
 "name": "HabitFlow",
 "cat": "🛠️ Herramientas",
-"desc": "Offline habit tracker for Flipper Zero — goals, streaks, progress, automatic saves, and optional prompts when the calendar advances.",
+"desc": "Rastreador de hábitos sin conexión: metas, rachas, progreso, guardado automático y avisos opcionales al avanzar el calendario.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Endika/flipper-habit-flow"
 },
@@ -3762,7 +3762,7 @@
 "appid": "hanzi_cards",
 "name": "Hanzi Cards",
 "cat": "🛠️ Herramientas",
-"desc": "Mandarin flashcards: simplified or traditional characters, pinyin with tone marks, and the tones played on the speaker.",
+"desc": "Tarjetas de estudio de mandarín: caracteres simplificados o tradicionales, pinyin con tonos, y los tonos sonando por el altavoz.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/rseufert/hanzi_cards"
 },
@@ -3770,7 +3770,7 @@
 "appid": "hex_editor",
 "name": "HEX Editor",
 "cat": "🛠️ Herramientas",
-"desc": "Read text files line by line and edit them without a computer or smartphone.",
+"desc": "Lee archivos de texto línea por línea y edítalos sin computador ni celular.",
 "fuente": "Momentum",
 "github": "https://github.com/dunaevai135/flipper-zero-hex_editor"
 },
@@ -3778,14 +3778,14 @@
 "appid": "hex_viewer",
 "name": "HEX Viewer",
 "cat": "🛠️ Herramientas",
-"desc": "App allows to view various files as HEX",
+"desc": "Permite ver varios archivos en HEX",
 "fuente": "Momentum"
 },
 {
 "appid": "flipper_hyper_focus_calc",
 "name": "HyperFocus Calc",
 "cat": "🛠️ Herramientas",
-"desc": "Hyperfocal calculator for Flipper Zero — focal length, full-stop aperture, and per-sensor circle of confusion (CoC), with optional manual CoC editing.",
+"desc": "Calculadora de hiperfocal para fotografía: distancia focal, apertura por pasos y círculo de confusión (CoC) por sensor, con CoC manual opcional.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Endika/flipper-hyper-focus-calc"
 },
@@ -3793,7 +3793,7 @@
 "appid": "iconedit",
 "name": "IconEdit",
 "cat": "🛠️ Herramientas",
-"desc": "Icon editor",
+"desc": "Editor de íconos",
 "fuente": "Momentum",
 "github": "https://github.com/rdefeo/iconedit"
 },
@@ -3801,7 +3801,7 @@
 "appid": "usb_internet_bridge",
 "name": "Internet Bridge",
 "cat": "🛠️ Herramientas",
-"desc": "HTTPS bridge over USB or Bluetooth",
+"desc": "Puente HTTPS por USB o Bluetooth",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/mete888/flipper_usb_to_wifi"
 },
@@ -3809,7 +3809,7 @@
 "appid": "internet_time_screen",
 "name": "Internet Time",
 "cat": "🛠️ Herramientas",
-"desc": "Swatch Internet Time (@beats), local clock, optional DCF77 sync",
+"desc": "Swatch Internet Time (@beats), reloj local y sincronización opcional con DCF77",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/sureserverman/internet-time-screen"
 },
@@ -3832,7 +3832,7 @@
 "appid": "key_wizard",
 "name": "Key Wizard",
 "cat": "🛠️ Herramientas",
-"desc": "Universal Key Wizard",
+"desc": "Asistente universal de llaves (Key Wizard)",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/vazgen3201/flipper-key-wizard"
 },
@@ -3840,7 +3840,7 @@
 "appid": "kneeflip_rehab",
 "name": "KneeFlip Rehab",
 "cat": "🛠️ Herramientas",
-"desc": "Timer and counter for clinician-prescribed knee rehab routines",
+"desc": "Temporizador y contador para rutinas de rehabilitación de rodilla prescritas por un médico",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/daryalok/KneeFlip-Rehab"
 },
@@ -3848,7 +3848,7 @@
 "appid": "knit_counter",
 "name": "Knit Counter",
 "cat": "🛠️ Herramientas",
-"desc": "Counter that saves after exiting",
+"desc": "Contador que se guarda al salir",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/fridgepoet/knit-counter"
 },
@@ -3856,7 +3856,7 @@
 "appid": "blinker",
 "name": "LED Blinker",
 "cat": "🛠️ Herramientas",
-"desc": "App that blinks LEDs with a decreasing frequency over time",
+"desc": "Parpadea LEDs con una frecuencia que baja con el tiempo",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Cupprum/Blinker"
 },
@@ -3864,7 +3864,7 @@
 "appid": "lishi",
 "name": "Lishi",
 "cat": "🛠️ Herramientas",
-"desc": "An app for saving values obtained from the Lishi tool, which is used for lock decoding. This app allows users to input, view, and store values from the decoding",
+"desc": "App para guardar los valores obtenidos con la herramienta Lishi, usada para decodificar cerraduras. Permite ingresar, ver y guardar los valores de la decodificación",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/evillero/lishi"
 },
@@ -3872,7 +3872,7 @@
 "appid": "mayan_decoder",
 "name": "Mayan Decoder",
 "cat": "🛠️ Herramientas",
-"desc": "Decimal to Mayan numeral converter with direct numeric input",
+"desc": "Conversor de decimal a números mayas con entrada numérica directa",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/RogerF5-Security/Mayan_decoder"
 },
@@ -3880,7 +3880,7 @@
 "appid": "moon_phases",
 "name": "Moon Phases",
 "cat": "🛠️ Herramientas",
-"desc": "A simple application to display the current phase of the moon along with additional lunar information.",
+"desc": "App sencilla que muestra la fase actual de la luna e información lunar.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/w84death/moon-phases"
 },
@@ -3888,7 +3888,7 @@
 "appid": "morse_flipper",
 "name": "Morse Flipper",
 "cat": "🛠️ Herramientas",
-"desc": "Morse Flipper is a CW trainer, keyer, hardware adapter, portable ham helper, and Sub-GHz Morse experiment bench for the Flipper Zero.",
+"desc": "Morse Flipper: entrenador de CW, keyer, adaptador de hardware, ayudante ham portátil y banco de pruebas de Morse por Sub-GHz.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/yo3gnd/morse-flipper"
 },
@@ -3896,7 +3896,7 @@
 "appid": "motion_lab",
 "name": "Motion Lab",
 "cat": "🛠️ Herramientas",
-"desc": "Turn your Flipper Zero and Video Game Module into a motion measuring instrument.",
+"desc": "Convierte tu Flipper y el Video Game Module en un instrumento para medir movimiento.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/thecoolguy2001/flipper-motion-lab"
 },
@@ -3904,14 +3904,14 @@
 "appid": "multi_converter",
 "name": "Multi Converter",
 "cat": "🛠️ Herramientas",
-"desc": "A multi-unit converter written with an easy and expandable system for adding new units and conversion methods",
+"desc": "Conversor de unidades, con un sistema fácil y ampliable para añadir nuevas unidades y métodos",
 "fuente": "Momentum"
 },
 {
 "appid": "multi_counter",
 "name": "Multi Counter",
 "cat": "🛠️ Herramientas",
-"desc": "Flipper Multi Counter This is a simple external application for the Flipper Zero modified from VS Counter version. The app give you access to up to 4 counters t",
+"desc": "Multi-contador para el Flipper: app sencilla (basada en VS Counter) que te da hasta 4 contadores",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/JadePossible/Flipper-Multi-Counter"
 },
@@ -3919,7 +3919,7 @@
 "appid": "multi_tally",
 "name": "Multi Tally",
 "cat": "🛠️ Herramientas",
-"desc": "Six independent tally counters, one per hardware button",
+"desc": "Seis contadores independientes, uno por botón físico",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/aseypalich1/flipper-multi-counter"
 },
@@ -3927,7 +3927,7 @@
 "appid": "net_calculator",
 "name": "Net Calculator",
 "cat": "🛠️ Herramientas",
-"desc": "Offline IPv4 VLSM subnet calculator",
+"desc": "Calculadora de subredes IPv4 VLSM sin conexión",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/WolfRorDev/Net-Calculator-for-Flipper-Zero"
 },
@@ -3935,7 +3935,7 @@
 "appid": "network_subnet",
 "name": "Network Subnet Helper",
 "cat": "🛠️ Herramientas",
-"desc": "A tool to view network subnets and other details.",
+"desc": "Herramienta para ver subredes y otros detalles de red.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/aaumkar/network_subnet"
 },
@@ -3943,7 +3943,7 @@
 "appid": "nfc_qr_presenter",
 "name": "NFC QR Presenter",
 "cat": "🛠️ Herramientas",
-"desc": "NFC QR Presenter",
+"desc": "Presentador de QR por NFC",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/RogerF5-Security/NFC_QR_Presenter"
 },
@@ -3951,14 +3951,14 @@
 "appid": "nfc_rfid_detector",
 "name": "NFC/RFID Detector",
 "cat": "🛠️ Herramientas",
-"desc": "Identify the reader type: NFC (13 MHz) and/or RFID (125 KHz).",
+"desc": "Identifica el tipo de lector: NFC (13 MHz) o RFID (125 kHz).",
 "fuente": "Momentum"
 },
 {
 "appid": "nightstand",
 "name": "Nightstand Clock",
 "cat": "🛠️ Herramientas",
-"desc": "Clock with screen brightness controls",
+"desc": "Reloj con control de brillo de pantalla",
 "fuente": "Momentum",
 "github": "https://github.com/nymda/FlipperNightStand"
 },
@@ -3966,7 +3966,7 @@
 "appid": "package_tracker",
 "name": "Pack Track",
 "cat": "🛠️ Herramientas",
-"desc": "Pack Track keeps your shipments on your Flipper. Add a tracking number on the device, and with a WiFi devboard attached the app fetches the real status for you:",
+"desc": "Pack Track sigue tus envíos en el Flipper. Agregas un número de guía en el equipo y, con una placa WiFi, la app consulta el estado real:",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/thecoolguy2001/flipper-pack-track"
 },
@@ -3974,14 +3974,14 @@
 "appid": "passgen",
 "name": "Password Generator",
 "cat": "🛠️ Herramientas",
-"desc": "Simple password generator",
+"desc": "Generador de contraseñas simple",
 "fuente": "Momentum"
 },
 {
 "appid": "password_manager",
 "name": "Password Manager",
 "cat": "🛠️ Herramientas",
-"desc": "This app stores your usernames and password and can write them on your PC acting as a keyboard",
+"desc": "Guarda tus usuarios y contraseñas y los escribe en tu PC actuando como teclado",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Rrycbarm/flipperZeroPasswordManager"
 },
@@ -3989,7 +3989,7 @@
 "appid": "period_tracker",
 "name": "Period Tracker",
 "cat": "🛠️ Herramientas",
-"desc": "A menstrual cycle tracker for Flipper Zero. Track cycles for multiple people with predictions, alerts, and statistical learning. All data stays on the SD card.",
+"desc": "Registro de ciclo menstrual: sigue ciclos de varias personas con predicciones, alertas y aprendizaje estadístico. Los datos quedan en la SD.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/gorshunovr/period_tracker"
 },
@@ -3997,7 +3997,7 @@
 "appid": "persian_calendar",
 "name": "Persian Calendar",
 "cat": "🛠️ Herramientas",
-"desc": "Persian (Jalali) calendar with date converter and weekday display",
+"desc": "Calendario persa (Jalali) con conversor de fechas y día de la semana",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/AmirNcode/flipper-persian-calendar"
 },
@@ -4005,7 +4005,7 @@
 "appid": "ntag5_thermometer",
 "name": "Pet Thermometer",
 "cat": "🛠️ Herramientas",
-"desc": "Reader for animal/human implantable NXP NTAG5 and 134kHz RFID tags with a thermometer function Tested with BeUno patch and 134kHz implant",
+"desc": "Lector de etiquetas implantables NXP NTAG5 y RFID de 134 kHz (animal/humano) con termómetro. Probado con parche BeUno e implante de 134 kHz",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Manawyrm/ntag5_thermometer"
 },
@@ -4013,7 +4013,7 @@
 "appid": "pet_your_dolphin",
 "name": "Pet Your Dolphin",
 "cat": "🛠️ Herramientas",
-"desc": "The Pet Your Dolphin app let's you check in on your little dolphin buddy! Stop by daily to give it some pets to improve its mood and earn XP!",
+"desc": "¡La app Pet Your Dolphin te deja visitar a tu delfincito! Pasa a diario a acariciarlo para mejorar su ánimo y ganar XP.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/dwight9339/pet_your_dolphin"
 },
@@ -4021,7 +4021,7 @@
 "appid": "pocket_cvss",
 "name": "Pocket CVSS",
 "cat": "🛠️ Herramientas",
-"desc": "Pocket CVSS is a native Flipper Zero app for offline CVSS v3.1 Base scoring and learning.",
+"desc": "Pocket CVSS es una app para puntuar y aprender CVSS v3.1 Base sin conexión.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/vavkamil/pocket-cvss"
 },
@@ -4029,7 +4029,7 @@
 "appid": "pocketlab",
 "name": "PocketLab",
 "cat": "🛠️ Herramientas",
-"desc": "Learn your Flipper with short, gamified hands-on labs.",
+"desc": "Aprende a usar tu Flipper con prácticas cortas y entretenidas.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/PerfectoWeb/flipper-pocketlab"
 },
@@ -4037,7 +4037,7 @@
 "appid": "flipper_prime_factors",
 "name": "Prime Factorization",
 "cat": "🛠️ Herramientas",
-"desc": "Prime factorization of an integer by trial division",
+"desc": "Factorización en primos de un entero por división de prueba",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/gbritoda/flipper0-prime_factors"
 },
@@ -4045,7 +4045,7 @@
 "appid": "programmercalc",
 "name": "Programmer Calculator",
 "cat": "🛠️ Herramientas",
-"desc": "Calculator, for Programmers!",
+"desc": "¡Calculadora para programadores!",
 "fuente": "Momentum",
 "github": "https://github.com/armixz/Flipper-Zero-Programmer-Calculator"
 },
@@ -4053,7 +4053,7 @@
 "appid": "pulse_bpm",
 "name": "Pulse BPM",
 "cat": "🛠️ Herramientas",
-"desc": "Tap along a pulse to measure heart rate; live BPM, locks after 20 seconds",
+"desc": "Marca el pulso con toques para medir el ritmo cardíaco; BPM en vivo, se fija tras 20 segundos",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/alaviation/flipper-pulse"
 },
@@ -4061,7 +4061,7 @@
 "appid": "qrcode",
 "name": "QR Code",
 "cat": "🛠️ Herramientas",
-"desc": "Display qrcodes",
+"desc": "Muestra códigos QR",
 "fuente": "Momentum",
 "github": "https://github.com/bmatcuk/flipperzero-qrcode"
 },
@@ -4069,7 +4069,7 @@
 "appid": "qrcode_generator",
 "name": "QRCode Generator",
 "cat": "🛠️ Herramientas",
-"desc": "Generates and displays QRCodes on the flipper zero.",
+"desc": "Genera y muestra códigos QR en el Flipper.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/qw3rtty/flipperzero-qrcode-generator"
 },
@@ -4077,7 +4077,7 @@
 "appid": "quac",
 "name": "Quac!",
 "cat": "🛠️ Herramientas",
-"desc": "Quick Action remote control app",
+"desc": "App de control remoto de acción rápida",
 "fuente": "Momentum",
 "github": "https://github.com/rdefeo/quac"
 },
@@ -4085,7 +4085,7 @@
 "appid": "quadratic_solver",
 "name": "Quadratic Solver",
 "cat": "🛠️ Herramientas",
-"desc": "A simple quadratic equation solver app",
+"desc": "App sencilla que resuelve ecuaciones cuadráticas",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/paul-sopin/flipper-quadratic-solver"
 },
@@ -4093,14 +4093,14 @@
 "appid": "resistors",
 "name": "Resistance Calculator",
 "cat": "🛠️ Herramientas",
-"desc": "Resistor calculations",
+"desc": "Cálculos de resistencias",
 "fuente": "Momentum"
 },
 {
 "appid": "roman_decoder",
 "name": "Roman decoder",
 "cat": "🛠️ Herramientas",
-"desc": "An Flipper Zero app that converts Roman numerals to decimal values.",
+"desc": "App que convierte números romanos a decimales.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/evillero/roman_decoder"
 },
@@ -4108,7 +4108,7 @@
 "appid": "rot13_app",
 "name": "ROT13",
 "cat": "🛠️ Herramientas",
-"desc": "Cipher text with ROT13",
+"desc": "Cifra texto con ROT13",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/nothingbutlucas/flipperzero_rot13"
 },
@@ -4116,7 +4116,7 @@
 "appid": "san_morse",
 "name": "San Morse",
 "cat": "🛠️ Herramientas",
-"desc": "Morse code trainer with a decision-tree guide and text-to-Morse playback",
+"desc": "Entrenador de código Morse con guía de árbol de decisión y reproducción de texto a Morse",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/sanjorgek/san-morse-flipper"
 },
@@ -4124,7 +4124,7 @@
 "appid": "skid_city",
 "name": "SKIDcity",
 "cat": "🛠️ Herramientas",
-"desc": "Educational: Don't be a SKID!",
+"desc": "Educativo: ¡no seas un script kiddie!",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/H4W9/SKIDcity_App"
 },
@@ -4140,7 +4140,7 @@
 "appid": "smoke_free",
 "name": "Smoke Free",
 "cat": "🛠️ Herramientas",
-"desc": "Tracks time without smoking with persistent SD card logging",
+"desc": "Cuenta el tiempo sin fumar con registro persistente en la SD",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/kamylwnb/smoke_free"
 },
@@ -4148,7 +4148,7 @@
 "appid": "timeclock",
 "name": "Staff Time Clock",
 "cat": "🛠️ Herramientas",
-"desc": "Staff time-clock using NFC, RFID or iButton badges, logging to a CSV timesheet.",
+"desc": "Reloj de fichaje de personal por NFC, RFID o iButton, con registro a una planilla CSV.",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/vladpereverzyev/flipper-staff-time-clock"
 },
@@ -4156,7 +4156,7 @@
 "appid": "sub_counter",
 "name": "Subscriber Counter",
 "cat": "🛠️ Herramientas",
-"desc": "Subscriber Counter",
+"desc": "Contador de suscriptores",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/TheProductAgency/flipper-subscriber-counter"
 },
@@ -4164,7 +4164,7 @@
 "appid": "talk_timer",
 "name": "Talk Timer",
 "cat": "🛠️ Herramientas",
-"desc": "Presentation clicker with a discreet talk timer. The Flipper acts as a USB or Bluetooth keyboard, flips your slides and reminds you of your speaking time by vib",
+"desc": "Pasador de diapositivas con temporizador discreto de charla. El Flipper actúa como teclado USB o Bluetooth, pasa tus slides y te avisa el tiempo vibrando",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Mableton/talk_timer"
 },
@@ -4172,7 +4172,7 @@
 "appid": "tasks",
 "name": "Tasks",
 "cat": "🛠️ Herramientas",
-"desc": "A simple to-do application.",
+"desc": "App sencilla de tareas pendientes.",
 "fuente": "Momentum",
 "github": "https://github.com/MadLadSquad/FlipperTasks"
 },
@@ -4180,7 +4180,7 @@
 "appid": "telemetro",
 "name": "Telemeter",
 "cat": "🛠️ Herramientas",
-"desc": "Measure distance from lightning-to-thunder or muzzle-flash-to-boom delay",
+"desc": "Mide la distancia por el retardo entre rayo y trueno, o entre fogonazo y estampido",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/alaviation/flipper-telemeter"
 },
@@ -4188,14 +4188,14 @@
 "appid": "text_viewer",
 "name": "Text Viewer",
 "cat": "🛠️ Herramientas",
-"desc": "Text viewer application",
+"desc": "App para ver texto",
 "fuente": "Momentum"
 },
 {
 "appid": "theme_manager",
 "name": "Theme Manager",
 "cat": "🛠️ Herramientas",
-"desc": "Manage dolphin animation themes from SD card",
+"desc": "Gestiona temas de animación del delfín desde la SD",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Hoasker/flipper-theme-manager"
 },
@@ -4203,7 +4203,7 @@
 "appid": "tone_gen",
 "name": "Tone Generator",
 "cat": "🛠️ Herramientas",
-"desc": "A simple app to generate sound tones.",
+"desc": "App sencilla para generar tonos.",
 "fuente": "Momentum",
 "github": "https://github.com/GEMISIS/tone_gen"
 },
@@ -4211,7 +4211,7 @@
 "appid": "tree_ident",
 "name": "Tree Identification",
 "cat": "🛠️ Herramientas",
-"desc": "The app helps users identify trees through a series of guided questions. It uses a decision-tree approach to narrow down possible tree species based on observab",
+"desc": "La app ayuda a identificar árboles con preguntas guiadas. Usa un árbol de decisión para reducir las especies posibles según lo que observas",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/fgreil/mitzi-tree-ident"
 },
@@ -4219,7 +4219,7 @@
 "appid": "upython",
 "name": "uPython",
 "cat": "🛠️ Herramientas",
-"desc": "Compile and execute MicroPython scripts",
+"desc": "Compila y ejecuta scripts de MicroPython",
 "fuente": "Momentum",
 "github": "https://github.com/ofabel/mp-flipper"
 },
@@ -4227,7 +4227,7 @@
 "appid": "vin_decoder",
 "name": "VIN decoder",
 "cat": "🛠️ Herramientas",
-"desc": "VIN decoder for Flipper Zero",
+"desc": "Decodificador de VIN para el Flipper",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/evillero/vin_decoder"
 },
@@ -4235,14 +4235,14 @@
 "appid": "voltcalc_app",
 "name": "Voltage Calculator",
 "cat": "🛠️ Herramientas",
-"desc": "Voltage (VRI) calculations",
+"desc": "Cálculos de voltaje (VRI)",
 "fuente": "Momentum"
 },
 {
 "appid": "wch_swio_flasher",
 "name": "WHC SWIO Flasher",
 "cat": "🛠️ Herramientas",
-"desc": "Flipper Zero WCH SWIO Flasher and debugger",
+"desc": "Grabador y depurador WCH SWIO para el Flipper",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/sukvojte/wch_swio_flasher"
 },
@@ -4250,7 +4250,7 @@
 "appid": "wikiflip",
 "name": "WikiFlip",
 "cat": "🛠️ Herramientas",
-"desc": "Offline cybersecurity dictionary for Flipper Zero",
+"desc": "Diccionario de ciberseguridad sin conexión para el Flipper",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/RogerF5-Security/WikiFlip"
 },
@@ -4258,7 +4258,7 @@
 "appid": "zerofido",
 "name": "ZeroFIDO",
 "cat": "🛠️ Herramientas",
-"desc": "FIDO2 for Flipper Zero",
+"desc": "FIDO2 para el Flipper",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/MinorGlitch/zerofido"
 },
@@ -4266,7 +4266,7 @@
 "appid": "zoom_remote",
 "name": "Zoom Remote",
 "cat": "🛠️ Herramientas",
-"desc": "Remote control for Zoom Workplace on macOS and Windows. Connect over USB or",
+"desc": "Control remoto para Zoom Workplace en macOS y Windows. Conecta por USB o",
 "fuente": "Catálogo oficial",
 "github": "https://github.com/Mableton/zoom_remote"
 },
@@ -4274,28 +4274,28 @@
 "appid": "toshiba_ac_remote",
 "name": "Toshiba",
 "cat": "📺 Infrarrojo",
-"desc": "IR remote for Toshiba-protocol air conditioners",
+"desc": "Control IR para aires con protocolo Toshiba",
 "fuente": "Comunidad"
 },
 {
 "appid": "coolix_ac_remote",
 "name": "Coolix",
 "cat": "📺 Infrarrojo",
-"desc": "IR remote for Coolix-protocol air conditioners",
+"desc": "Control IR para aires con protocolo Coolix",
 "fuente": "Comunidad"
 },
 {
 "appid": "tagtinker",
 "name": "TagTinker",
 "cat": "📺 Infrarrojo",
-"desc": "Educational ESL study tool for owned hardware",
+"desc": "Herramienta educativa de estudio de inglés (ESL) para hardware propio",
 "fuente": "Comunidad"
 },
 {
 "appid": "wmbuster",
 "name": "wM-Buster",
 "cat": "📡 Sub-GHz",
-"desc": "EU wM-Bus listener: T1/C1/T+C/S1, AES-128 mode 5, OMS DIF/VIF, manufacturer drivers. RX-only.",
+"desc": "Escucha wM-Bus de la UE: T1/C1/T+C/S1, AES-128 modo 5, OMS DIF/VIF, drivers por fabricante. Solo recepción.",
 "fuente": "Comunidad"
 },
 {
@@ -4316,7 +4316,7 @@
 "appid": "sd_info",
 "name": "SD Info",
 "cat": "🛠️ Herramientas",
-"desc": "The application shows information about the SD card",
+"desc": "La app muestra información de la tarjeta SD",
 "fuente": "Comunidad",
 "github": "https://github.com/Sladkisnovraper/SD-Info-For-Flipper-Zero"
 },
@@ -4324,7 +4324,7 @@
 "appid": "nfc_comparator",
 "name": "NFC Comparator",
 "cat": "💳 NFC",
-"desc": "A tool to check if a physical NFC card is the same as a saved digital one",
+"desc": "Herramienta para comprobar si una tarjeta NFC física es la misma que una guardada",
 "fuente": "Comunidad",
 "github": "https://github.com/acegoal07/FlipperZero_NFC_Comparator"
 },
@@ -4332,7 +4332,7 @@
 "appid": "vario",
 "name": "[BME280] Vario",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Variometer for paragliding and hiking using BME280 pressure sensor",
+"desc": "Variómetro para parapente y senderismo con el sensor de presión BME280",
 "fuente": "Comunidad",
 "github": "https://github.com/xumbax/flipper-vario"
 },
@@ -4340,7 +4340,7 @@
 "appid": "samsung_ac_remote_old",
 "name": "Samsung (Old)",
 "cat": "📺 Infrarrojo",
-"desc": "Samsung Electric Air Conditioner remote control",
+"desc": "Mando del aire acondicionado eléctrico Samsung",
 "fuente": "Comunidad",
 "github": "https://github.com/dappermint/samsung-ac-remote-flipper-app"
 },
@@ -4355,21 +4355,21 @@
 "appid": "genie_record",
 "name": "Genie Door Recorder",
 "cat": "📡 Sub-GHz",
-"desc": "This application extracts the codes from a Genie garage door remote into a .GNE file. It also plays back a .GNE file to a Genie garage door opener.",
+"desc": "Extrae los códigos de un control de garaje Genie a un archivo .GNE y también reproduce un .GNE hacia un abridor Genie.",
 "fuente": "Comunidad"
 },
 {
 "appid": "gps_track",
 "name": "GPS Track",
 "cat": "🔌 GPIO / Hardware",
-"desc": "GPS NMEA tracker with breadcrumb navigation",
+"desc": "Rastreador GPS NMEA con navegación por migas",
 "fuente": "Comunidad"
 },
 {
 "appid": "neoclima_ac_remote",
 "name": "Neoclima",
 "cat": "📺 Infrarrojo",
-"desc": "IR remote for Neoclima-protocol air conditioners",
+"desc": "Control IR para aires con protocolo Neoclima",
 "fuente": "Comunidad"
 },
 {
@@ -4383,21 +4383,21 @@
 "appid": "wiegand_reader",
 "name": "Wiegand Reader",
 "cat": "🔌 GPIO / Hardware",
-"desc": "This application can be used to test Wiegand readers and keypads",
+"desc": "App para probar lectores y teclados Wiegand",
 "fuente": "Comunidad"
 },
 {
 "appid": "daikin_ac_remote",
 "name": "Daikin",
 "cat": "📺 Infrarrojo",
-"desc": "IR remote for Daikin-protocol air conditioners",
+"desc": "Control IR para aires con protocolo Daikin",
 "fuente": "Comunidad"
 },
 {
 "appid": "goodweather_ac_remote",
 "name": "Goodweather",
 "cat": "📺 Infrarrojo",
-"desc": "IR remote for Goodweather-protocol air conditioners",
+"desc": "Control IR para aires con protocolo Goodweather",
 "fuente": "Comunidad"
 },
 {
@@ -4411,7 +4411,7 @@
 "appid": "crypto_dict",
 "name": "Crypto Dictionary",
 "cat": "🎵 Multimedia",
-"desc": "Cryptography Dictionary (Flipper Zero Edition)",
+"desc": "Diccionario de criptografía (edición Flipper Zero)",
 "fuente": "Comunidad",
 "github": "https://github.com/armixz/Flipper-Zero-Crypto-Dictionary"
 },
@@ -4419,7 +4419,7 @@
 "appid": "servotester2",
 "name": "Servo Tester 2",
 "cat": "🔌 GPIO / Hardware",
-"desc": "App uses A7 pin for servo PWM output.",
+"desc": "Usa el pin A7 para salida PWM de servo.",
 "fuente": "Comunidad"
 },
 {
@@ -4433,7 +4433,7 @@
 "appid": "fujitsu_ac_remote",
 "name": "Fujitsu",
 "cat": "📺 Infrarrojo",
-"desc": "IR remote for Fujitsu-protocol air conditioners",
+"desc": "Control IR para aires con protocolo Fujitsu",
 "fuente": "Comunidad"
 },
 {
@@ -4447,7 +4447,7 @@
 "appid": "wolfenduino",
 "name": "Wolfenduino",
 "cat": "🎮 Juegos",
-"desc": "Play the port of Wolfenduino game on your Flipper Zero.",
+"desc": "Juega el port de Wolfenduino en tu Flipper.",
 "fuente": "Comunidad",
 "github": "https://github.com/apfxtech/FlipperWolfenstein"
 },
@@ -4462,7 +4462,7 @@
 "appid": "ulc_brute",
 "name": "UL-C Bruteforce",
 "cat": "💳 NFC",
-"desc": "Bruteforce Ultralight C authentication",
+"desc": "Fuerza bruta a la autenticación de Ultralight C",
 "fuente": "Comunidad"
 },
 {
@@ -4483,28 +4483,28 @@
 "appid": "ulcfkey_next",
 "name": "ULCFKey (Next)",
 "cat": "💳 NFC",
-"desc": "Crack counterfeit ULC cards",
+"desc": "Rompe tarjetas ULC falsificadas",
 "fuente": "Comunidad"
 },
 {
 "appid": "haier_ac_remote",
 "name": "Haier",
 "cat": "📺 Infrarrojo",
-"desc": "IR remote for Haier-protocol air conditioners",
+"desc": "Control IR para aires con protocolo Haier",
 "fuente": "Comunidad"
 },
 {
 "appid": "ulcfkey",
 "name": "ULCFKey",
 "cat": "💳 NFC",
-"desc": "Crack counterfeit ULC cards",
+"desc": "Rompe tarjetas ULC falsificadas",
 "fuente": "Comunidad"
 },
 {
 "appid": "doom2",
 "name": "Maze of doom",
 "cat": "🎮 Juegos",
-"desc": "Play the port of the arduboy3d game on your Flipper Zero.",
+"desc": "Juega el port de arduboy3d en tu Flipper.",
 "fuente": "Comunidad",
 "github": "https://github.com/apfxtech/FlipperCatacombs"
 },
@@ -4512,28 +4512,28 @@
 "appid": "allstar_firefly",
 "name": "Allstar Firefly",
 "cat": "📡 Sub-GHz",
-"desc": "Allstar Firefly 318ALD31K gate remote - 9-bit trinary OOK decoder/emulator",
+"desc": "Control de portón Allstar Firefly 318ALD31K: decodificador/emulador OOK trinario de 9 bits",
 "fuente": "Comunidad"
 },
 {
 "appid": "fmtx",
 "name": "FM TX",
 "cat": "📡 Sub-GHz",
-"desc": "Experimental MP3 audio over CC1101 FM.",
+"desc": "Audio MP3 experimental por FM con CC1101.",
 "fuente": "Comunidad"
 },
 {
 "appid": "ac_detector",
 "name": "AC Detector",
 "cat": "📺 Infrarrojo",
-"desc": "Identify the IR protocol an air conditioner remote speaks",
+"desc": "Identifica el protocolo IR que habla el control de un aire acondicionado",
 "fuente": "Comunidad"
 },
 {
 "appid": "c_book",
 "name": "The C Prog. Language",
 "cat": "🎵 Multimedia",
-"desc": "The C Programming Language, Flipper Zero Edition (by Brian W. Kernighan, Dennis M. Ritchie)",
+"desc": "El lenguaje de programación C, edición Flipper Zero (por Brian W. Kernighan y Dennis M. Ritchie)",
 "fuente": "Comunidad",
 "github": "https://github.com/armixz/Flipper-Zero-The-C-Programming-Language"
 },
@@ -4548,7 +4548,7 @@
 "appid": "microtd",
 "name": "Tower Defense",
 "cat": "🎮 Juegos",
-"desc": "Tower defense game ported from Arduboy.",
+"desc": "Juego de defensa de torres adaptado de Arduboy.",
 "fuente": "Comunidad",
 "github": "https://github.com/apfxtech/FlipperTowerDefense"
 },
@@ -4563,7 +4563,7 @@
 "appid": "princeofarabia",
 "name": "Prince Of Arabia",
 "cat": "🎮 Juegos",
-"desc": "Escape the dungeons and free the princess!",
+"desc": "¡Escapa de las mazmorras y libera a la princesa!",
 "fuente": "Comunidad",
 "github": "https://github.com/apfxtech/FlipperPrinceOfArabia"
 },
@@ -4571,14 +4571,14 @@
 "appid": "uk_mbirth_sonicare",
 "name": "Sonicare Head ID",
 "cat": "💳 NFC",
-"desc": "Philips Sonicare brush head NFC reader + usage reset",
+"desc": "Lector NFC de cabezales de cepillo Philips Sonicare + reinicio de uso",
 "fuente": "Comunidad"
 },
 {
 "appid": "nfc_canary",
 "name": "NFC Canary",
 "cat": "💳 NFC",
-"desc": "Passive NFC skim detector: alarms when a reader interrogates the device.",
+"desc": "Detector pasivo de skimming NFC: avisa cuando un lector interroga el equipo.",
 "fuente": "Comunidad",
 "github": "https://github.com/antitree/nfc_canary"
 },
@@ -4586,7 +4586,7 @@
 "appid": "ballu_ac_remote",
 "name": "Ballu",
 "cat": "📺 Infrarrojo",
-"desc": "IR remote for Ballu-protocol air conditioners",
+"desc": "Control IR para aires con protocolo Ballu",
 "fuente": "Comunidad"
 },
 {
@@ -4600,21 +4600,21 @@
 "appid": "btremote_kodi",
 "name": "BT Remote for Kodi",
 "cat": "🔵 Bluetooth",
-"desc": "Application Bluetooth remote Keynote for Kodi (original app + feature: long press on OK to switch between Space and Return (useful for Kodi to navigate the menu",
+"desc": "Control Bluetooth tipo Keynote para Kodi (app original + extra: mantén OK para alternar entre Espacio y Enter, útil para navegar el menú de Kodi",
 "fuente": "Comunidad"
 },
 {
 "appid": "ulc_relay",
 "name": "UL-C Relay",
 "cat": "💳 NFC",
-"desc": "Relay Ultralight C authentication",
+"desc": "Retransmite (relay) la autenticación de Ultralight C",
 "fuente": "Comunidad"
 },
 {
 "appid": "paper_plane",
 "name": "Paper Plane",
 "cat": "🎮 Juegos",
-"desc": "Guide a paper plane through obstacles to get the highest score.",
+"desc": "Guía un avión de papel entre obstáculos y logra la mayor puntuación.",
 "fuente": "Comunidad",
 "github": "https://github.com/Larry-the-Pig/flipper-plane"
 },
@@ -4622,7 +4622,7 @@
 "appid": "delonghi_ac_remote",
 "name": "Delonghi",
 "cat": "📺 Infrarrojo",
-"desc": "IR remote for Delonghi-protocol air conditioners",
+"desc": "Control IR para aires con protocolo Delonghi",
 "fuente": "Comunidad"
 },
 {
@@ -4636,7 +4636,7 @@
 "appid": "rad_sens",
 "name": "Radiation Sensor",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Works with RadSens external module",
+"desc": "Funciona con el módulo externo RadSens",
 "fuente": "Comunidad",
 "github": "https://github.com/sionyx/flipper_radsens"
 },
@@ -4651,21 +4651,21 @@
 "appid": "chess_clock",
 "name": "Chess Clock",
 "cat": "🎮 Juegos",
-"desc": "A simple chess clock",
+"desc": "Reloj de ajedrez simple",
 "fuente": "Comunidad"
 },
 {
 "appid": "tcl_ac_remote",
 "name": "TCL",
 "cat": "📺 Infrarrojo",
-"desc": "IR remote for TCL-protocol air conditioners",
+"desc": "Control IR para aires con protocolo TCL",
 "fuente": "Comunidad"
 },
 {
 "appid": "carrier_ac_remote",
 "name": "Carrier",
 "cat": "📺 Infrarrojo",
-"desc": "IR remote for Carrier-protocol air conditioners",
+"desc": "Control IR para aires con protocolo Carrier",
 "fuente": "Comunidad"
 },
 {
@@ -4679,14 +4679,14 @@
 "appid": "gree_ac_remote",
 "name": "Gree",
 "cat": "📺 Infrarrojo",
-"desc": "IR remote for Gree-protocol air conditioners",
+"desc": "Control IR para aires con protocolo Gree",
 "fuente": "Comunidad"
 },
 {
 "appid": "kelon_ac_remote",
 "name": "Kelon",
 "cat": "📺 Infrarrojo",
-"desc": "IR remote for Kelon-protocol air conditioners",
+"desc": "Control IR para aires con protocolo Kelon",
 "fuente": "Comunidad"
 },
 {
@@ -4700,7 +4700,7 @@
 "appid": "mitsubishi_heavy_ac_remote",
 "name": "MitsuHeavy",
 "cat": "📺 Infrarrojo",
-"desc": "IR remote for MitsuHeavy-protocol air conditioners",
+"desc": "Control IR para aires con protocolo MitsuHeavy",
 "fuente": "Comunidad"
 },
 {
@@ -4721,14 +4721,14 @@
 "appid": "kyberwrite",
 "name": "KyberWrite",
 "cat": "💳 RFID",
-"desc": "Program EM4x05 tubes as Disney Galaxy's Edge kyber crystals",
+"desc": "Programa tubos EM4x05 como cristales kyber de Galaxy's Edge",
 "fuente": "Comunidad"
 },
 {
 "appid": "nrf24tool",
 "name": "NRF24 Tool",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Utility app for NRF24L01",
+"desc": "App de utilidad para el NRF24L01",
 "fuente": "Comunidad",
 "github": "https://github.com/OuinOuin74/nrf24tool"
 },
@@ -4744,7 +4744,7 @@
 "appid": "kelvinator_ac_remote",
 "name": "Kelvinator",
 "cat": "📺 Infrarrojo",
-"desc": "IR remote for Kelvinator-protocol air conditioners",
+"desc": "Control IR para aires con protocolo Kelvinator",
 "fuente": "Comunidad"
 },
 {
@@ -4758,14 +4758,14 @@
 "appid": "claude_remote_ble",
 "name": "Agentic Remote",
 "cat": "🔵 Bluetooth",
-"desc": "One-handed Bluetooth remote for AI coding agents (Claude Code). 5-button D-pad control, macros, offline manual + quiz.",
+"desc": "Control Bluetooth de una mano para agentes de IA (Claude Code). Pad de 5 botones, macros, manual y quiz sin conexión.",
 "fuente": "Comunidad"
 },
 {
 "appid": "flip_rob",
 "name": "R.O.B. Control",
 "cat": "📺 Infrarrojo",
-"desc": "Control Nintendo R.O.B.",
+"desc": "Controla el R.O.B. de Nintendo",
 "fuente": "Comunidad",
 "github": "https://github.com/riney/flip_rob"
 },
@@ -4773,7 +4773,7 @@
 "appid": "schip",
 "name": "SUPER-CHIP",
 "cat": "🎮 Juegos",
-"desc": "SUPER-CHIP (Chip8) emulator for the Flipper Zero",
+"desc": "Emulador SUPER-CHIP (Chip8) para el Flipper",
 "fuente": "Comunidad",
 "github": "https://github.com/Milk-Cool/fz-schip"
 },
@@ -4795,14 +4795,14 @@
 "appid": "mitsubishi_ac_remote_old",
 "name": "Mitsubishi (Old)",
 "cat": "📺 Infrarrojo",
-"desc": "Mitsubishi Electric Air Conditioner remote control",
+"desc": "Mando del aire acondicionado Mitsubishi Electric",
 "fuente": "Comunidad"
 },
 {
 "appid": "battery_reader",
 "name": "I2C BMS Reader",
 "cat": "🔌 GPIO / Hardware",
-"desc": "SBS battery reader and service tool for TI BQ30/BQ40 controllers",
+"desc": "Lector de batería SBS y herramienta de servicio para controladores TI BQ30/BQ40",
 "fuente": "Comunidad",
 "github": "https://github.com/gazirov/battery_reader"
 },
@@ -4810,21 +4810,21 @@
 "appid": "panasonic_ac_remote",
 "name": "Panasonic",
 "cat": "📺 Infrarrojo",
-"desc": "IR remote for Panasonic-protocol air conditioners",
+"desc": "Control IR para aires con protocolo Panasonic",
 "fuente": "Comunidad"
 },
 {
 "appid": "lg_ac_remote",
 "name": "LG",
 "cat": "📺 Infrarrojo",
-"desc": "IR remote for LG-protocol air conditioners",
+"desc": "Control IR para aires con protocolo LG",
 "fuente": "Comunidad"
 },
 {
 "appid": "subghz_signal_gen",
 "name": "SubGHz Signal Generator",
 "cat": "📡 Sub-GHz",
-"desc": "SubGHz Signal Generator for Flipper Zero",
+"desc": "Generador de señales Sub-GHz para el Flipper",
 "fuente": "Comunidad",
 "github": "https://github.com/RocketGod-Git/Flipper-Zero-SubGHz-Signal-Generator"
 },
@@ -4839,7 +4839,7 @@
 "appid": "crane_remote",
 "name": "Telecrane Control",
 "cat": "📡 Sub-GHz",
-"desc": "Sends forged frames to Telecrane-style 2FSK crane remotes (848.93/850.92 MHz)",
+"desc": "Envía tramas falsificadas a controles de grúa tipo Telecrane 2FSK (848.93/850.92 MHz)",
 "fuente": "Comunidad",
 "github": "https://github.com/nmatt0/telecrane-contol"
 },
@@ -4847,21 +4847,21 @@
 "appid": "droidbeacon",
 "name": "Droid Beacon",
 "cat": "🔵 Bluetooth",
-"desc": "Emulate Galaxy's Edge BLE park location beacons for Droid Depot droids",
+"desc": "Emula los beacons BLE de ubicación de Galaxy's Edge para droides de Droid Depot",
 "fuente": "Comunidad"
 },
 {
 "appid": "montyhall",
 "name": "Monty Hall",
 "cat": "🎮 Juegos",
-"desc": "Monty Hall asks you to guess which closed door a prize is behind.",
+"desc": "Monty Hall te pide adivinar tras qué puerta cerrada está el premio.",
 "fuente": "Comunidad"
 },
 {
 "appid": "mandelbrotset",
 "name": "Mandelbrot Set",
 "cat": "🎮 Juegos",
-"desc": "The Mandelbrot set is the set of all so-called (complex) numbers that meet Mandelbrots simple arithmetic criterion.",
+"desc": "El conjunto de Mandelbrot: todos los números (complejos) que cumplen el sencillo criterio aritmético de Mandelbrot.",
 "fuente": "Comunidad",
 "github": "https://github.com/xMasterX/all-the-plugins"
 },
@@ -4869,7 +4869,7 @@
 "appid": "reaction",
 "name": "Reaction test",
 "cat": "🎮 Juegos",
-"desc": "A simple reaction test game",
+"desc": "Juego sencillo de prueba de reacción",
 "fuente": "Comunidad",
 "github": "https://github.com/Milk-Cool/fz-reaction-game"
 },
@@ -4877,7 +4877,7 @@
 "appid": "usb_hid_autofire",
 "name": "USB HID Autofire",
 "cat": "⌨️ USB / BadUSB",
-"desc": "This is a simple Flipper Zero application to send left-clicks as a USB HID device.",
+"desc": "App sencilla que envía clics izquierdos como dispositivo HID USB.",
 "fuente": "Comunidad",
 "github": "https://github.com/pbek/usb_hid_autofire"
 },
@@ -4885,14 +4885,14 @@
 "appid": "ws2812b_tester_app",
 "name": "[WS2812B] LED Tester",
 "cat": "🔌 GPIO / Hardware",
-"desc": "WS2812B LED Tester App. This is intended to test that WS2812B LEDs are functioning correctly.",
+"desc": "App para probar LEDs WS2812B y verificar que funcionan bien.",
 "fuente": "Comunidad"
 },
 {
 "appid": "segment_clock",
 "name": "Segment Clock",
 "cat": "🛠️ Herramientas",
-"desc": "Display simple segment clock on Flipper screen",
+"desc": "Muestra un reloj de segmentos simple en la pantalla del Flipper",
 "fuente": "Comunidad",
 "github": "https://github.com/Sladkisnovraper/Segment-Clock-For-Flipper-Zero"
 },
@@ -4900,7 +4900,7 @@
 "appid": "gpio_reader",
 "name": "[GPIO] Reader",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Read GPIO pins states, and display them on the screen",
+"desc": "Lee el estado de los pines GPIO y lo muestra en pantalla",
 "fuente": "Comunidad",
 "github": "https://github.com/aureli1c/flipperzero_GPIO_read"
 },
@@ -4908,14 +4908,14 @@
 "appid": "gpio_7segment_output",
 "name": "7-Segment Output",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Control a 7-segment display with GPIO pins",
+"desc": "Controla una pantalla de 7 segmentos con los pines GPIO",
 "fuente": "Comunidad"
 },
 {
 "appid": "logic_analyzer",
 "name": "Logic Analyzer",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Use flipper as Openbench Logic Sniffer (ols) logic analyzer in PulseView",
+"desc": "Usa el Flipper como analizador lógico Openbench Logic Sniffer (OLS) en PulseView",
 "fuente": "Comunidad",
 "github": "https://github.com/g3gg0/flipper-logic_analyzer"
 },
@@ -4923,7 +4923,7 @@
 "appid": "zero_tracker",
 "name": "Zero Tracker",
 "cat": "🎵 Multimedia",
-"desc": "App plays hardcoded tracker song",
+"desc": "Reproduce una canción tracker fija",
 "fuente": "Comunidad",
 "github": "https://github.com/DrZlo13/flipper-zero-music-tracker"
 },
@@ -4931,7 +4931,7 @@
 "appid": "brainfuck",
 "name": "Brainfuck",
 "cat": "🛠️ Herramientas",
-"desc": "Brainfuck language interpreter",
+"desc": "Intérprete del lenguaje Brainfuck",
 "fuente": "Comunidad",
 "github": "https://github.com/nymda/FlipperZeroBrainfuck"
 },
@@ -4939,7 +4939,7 @@
 "appid": "racegame",
 "name": "Race",
 "cat": "🎮 Juegos",
-"desc": "Race game inspired by Race game in BrickGame 9999 in 1.",
+"desc": "Juego de carreras inspirado en el de BrickGame 9999 in 1.",
 "fuente": "Comunidad",
 "github": "https://github.com/zyuhel/flipperzero-racegame"
 },
@@ -4947,7 +4947,7 @@
 "appid": "analog_clock",
 "name": "Analog Clock",
 "cat": "🛠️ Herramientas",
-"desc": "Shows analog clock on Flipper screen",
+"desc": "Muestra un reloj analógico en la pantalla del Flipper",
 "fuente": "Comunidad",
 "github": "https://github.com/scrolltex/flipper_analog_clock"
 },
@@ -4955,7 +4955,7 @@
 "appid": "airmon",
 "name": "[PMSx003] Airmon",
 "cat": "🔌 GPIO / Hardware",
-"desc": "Plantower PMSx003 sensor reader",
+"desc": "Lector del sensor Plantower PMSx003",
 "fuente": "Comunidad",
 "github": "https://github.com/3cky/flipperzero-airmon"
 },
@@ -4963,7 +4963,7 @@
 "appid": "ocarina",
 "name": "Ocarina",
 "cat": "🎵 Multimedia",
-"desc": "A basic Ocarina (of Time), Controls are the same as the N64 version of the Ocarina of Time",
+"desc": "Ocarina básica (of Time); los controles son como en la versión de N64",
 "fuente": "Comunidad",
 "github": "https://github.com/invalidna-me/flipperzero-ocarina"
 },
@@ -4971,7 +4971,7 @@
 "appid": "pomodoro_timer",
 "name": "Pomodoro Timer",
 "cat": "🛠️ Herramientas",
-"desc": "Use your Flipper Zero as a Pomodoro Timer.",
+"desc": "Usa tu Flipper como temporizador Pomodoro.",
 "fuente": "Comunidad",
 "github": "https://github.com/sbrin/flipperzero_pomodoro"
 },
@@ -4979,21 +4979,21 @@
 "appid": "proto_pirate",
 "name": "ProtoPirate",
 "cat": "📡 Sub-GHz",
-"desc": "Decode car key fob signals from Sub-GHz",
+"desc": "Decodifica señales de llaves de carro desde Sub-GHz",
 "fuente": "Comunidad"
 },
 {
 "appid": "usb_i2s",
 "name": "USB I2S Audio",
 "cat": "⌨️ USB / BadUSB",
-"desc": "USB Audio Class 1 sound card: stereo 16-bit up to 96 kHz / 24-bit up to 48 kHz, I2S (SAI1) on GPIO header, optional MCLK",
+"desc": "Tarjeta de sonido USB Audio Class 1: estéreo 16-bit hasta 96 kHz / 24-bit hasta 48 kHz, I2S (SAI1) en el GPIO, MCLK opcional",
 "fuente": "Comunidad"
 },
 {
 "appid": "flipper_share_ir",
 "name": "Flipper Share IR",
 "cat": "📺 Infrarrojo",
-"desc": "Direct file transfer between flippers via IR",
+"desc": "Transferencia directa de archivos entre Flippers por IR",
 "fuente": "Comunidad"
 },
 {
@@ -5007,7 +5007,7 @@
 "appid": "flipper_share_nfc",
 "name": "Flipper Share NFC",
 "cat": "💳 NFC",
-"desc": "Direct file transfer between flippers via NFC",
+"desc": "Transferencia directa de archivos entre Flippers por NFC",
 "fuente": "Comunidad"
 }
 ]
