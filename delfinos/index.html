@@ -352,7 +352,7 @@
 
   <section id="catalogo">
     <div class="shead"><span class="em">🧰</span><h2>Catálogo de herramientas</h2><p>629 apps, las mejores de cada categoría, sin repetir</p></div>
-    <p style="margin:-10px 0 18px"><a class="btn primary" href="https://claude.ai/artifact/U3e7yxabF5F9ZMoeqsr3so" target="_blank" rel="noopener">🔎 Ver el catálogo completo (629 apps)</a></p>
+    <p style="margin:-10px 0 18px;color:var(--mut);font-size:14px">El catálogo completo de 629 apps —para agregar, probar y aprobar— es privado y se abre desde el <a href="#admin" style="color:var(--accent)">panel de administrador</a>.</p>
     <div class="grid">
       <div class="cat" style="--c:#ff7a3c"><div class="ic">📡</div><span class="tag">Sub-GHz · Radio</span><h3>Radiofrecuencia</h3>
         <ul><li>Lectura y reenvío <span>— garajes, barreras, timbres (300–928 MHz)</span></li><li>Sub-GHz Bruteforcer</li><li>Weather Station <span>— sensores de clima</span></li><li>Spectrum Analyzer</li></ul></div>
@@ -411,18 +411,9 @@
         <p style="font-size:12px;color:var(--mut);text-align:center">Demostración de la interfaz · la validación real va en tu servidor</p>
       </div>
       <div class="admin-panel">
+        <a class="btn primary" href="https://claude.ai/artifact/U3e7yxabF5F9ZMoeqsr3so" target="_blank" rel="noopener" style="display:block;text-align:center;margin-bottom:12px">🔎 Abrir el catálogo (629 apps) · agregar a pruebas, probar y aprobar</a>
         <a class="btn primary" href="https://claude.ai/artifact/Pihzt6uoV3HECqW97PSJTh" target="_blank" rel="noopener" style="display:block;text-align:center;margin-bottom:14px">🌐 Abrir el Traductor DelfínOS</a>
-        <div class="upload">
-          📦 <b>Cargar app traducida (.fap)</b>
-          <div style="color:var(--mut);font-size:13px;margin-top:4px">Selecciona el archivo compilado para enviarlo a pruebas</div>
-          <input type="file" accept=".fap" multiple>
-        </div>
-        <div style="font-size:14px;font-weight:600;margin:14px 0 2px">🧪 En pruebas (staging)</div>
-        <div class="stage-item"><div><div class="nm">wifi_marauder.fap</div><div class="st">⏳ Pendiente de prueba</div></div>
-          <div style="display:flex;gap:8px"><button class="mini">Probar</button><button class="mini ok">Aprobar</button></div></div>
-        <div class="stage-item"><div><div class="nm">nfc_playlist.fap</div><div class="st done">✓ Probada — lista</div></div>
-          <div style="display:flex;gap:8px"><button class="mini">Ver</button><button class="mini ok">Publicar</button></div></div>
-        <div class="admin-note">⚠️ Esta es la <b>interfaz</b> del panel. La autenticación y el guardado de archivos se conectan a <b>tu servidor</b> cuando montemos el backend. <b>No pongas una contraseña real</b> en una página pública: cualquiera podría verla en el código.</div>
+        <div class="admin-note">🔒 Estos dos abren en una <b>ventana nueva</b> y son <b>privados: solo tú</b> puedes abrirlos (con tu cuenta de administrador). Aunque alguien vea este botón, no podrá entrar sin tus credenciales.<br><br>Dentro del catálogo tienes <b>«Agregar app a En pruebas»</b> (pegando un enlace de GitHub), el aviso si la app ya existe, y los botones para <b>pasar a Estable</b>. El guardado de archivos <code>.fap</code> se conecta a tu servidor cuando montemos el backend.</div>
       </div>
     </div>
   </section>
